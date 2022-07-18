@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Power Save - Deep Sleep for DHT and LCD &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Power Save - Tickless Mode" href="Power%20Save%20-%20Tickless%20Mode.html" />
+    <link rel="prev" title="Power Save - Deep Sleep for DHT and E-paper" href="Power%20Save%20-%20Deep%20Sleep%20for%20DHT%20and%20E-paper.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB21/index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">BW16 (RTL8720DN)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Network%20Examples/index.html">Network Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">BW16 (RTL8720DN)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Peripheral Examples</a> &raquo;</li>
+      <li>Power Save - Deep Sleep for DHT and LCD</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/BW16_/examples_and_components/Peripheral Examples/Power Save - Deep Sleep for DHT and LCD.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="power-save-deep-sleep-for-dht-and-lcd">
+<h1>Power Save - Deep Sleep for DHT and LCD<a class="headerlink" href="#power-save-deep-sleep-for-dht-and-lcd" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Materials</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22 / AMB23 / BW16] x 1</p></li>
+<li><p>DHT11 or DHT22 or DHT21 x 1</p></li>
+<li><p>LCD I2C screen x 1</p></li>
+</ul>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<p><strong>Introduction</strong></p>
+<p>Ameba-D supports low power modes which are deepsleep mode. Deepsleep
+mode turns off most of the system power domain. The power consumptions
+of core module in DeepSleep Mode is around 7uA to 8uA compare to normal
+state around 22mA. This example gives demo of system switch between
+“working” and “sleep”(power save).Using DHT sensor to read data and
+display on LCD screen when system is awake. After 5 seconds system auto
+enter DeepSleep Mode for power save. System will wake up by wakeup
+source.( Aon timer, Aon Pins or RTC timer).</p>
+<div class="line-block">
+<div class="line"><strong>Procedure</strong></div>
+<div class="line">Open <code class="docutils literal notranslate"><span class="pre">“File”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span> <span class="pre">“AmebaPowerSave”</span> <span class="pre">-&gt;</span>
+<span class="pre">“DeepSleep_DHT_LCD_Example”</span></code></div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image165.png"><img alt="1" src="../../../../_images/image165.png" style="width: 482.29999999999995px; height: 492.79999999999995px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Set condition values as picture below.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">DS_WAKEUP_SOURCE</span></code> is used to set the wake-up source, user can chose 3
+wake up sources now,</div>
+</div>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">AON</span><span class="w"> </span><span class="nf">timer</span><span class="w"> </span><span class="p">(</span><span class="n">SET_DS_AON_TIMER_WAKEUP</span><span class="p">);</span><span class="w"></span>
+<span class="n">AON</span><span class="w"> </span><span class="nf">pins</span><span class="w"> </span><span class="p">(</span><span class="n">SET_AON_WAKEPIN_WAKEUP</span><span class="p">);</span><span class="w"></span>
+<span class="n">RTC</span><span class="w"> </span><span class="nf">timer</span><span class="w"> </span><span class="p">(</span><span class="n">SET_DS_RTC_WAKEUP</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Using AON Timer as wakeup source</strong></div>
+<div class="line">AON timer can be set from 0 to 32760000 range (unit ms) by <code class="docutils literal notranslate"><span class="pre">AON_TIMER_SLEEP_DURATION</span></code></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Using AON GPIO pins as wakeup source</strong></div>
+<div class="line">For AMB21, there are 5 pins that can be set as AON pins and active
+high for wakeup, GPIOA25(D16), GPIOA26(D17), GPIOA21(D26),
+GPIOA20(D27), GPIOA(D28).</div>
+</div>
+<div class="line-block">
+<div class="line">For AMB23, there are 8 pins that can be set as AON pins and active high
+for wakeup, GPIOA12(D9), GPIOA13(D10), GPIOA14(D11), GPIOA15(D12),
+GPIOA16(D13), GPIOA18(D15), GPIOA19(D16), GPIOA21(D18).</div>
+</div>
+<div class="line-block">
+<div class="line">For BW16, there is only 6 pins that can be set as AON pin and active
+high for wakeup, GPIOA_25 (D7), GPIOA_26 (D8), GPIOA_15 (D9), GPIOA_14
+(D10), GPIOA_13 (D11), GPIOA_12 (D12).</div>
+</div>
+<div class="line-block">
+<div class="line">These AON pins can be set by using <code class="docutils literal notranslate"><span class="pre">SET_AON_GPIO_WAKEUP_GPIOA25</span></code> or the pin that you want to use as shown in the picture below.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image259.png"><img alt="2" src="../../../../_images/image259.png" style="width: 576.0px; height: 406.2px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><strong>Using RTC Timer as wakeup source</strong></div>
+<div class="line">RTC timer wakeup system is by setting alarm. The alarm has 4 values, day,
+hour, min and sec. All 4 values can be set by <code class="docutils literal notranslate"><span class="pre">DS_RTC_ALARM_DAY</span></code>,
+<code class="docutils literal notranslate"><span class="pre">DS_RTC_ALARM_HOUR</span></code>, <code class="docutils literal notranslate"><span class="pre">DS_RTC_ALARM_MIN</span></code>, and <code class="docutils literal notranslate"><span class="pre">DS_RTC_ALARM_SEC</span></code></div>
+</div>
+<div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">DHTPIN</span></code> is used to set DHT sensor data pin. User can choose any GPIO
+pins.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">DHTTYPE</span></code> is used to set DHT sensor type. (DHT11, DHT22 and DHT33)</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image340.png"><img alt="3" src="../../../../_images/image340.png" style="width: 576.0px; height: 488.4px;" /></a></p>
+</div></blockquote>
+<p>When finished the condition values setting, system will run and switch
+between normal working mode and deepsleep mode controlled by wakeup
+source. LCD screen will display the temperature and humidity data
+measured from DHT sensor when system is awake.</p>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Code Reference</strong>
+<span class="raw-html"></p></span></p>
+<p>Please refer to the <a class="reference external" href="https://www.amebaiot.com/rtl8722dm-arduino-online-api-documents/">API
+Documents</a> PowerSave
+section for detail description of all API.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Power%20Save%20-%20Deep%20Sleep%20for%20DHT%20and%20E-paper.html" class="btn btn-neutral float-left" title="Power Save - Deep Sleep for DHT and E-paper" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Power%20Save%20-%20Tickless%20Mode.html" class="btn btn-neutral float-right" title="Power Save - Tickless Mode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

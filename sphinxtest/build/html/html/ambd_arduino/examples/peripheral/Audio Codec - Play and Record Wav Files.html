@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audio Codec – Play and Record Wav Files &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_index.html">Arduino SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Audio Codec – Play and Record Wav Files</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_arduino/examples/peripheral/Audio Codec - Play and Record Wav Files.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="audio-codec-play-and-record-wav-files">
+<h1>Audio Codec – Play and Record Wav Files<a class="headerlink" href="#audio-codec-play-and-record-wav-files" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Materials</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>AmebaD [AMB23] x 1</p></li>
+<li><p>MicroSD card</p></li>
+</ul>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<p><strong>Procedure</strong></p>
+<p>As AMB23 have a built in microphone on the board, there is no need for any external microphone. Copy a sample wav file into the MicroSD card for demo. (In this example, the sample name is “Test_Audio_48khz_16bit_stereo.wav”. ) Then insert the MicroSD card into the adapter at the back of the board.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image194.png"><img alt="image1" src="../../../_images/image194.png" style="width: 420.6px; height: 526.0px;" /></a></p>
+</div></blockquote>
+<p><strong>Example 01 - PlaybackWavFile</strong></p>
+<div class="line-block">
+<div class="line">Open the example, <code class="docutils literal notranslate"><span class="pre">“Files”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span> <span class="pre">“AmebaAudioCodec”</span> <span class="pre">-&gt;</span> <span class="pre">“PlaybackWavFile”</span></code>.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image282.png"><img alt="image2" src="../../../_images/image282.png" style="width: 560.0px; height: 453.0px;" /></a></p>
+</div></blockquote>
+<p>Upload the code and press the reset button on Ameba once the upload is finished.
+Insert earphone/speaker into the onboard jack for playing the sample sound.</p>
+<p><strong>Example 02 - RecordWavFile</strong></p>
+<div class="line-block">
+<div class="line">Open the example, <code class="docutils literal notranslate"><span class="pre">“Files”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span> <span class="pre">“AmebaAudioCodec”</span> <span class="pre">-&gt;</span> <span class="pre">“RecordWavFile”</span></code>.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image355.png"><img alt="image3" src="../../../_images/image355.png" style="width: 531.0px; height: 402.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Define a GPIO/button(Input high to active) for <code class="docutils literal notranslate"><span class="pre">RECORDBTN</span></code>. Define the <code class="docutils literal notranslate"><span class="pre">filename[]</span></code> for name of the storge wav file. In this example the name is “Test_Recording_48khz_16bit_mono.wav”.</div>
+<div class="line">Upload the code and press the reset button on Ameba once the upload is finished.</div>
+<div class="line">Input high to <code class="docutils literal notranslate"><span class="pre">RECORDBTN</span></code>, then record voice by on board mic. When input is low the record stops. The recorded voice will be stored in “Test_Recording_48khz_16bit_mono.wav” that located at MicroSD card.</div>
+</div>
+<p><strong>Example 03 - RecordPlaybackWav</strong></p>
+<div class="line-block">
+<div class="line">Open the example, <code class="docutils literal notranslate"><span class="pre">“Files”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span> <span class="pre">“AmebaAudioCodec”</span> <span class="pre">-&gt;</span> <span class="pre">“RecordPlaybackWav”</span></code>.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image445.png"><img alt="image4" src="../../../_images/image445.png" style="width: 513.0px; height: 540.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">This example is a combination of <strong>Example01</strong> and <strong>Example02</strong>. You can record by <strong>Example02</strong> then play it by jack as the method of <strong>Example01</strong>.</div>
+</div>
+<div class="line-block">
+<div class="line">Define a GPIO/button(Input high to active) for <code class="docutils literal notranslate"><span class="pre">RECORDBTN</span></code>. Define the <code class="docutils literal notranslate"><span class="pre">filename[]</span></code> for name of the storge wav file. In this example the name is</div>
+<div class="line">“Test_Recording_48khz_16bit_mono.wav”.</div>
+</div>
+<div class="line-block">
+<div class="line">Upload the code and press the reset button on Ameba once the upload is finished.</div>
+</div>
+<div class="line-block">
+<div class="line">Input high to <code class="docutils literal notranslate"><span class="pre">RECORDBTN</span></code>, then record voice by on board mic. When input is low the record stops. The recorded voice will be stored in
+“Test_Recording_48khz_16bit_mono.wav” that located at MicroSD card.</div>
+</div>
+<div class="line-block">
+<div class="line">Insert earphone/speaker into the onboard jack for playing the sample sound.</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

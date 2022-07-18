@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Documents &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Class AmebaServo" href="Class%20AmebaServo.html" />
+    <link rel="prev" title="Components Used" href="../examples_and_components/Components%20Used.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples_and_components/index.html">Examples &amp; Components</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">API Documents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#analog">Analog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#audiocodec">AudioCodec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ble">BLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#epdif">EPDIF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fatfssdcard">FatfsSDCard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flashmemory">FlashMemory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gpio">GPIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gtimer">GTimer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#http">Http</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#irdevice">IRDevice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mdns">MDNS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mqttclient">MQTTClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ntpclient">NTPClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powersave">PowerSave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rtc">RTC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#softwareserial">SoftwareSerial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spi">SPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sys">Sys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb">USB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wdt">WDT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wifi">WiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wire">Wire</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ws2812b">WS2812B</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+      <li>API Documents</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_arduino/AMB21/api_documents/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-documents">
+<h1>API Documents<a class="headerlink" href="#api-documents" title="Permalink to this heading"></a></h1>
+<p><strong>RTL8722DM ARDUINO Online API Documents</strong></p>
+<section id="analog">
+<h2>Analog<a class="headerlink" href="#analog" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Class%20AmebaServo.html">Class AmebaServo</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="audiocodec">
+<h2>AudioCodec<a class="headerlink" href="#audiocodec" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Class%20AudioCodec.html">Class AudioCodec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20FFT.html">Class FFT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20PlaybackWav.html">Class PlaybackWav</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20RecordWav.html">Class RecordWav</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="ble">
+<h2>BLE<a class="headerlink" href="#ble" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Class%20BLEAddr.html">Class BLEAddr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20BLEAdvert.html">Class BLEAdvert</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20BLEAdvertData.html">Class BLEAdvertData</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20BLEBeacon.html">Class BLEBeacon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20BLECharacteristic.html">Class BLECharacteristic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20BLEClient.html">Class BLEClient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20BLEConnect.html">Class BLEConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20BLEDevice.html">Class BLEDevice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20BLEHIDDevice.html">Class BLEHIDDevice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20BLEHIDGamepad.html">Class BLEHIDGamepad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20BLEHIDKeyboard.html">Class BLEHIDKeyboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20BLEHIDMouse.html">Class BLEHIDMouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20BLERemoteCharacteristic.html">Class BLERemoteCharacteristic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20BLERemoteDescriptor.html">Class BLERemoteDescriptor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20BLERemoteService.html">Class BLERemoteService</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20BLEScan.html">Class BLEScan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20BLEService.html">Class BLEService</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20BLEUUID.html">Class BLEUUID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20BLEWifiConfigService.html">Class BLEWifiConfigService</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="epdif">
+<h2>EPDIF<a class="headerlink" href="#epdif" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Class%20EpdIF.html">Class EpdIF</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="fatfssdcard">
+<h2>FatfsSDCard<a class="headerlink" href="#fatfssdcard" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Class%20SdFatFs.html">Class SdFatFs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20SdFatFile.html">Class SdFatFile</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="flashmemory">
+<h2>FlashMemory<a class="headerlink" href="#flashmemory" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Class%20FlashMemoryClass.html">Class FlashMemory</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="gpio">
+<h2>GPIO<a class="headerlink" href="#gpio" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Class%20DHT.html">Class DHT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20InterruptLock.html">Class InterruptLock</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="gtimer">
+<h2>GTimer<a class="headerlink" href="#gtimer" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Class%20GTimerClass.html">Class GTimer</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="http">
+<h2>Http<a class="headerlink" href="#http" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Class%20HttpClient.html">Class HttpClient</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="irdevice">
+<h2>IRDevice<a class="headerlink" href="#irdevice" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Class%20IRDevice.html">Class HttpClient</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="mdns">
+<h2>MDNS<a class="headerlink" href="#mdns" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Class%20MDNSClass.html">Class MDNS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20MDNSService.html">Class MDNSService</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="mqttclient">
+<h2>MQTTClient<a class="headerlink" href="#mqttclient" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Class%20PubSubClient.html">Class PMUClass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Readme%20MQTTClient.html">Readme</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="ntpclient">
+<h2>NTPClient<a class="headerlink" href="#ntpclient" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Readme%20NTPClient.html">Readme</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="powersave">
+<h2>PowerSave<a class="headerlink" href="#powersave" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Class%20PMUClass.html">Class PMUClass</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="rtc">
+<h2>RTC<a class="headerlink" href="#rtc" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Class%20RTC.html">Class RTC</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="softwareserial">
+<h2>SoftwareSerial<a class="headerlink" href="#softwareserial" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Class%20Adafruit_GPS.html">Class Adafruit_GPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20PMS3003.html">Class HttpClient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20SoftwareSerial.html">Class SoftwareSerial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Readme%20SoftwareSerial.html">Readme</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="spi">
+<h2>SPI<a class="headerlink" href="#spi" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Class%20AmebaILI9341.html">Class AmebaILI9341</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20SPISettings_SPIClass.html">Class SPISettings_SPIClass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Readme%20SPI.html">Readme</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="sys">
+<h2>Sys<a class="headerlink" href="#sys" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Wiring_OS_API.html">Wiring_OS_API</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="usb">
+<h2>USB<a class="headerlink" href="#usb" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Class%20USBCDCDevice.html">Class USBCDCDevice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20USBHIDDevice.html">Class USBHIDDevice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20USBHIDGamepad.html">Class USBHIDGamepad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20USBHIDKeyboard.html">Class USBHIDKeyboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20USBHIDMouse.html">Class USBHIDMouse</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="wdt">
+<h2>WDT<a class="headerlink" href="#wdt" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Class%20WDT.html">Class WDT</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="wifi">
+<h2>WiFi<a class="headerlink" href="#wifi" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Class%20WiFi.html">Class WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20WiFiClient.html">Class WiFiClient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20WiFiServer.html">Class WiFiServer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20WiFiSSLClient.html">Class WiFiSSLClient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class%20WiFiUdp.html">Class WiFiUdp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Readme%20WiFi.html">Readme</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="wire">
+<h2>Wire<a class="headerlink" href="#wire" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Class%20TwoWire.html">Class TwoWire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Readme%20Wire.html">Wire_Readme</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="ws2812b">
+<h2>WS2812B<a class="headerlink" href="#ws2812b" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Class%20WS2812B.html">Class WS2812B</a></li>
+</ul>
+</div>
+<p>—</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../examples_and_components/Components%20Used.html" class="btn btn-neutral float-left" title="Components Used" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Class%20AmebaServo.html" class="btn btn-neutral float-right" title="Class AmebaServo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

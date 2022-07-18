@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peripheral Examples &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="AmebaMotors - Use Ameba as Server to Control Motors" href="AmebaMotors%20-%20Use%20Ameba%20as%20Server%20to%20Control%20Motors.html" />
+    <link rel="prev" title="WiFi - Set up SSL Client for HTTPS Communication" href="../Network%20Examples/WiFi%20-%20Set%20up%20SSL%20Client%20for%20HTTPS%20Communication.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Network%20Examples/index.html">Network Examples</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+      <li>Peripheral Examples</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/AMB21/examples_and_components/Peripheral Examples/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="peripheral-examples">
+<h1>Peripheral Examples<a class="headerlink" href="#peripheral-examples" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Peripheral Library &amp; Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="AmebaMotors%20-%20Use%20Ameba%20as%20Server%20to%20Control%20Motors.html">AmebaMotors - Use Ameba as Server to Control Motors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Audio%20Codec%20-%20Basic%20Input%20Output.html">Audio Codec – Basic Input Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Audio%20Codec%20-%20FFT.html">Audio Codec - FFT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Audio%20Codec%20-%20Input%20FFT.html">Audio Codec - Input FFT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Audio%20Codec%20-%20Output%20Sine%20Wave.html">Audio Codec – Output Sine Wave</a></li>
+<li class="toctree-l1"><a class="reference internal" href="E-Paper%20-%20Display%20Images.html">E-Paper - Display Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="E-Paper%20-%20Display%20Text.html">E-Paper - Display Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="E-Paper%20-%20Display%20User-generated%20QR%20Code.html">E-Paper - Display User-generated QR Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Flash%20Memory%20-%20Store%20data%20in%20FlashEEProm.html">Flash Memory - Store data in FlashEEProm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Flash%20Memory%20-%20Use%20Flash%20Memory%20Larger%20Than%204K.html">Flash Memory - Use Flash Memory Larger Than 4K</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GPIO%20-%20Measure%20Distance%20By%20Ultrasound%20Module.html">GPIO - Measure Distance By Ultrasound Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GPIO%20-%20Measure%20Temperature%20and%20Humidity.html">GPIO - Measure Temperature and Humidity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GPIO%20-%20Use%20GPIO%20Interrupt%20To%20Control%20LED.html">GPIO - Use GPIO Interrupt To Control LED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GTimer%20-%20Using%20The%20Periodic%20GTimer.html">GTimer - Using The Periodic GTimer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GTimer%20-%20Using%20the%20One-Time%20Gtimer.html">GTimer - Using the One-Time Gtimer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="I2C%20-%20Send%20Data%20to%20Arduino%20UNO.html">I2C - Send Data to Arduino UNO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="I2C%20-%20Display%20Data%20On%20LCD%20Screen.html">I2C - Display Data On LCD Screen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="I2C%20-%20Receive%20Data%20from%20Arduino%20UNO.html">I2C - Receive Data from Arduino UNO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IR%20-%20Transmit%20IR%20NEC%20Raw%20Data%20And%20Decode.html">IR - Transmit IR NEC Raw Data And Decode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IR%20-%20Transmit%20IR%20SONY%20Data.html">IR - Transmit IR Sony Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Power%20Save%20-%20Deep%20Sleep%20Mode.html">Power Save - Deep Sleep Mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Power%20Save%20-%20Deep%20Sleep%20for%20DHT%20and%20E-paper.html">Power Save - Deep Sleep for DHT and E-paper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Power%20Save%20-%20Deep%20Sleep%20for%20DHT%20and%20LCD.html">Power Save - Deep Sleep for DHT and LCD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Power%20Save%20-%20Tickless%20Mode.html">Power Save - Tickless Mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PWM%20-%20Play%20Music%20by%20Buzzer.html">PWM - Play Music by Buzzer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PWM%20-%20Servo%20Control.html">PWM - Servo Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RTC%20-%20Simple%20RTC.html">RTC - Simple RTC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RTC%20-%20Simple%20RTC%20Alarm.html">RTC - Simple RTC Alarm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SPI%20-%20Print%20Image%20And%20Text%20On%20LCD%20Screen.html">SPI – Print Image And Text On LCD Screen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SPI%20-%20Show%20PM2.5%20Concentration%20On%20ILI9341%20TFT%20LCD.html">SPI – Show PM2.5 Concentration On ILI9341 TFT LCD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TensorFlow%20Lite%20-%20Hello%20World.html">TensorFlow Lite - Hello World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TensorFlow%20Lite%20-%20Magic%20Wand.html">TensorFlow Lite - Magic Wand</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TensorFlow%20Lite%20-%20Micro%20Speech.html">TensorFlow Lite - Micro Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TensorFlow%20Lite%20-%20Person%20Detection.html">TensorFlow Lite - Person Detection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UART%20-%20Communicate%20with%20PC%20over%20USB%20to%20Serial%20Module.html">UART - Communicate with PC over USB to Serial Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UART%20-%20Retrieve%20GPS%20Position.html">UART - Retrieve GPS Position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UART%20-%20Set%20Callback%20Function%20For%20UART%20Communications.html">UART – Set Callback Function For UART Communications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UART%20-%20PM2.5%20Concentration%20in%20The%20Air.html">UART - PM2.5 Concentration in The Air</a></li>
+<li class="toctree-l1"><a class="reference internal" href="USB%20-%20CDC%20Serial.html">USB - CDC Serial Port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="USB%20-%20HID%20Gamepad.html">USB - HID Gamepad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="USB%20-%20HID%20Keyboard.html">USB - HID Keyboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="USB%20-%20HID%20Mouse.html">USB - HID Mouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Watchdog%20-%20Simple%20WDG%20Timer.html">Watchdog - Simple WDG Timer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WS2812B%20-%20Basics.html">WS2812B - Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WS2812B%20-%20Patterns.html">WS2812B - Patterns</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Network%20Examples/WiFi%20-%20Set%20up%20SSL%20Client%20for%20HTTPS%20Communication.html" class="btn btn-neutral float-left" title="WiFi - Set up SSL Client for HTTPS Communication" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="AmebaMotors%20-%20Use%20Ameba%20as%20Server%20to%20Control%20Motors.html" class="btn btn-neutral float-right" title="AmebaMotors - Use Ameba as Server to Control Motors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

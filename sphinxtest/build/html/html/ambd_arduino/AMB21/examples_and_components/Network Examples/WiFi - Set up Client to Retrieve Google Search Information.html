@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WiFi - Set up Client to Retrieve Google Search Informations &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="WiFi - Set up UDP Server to Communicate" href="WiFi%20-%20Set%20up%20UDP%20Server%20to%20Communicate.html" />
+    <link rel="prev" title="WiFi - Set up Server to communicate" href="WiFi%20-%20Set%20up%20Server%20to%20communicate.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Network Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Peripheral%20Examples/index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Network Examples</a> &raquo;</li>
+      <li>WiFi - Set up Client to Retrieve Google Search Informations</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/AMB21/examples_and_components/Network Examples/WiFi - Set up Client to Retrieve Google Search Information.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="wifi-set-up-client-to-retrieve-google-search-informations">
+<h1>WiFi - Set up Client to Retrieve Google Search Informations<a class="headerlink" href="#wifi-set-up-client-to-retrieve-google-search-informations" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Materials</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22 / AMB23 / BW16] x 1</p></li>
+</ul>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<div class="line-block">
+<div class="line">In this example, we use Ameba to be a web client to retrieve
+Informations from the Internet.</div>
+<div class="line">First, make sure the correct Ameba development board is selected in
+“Tools” -&gt; “Board”</div>
+</div>
+<div class="line-block">
+<div class="line">Then open <code class="docutils literal notranslate"><span class="pre">“File”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span> <span class="pre">“WiFi”</span> <span class="pre">-&gt;</span> <span class="pre">“WiFiWebClient”</span></code></div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image134.png"><img alt="1" src="../../../../_images/image134.png" style="width: 808.5px; height: 672.6999999999999px;" /></a></p>
+</div></blockquote>
+<p>In the sample code, modify the highlighted snippet and enter the
+required Informations (ssid, password, key index) required to connect to
+your WiFi network.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image230.png"><img alt="2" src="../../../../_images/image230.png" style="width: 501.2px; height: 606.9px;" /></a></p>
+</div></blockquote>
+<p>Upload the code and press the reset button on Ameba. Then you can see
+the Informations retrieved from Google is shown in the Arduino serial
+monitor.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image322.png"><img alt="3" src="../../../../_images/image322.png" style="width: 658.6999999999999px; height: 492.09999999999997px;" /></a></p>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Code Reference</strong>
+<span class="raw-html"></p></span></p>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiBegin">https://www.arduino.cc/en/Reference/WiFiBegin</a></div>
+<div class="line">To get the Informations of a WiFi connection: Use <code class="docutils literal notranslate"><span class="pre">WiFi.SSID()</span></code> to get
+SSID of the current connected network.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiSSID">https://www.arduino.cc/en/Reference/WiFiSSID</a></div>
+<div class="line">Use <code class="docutils literal notranslate"><span class="pre">WiFi.RSSI()</span></code> to get the signal strength of the connection.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiRSSI">https://www.arduino.cc/en/Reference/WiFiRSSI</a></div>
+<div class="line">Use <code class="docutils literal notranslate"><span class="pre">WiFi.localIP()</span></code> to get the IP address of Ameba.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiLocalIP">https://www.arduino.cc/en/Reference/WiFiLocalIP</a></div>
+<div class="line">Use <code class="docutils literal notranslate"><span class="pre">WiFiClient()</span></code> to create a client.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiClient">https://www.arduino.cc/en/Reference/WiFiClient</a></div>
+<div class="line">Use <code class="docutils literal notranslate"><span class="pre">client.connect()</span></code> to connect to the IP address and port specified.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiClientConnect">https://www.arduino.cc/en/Reference/WiFiClientConnect</a></div>
+<div class="line">Use <code class="docutils literal notranslate"><span class="pre">client.println()</span></code> to print data followed by a carriage return and
+newline.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiClientPrintln">https://www.arduino.cc/en/Reference/WiFiClientPrintln</a></div>
+<div class="line">Use <code class="docutils literal notranslate"><span class="pre">client.available()</span></code> to return the number of bytes available for
+reading.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiClientAvailable">https://www.arduino.cc/en/Reference/WiFiClientAvailable</a></div>
+<div class="line">Use <code class="docutils literal notranslate"><span class="pre">client.read()</span></code> to read the next byte received from the server the
+client is connected to.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiClientRead">https://www.arduino.cc/en/Reference/WiFiClientRead</a></div>
+<div class="line">Use <code class="docutils literal notranslate"><span class="pre">client.stop()</span></code> to disconnect from the server the client is
+connected to.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFIClientStop">https://www.arduino.cc/en/Reference/WiFIClientStop</a></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="WiFi%20-%20Set%20up%20Server%20to%20communicate.html" class="btn btn-neutral float-left" title="WiFi - Set up Server to communicate" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="WiFi%20-%20Set%20up%20UDP%20Server%20to%20Communicate.html" class="btn btn-neutral float-right" title="WiFi - Set up UDP Server to Communicate" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

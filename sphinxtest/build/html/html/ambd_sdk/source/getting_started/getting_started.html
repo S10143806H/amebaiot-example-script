@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting Started &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Release History" href="../release_history/Release%20History.html" />
+    <link rel="prev" title="Standard SDK" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_arduino/arduino_index.html">Arduino SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Standard SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setup-of-the-gcc-development-environment">Setup of the GCC Development Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#knowledge-about-ameba-d-demo-board">Knowledge about Ameba-D Demo Board</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#connection-to-log-console">Connection to Log Console</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-the-first-gcc-project-on-ameba-d">Building the First GCC Project on Ameba-D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#downloading-images-to-ameba-d">Downloading Images to Ameba-D</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../release_history/Release%20History.html">Release History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../support/index.html">Support</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">Standard SDK</a> &raquo;</li>
+      <li>Getting Started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_sdk/source/getting_started/getting_started.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h1>
+<section id="setup-of-the-gcc-development-environment">
+<h2>Setup of the GCC Development Environment<a class="headerlink" href="#setup-of-the-gcc-development-environment" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line">On Windows, you can use <code class="docutils literal notranslate"><span class="pre">Cygwin</span></code> as the GCC development environment. <code class="docutils literal notranslate"><span class="pre">Cygwin</span></code> is a large collection of GNU and open source tools which provide functionality similar to a Linux distribution on Windows.</div>
+<div class="line">Click <a class="reference external" href="http://cygwin.com/">http://cygwin.com/ </a>and download the <code class="docutils literal notranslate"><span class="pre">Cygwin</span></code> package <a class="reference external" href="http://www.cygwin.com/setup-x86.exe">setup-x86.exe </a>for your Windows platform.</div>
+</div>
+<div class="line-block">
+<div class="line">1. 32-bit <code class="docutils literal notranslate"><span class="pre">Cygwin</span></code> is supported both for 32-bit Windows and 64-bit Windows.</div>
+<div class="line">2. During the installation of <code class="docutils literal notranslate"><span class="pre">Cygwin</span></code> package, include ‘Devel -&gt; make’ and ‘Math -&gt; bc’ utilities on the Select Packages page, as below shows.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image1100.png"><img alt="image0" src="../../../_images/image1100.png" style="width: 624.0px; height: 726.0px;" /></a></p>
+<p><a class="reference internal" href="../../../_images/image287.png"><img alt="image1" src="../../../_images/image287.png" style="width: 673.0px; height: 690.0px;" /></a></p>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For Linux, refer to <a class="reference external" href="https://www.amebaiot.com/zh/sdk-download-manual-8722dm/">AN0400 Ameba-D Application Note v12.pdf</a> to build the GCC development environment.</p>
+</div>
+</section>
+<section id="knowledge-about-ameba-d-demo-board">
+<h2>Knowledge about Ameba-D Demo Board<a class="headerlink" href="#knowledge-about-ameba-d-demo-board" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line">For Ameba-D, there are many types of chipsets available, such as RTL8720CS, RTL8721CSM, RTL8722CSM, RTL8720DN, RTL8720DM, RTL8721DM, and RTL8722DM.</div>
+<div class="line">In addition, the chipsets can be embedded on Ameba-D DEV demo board, which is extended to various I/O interfaces. The corresponding HDK (Hardware Development Kit) documents are available, please contact RTK for further details.</div>
+</div>
+<p>The hardware block diagram of Ameba-D demo board is shown below.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>USB TO UART: power supply and log print.</p></li>
+<li><p>The baudrate is 115200bps</p></li>
+<li><p>SWD: SWD interface, used to download images and debug with IAR.</p></li>
+<li><p>Reset button: reset Ameba-D to run firmware after IAR completes download.</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/image360.png"><img alt="image2" src="../../../_images/image360.png" style="width: 429.0px; height: 316.5px;" /></a></p>
+</div></blockquote>
+</section>
+<section id="connection-to-log-console">
+<h2>Connection to Log Console<a class="headerlink" href="#connection-to-log-console" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line">On Ameba-D board, FTDI Chip and FT232 can be used for the log console and debugger. To view the log console, make use of the terminal tool, such as <code class="docutils literal notranslate"><span class="pre">SecureCRT</span></code>/<code class="docutils literal notranslate"><span class="pre">teraterm</span></code>/<code class="docutils literal notranslate"><span class="pre">putty</span></code> and etc. We will take our internal tool as an example.</div>
+</div>
+<ol class="arabic">
+<li><p>Select the corresponding serial uart configure communicate parameter and then open it.</p></li>
+<li><p>Press the Reset button on Ameba-D board. Some messages can be found in the terminal.</p>
+<p><a class="reference internal" href="../../../_images/image449.png"><img alt="image3" src="../../../_images/image449.png" style="width: 508.5px; height: 350.0px;" /></a></p>
+</li>
+</ol>
+</section>
+<section id="building-the-first-gcc-project-on-ameba-d">
+<h2>Building the First GCC Project on Ameba-D<a class="headerlink" href="#building-the-first-gcc-project-on-ameba-d" title="Permalink to this heading"></a></h2>
+<p>The following steps are for first-time developer to build GCC project, under existing RTK SDK.</p>
+<div class="line-block">
+<div class="line"><strong>Building Code</strong> This section illustrates how to build SDK.</div>
+<div class="line">First, you need to switch to GCC project directory. For Windows, open <code class="docutils literal notranslate"><span class="pre">Cygwin</span></code> terminal and use <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cd</span></code> command to change directory to KM0 or KM4 project directory of Ameba-D SDK.</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You need to replace the <code class="docutils literal notranslate"><span class="pre">{path}</span></code> to your own SDK location, and add <code class="docutils literal notranslate"><span class="pre">“cygdrive”</span></code> prefix in front of the SDK location, so that Cygwin can access your file system.</p>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">/cygdrive/{path}/project/realtek_amebaD_va0_example/GCC-RELEASE/project_lp</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">/cygdrive/{path}/project/realtek_amebaD_va0_example/GCC-RELEASE/project_hp</span></code></p></li>
+</ul>
+<p>Linux, open its own terminal and use $ cd command to change directory to KM0 or KM4 project directory of Ameba-D SDK.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">/{path}/project/realtek_amebaD_va0_example/GCC-RELEASE/project_lp</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">/{path}/project/realtek_amebaD_va0_example/GCC-RELEASE/project_hp</span></code></p></li>
+</ul>
+<p>To build SDK for normal image, simply use <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">make</span> <span class="pre">all</span></code> command under the corresponding project directories on Cygwin (Windows) or terminal (Linux).
+KM0 project For KM0 project, if the terminal contains <code class="docutils literal notranslate"><span class="pre">“km0_image2_all.bin”</span></code> and <code class="docutils literal notranslate"><span class="pre">“Image</span> <span class="pre">manipulating</span> <span class="pre">end”</span></code> output message, it means that the image has been built successfully, as below shows.</p>
+<p><a class="reference internal" href="../../../_images/image535.png"><img alt="image4" src="../../../_images/image535.png" style="width: 365.5px; height: 210.5px;" /></a></p>
+<div class="line-block">
+<div class="line">If somehow it is built failed, type <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">make</span> <span class="pre">clean</span></code> to clean and then redo the make procedure.</div>
+<div class="line">After successfully built, the image file is located in <code class="docutils literal notranslate"><span class="pre">project/realtek_amebaD_va0_example/GCC-RELEASE/project_lp/asdk/image</span></code> , as below shows.</div>
+</div>
+<p><a class="reference internal" href="../../../_images/image623.png"><img alt="image5" src="../../../_images/image623.png" style="width: 400.5px; height: 187.5px;" /></a></p>
+<p>KM4 project For KM4 project, if the terminal contains <code class="docutils literal notranslate"><span class="pre">“km0_image2_all.bin”</span></code> and <code class="docutils literal notranslate"><span class="pre">“Image</span> <span class="pre">manipulating</span> <span class="pre">end”</span></code> output message, it means that the image has been built successfully, as below shows.</p>
+<p><a class="reference internal" href="../../../_images/image719.png"><img alt="image6" src="../../../_images/image719.png" style="width: 666.5px; height: 356.0px;" /></a></p>
+<div class="line-block">
+<div class="line">If somehow it built failed, type <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">make</span> <span class="pre">clean</span></code> to clean and then redo the make procedure.</div>
+<div class="line">After built successfully, the image file is located in <code class="docutils literal notranslate"><span class="pre">project/realtek_amebaD_va0_example/GCC-RELEASE/project_hp/asdk/image</span></code>, as below shows.</div>
+</div>
+<p><a class="reference internal" href="../../../_images/image812.png"><img alt="image7" src="../../../_images/image812.png" style="width: 402.5px; height: 200.5px;" /></a></p>
+</section>
+<section id="downloading-images-to-ameba-d">
+<h2>Downloading Images to Ameba-D<a class="headerlink" href="#downloading-images-to-ameba-d" title="Permalink to this heading"></a></h2>
+<p>Realtek provides an image tool to download images on windows.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Environment Requirements: EX. WinXP, Win 7 Above, Microsoft .NET Framework 3.5</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ImageTool.exe</span></code>  Location: <code class="docutils literal notranslate"><span class="pre">SDK\tools\AmebaD\Image_Tool\ImageTool.exe</span></code></p></li>
+</ul>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image912.png"><img alt="image8" src="../../../_images/image912.png" style="width: 576.0px; height: 300.0px;" /></a></p>
+</div></blockquote>
+</div></blockquote>
+<p>Assuming that the ImageTool on PC is a server, it sends images files to Ameba (client) through UART. To download image from server to client, the client must enter uart download first.</p>
+<ol class="arabic">
+<li><p><strong>Enter into UART_DOWNLOAD mode.</strong></p>
+<ul class="simple">
+<li><p>Push the UART DOWNLOAD button and keep it pressed.</p></li>
+<li><p>Re-power on the board or press the Reset button.</p></li>
+<li><p>Release the UART DOWNLOAD button.</p></li>
+</ul>
+<p>Now, Ameba board gets into UART_DOWNLOAD mode and is ready to receive data.</p>
+</li>
+<li><p><strong>Click Chip Select(in red) on UI and select chip (AmebaD or AmebaZ).</strong></p></li>
+<li><p><strong>Select the corresponding serial port and transmission baud rate. The default baudrate is 1.5Mbps (recommended).</strong></p></li>
+<li><p><strong>Click the Browse button to select the images (km0_boot_all.bin/km4_boot_all.bin/km0_km4_image2.bin) to be programmed and input addresses.</strong></p>
+<ul>
+<li><div class="line-block">
+<div class="line">The image path is located in:</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">{path}\project\realtek_amebaD_va0_example\GCC-RELEASE\project_lp\asdk\image</span></code></div>
+<div class="line">and</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">{path}\project\realtek_amebaD_va0_example\GCC-RELEASE\project_hp\asdk\image</span></code>,</div>
+<div class="line">where {path} is the location of the project on your own computer.</div>
+</div>
+</li>
+<li><p>The default target address is the SDK default image address, you can use it directly.</p></li>
+</ul>
+</li>
+<li><p><strong>Click Download button to start. The progress bar will show the transmit progress of each image. You can also get the message of operation successfully or errors from the log window.</strong></p>
+<p><a class="reference internal" href="../../../_images/image108.png"><img alt="image9" src="../../../_images/image108.png" style="width: 585.0px; height: 739.0px;" /></a></p>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Standard SDK" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../release_history/Release%20History.html" class="btn btn-neutral float-right" title="Release History" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MQTT - Set up MQTT Client over TLS &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_index.html">Arduino SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>MQTT - Set up MQTT Client over TLS</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_arduino/examples/network/MQTT - Set up MQTT Client over TLS.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mqtt-set-up-mqtt-client-over-tls">
+<h1>MQTT - Set up MQTT Client over TLS<a class="headerlink" href="#mqtt-set-up-mqtt-client-over-tls" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Preparation</strong>
+<span class="raw-html"></p></span></p>
+<ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22 / AMB23 / BW16] x 1</p></li>
+</ul>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<div class="line-block">
+<div class="line">In this example, we connect Ameba to a MQTT broker using TLS
+authentication. Then send messages as a publisher and receive messages
+from as a subscriber. Open the MQTT example <code class="docutils literal notranslate"><span class="pre">“File”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span>
+<span class="pre">“AmebaMQTTClient”</span> <span class="pre">-&gt;</span> <span class="pre">“MQTT_TLS”</span></code></div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image117.png"><img alt="1" src="../../../_images/image117.png" style="width: 467.59999999999997px; height: 719.5999999999999px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Please modify the WiFi-related parameters to connect to your WiFi network.</div>
+<div class="line">Modify the MQTT parameters to fit your application:</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image215.png"><img alt="2" src="../../../_images/image215.png" style="width: 580.5px; height: 761.4px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">The “mqttServer” refers to the MQTT-Broker, we use the free MQTT sandbox
+“test.mosquitto.org” for testing.</div>
+<div class="line">“clientId” is an identifier for MQTT-Broker to identify the connected device.</div>
+<div class="line">“publishTopic” is the topic of the published message, we use “outTopic” in the
+example. The devices subscribe to “outTopic” will receive the message.</div>
+<div class="line">“publishPayload” is the content to be published.</div>
+<div class="line">“subscribeTopic” is to tell MQTT-broker which topic we want to subscribe to.</div>
+</div>
+<div class="line-block">
+<div class="line">Next, compile the code and upload it to Ameba. Press the reset button, then
+open the serial monitor</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image311.png"><img alt="3" src="../../../_images/image311.png" style="width: 633.0px; height: 476.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">After Ameba is connected to MQTT server, it sends the message “hello world” to
+“outTopic”. To see the message, use another MQTT client. Refer to the
+MQTT_Basic example guide on how to setup a PC-based MQTT client.</div>
+</div>
+<div class="line-block">
+<div class="line">If you wish to use TLS client authentication in addition to server
+authentication, you will need to generate an OpenSSL private key and
+obtain a signed certificate from the server. For testing purposes,
+signed certificates can be obtained from test.mosquitto.org by following
+the guide at <a class="reference external" href="https://test.mosquitto.org/ssl/">https://test.mosquitto.org/ssl/</a>.</div>
+</div>
+<div class="line-block">
+<div class="line">Replace the character strings “certificateBuff” and “privateKeyBuff” with your
+signed certificate and OpenSSL private key, ensuring that they are formatted
+the same way as the shown in the example code. Also uncomment the highlighted
+code to enable client authentication, and to change the MQTT port number.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image49.png"><img alt="4" src="../../../_images/image49.png" style="width: 645.0px; height: 846.0px;" /></a></p>
+<p><a class="reference internal" href="../../../_images/image59.png"><img alt="5" src="../../../_images/image59.png" style="width: 632.8000000000001px; height: 676.8000000000001px;" /></a></p>
+</div></blockquote>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

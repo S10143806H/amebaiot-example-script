@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PWM - Servo Control &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="RTC - Simple RTC" href="RTC%20-%20Simple%20RTC.html" />
+    <link rel="prev" title="PWM - Play Music by Buzzer" href="PWM%20-%20Play%20Music%20by%20Buzzer.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB21/index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">BW16 (RTL8720DN)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Network%20Examples/index.html">Network Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">BW16 (RTL8720DN)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Peripheral Examples</a> &raquo;</li>
+      <li>PWM - Servo Control</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/BW16_/examples_and_components/Peripheral Examples/PWM - Servo Control.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pwm-servo-control">
+<h1>PWM - Servo Control<a class="headerlink" href="#pwm-servo-control" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Preparation</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22 / AMB23 / BW16] x 1</p></li>
+<li><p>Servo x 1 (Ex. Tower Pro SG90)</p></li>
+</ul>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<p>A typical servo has 3 wires, the red wire is for power, black or brown
+one should be connected to GND, and the other one is for signal data. We
+use PWM signal to control the rotation angle of the axis of the servo.
+The frequency of the signal is 50Hz, that is length 20ms. Each servo
+defines its pulse bandwidth, which is usually 1ms~2ms.</p>
+<p>To control the rotation angle, for example if 1ms-length pulse rotates
+the axis to degree 0, then 1.5 ms pulse rotates the axis to 90 degrees,
+and 2 ms pulse rotates the axis to 180 degrees. Furthermore, a servo
+defines the “dead bandwidth”, which stands for the required minimum
+difference of the length of two consecutive pulse for the servo to work.</p>
+<p><strong>AMB21 / AMB22</strong> Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image160.png"><img alt="1" src="../../../../_images/image160.png" style="width: 499.6px; height: 389.6px;" /></a></p>
+</div></blockquote>
+<p><strong>AMB23</strong> Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image256.png"><img alt="1" src="../../../../_images/image256.png" style="width: 400.0px; height: 316.5px;" /></a></p>
+</div></blockquote>
+<p><strong>BW16</strong> Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image2-15.png"><img alt="1" src="../../../../_images/image2-15.png" style="width: 485.4px; height: 358.8px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Open the example, <code class="docutils literal notranslate"><span class="pre">“File”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span> <span class="pre">“AmebaAnalog”</span> <span class="pre">-&gt;</span>
+<span class="pre">“ServoSweep”</span></code></div>
+<div class="line">This example makes the servo to rotate from degree 0 to 180, and then
+rotate back to degree 0.</div>
+</div>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Code Reference</strong>
+<span class="raw-html"></p></span></p>
+<p>The Servo API of Ameba is similar to the API of Arduino. To distinguish
+from the original API of Arduino, we name the header file “AmebaServo.h”
+and the Class “AmebaServo”, the usage is identical to the Arduino API.</p>
+<p>The default pulse bandwidth of Arduino Servo is 0.5ms~2.4ms, which is
+the same as Tower Pro SG90. Therefore, we set the attached pin directly:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">myservo</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Next, rotate the axis to desired position:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">myservo</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">pos</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="PWM%20-%20Play%20Music%20by%20Buzzer.html" class="btn btn-neutral float-left" title="PWM - Play Music by Buzzer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="RTC%20-%20Simple%20RTC.html" class="btn btn-neutral float-right" title="RTC - Simple RTC" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

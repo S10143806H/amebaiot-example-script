@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class BLEAdvertData &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Class BLEBeacon" href="Class%20BLEBeacon.html" />
+    <link rel="prev" title="Class BLEAdvert" href="Class%20BLEAdvert.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples_and_components/index.html">Examples &amp; Components</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">API Documents</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="index.html#analog">Analog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#audiocodec">AudioCodec</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#ble">BLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#epdif">EPDIF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#fatfssdcard">FatfsSDCard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#flashmemory">FlashMemory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gpio">GPIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gtimer">GTimer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#http">Http</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#irdevice">IRDevice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#mdns">MDNS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#mqttclient">MQTTClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ntpclient">NTPClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#powersave">PowerSave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#rtc">RTC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#softwareserial">SoftwareSerial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#spi">SPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#sys">Sys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#usb">USB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wdt">WDT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wifi">WiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wire">Wire</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ws2812b">WS2812B</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+          <li><a href="index.html">API Documents</a> &raquo;</li>
+      <li>Class BLEAdvertData</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_arduino/AMB21/api_documents/Class BLEAdvertData.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-bleadvertdata">
+<h1>Class BLEAdvertData<a class="headerlink" href="#class-bleadvertdata" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="BLEAdvertData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BLEAdvertData</span></span><a class="headerlink" href="#BLEAdvertData" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>A class used for managing BLE advertising data.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">BLEAdvertData</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Members</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 46%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Public Constructors</strong></p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BLEAdvertData::BLEAdvertData</p></td>
+<td><p>Constructs a BLEAdvertData object</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Public Methods</strong></p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BLEAdvertData::clear</p></td>
+<td><p>Clear all advertising data</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEAdvertData::addData</p></td>
+<td><p>Add binary advertising data</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEAdvertData::addFlags</p></td>
+<td><p>Add flags to advertising data</p></td>
+</tr>
+<tr class="row-odd"><td><p>B
+LEAdvertData::addPartialServices</p></td>
+<td><p>Add partial services to
+advertising data</p></td>
+</tr>
+<tr class="row-even"><td><p>BL
+EAdvertData::addCompleteServices</p></td>
+<td><p>Add complete services to
+advertising data</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEAdvertData::addAppearance</p></td>
+<td><p>Add device appearance to
+advertising data</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEAdvertData::addShortName</p></td>
+<td><p>Add short device name to
+advertising data</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEAdvertData::addCompleteName</p></td>
+<td><p>Add complete device name to
+advertising data</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEAdvertData::parseScanInfo</p></td>
+<td><p>Parse advertising data received
+from a scan</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEAdvertData::hasFlags</p></td>
+<td><p>Check if received data includes
+advertising flags</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEAdvertData::hasUUID</p></td>
+<td><p>Check if received data includes
+UUIDs</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEAdvertData::hasName</p></td>
+<td><p>Check if received data includes
+device name</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEAdvertData::hasManufacturer</p></td>
+<td><p>Check if received data includes
+manufacturer data</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEAdvertData::getAdvType</p></td>
+<td><p>Get advertising type of received
+data</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEAdvertData::getAddrType</p></td>
+<td><p>Get Bluetooth address type of
+received data</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEAdvertData::getAddr</p></td>
+<td><p>Get Bluetooth address of
+received data</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEAdvertData::getRSSI</p></td>
+<td><p>Get RSSI of received data</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEAdvertData::getFlags</p></td>
+<td><p>Get advertising flags of
+received data</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEAdvertData::getServiceCount</p></td>
+<td><p>Get number of advertised
+services in received data</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEAdvertData::getServiceList</p></td>
+<td><p>Get array of advertised services
+in received data</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEAdvertData::getName</p></td>
+<td><p>Get advertised device name in
+received data</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEAdvertData::getTxPower</p></td>
+<td><p>Get advertised transmission
+power in received data</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEAdvertData::getAppearance</p></td>
+<td><p>Get advertised device appearance
+in received data</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEAdvertData::getManufacturer</p></td>
+<td><p>Get advertised manufacturer in
+received data</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEAdver
+tData::getManufacturerDataLength</p></td>
+<td><p>Get length of manufacturer data
+in received data</p></td>
+</tr>
+<tr class="row-odd"><td><p>BL
+EAdvertData::getManufacturerData</p></td>
+<td><p>Get advertised manufacturer data
+in received data</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::BLEAdvertData</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Constructs a BLEAdvertData object.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">BLEAdvertData</span><span class="o">::</span><span class="n">BLEAdvertData</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>This class is used for managing BLE advertising data for two primary
+uses. First is to assemble advertising data for broadcasting as
+advertising packets. Second is to process and split up the advertising
+data received from a scan into separate types.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::clear</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Clear all advertising data currently saved in class object.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">clear</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::addData</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Add binary advertising data.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">addData</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">size</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">data</span></code> : pointer to array containing desired advertising data.</p>
+<p><code class="docutils literal notranslate"><span class="pre">size</span></code> : number of bytes in array.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>This function is provided for flexibility in adding BLE advertising
+data. Other functions should be used for adding advertising data if
+possible, as this function does not perform any checks on the validity
+of the data.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::addFlags</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Add flags to advertising data.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">addFlags</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">flags</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>flags: desired flags to add to advertising data. Valid values:
+– GAP_ADTYPE_FLAGS_LIMITED
+– GAP_ADTYPE_FLAGS_GENERAL
+– GAP_ADTYPE_FLAGS_BREDR_NOT_SUPPORTED
+– GAP_ADTYPE_FLAGS_SIMULTANEOUS_LE_BREDR_CONTROLLER
+– GAP_ADTYPE_FLAGS_SIMULTANEOUS_LE_BREDR_HOST</p>
+<p><strong>Returns</strong></p>
+<p>Current total size of advertising data.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: BLEBatteryService</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<p><strong>BLEAdvertData::addPartialServices</strong></p>
+<p><strong>Description</strong></p>
+<p>Add partial list of service UUIDs to advertising data.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">addPartialServices</span><span class="p">(</span><span class="n">BLEUUID</span><span class="w"> </span><span class="n">uuid</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">uuid</span></code> : the desired UUID contained in BLEUUID class object.</p>
+<p><strong>Returns</strong></p>
+<p>Current total size of advertising data.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::addCompleteServices</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Add complete list of service UUIDs to advertising data.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">addCompleteServices</span><span class="p">(</span><span class="n">BLEUUID</span><span class="w"> </span><span class="n">uuid</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">addCompleteServices</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">uuidBitLength</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">uuid</span></code> : the desired UUID contained in BLEUUID class object.</p>
+<p><code class="docutils literal notranslate"><span class="pre">uuidBitLength</span></code> : UUID bit length for which a blank entry is to be added.
+Valid values: 16, 32, 128.</p>
+<p><strong>Returns</strong></p>
+<p>Current total size of advertising data.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: BLEBatteryService</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>uuidBitLength is used when it is desired to add a blank entry to the
+advertisement data, used to indicate that no services with UUIDs of a
+certain length are available.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::addAppearance</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Add device appearance to advertising data.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">addAppearance</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">appearance</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">appearance</span></code> : the desired device appearance.</p>
+<p><strong>Returns</strong></p>
+<p>Current total size of advertising data.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Refer to Bluetooth specifications for a full list of device appearance
+values.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::addShortName</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Add shortened device name to advertising data.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">addShortName</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="n">str</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">str</span></code> : character string containing desired device name.</p>
+<p><strong>Returns</strong></p>
+<p>Current total size of advertising data.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::addCompleteName</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Add complete device name to advertising data.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">addCompleteName</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">str</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">str</span></code> : character string containing desired device name.</p>
+<p><strong>Returns</strong></p>
+<p>Current total size of advertising data.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: BLEBatteryService</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::parseScanInfo</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Parse advertising data received from a scan.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">parseScanInfo</span><span class="p">(</span><span class="n">T_LE_CB_DATA</span><span class="o">*</span><span class="n">p_data</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">p_data</span></code> : pointer to advertising data received from a Bluetooth scan.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: BLEBatteryClient</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Advertising data fields of parsed receive data can be access using
+member functions starting with “has” and “get”.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::hasFlags</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Check if received data includes advertising flags.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">hasFlags</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>True if flags are present in received advertising data.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::hasUUID</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Check if received data includes service UUIDs.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">hasUUID</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>True if service UUIDs are present in received advertising data.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::hasName</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Check if received data includes device name.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">hasName</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>True if device name is present in received advertising data.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: BLEBatteryClient</p>
+<p><strong>Notes and Warnings</strong>
+NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::hasManufacturer</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Check if received data includes manufacturer specific data.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">hasManufacturer</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>True if manufacturer specific data is present in received advertising
+data.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::getAdvType</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Get advertising type of received data.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">T_GAP_ADV_EVT_TYPE</span><span class="w"> </span><span class="nf">getAdvType</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>Advertising type of received advertising data.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Possible types:
+– GAP_ADV_EVT_TYPE_UNDIRECTED
+– GAP_ADV_EVT_TYPE_DIRECTED
+– GAP_ADV_EVT_TYPE_SCANNABLE
+– GAP_ADV_EVT_TYPE_NON_CONNECTABEL
+– GAP_ADV_EVT_TYPE_SCAN_RSP</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::getAddrType</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Get Bluetooth address type of received data.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">T_GAP_REMOTE_ADDR_TYPE</span><span class="w"> </span><span class="nf">getAddrType</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>Bluetooth address type of received data.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Possible types:</p>
+<p>– GAP_REMOTE_ADDR_LE_PUBLIC</p>
+<p>– GAP_REMOTE_ADDR_LE_RANDOM</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::getRSSI</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Get received signal strength indicator (RSSI) of received data.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Int8_t</span><span class="w"> </span><span class="nf">getRSSI</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>Received signal strength.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::getFlags</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Get advertising flags of received data.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">getFlags</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>Advertising flags present in received advertising data, expressed as a
+single byte.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::getServiceCount</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Get number of advertised services in received data.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">getServiceCount</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>Number of advertised service UUIDs in received data.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: BLEBatteryClient</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::getServiceList</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Get list of advertised service UUIDs in received data.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">BLEUUID</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">getServiceList</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>Pointer to a BLEUUID array containing all advertised service UUIDs.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: BLEBatteryClient</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::getName</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Get advertised device name in received data.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>Advertised device name contained in a String class object.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: BLEBatteryClient</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::getTxPower</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Get advertised transmission power in received data.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int8_t</span><span class="w"> </span><span class="nf">getTxPower</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>Advertised transmission power.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::getAppearance</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Get advertised device appearance in received data.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint16_t</span><span class="w"> </span><span class="nf">getAppearance</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>Advertised device appearance.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Refer to Bluetooth specifications for full list of device appearance
+values.</p>
+<hr class="docutils" />
+<p><strong>BLEAdvertData::getManufacturer</strong></p>
+<p><strong>Description</strong></p>
+<p>Get advertised manufacturer in received data.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint16_t</span><span class="w"> </span><span class="nf">getManufacturer</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>Advertised manufacturer.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Refer to Bluetooth specifications for full list of manufacturer codes.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::getManufacturerDataLength</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Get length of manufacturer data in received data.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">getManufacturerDataLength</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>Number of bytes of manufacturer data present in received advertising
+data.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEAdvertData::getManufacturerData</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Get manufacturer data in received data.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">getManufacturerData</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>Pointer to array containing manufacturer data.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Class%20BLEAdvert.html" class="btn btn-neutral float-left" title="Class BLEAdvert" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Class%20BLEBeacon.html" class="btn btn-neutral float-right" title="Class BLEBeacon" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

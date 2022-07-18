@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I2C - Display Data On LCD Screen &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="I2C - Receive Data from Arduino UNO" href="I2C%20-%20Receive%20Data%20from%20Arduino%20UNO.html" />
+    <link rel="prev" title="I2C - Send Data to Arduino UNO" href="I2C%20-%20Send%20Data%20to%20Arduino%20UNO.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB21/index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">BW16 (RTL8720DN)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Network%20Examples/index.html">Network Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">BW16 (RTL8720DN)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Peripheral Examples</a> &raquo;</li>
+      <li>I2C - Display Data On LCD Screen</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/BW16_/examples_and_components/Peripheral Examples/I2C - Display Data On LCD Screen.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="i2c-display-data-on-lcd-screen">
+<h1>I2C - Display Data On LCD Screen<a class="headerlink" href="#i2c-display-data-on-lcd-screen" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Preparation</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22 / AMB23 / BW16] x 1</p></li>
+<li><p>I2C 2×16 LCD</p></li>
+</ul>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<div class="line-block">
+<div class="line">Normally there are many pins on an LCD display, as shown in below
+figure.</div>
+<div class="line"><a class="reference internal" href="../../../../_images/image155.png"><img alt="1" src="../../../../_images/image155.png" style="width: 375.20000000000005px; height: 325.6px;" /></a></div>
+<div class="line">An LCD display can be equipped with an additional processing chip to
+process the data. The processing chip can connect to a microcontroller
+using the I2C interface.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>AMB21 / AMB22</strong> Wiring Diagram:</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image249.png"><img alt="2" src="../../../../_images/image249.png" style="width: 643.0500000000001px; height: 440.1px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><strong>AMB23</strong> Wiring Diagram:</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image2-14.png"><img alt="2" src="../../../../_images/image2-14.png" style="width: 573.6px; height: 299.2px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><strong>BW16</strong> Wiring Diagram:</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image2-31.png"><img alt="2" src="../../../../_images/image2-31.png" style="width: 694.8px; height: 372.59999999999997px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Open the example in <code class="docutils literal notranslate"><span class="pre">“File”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span> <span class="pre">“AmebaWire”</span> <span class="pre">-&gt;</span> <span class="pre">“LCD_HelloWorld”</span></code>.</div>
+<div class="line">Compile and upload to Ameba, then press the reset button.</div>
+<div class="line">Then you can see “Hello World” in the first line, and “Ameba” in the
+second line displayed on the LCD screen.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image31.jpeg"><img alt="3" src="../../../../_images/image31.jpeg" style="width: 428.7px; height: 293.4px;" /></a></p>
+</div></blockquote>
+<p>After 8 seconds, you can input to the Serial Monitor the string you
+would like to display on the LCD.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image41.jpeg"><img alt="4" src="../../../../_images/image41.jpeg" style="width: 429.3px; height: 258.59999999999997px;" /></a></p>
+</div></blockquote>
+<p>For example, we enter “123456789” and press “Send”:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image53.jpeg"><img alt="5" src="../../../../_images/image53.jpeg" style="width: 429.3px; height: 255.29999999999998px;" /></a></p>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Code Reference</strong>
+<span class="raw-html"></p></span></p>
+<p>The required settings of each model of LCD might be different, the
+constructor we use in this example is:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">LiquidCrystal_I2C</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">lcd_Addr</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">En</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">Rw</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">Rs</span><span class="p">,</span><span class="w"></span>
+<span class="w">                  </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">d4</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">d5</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">d6</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">d7</span><span class="p">,</span><span class="w"></span>
+<span class="w">                  </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">backlighPin</span><span class="p">,</span><span class="w"> </span><span class="n">t_backlighPol</span><span class="w"> </span><span class="n">pol</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>And the setting parameters are as follows:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">LiquidCrystal_I2C</span><span class="w"> </span><span class="nf">lcd</span><span class="p">(</span><span class="mh">0x27</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">POSITIVE</span><span class="p">);</span><span class="w"> </span><span class="c1">// Set the LCD I2C address</span>
+</pre></div>
+</div>
+<p>The first parameter 0x27 is the address of I2C. Each of the following 8
+parameters represents the meaning of each bit in a byte, i.e., En is bit
+2, Rw is bit 1, Rs is bit 0, d4 is bit 4, and so forth.</p>
+<div class="line-block">
+<div class="line">Call <code class="docutils literal notranslate"><span class="pre">backlight()</span></code> to light the screen,</div>
+<div class="line">Call <code class="docutils literal notranslate"><span class="pre">setCursor(0,</span> <span class="pre">0)</span></code> to set the position of the cursor.</div>
+<div class="line">LCD inherits the Print class, so we can use <code class="docutils literal notranslate"><span class="pre">lcd.print()</span></code> to output string on the screen.</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="I2C%20-%20Send%20Data%20to%20Arduino%20UNO.html" class="btn btn-neutral float-left" title="I2C - Send Data to Arduino UNO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="I2C%20-%20Receive%20Data%20from%20Arduino%20UNO.html" class="btn btn-neutral float-right" title="I2C - Receive Data from Arduino UNO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

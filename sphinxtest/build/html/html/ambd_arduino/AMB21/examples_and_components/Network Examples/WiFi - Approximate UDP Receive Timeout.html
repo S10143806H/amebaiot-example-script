@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WiFi - Approximate UDP Receive Timeout &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="WiFi - Connect to WiFi networks" href="WiFi%20-%20Connect%20to%20WiFi%20networks.html" />
+    <link rel="prev" title="WiFi - Approximate UDP Sending Delay" href="WiFi%20-%20Approximate%20UDP%20Sending%20Delay.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Network Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Peripheral%20Examples/index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Network Examples</a> &raquo;</li>
+      <li>WiFi - Approximate UDP Receive Timeout</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/AMB21/examples_and_components/Network Examples/WiFi - Approximate UDP Receive Timeout.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="wifi-approximate-udp-receive-timeout">
+<h1>WiFi - Approximate UDP Receive Timeout<a class="headerlink" href="#wifi-approximate-udp-receive-timeout" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Materials</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22 / AMB23 / BW16] x 1</p></li>
+<li><p>Windows computer connected to same network</p></li>
+</ul>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<p>This example uses Ameba to receive UDP packets from a computer and
+calculates the allowed UDP receive timeout setting.</p>
+<p><strong>Ameba Preparation</strong></p>
+<p>Open the “CalculateUdpReceiveTimeout” example in
+<code class="docutils literal notranslate"><span class="pre">“File”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span> <span class="pre">“WiFi”</span> <span class="pre">-&gt;</span> <span class="pre">”</span> <span class="pre">UDP_Calculation</span> <span class="pre">”</span> <span class="pre">-&gt;</span> <span class="pre">“CalculateUdpReceiveTimeout”</span></code>.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image126.png"><img alt="1" src="../../../../_images/image126.png" style="width: 806.4px; height: 673.4px;" /></a></p>
+</div></blockquote>
+<p>In the sample code, modify the highlighted section to enter the
+information required (ssid, password, key index) to connect to your WiFi
+network.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image225.png"><img alt="2" src="../../../../_images/image225.png" style="width: 721.0px; height: 864.0px;" /></a></p>
+</div></blockquote>
+<p>Upload the code and press the reset button on Ameba once the upload is
+finished.</p>
+<p>Open the serial monitor in Arduino IDE and take note of the IP address
+assigned to Ameba.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image318.png"><img alt="3" src="../../../../_images/image318.png" style="width: 704.0px; height: 355.0px;" /></a></p>
+</div></blockquote>
+<p><strong>Computer Preparation</strong></p>
+<p>On the computer, Cygwin will be required to compile the code to send the
+UDP packets. Cygwin can be downloaded from <a class="reference external" href="https://www.cygwin.com/">https://www.cygwin.com/</a></p>
+<p>Follow the instructions there to install it. Next, from the
+“CalculateUdpReceiveTimeout” Arduino example, copy the code from the
+bottom between “#if 0” and “#endif”, into a new text file, change the
+hostname to the IP address assigned to Ameba, and rename the file to
+“UdpReceiveTimeout.cpp”.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image415.png"><img alt="4" src="../../../../_images/image415.png" style="width: 695.0px; height: 661.0px;" /></a></p>
+</div></blockquote>
+<p>Next, open a Cygwin terminal, change the working directory to the
+location of “UdpReceiveTimeout.cpp”, and use the command “g++
+UdpReceiveTimeout.cpp -o UdpTimeout” to compile the code. A file named
+“UdpTimeout.exe” will be created in the same directory.</p>
+<p><strong>Running the Example</strong></p>
+<p>Reset the Ameba, wait for the WiFi to connect, and check that the IP
+address remains the same. On the computer, run the UdpTimeout.exe file,
+and the computer will begin to send packets continuously to Ameba.</p>
+<p>The timeout value is set to 1000ms initially. For each packet received
+successfully, Ameba decreases the timeout value. The next packet must be
+received within the timeout period, otherwise Ameba registers a failed
+packet and increases the timeout value. Open the serial monitor and
+observe the timeout value converge to a minimum value.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="WiFi%20-%20Approximate%20UDP%20Sending%20Delay.html" class="btn btn-neutral float-left" title="WiFi - Approximate UDP Sending Delay" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="WiFi%20-%20Connect%20to%20WiFi%20networks.html" class="btn btn-neutral float-right" title="WiFi - Connect to WiFi networks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

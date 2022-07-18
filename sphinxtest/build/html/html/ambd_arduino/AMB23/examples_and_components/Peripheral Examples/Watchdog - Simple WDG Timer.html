@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watchdog - Simple WDG Timer &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="WS2812B - Basics" href="WS2812B%20-%20Basics.html" />
+    <link rel="prev" title="USB - HID Mouse" href="USB%20-%20HID%20Mouse.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB21/index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">AMB23 (RTL8722DM MINI)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_mini_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Network%20Examples/index.html">Network Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">AMB23 (RTL8722DM MINI)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Peripheral Examples</a> &raquo;</li>
+      <li>Watchdog - Simple WDG Timer</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/AMB23/examples_and_components/Peripheral Examples/Watchdog - Simple WDG Timer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="watchdog-simple-wdg-timer">
+<h1>Watchdog - Simple WDG Timer<a class="headerlink" href="#watchdog-simple-wdg-timer" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Preparation</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22 / AMB23 / BW16] x 1</p></li>
+</ul>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<p>In this example, we will use this simple watchdog timer example runs on
+the Ameba RTL8722 module to illustrate how to use the watchdog API.
+Before we get into the details of the example, let’s briefly go through
+the definition of Watchdog as well as it’s working principles.</p>
+<p><strong>Watchdog</strong></p>
+<p>Watchdog Timer (WDT) is a hardware timer that is used to detect the
+occurrence of a software fault, then automatically generates a system
+reset or a watchdog interrupt on the expiry of a programmed period.</p>
+<p>In layman terms, imagine in the situation while your micro-controller is
+confused in an infinity loop, or any case like the micro-controller hang
+while performing some tasks. The normal troubleshooting method would be
+to press the reset button and jump out of the infinity loop. However, is
+it practically impossible to do press on the button all time, therefore,
+the watchdog timer that embedded inside the micro-controller would help
+with this situation.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image188.png"><img alt="1" src="../../../../_images/image188.png" style="width: 544.1999999999999px; height: 331.2px;" /></a></p>
+</div></blockquote>
+<p><strong>Feed the Dog</strong></p>
+<div class="line-block">
+<div class="line">If you have a dog in your home. You need to feed that dog at a regular
+interval. if you can’t feed one day, it will bite you! And likewise,
+this is the working logic behind the watchdog timer.</div>
+</div>
+<div class="line-block">
+<div class="line">In our example, we created 2 tasks that contain some loop that runs repeatedly,
+one is called “Small_Task” and the other is called “Big_Task”.
+We are enabling the watchdog timer is loaded with an initial value (5 seconds)
+greater than the total delay in the “Small_Task”, but shorter than the “Big_Task”.</div>
+<div class="line">For the successful case, the watchdog is being refreshed/feed within 5 seconds,
+however, for the failed case, the loop is under processing and the watchdog is
+not being fresh after 5 seconds, which triggers the watchdog (dog barks),
+an interrupt is generated to reset the processor. Likewise, the watchdog timer
+protects the micro-controller from the hanging case.</div>
+</div>
+<div class="line-block">
+<div class="line">Then we move to the coding part for this example, for this example,
+you will only need the RTL8722CSM/RTL8722DM/RTL8722DM MINI Board itself.</div>
+</div>
+<div class="line-block">
+<div class="line">Firstly, make sure the correct Ameba development board is selected in
+Arduino IDE: <code class="docutils literal notranslate"><span class="pre">“Tools”</span> <span class="pre">-&gt;</span> <span class="pre">“Board”</span> <span class="pre">-&gt;</span> <span class="pre">“RTL8722CSM/RTL8722DM”</span> <span class="pre">(or</span> <span class="pre">“RTL8722DM</span> <span class="pre">MINI”)</span></code>.
+Then open the “Watchdog Timer” example in <code class="docutils literal notranslate"><span class="pre">“File”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span> <span class="pre">“AmebaWatchdog”</span> <span class="pre">-&gt;</span>
+<span class="pre">“Watchdog</span> <span class="pre">Timer”</span></code>:</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image278.png"><img alt="2" src="../../../../_images/image278.png" style="width: 357.0px; height: 444.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Upon successfully upload the sample code, open the serial monitor,
+and press the reset button. You will find that the “Small_Task” can refresh the
+watchdog within the 5 seconds (initialized in the watchdog timer).
+However, the “Big_Task” will not be able to refresh the watchdog within 5 seconds,
+which the watchdog “barks” then the microcontroller reset.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image353.png"><img alt="3" src="../../../../_images/image353.png" style="width: 383.0px; height: 628.0px;" /></a></p>
+<p><a class="reference internal" href="../../../../_images/image442.png"><img alt="4" src="../../../../_images/image442.png" style="width: 379.0px; height: 419.0px;" /></a></p>
+</div></blockquote>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="USB%20-%20HID%20Mouse.html" class="btn btn-neutral float-left" title="USB - HID Mouse" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="WS2812B%20-%20Basics.html" class="btn btn-neutral float-right" title="WS2812B - Basics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

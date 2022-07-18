@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Examples &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Network Examples" href="Network%20Examples/index.html" />
+    <link rel="prev" title="Examples &amp; Components" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Basic Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Network%20Examples/index.html">Network Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Peripheral%20Examples/index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+          <li><a href="index.html">Examples &amp; Components</a> &raquo;</li>
+      <li>Basic Examples</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_arduino/AMB21/examples_and_components/Basic Examples.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="basic-examples">
+<h1>Basic Examples<a class="headerlink" href="#basic-examples" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><h1 style="color:#000000; font-size:20px"></span>
+AMB21/AMB22 Supported ARDUINO built-in example table
+<span class="raw-html"></h1></span></p>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:18px"></span>
+There are many built-in examples in Arduino. In the table below, we list
+all examples that are compatible with Ameba.
+<span class="raw-html"></p></span></p>
+<div class="line-block">
+<div class="line">Please refer to the following link to set up Ameba for Arduino IDE:</div>
+<div class="line"><a class="reference external" href="https://www.amebaiot.com/en/amebad-arduino-getting-started/">https://www.amebaiot.com/en/amebad-arduino-getting-started/</a></div>
+</div>
+<div class="line-block">
+<div class="line">Please refer to the following link for Arduino built-in example details:</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Tutorial/BuiltInExamples/">https://www.arduino.cc/en/Tutorial/BuiltInExamples/</a></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 30%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Category</strong></p></th>
+<th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Comment</strong></p></th>
+<th class="head"><p><strong>Remarks</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>01.
+Basics</p></td>
+<td><p>AnalogReadSerial</p></td>
+<td><p>Connect potentiometer
+to 3.3V.</p></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6. ADC
+pin reading
+voltage range 0 to
+3.3V.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>BareMinimum</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Blink</p></td>
+<td><p>Pin LED_BUILTIN sets
+to pin D8.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>DigitalReadSerial</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Fade</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ReadAnalogVoltage</p></td>
+<td></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6. ADC
+pin reading
+voltage range 0 to
+3.3V.</p></td>
+</tr>
+<tr class="row-even"><td><p>02.
+Digital</p></td>
+<td><p>BlinkWithoutDelay</p></td>
+<td><p>Pin LED_BUILTIN sets
+to pin D8.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Button</p></td>
+<td><p>Connect LED to pin
+D13.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Debounce</p></td>
+<td><p>Connect LED to pin
+D13.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Digital
+InputPullup</p></td>
+<td><p>Connect LED to pin
+D13.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>StateChange
+Detection</p></td>
+<td><p>Connect LED to pin
+D13.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>toneKeyboard</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>toneMelody</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>toneMultiple</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>tonePitch
+Follower</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>03.
+Analog</p></td>
+<td><p>Analog
+InOutSerial</p></td>
+<td></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6. ADC
+pin reading
+voltage range 0 to
+3.3V.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>AnalogInput</p></td>
+<td><p>Connect LED to pin
+D13.</p></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6. ADC
+pin reading
+voltage range 0 to
+3.3V.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Analog
+Write Mega</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Calibration</p></td>
+<td><p>Connect another LED to
+pin D13.</p></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6. ADC
+pin reading
+voltage range 0 to
+3.3V.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Fading</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Smoothing</p></td>
+<td></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6. ADC
+pin reading
+voltage range 0 to
+3.3V.</p></td>
+</tr>
+<tr class="row-odd"><td><p>04.
+Communication</p></td>
+<td><p>ASCIITable</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Dimmer</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Graph</p></td>
+<td><p>Connect potentiometer
+to 3.3V.</p></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6. ADC
+pin reading
+voltage range 0 to
+3.3V.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Midi</p></td>
+<td><p>Use Serial1 and pin
+D26, or use Serial2
+and pin D17.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>MultiSerial</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>PhysicalPixel</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Read
+ASCIIString</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>SerialCallResponse</p></td>
+<td></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6. ADC
+pin reading
+voltage range 0 to
+3.3V.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>SerialCallResponse
+ASCII</p></td>
+<td></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6. ADC
+pin reading
+voltage range 0 to
+3.3V.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>SerialEvent</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Serial
+Passthrough</p></td>
+<td></td>
+<td><p>Serial options,
+Serial1 or
+Serial2.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Virtual
+ColorMixer</p></td>
+<td></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6. ADC
+pin reading
+voltage range 0 to
+3.3V.</p></td>
+</tr>
+<tr class="row-odd"><td><p>05.
+Control</p></td>
+<td><p>Arrays</p></td>
+<td><p>Use pins D1, D2, D3,
+D4, D5, D6.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ForLoop
+Iteration</p></td>
+<td><p>Use pins D1, D2, D3,
+D4, D5, D6.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>IfStatement
+Conditional</p></td>
+<td></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6. ADC
+pin reading
+voltage range 0 to
+3.3V.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>switchCase</p></td>
+<td></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6. ADC
+pin reading
+voltage range 0 to
+3.3V.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>switchCase2</p></td>
+<td><p>Use pins D1, D2, D3,
+D4, D5, D6.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>While
+Statement
+Conditional</p></td>
+<td><p>Connect another LED to
+pin D13.</p></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6. ADC
+pin reading
+voltage range 0 to
+3.3V.</p></td>
+</tr>
+<tr class="row-odd"><td><p>06.
+Display</p></td>
+<td><p>barGraph</p></td>
+<td><p>Use another pin to
+replace pin D7.</p></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6. ADC
+pin reading
+voltage range 0 to
+3.3V.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>RowColumn
+Scanning</p></td>
+<td></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6. ADC
+pin reading
+voltage range 0 to
+3.3V.</p></td>
+</tr>
+<tr class="row-odd"><td><p>07.
+Strings</p></td>
+<td><p>Character
+Analysis</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>StringAddition
+Operator</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>StringAppend
+Operator</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>String
+CaseChanges</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>String
+Characters</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>StringComparision
+Operators</p></td>
+<td></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6. ADC
+pin reading
+voltage range 0 to
+3.3V.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>StringIndexOf</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>StringLength</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>StringLengthTrim</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>StringReplace</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>StringStartsWith
+EndsWith</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>StringSubstring</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>StringToInt</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Examples &amp; Components" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Network%20Examples/index.html" class="btn btn-neutral float-right" title="Network Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

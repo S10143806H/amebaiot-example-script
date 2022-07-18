@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class MDNSService &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Class PMUClass" href="Class%20PubSubClient.html" />
+    <link rel="prev" title="Class MDNS" href="Class%20MDNSClass.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples_and_components/index.html">Examples &amp; Components</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">API Documents</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="index.html#analog">Analog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#audiocodec">AudioCodec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ble">BLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#epdif">EPDIF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#fatfssdcard">FatfsSDCard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#flashmemory">FlashMemory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gpio">GPIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gtimer">GTimer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#http">Http</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#irdevice">IRDevice</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#mdns">MDNS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#mqttclient">MQTTClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ntpclient">NTPClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#powersave">PowerSave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#rtc">RTC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#softwareserial">SoftwareSerial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#spi">SPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#sys">Sys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#usb">USB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wdt">WDT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wifi">WiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wire">Wire</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ws2812b">WS2812B</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+          <li><a href="index.html">API Documents</a> &raquo;</li>
+      <li>Class MDNSService</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_arduino/AMB21/api_documents/Class MDNSService.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-mdnsservice">
+<h1>Class MDNSService<a class="headerlink" href="#class-mdnsservice" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="MDNSService">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MDNSService</span></span><a class="headerlink" href="#MDNSService" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>A class used for creating MDNS service records.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MDNSService</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Members</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Public Constructors</strong></p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>MDNSService::MDNSService</p></td>
+<td><p>Create a MDNS service record</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 55%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Public Methods</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>MDNSService::addTxtRecord</p></td>
+<td><p>Add text to MDNS service record</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MDNSService::MDNSService</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Create a MDNS service record.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MDNSService</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">service_type</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">domain</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">port</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">bufsize</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">name</span></code>: device name</p>
+<p><code class="docutils literal notranslate"><span class="pre">service_type</span></code>: MDNS service type</p>
+<p><code class="docutils literal notranslate"><span class="pre">domain</span></code>: host domain</p>
+<p><code class="docutils literal notranslate"><span class="pre">port</span></code>: network port</p>
+<p><code class="docutils literal notranslate"><span class="pre">bufsize</span></code> : size of buffer for MDNS text record</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: mDNS_On_Arduino_IDE</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Include “AmebaMDNS.h” to use the class function.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MDNSService::addTxtRecord*</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Add text to MDNS service record.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">addTextRecord</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value_len</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">value</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">key</span></code> : record type expressed as character string</p>
+<p><code class="docutils literal notranslate"><span class="pre">value_len</span></code> : length of value string</p>
+<p><code class="docutils literal notranslate"><span class="pre">value</span></code> : record value expressed as character string</p>
+<p><strong>Returns</strong></p>
+<p>0 if add record successful</p>
+<p><strong>Example Code</strong></p>
+<p>Example: mDNS_On_Arduino_IDE</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Include “AmebaMDNS.h” to use the class function.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Class%20MDNSClass.html" class="btn btn-neutral float-left" title="Class MDNS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Class%20PubSubClient.html" class="btn btn-neutral float-right" title="Class PMUClass" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

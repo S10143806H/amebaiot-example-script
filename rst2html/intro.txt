@@ -1,0 +1,4 @@
+ In this example, the data obtained from a DHT temperature and humidity
+sensor are transmitted over a BLE UART service to a smartphone. Refer to
+the other examples for detailed explanations of using the DHT sensor and
+the BLE UART service.

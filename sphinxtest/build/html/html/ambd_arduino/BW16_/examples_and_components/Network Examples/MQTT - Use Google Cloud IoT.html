@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MQTT - Use Google Cloud IoT &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="MQTT - Upload PM2.5 Data to LASS System" href="MQTT%20-%20Upload%20PM2.5%20Data%20to%20LASS%20System.html" />
+    <link rel="prev" title="MQTT - Use Amazon AWS IoT Shadow Service" href="MQTT%20-%20Use%20Amazon%20AWS%20IoT%20Shadow%20Service.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB21/index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">BW16 (RTL8720DN)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Network Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Peripheral%20Examples/index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">BW16 (RTL8720DN)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Network Examples</a> &raquo;</li>
+      <li>MQTT - Use Google Cloud IoT</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/BW16_/examples_and_components/Network Examples/MQTT - Use Google Cloud IoT.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mqtt-use-google-cloud-iot">
+<h1>MQTT - Use Google Cloud IoT<a class="headerlink" href="#mqtt-use-google-cloud-iot" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Preparation</strong>
+<span class="raw-html"></p></span></p>
+<ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22 / AMB23 / BW16] x 1</p></li>
+</ul>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Google Cloud IoT Configuration</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><p>1. Select or create a Cloud Platform project In the Google Cloud
+Console, select an existing project or create a new project. You will
+need a <strong>Project ID</strong> to use with Ameba.</p>
+<p><a class="reference internal" href="../../../../_images/image122.png"><img alt="1" src="../../../../_images/image122.png" style="width: 676.0px; height: 562.5px;" /></a></p>
+<p>If creating a new
+project, enter a project name, and take note of the <strong>Project ID</strong> generated.</p>
+<p><a class="reference internal" href="../../../../_images/image220.png"><img alt="image1" src="../../../../_images/image220.png" style="width: 590.5px; height: 270.0px;" /></a></p>
+<p>2. Enable billing for your project Billing
+needs to be enabled for your project to use Google Cloud Platform
+features. Follow the guide in Google cloud documentation to enable
+billing. <a class="reference external" href="https://cloud.google.com/billing/docs/how-to/modify-project">https://cloud.google.com/billing/docs/how-to/modify-project</a>
+3. Enable the Cloud IoT Core API In Google Cloud console, click on the top
+left menu button and search for IoT Core.</p>
+<p><a class="reference internal" href="../../../../_images/image315.png"><img alt="image2" src="../../../../_images/image315.png" style="width: 676.0px; height: 562.5px;" /></a></p>
+<p>Click enable to
+activate Google Cloud IoT API for your project.</p>
+<p><a class="reference internal" href="../../../../_images/image413.png"><img alt="image3" src="../../../../_images/image413.png" style="width: 676.0px; height: 562.5px;" /></a></p>
+<p>4. Create a Cloud Pub/Sub topic In Google Cloud console, click on the top left menu
+button and search for Pub/Sub.</p>
+<p><a class="reference internal" href="../../../../_images/image513.png"><img alt="image4" src="../../../../_images/image513.png" style="width: 676.0px; height: 562.5px;" /></a></p>
+<p>Create a new topic for your
+project and give it a suitable topic ID.</p>
+<p><a class="reference internal" href="../../../../_images/image68.png"><img alt="image5" src="../../../../_images/image68.png" style="width: 676.0px; height: 562.5px;" /></a></p>
+<p><a class="reference internal" href="../../../../_images/image76.png"><img alt="image6" src="../../../../_images/image76.png" style="width: 676.0px; height: 562.5px;" /></a></p>
+<p>After the
+topic is created, go to the permissions tab of the info panel, and add
+“<a class="reference external" href="mailto:cloud-iot&#37;&#52;&#48;system&#46;gserviceaccount&#46;com">cloud-iot<span>&#64;</span>system<span>&#46;</span>gserviceaccount<span>&#46;</span>com</a>” with the role of “Pub/Sub
+Publisher”.</p>
+<p><a class="reference internal" href="../../../../_images/image84.png"><img alt="image7" src="../../../../_images/image84.png" style="width: 550.5px; height: 458.0px;" /></a></p>
+<p><a class="reference internal" href="../../../../_images/image92.png"><img alt="image8" src="../../../../_images/image92.png" style="width: 811.0px; height: 562.5px;" /></a></p>
+<p><a class="reference internal" href="../../../../_images/image102.png"><img alt="image9" src="../../../../_images/image102.png" style="width: 811.0px; height: 562.5px;" /></a></p>
+<p>5.Create a device registry Go back to the IoT Core settings page and create a new
+registry.</p>
+<p><a class="reference internal" href="../../../../_images/image315.png"><img alt="image10" src="../../../../_images/image315.png" style="width: 660.5px; height: 458.0px;" /></a></p>
+<p><a class="reference internal" href="../../../../_images/image1111.png"><img alt="image11" src="../../../../_images/image1111.png" style="width: 405.5px; height: 281.25px;" /></a></p>
+<p>Choose a suitable <strong>Registry ID</strong> and
+<strong>in which to store data. Remember
+the **Registry ID</strong> and <strong>Region</strong>for use with Ameba later. For the
+Pub/Sub topic, select the topic created in the previous
+step.</p>
+<p><a class="reference internal" href="../../../../_images/image123.png"><img alt="image12" src="../../../../_images/image123.png" style="width: 660.5px; height: 458.0px;" /></a></p>
+<p>6. Create a public/private key pair Using Openssl in a
+terminal in Windows/Linux/MacOs, run the following commands to generate
+a private and public key pair. Two files will be created by these
+commands, “ec_private.pem” containing the private key, and
+“ec_public.pem” containing the public key.</p>
+</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>openssl ecparam -genkey -name prime256v1 -noout -out ec_private.pem
+<span class="gp">$ </span>openssl ec -in ec_private.pem -pubout -out ec_public.pem
+</pre></div>
+</div>
+<p><a class="reference internal" href="../../../../_images/image133.png"><img alt="image13" src="../../../../_images/image133.png" style="width: 481.5px; height: 347.0px;" /></a></p>
+<blockquote>
+<div><p>Run the next command to extract out the private key, and
+remember the highlighted string of hexadecimal numbers for use with
+Ameba later.</p>
+</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>openssl ec -in ec_private.pem -noout -text
+</pre></div>
+</div>
+<p><a class="reference internal" href="../../../../_images/image142.png"><img alt="image14" src="../../../../_images/image142.png" style="width: 481.5px; height: 347.0px;" /></a></p>
+<blockquote>
+<div><p>7. Create a device Go back to the IoT Core settings page and
+create a new device.</p>
+<p><a class="reference internal" href="../../../../_images/image152.png"><img alt="image15" src="../../../../_images/image152.png" style="width: 811.0px; height: 562.5px;" /></a></p>
+<p>Give the device a suitable <strong>Device ID</strong> and remember it for use with
+Ameba later.</p>
+<p><a class="reference internal" href="../../../../_images/image162.png"><img alt="image16" src="../../../../_images/image162.png" style="width: 690.0px; height: 562.5px;" /></a></p>
+<p>In the
+authentication section of the additional options, upload the previously
+generated “ec_public.pem” public key.</p>
+<p><a class="reference internal" href="../../../../_images/image172.png"><img alt="image17" src="../../../../_images/image172.png" style="width: 690.0px; height: 562.5px;" /></a></p>
+<p>8. Create a Cloud
+Pub/Sub subscription To observe messages sent by Ameba, create a
+subscription in Pub/Sub.</p>
+<p><a class="reference internal" href="../../../../_images/image183.png"><img alt="image18" src="../../../../_images/image183.png" style="width: 690.0px; height: 562.5px;" /></a></p>
+<p>Choose a suitable subscription ID
+and select the previously created topic.</p>
+<p><a class="reference internal" href="../../../../_images/image192.png"><img alt="image19" src="../../../../_images/image192.png" style="width: 576.5px; height: 470.0px;" /></a></p>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<div class="line-block">
+<div class="line">Open the example in <code class="docutils literal notranslate"><span class="pre">“File”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span> <span class="pre">“AmebaMQTTClient”</span> <span class="pre">-&gt;</span>
+<span class="pre">“Google_Cloud_IoT”</span></code>.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image201.png"><img alt="image20" src="../../../../_images/image201.png" style="width: 368.5px; height: 601.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Enter the required information in the highlighted sections below.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image2110.png"><img alt="image21" src="../../../../_images/image2110.png" style="width: 368.5px; height: 531.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">In the yellow section, enter the
+SSID and password required to connect to your WiFi network. In the green
+section, enter the Project ID, server Region, Registry ID and Device ID
+previously configured in Google Cloud console. In the blue section,
+enter the hexadecimal string previously extracted from the private key.
+Upload the code and press the reset button on Ameba once the upload is
+finished. Open the serial monitor and observe as Ameba connects and
+sends messages to Google Cloud IoT.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image222.png"><img alt="image22" src="../../../../_images/image222.png" style="width: 366.0px; height: 313.5px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">In Google Cloud console, go to Pub/Sub subscriptions, select the previously
+created subscription, and click view messages. Here you can view the messages
+sent by Ameba.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image231.png"><img alt="image23" src="../../../../_images/image231.png" style="width: 793.0px; height: 562.5px;" /></a></p>
+<p><a class="reference internal" href="../../../../_images/image242.png"><img alt="image24" src="../../../../_images/image242.png" style="width: 793.0px; height: 562.5px;" /></a></p>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Code Reference</strong>
+<span class="raw-html"></p></span></p>
+<p>In <code class="docutils literal notranslate"><span class="pre">setup()</span></code>, we set up RootCA which is required to form a TLS connection
+with Google’s servers.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">wifiClient</span><span class="p">.</span><span class="n">setRootCA</span><span class="p">((</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">rootCABuff</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>In <code class="docutils literal notranslate"><span class="pre">loop()</span></code>, each loop checks the Internet status and re-connect to it
+when the environment has a problem.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="n">status</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">WL_CONNECTED</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="n">pass</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">WL_CONNECTED</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="p">}</span><span class="w"></span>
+<span class="w">   </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Connected to wifi&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>To publish messages, mqtt_id , clientPass and pub_topic are required.
+mqtt_id is generated by printing the project ID, server location,
+registry ID and device ID in the required format:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">mqtt_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="n">strlen</span><span class="p">(</span><span class="s">&quot;projects/&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">project_id</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="s">&quot;/locations/us-central1/registries/&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">registry_id</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="s">&quot;/devices/&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">device_id</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="n">sprintf</span><span class="p">(</span><span class="n">mqtt_id</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;projects/%s/locations/us-central1/registries/%s/devices/%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">project_id</span><span class="p">,</span><span class="w"> </span><span class="n">registry_id</span><span class="p">,</span><span class="w"> </span><span class="n">device_id</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">clientPass</span></code> is generated using a JSON web token (JWT) generator function,
+which requires the project ID and current time, and signs it with the
+private key:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">clientPass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateJwt</span><span class="p">(</span><span class="n">project_id</span><span class="p">,</span><span class="w"> </span><span class="n">timeClient</span><span class="p">.</span><span class="n">getEpochTime</span><span class="p">(),</span><span class="w"> </span><span class="n">priv_key</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">pub_topic</span></code> is generated by printing the project ID and topic in the
+required format:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">pub_topic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="n">strlen</span><span class="p">(</span><span class="s">&quot;/devices/&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">device_id</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="s">&quot;/events&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="n">sprintf</span><span class="p">(</span><span class="n">pub_topic</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;/devices/%s/events&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">device_id</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>MQTT Server setting:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">client</span><span class="p">.</span><span class="n">setServer</span><span class="p">(</span><span class="n">GOOGLE_MQTT_SERVER</span><span class="p">,</span><span class="w"> </span><span class="n">GOOGLE_MQTT_PORT</span><span class="p">);</span><span class="w"></span>
+<span class="n">client</span><span class="p">.</span><span class="n">setPublishQos</span><span class="p">(</span><span class="n">MQTTQOS1</span><span class="p">);</span><span class="w"></span>
+<span class="n">client</span><span class="p">.</span><span class="n">waitForAck</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Connect to google cloud and publish messages:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">client</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="n">mqtt_id</span><span class="p">,</span><span class="w"> </span><span class="n">clientUser</span><span class="p">,</span><span class="w"> </span><span class="n">clientPass</span><span class="p">.</span><span class="n">c_str</span><span class="p">())){</span><span class="w"></span>
+<span class="w">   </span><span class="c1">// ...</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// ...</span>
+<span class="w">      </span><span class="n">sprintf</span><span class="p">(</span><span class="n">payload</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;This is Ameba&#39;s %d message!!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">publish</span><span class="p">(</span><span class="n">pub_topic</span><span class="p">,</span><span class="w"> </span><span class="n">payload</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// ...</span>
+<span class="w">   </span><span class="p">}</span><span class="w"></span>
+<span class="w">   </span><span class="c1">// ...</span>
+<span class="w">   </span><span class="n">client</span><span class="p">.</span><span class="n">disconnect</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="n">free</span><span class="p">(</span><span class="n">mqtt_id</span><span class="p">);</span><span class="w"></span>
+<span class="n">free</span><span class="p">(</span><span class="n">pub_topic</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="MQTT%20-%20Use%20Amazon%20AWS%20IoT%20Shadow%20Service.html" class="btn btn-neutral float-left" title="MQTT - Use Amazon AWS IoT Shadow Service" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="MQTT%20-%20Upload%20PM2.5%20Data%20to%20LASS%20System.html" class="btn btn-neutral float-right" title="MQTT - Upload PM2.5 Data to LASS System" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

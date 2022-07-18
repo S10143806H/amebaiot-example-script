@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UART – Set Callback Function For UART Communications &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="UART - PM2.5 Concentration in The Air" href="UART%20-%20PM2.5%20Concentration%20in%20The%20Air.html" />
+    <link rel="prev" title="UART - Retrieve GPS Position" href="UART%20-%20Retrieve%20GPS%20Position.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Network%20Examples/index.html">Network Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Peripheral Examples</a> &raquo;</li>
+      <li>UART – Set Callback Function For UART Communications</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/AMB21/examples_and_components/Peripheral Examples/UART - Set Callback Function For UART Communications.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="uart-set-callback-function-for-uart-communications">
+<h1>UART – Set Callback Function For UART Communications<a class="headerlink" href="#uart-set-callback-function-for-uart-communications" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Materials</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22 / AMB23 / BW16] x 1</p></li>
+<li><p>USB to TTL Adapter x 1</p></li>
+</ul>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<div class="line-block">
+<div class="line">This example shows how to set a callback function for UART communication
+to process the UART data.</div>
+</div>
+<div class="line-block">
+<div class="line">A USB to TTL adapter is required for this example. Ensure that you have
+the driver installed and connect it to the Ameba board as shown.</div>
+</div>
+<p><strong>AMB21 / AMB22</strong> Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image178.png"><img alt="1" src="../../../../_images/image178.png" style="width: 536.8000000000001px; height: 452.0px;" /></a></p>
+</div></blockquote>
+<p><strong>AMB23</strong> Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image1-17.png"><img alt="1-1" src="../../../../_images/image1-17.png" style="width: 503.0px; height: 399.0px;" /></a></p>
+</div></blockquote>
+<p><strong>BW16</strong> Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image1-33.png"><img alt="1-3" src="../../../../_images/image1-33.png" style="width: 510.0px; height: 352.5px;" /></a></p>
+</div></blockquote>
+<p>Open the example in <code class="docutils literal notranslate"><span class="pre">“File”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span> <span class="pre">“AmebaSoftwareSerial”</span> <span class="pre">-&gt;</span>
+<span class="pre">“SoftwareSerial_Irq_Callback”</span></code></p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image272.png"><img alt="2" src="../../../../_images/image272.png" style="width: 504.7px; height: 704.1999999999999px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Upload the code and press the reset button on Ameba once the upload is
+finished.</div>
+<div class="line">Next, using a terminal program, such as TeraTerm or PuTTY, open a
+serial port and configure it according to the settings. Make sure the
+serial port number corresponds to the USB to TTL adapter.</div>
+</div>
+<blockquote>
+<div><blockquote>
+<div><ul class="simple">
+<li><p>Speed: 38400</p></li>
+<li><p>Data: 8 bit</p></li>
+<li><p>Parity: none</p></li>
+<li><p>Stop bits: 1 bit</p></li>
+<li><p>Flow control: none</p></li>
+</ul>
+</div></blockquote>
+<p><a class="reference internal" href="../../../../_images/image348.png"><img alt="3" src="../../../../_images/image348.png" style="width: 465.49999999999994px; height: 378.0px;" /></a></p>
+</div></blockquote>
+<p>Once the serial port is open, type in the terminal and press the enter
+key, and you will see the corresponding output.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image437.png"><img alt="4" src="../../../../_images/image437.png" style="width: 665.0px; height: 540.0px;" /></a></p>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Code Reference</strong>
+<span class="raw-html"></p></span></p>
+<p><code class="docutils literal notranslate"><span class="pre">mySerial.setAvailableCallback(mySerialCallback);</span></code> is used to set the
+function mySerialCallback as a callback function for software serial.
+When a new character is received, the callback function checks if the
+character corresponds to the enter key, and releases the semaphore if it
+is true, which in turn allows the main loop to print out all the
+previously received characters.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="UART%20-%20Retrieve%20GPS%20Position.html" class="btn btn-neutral float-left" title="UART - Retrieve GPS Position" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="UART%20-%20PM2.5%20Concentration%20in%20The%20Air.html" class="btn btn-neutral float-right" title="UART - PM2.5 Concentration in The Air" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

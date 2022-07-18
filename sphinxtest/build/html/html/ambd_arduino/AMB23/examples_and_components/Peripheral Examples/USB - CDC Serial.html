@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>USB - CDC Serial Port &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="USB - HID Gamepad" href="USB%20-%20HID%20Gamepad.html" />
+    <link rel="prev" title="UART - PM2.5 Concentration in The Air" href="UART%20-%20PM2.5%20Concentration%20in%20The%20Air.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB21/index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">AMB23 (RTL8722DM MINI)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_mini_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Network%20Examples/index.html">Network Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">AMB23 (RTL8722DM MINI)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Peripheral Examples</a> &raquo;</li>
+      <li>USB - CDC Serial Port</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/AMB23/examples_and_components/Peripheral Examples/USB - CDC Serial.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="usb-cdc-serial-port">
+<h1>USB - CDC Serial Port<a class="headerlink" href="#usb-cdc-serial-port" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Materials</strong>
+<span class="raw-html"></p></span></p>
+<ul class="simple">
+<li><p>AmebaD [ AMB21 / AMB22 / AMB23 ] x 1</p></li>
+<li><p>USB host device [ Windows / Linux / MacOS ]</p></li>
+<li><p>USB cable x 2</p></li>
+</ul>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<p>In this example, the RTL8722 board emulates a CDC ACM virtual COM-port
+connected using USB.</p>
+</section>
+<section id="usb-connection">
+<h2>USB connection<a class="headerlink" href="#usb-connection" title="Permalink to this heading"></a></h2>
+<p>Two USB ports will be used simultaneously, thus two USB cables are
+required for this example. In addition to the regular USB port used for
+uploading code, the second USB cable should be connected to the USB OTG
+port as shown below.</p>
+<p>For AMB23, connect the second USB cable to the USB port in the red box.</p>
+<p><a class="reference internal" href="../../../../_images/image179.png"><img alt="1" src="../../../../_images/image179.png" style="width: 328.5px; height: 529.8px;" /></a></p>
+<p>For AMB21 / AMB22, a modification needs to be made to enable the USB OTG
+port. The two zero-ohm resistors in the red box should be resoldered and
+moved into the green position. This will disable pins 16 and 17
+(GPIOA_25 and GPIOA_26) on the pin headers and enable the middle USB
+port.</p>
+<p><a class="reference internal" href="../../../../_images/image273.png"><img alt="2" src="../../../../_images/image273.png" style="width: 520.1999999999999px; height: 430.8px;" /></a></p>
+<p><a class="reference internal" href="../../../../_images/image349.png"><img alt="3" src="../../../../_images/image349.png" style="width: 477.4px; height: 369.59999999999997px;" /></a></p>
+<p>Alternatively, if you do not wish to risk damaging the board in the
+process of soldering, an external USB breakout board may be used.
+Connect the USB pins as shown.</p>
+<p><a class="reference internal" href="../../../../_images/image438.png"><img alt="4" src="../../../../_images/image438.png" style="width: 504.0px; height: 462.5px;" /></a></p>
+</section>
+<section id="procedure">
+<h2>Procedure<a class="headerlink" href="#procedure" title="Permalink to this heading"></a></h2>
+<p>Open the example, <code class="docutils literal notranslate"><span class="pre">&quot;Files&quot;</span> <span class="pre">-&gt;</span> <span class="pre">&quot;Examples&quot;</span> <span class="pre">-&gt;</span> <span class="pre">“AmebaUSB”</span> <span class="pre">-&gt;</span> <span class="pre">“USBCDCSerial”</span></code>.</p>
+<p><a class="reference internal" href="../../../../_images/image527.png"><img alt="5" src="../../../../_images/image527.png" style="width: 448.0px; height: 665.0px;" /></a></p>
+<p>Upload the code and press the reset button once the upload is finished.
+Open the Arduino serial monitor.</p>
+<p>Immediately after reset, a second COM port should become available. On
+your host device, open a terminal application (e.g., Teraterm) and
+connect to this new COM port.</p>
+<p>Any message sent on the Arduino serial monitor should appear on the
+terminal application. Similarly, any message sent on the terminal
+application should appear in Arduino serial monitor.</p>
+<p><a class="reference internal" href="../../../../_images/image615.png"><img alt="6" src="../../../../_images/image615.png" style="width: 671.0px; height: 357.0px;" /></a></p>
+<p><a class="reference internal" href="../../../../_images/image712.png"><img alt="7" src="../../../../_images/image712.png" style="width: 619.0px; height: 354.0px;" /></a></p>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Code Reference</strong>
+<span class="raw-html"></p></span></p>
+<p>The SerialUSB class can be used in the same way as the familiar Serial
+class, and supports all the same print features.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="UART%20-%20PM2.5%20Concentration%20in%20The%20Air.html" class="btn btn-neutral float-left" title="UART - PM2.5 Concentration in The Air" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="USB%20-%20HID%20Gamepad.html" class="btn btn-neutral float-right" title="USB - HID Gamepad" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

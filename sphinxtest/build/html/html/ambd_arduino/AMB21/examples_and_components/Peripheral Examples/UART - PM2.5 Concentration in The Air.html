@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UART - PM2.5 Concentration in The Air &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="USB - CDC Serial Port" href="USB%20-%20CDC%20Serial.html" />
+    <link rel="prev" title="UART – Set Callback Function For UART Communications" href="UART%20-%20Set%20Callback%20Function%20For%20UART%20Communications.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Network%20Examples/index.html">Network Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Peripheral Examples</a> &raquo;</li>
+      <li>UART - PM2.5 Concentration in The Air</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/AMB21/examples_and_components/Peripheral Examples/UART - PM2.5 Concentration in The Air.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="uart-pm2-5-concentration-in-the-air">
+<h1>UART - PM2.5 Concentration in The Air<a class="headerlink" href="#uart-pm2-5-concentration-in-the-air" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Preparation</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22 / AMB23 / BW16] x 1</p></li>
+<li><p>PlanTower PMS3003 or PMS5003 x 1</p></li>
+</ul>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<p>PMS3003 (or PMS5003) is a sensor of air quality, it can detect the
+concentration of those 0.3 to 10 micrometer particulate matters in the
+air. The sensor output its data via UART.</p>
+<p>The PMS3003 (or PMS5003) sensor detects the concentration value of PM 1.0, PM 2.5, PM 10.
+Take PM 2.5 for example, it stands for the fine particles with a diameter of 2.5
+micrometers or less.</p>
+<p>Open the example in <code class="docutils literal notranslate"><span class="pre">“File”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span> <span class="pre">“AmebaSoftwareSerial”</span> <span class="pre">-&gt;</span> <span class="pre">“PMS3003_AirQuality”</span></code></p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image176.png"><img alt="1" src="../../../../_images/image176.png" style="width: 466.2px; height: 603.6px;" /></a></p>
+</div></blockquote>
+<p>There are 8 pins in PMS3003:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image269.png"><img alt="2" src="../../../../_images/image269.png" style="width: 392.40000000000003px; height: 347.6px;" /></a></p>
+</div></blockquote>
+<p>PMS3003 requires 5V power, but the working voltage of its IC is 3.3C.
+Therefore, the working voltage of Reset, TX, RX, Set are 3.3 as well. If
+the “Set” pin is pulled to high, the PMS3003 is put to operating mode.
+If the “Set” pin is pulled low, the PMS3003 is put to standby mode.</p>
+<p>TX/RX pins are for UART connection. Under operating mode, PMS3003 output
+the data it reads continuously. Each data is of 32 byte, please refer to
+the following article for detailed data format
+information:</p>
+<p><a class="reference external" href="https://www.dfrobot.com/wiki/index.php?title=PM2.5_laser_dust_sensor_SKU:SEN0177">https://www.dfrobot.com/wiki/index.php?title=PM2.5_laser_dust_sensor_SKU:SEN0177</a></p>
+<p><strong>AMB21 / AMB22</strong> Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image346.png"><img alt="3" src="../../../../_images/image346.png" style="width: 649.5999999999999px; height: 336.7px;" /></a></p>
+</div></blockquote>
+<p><strong>AMB23</strong> Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image3-18.png"><img alt="3-1" src="../../../../_images/image3-18.png" style="width: 428.4px; height: 385.2px;" /></a></p>
+</div></blockquote>
+<p><strong>BW16</strong> Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image3-34.png"><img alt="3-3" src="../../../../_images/image3-34.png" style="width: 562.8px; height: 382.8px;" /></a></p>
+</div></blockquote>
+<p>In this example, we do not use the “Set” and “Reset” pins.</p>
+<p>Compile the code and upload it to Ameba. After pressing
+the Reset button, Ameba starts to output the PM 2.5 data to serial
+monitor.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image435.png"><img alt="4" src="../../../../_images/image435.png" style="width: 649.0px; height: 410.0px;" /></a></p>
+</div></blockquote>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="UART%20-%20Set%20Callback%20Function%20For%20UART%20Communications.html" class="btn btn-neutral float-left" title="UART – Set Callback Function For UART Communications" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="USB%20-%20CDC%20Serial.html" class="btn btn-neutral float-right" title="USB - CDC Serial Port" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GPIO - Use GPIO Interrupt To Control LED &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="GTimer - Using The Periodic GTimer" href="GTimer%20-%20Using%20The%20Periodic%20GTimer.html" />
+    <link rel="prev" title="GPIO - Measure Temperature and Humidity" href="GPIO%20-%20Measure%20Temperature%20and%20Humidity.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB21/index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">AMB23 (RTL8722DM MINI)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_mini_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Network%20Examples/index.html">Network Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">AMB23 (RTL8722DM MINI)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Peripheral Examples</a> &raquo;</li>
+      <li>GPIO - Use GPIO Interrupt To Control LED</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/AMB23/examples_and_components/Peripheral Examples/GPIO - Use GPIO Interrupt To Control LED.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gpio-use-gpio-interrupt-to-control-led">
+<h1>GPIO - Use GPIO Interrupt To Control LED<a class="headerlink" href="#gpio-use-gpio-interrupt-to-control-led" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Preparation</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22 / AMB23 / BW16] x 1</p></li>
+<li><p>LED x 1</p></li>
+<li><p>Button x 1</p></li>
+</ul>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<p>In this example, we use a button to trigger interrupt and control the
+LED. When we press and release the button, the LED dims, press and
+release the button again, and the LED lights.Note that in the Arduino
+example “Button and LED”, LED only lights when the button is pressed and
+hold, when we release the button, the LED dims.</p>
+<p>Open the example, <code class="docutils literal notranslate"><span class="pre">“Files”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span> <span class="pre">“AmebaGPIO”</span> <span class="pre">-&gt;</span>
+<span class="pre">“LED_InterruptCtrl”</span></code></p>
+<p><strong>AMB21 / AMB22</strong> Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image154.png"><img alt="1" src="../../../../_images/image154.png" style="width: 534.0px; height: 373.6px;" /></a></p>
+</div></blockquote>
+<p><strong>AMB23</strong> Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image248.png"><img alt="2" src="../../../../_images/image248.png" style="width: 498.59999999999997px; height: 478.2px;" /></a></p>
+</div></blockquote>
+<p><strong>BW16</strong> Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image2-23.png"><img alt="2-2" src="../../../../_images/image2-23.png" style="width: 534.1px; height: 543.9px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Compile and upload the program, press reset.</div>
+<div class="line">The LED lights at first. Press and release the button, then the LED
+should dim. Press again, then the LED should light.</div>
+</div>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Code Reference</strong>
+<span class="raw-html"></p></span></p>
+<p>In</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">setup</span><span class="p">()</span><span class="w"></span>
+</pre></div>
+</div>
+<p>we set Pin 12 to</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">INPUT_IRQ_RISE</span><span class="w"></span>
+</pre></div>
+</div>
+<p>, this means that an interrupt occurs when the voltage of this pin
+changes from GND to 3V3. Therefore, we connect the other side of the
+button to 3V3, so as to trigger interrupt event when the button is
+pressed.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">pinMode</span><span class="p">(</span><span class="n">button</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_IRQ_RISE</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>On the other hand, we can set pin 12 to</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">INPUT_IRQ_FALL</span><span class="w"></span>
+</pre></div>
+</div>
+<p>, this means that an interrupt occurs when the voltage of this pin
+changes from 3V3 to GND. In this case, the other side of the button is
+connected to GND.Next, we need to specify the funtion to be execute to
+handle the interrupt:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">digitalSetIrqHandler</span><span class="p">(</span><span class="n">button</span><span class="p">,</span><span class="w"> </span><span class="n">button_handler</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The second parameter is a function pointer, with prototype:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="n">button_handler</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+<p>In this handler, every time we press and release the button, we trigger
+an interrupt, and change the status of the LED.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="GPIO%20-%20Measure%20Temperature%20and%20Humidity.html" class="btn btn-neutral float-left" title="GPIO - Measure Temperature and Humidity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="GTimer%20-%20Using%20The%20Periodic%20GTimer.html" class="btn btn-neutral float-right" title="GTimer - Using The Periodic GTimer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

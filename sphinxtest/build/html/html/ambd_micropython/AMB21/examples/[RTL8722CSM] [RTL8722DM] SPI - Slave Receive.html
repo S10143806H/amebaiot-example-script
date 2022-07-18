@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[RTL8722CSM] [RTL8722DM] SPI - Slave Receive &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="[RTL8722CSM] [RTL8722DM] Time - Delay and Timing" href="%5BRTL8722CSM%5D%20%5BRTL8722DM%5D%20Time%20-%20Delay%20and%20Timing.html" />
+    <link rel="prev" title="[RTL8722CSM] [RTL8722DM] Socket - Get information from HTTP website" href="%5BRTL8722CSM%5D%20%5BRTL8722DM%5D%20Socket%20-%20Get%20information%20from%20HTTP%20website.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_arduino/arduino_index.html">Arduino SDK</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../micropython_index.html">MicroPython SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/mp_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Examples</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#peripheral-examples">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#network-examples">Network Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../micropython_index.html">MicroPython SDK</a> &raquo;</li>
+          <li><a href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+          <li><a href="index.html">Examples</a> &raquo;</li>
+      <li>[RTL8722CSM] [RTL8722DM] SPI - Slave Receive</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_micropython/AMB21/examples/[RTL8722CSM] [RTL8722DM] SPI - Slave Receive.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rtl8722csm-rtl8722dm-spi-slave-receive">
+<h1>[RTL8722CSM] [RTL8722DM] SPI - Slave Receive<a class="headerlink" href="#rtl8722csm-rtl8722dm-spi-slave-receive" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Materials</strong>
+<span class="raw-html"></p></span></p>
+<ul class="simple">
+<li><p>AmebaD[AMB21 / AMB22] x 1</p></li>
+<li><p>Arduino UNO x 1</p></li>
+</ul>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Steps</strong>
+<span class="raw-html"></p></span></p>
+<p>SPI is a fast and robust communication protocol that are commonly found on many microcontrollers and is often used to retrieve sensor data or output image signal to a display. Ameba support SPI in both master and slave mode. Here we are going to see an example demonstrating how ameba receive data in slave mode on MicroPython.</p>
+<p>Before connection, make sure to upload the following code to your Arduino UNO.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">///////////////////////</span>
+<span class="linenos"> 2</span><span class="c1">// SPI Master Write //</span>
+<span class="linenos"> 3</span><span class="c1">///////////////////////</span>
+<span class="linenos"> 4</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SPI.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 5</span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">             </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"> </span><span class="c1">//set baud rate to 115200 for usart</span>
+<span class="linenos"> 7</span><span class="w">             </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">SS</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// disable Slave Select</span>
+<span class="linenos"> 8</span><span class="w">             </span><span class="n">SPI</span><span class="p">.</span><span class="n">begin</span><span class="w"> </span><span class="p">();</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">10</span><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">             </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">             </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">SS</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span><span class="c1">// enable Slave Select</span>
+<span class="linenos">13</span><span class="w">             </span><span class="c1">// send test string</span>
+<span class="linenos">14</span><span class="w">             </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello, world!</span><span class="se">\r</span><span class="s">&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">;</span><span class="w"> </span><span class="n">p</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">             </span><span class="n">SPI</span><span class="p">.</span><span class="n">transfer</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">             </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">                     </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">                </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">             </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">SS</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// disable Slave Select</span>
+<span class="linenos">20</span><span class="w">             </span><span class="n">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">21</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Connection is shown as follows, here we are using unit 0 as SPI slave, and Arduino UNO as SPI master,</p>
+<p><a class="reference internal" href="../../../_images/imageSPI.jpg"><img alt="image1" src="../../../_images/imageSPI.jpg" style="width: 641.0px; height: 450.5px;" /></a></p>
+<p>Then copy and paste the following code into REPL under paste mode to see their effects.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">SPI</span>
+<span class="linenos">2</span><span class="n">s1</span><span class="o">=</span> <span class="n">SPI</span><span class="p">(</span><span class="mi">0</span> <span class="p">,</span> <span class="n">mode</span> <span class="o">=</span> <span class="n">SPI</span><span class="o">.</span><span class="n">SLAVE</span><span class="p">)</span>
+<span class="linenos">3</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">14</span><span class="p">):</span>
+<span class="linenos">4</span><span class="nb">chr</span><span class="p">(</span><span class="n">s1</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="%5BRTL8722CSM%5D%20%5BRTL8722DM%5D%20Socket%20-%20Get%20information%20from%20HTTP%20website.html" class="btn btn-neutral float-left" title="[RTL8722CSM] [RTL8722DM] Socket - Get information from HTTP website" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="%5BRTL8722CSM%5D%20%5BRTL8722DM%5D%20Time%20-%20Delay%20and%20Timing.html" class="btn btn-neutral float-right" title="[RTL8722CSM] [RTL8722DM] Time - Delay and Timing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

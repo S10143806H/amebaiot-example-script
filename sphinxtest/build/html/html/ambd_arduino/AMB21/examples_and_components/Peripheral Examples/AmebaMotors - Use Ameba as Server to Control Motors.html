@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AmebaMotors - Use Ameba as Server to Control Motors &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Audio Codec – Basic Input Output" href="Audio%20Codec%20-%20Basic%20Input%20Output.html" />
+    <link rel="prev" title="Peripheral Examples" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Network%20Examples/index.html">Network Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Peripheral Examples</a> &raquo;</li>
+      <li>AmebaMotors - Use Ameba as Server to Control Motors</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/AMB21/examples_and_components/Peripheral Examples/AmebaMotors - Use Ameba as Server to Control Motors.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="amebamotors-use-ameba-as-server-to-control-motors">
+<h1>AmebaMotors - Use Ameba as Server to Control Motors<a class="headerlink" href="#amebamotors-use-ameba-as-server-to-control-motors" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Introduction to ambd_arduino/AmebaMotors</strong>
+<span class="raw-html"></p></span></p>
+<p>ambd_arduino/AmebaMotors is a library which provides API related to controlling motors.
+Please download the library: <a class="reference external" href="https://github.com/ambiot/raw/master/Arduino_zip_libraries/ambd_arduino/AmebaMotors.zip">ambd_arduino/AmebaMotors</a>
+And add the library to Ameba: <a class="reference external" href="https://www.arduino.cc/en/Guide/Libraries#toc4">https://www.arduino.cc/en/Guide/Libraries#toc4</a></p>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Materials</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22] x 1</p></li>
+<li><p>L298N H-Bridge x 1</p></li>
+<li><p>4-wheel motorcar or 2-wheel motorcar+Universal wheel</p></li>
+</ul>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<p><strong>Procedure</strong></p>
+<div class="line-block">
+<div class="line">In this example, we connect Ameba to WiFi and use Ameba as server, the user can control a 4-wheel/2-wheel motorcar through a webpage.</div>
+<div class="line"><br /></div>
+<div class="line">First, connect Ameba to the L298N H-Bridge and the motorcar.</div>
+<div class="line"><br /></div>
+<div class="line">To know more about motor movement and the technical details of the L298N H-Bridge,
+please check out this <cite>link &lt;https://www.amebaiot.com/en/ameba-arduino-amebamotors-basic/&gt;</cite>.</div>
+<div class="line">Open the example, <code class="docutils literal notranslate"><span class="pre">“Files”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span> <span class="pre">“WiFi”</span> <span class="pre">-&gt;</span> <span class="pre">“WiFiControlCar”</span></code>.</div>
+</div>
+<div class="line-block">
+<div class="line">You will see we use the following pins in the example:</div>
+</div>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ENA</p></th>
+<th class="head"><p>IN1</p></th>
+<th class="head"><p>IN2</p></th>
+<th class="head"><p>IN3</p></th>
+<th class="head"><p>IN4</p></th>
+<th class="head"><p>ENB</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>9</p></td>
+<td><p>10</p></td>
+<td><p>11</p></td>
+<td><p>12</p></td>
+<td><p>13</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Wiring:</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/13.png"><img alt="1" src="../../../../_images/13.png" style="width: 689.0px; height: 591.5px;" /></a></p>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>We connect Ameba 5V to L298N +12V to supply power. However, not every L298N accepts 5V power supply, if this does not work, please connect L298N +12V to other power supply (e.g., +12V) and use L298N +5V to supply power to Ameba.</p></li>
+<li><p>The correct wiring of the motor depends on each model (may be opposite). Please run the test program first, make sure it runs correctly before assembling the motorcar.</p></li>
+<li><p>For convenience purposes, it’s recommended to use Dupont line to organize the wiring of motors and L298N.</p></li>
+</ul>
+</div>
+<div class="line-block">
+<div class="line">Every time you modify your program, please remember to unplug the power of L298N to avoid the motor running unexpectedly.
+Connect Ameba to power, upload the program, and then connect L298N to power when you are going to test the program.</div>
+<div class="line"><br /></div>
+<div class="line">Then, upload the code to Ameba</div>
+<div class="line"><br /></div>
+<div class="line">In the sample code, modify the highlighted snippet to corresponding information.</div>
+<div class="line"><a class="reference internal" href="../../../../_images/23.png"><img alt="2" src="../../../../_images/23.png" style="width: 636.0px; height: 473.6px;" /></a></div>
+</div>
+<div class="line-block">
+<div class="line">Upload the code and press the reset button on Ameba. When the connection is established,
+you will see the message “To see this page in action, open a browser to <a class="reference external" href="http://xxx.xxx.xxx.xxx">http://xxx.xxx.xxx.xxx</a>” in the Arduino IDE,
+as shown in the figure:</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/33.png"><img alt="3" src="../../../../_images/33.png" style="width: 683.2px; height: 330.40000000000003px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Next, open the browser of a computer or a cell phone under the same WiFi domain, enter the address in the message.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/42.png"><img alt="4" src="../../../../_images/42.png" style="width: 571.2px; height: 382.40000000000003px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">In the webpage, you can press the corresponding button to control the motor car in any of the 4 directions.</div>
+</div>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Demo Video</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ItVaPQ4dv8Q" title="Ameba WiFi Remote Control Car" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Code Reference</strong>
+<span class="raw-html"></p></span></p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">WiFi.begin()</span></code> to establish WiFi connection.
+<a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiBegin">https://www.arduino.cc/en/Reference/WiFiBegin</a></p>
+<p>To get the information of a WiFi connection:</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">WiFi.SSID()</span></code> to get SSID of the current connected network.
+<a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiSSID">https://www.arduino.cc/en/Reference/WiFiSSID</a></p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">WiFi.RSSI()</span></code> to get the signal strength of the connection.
+<a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiRSSI">https://www.arduino.cc/en/Reference/WiFiRSSI</a></p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">WiFi.localIP()</span></code> to get the IP address of Ameba.
+<a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiLocalIP">https://www.arduino.cc/en/Reference/WiFiLocalIP</a></p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">WiFiServer</span> <span class="pre">server()</span></code> to create a server that listens on the specified port.
+<a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiServer">https://www.arduino.cc/en/Reference/WiFiServer</a></p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">server.begin()</span></code> to tell the server to begin listening for incoming connections.
+<a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiServerBegin">https://www.arduino.cc/en/Reference/WiFiServerBegin</a></p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">server.available()</span></code> to get a client that is connected to the server and has data available for reading.
+<a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiServerAvailable">https://www.arduino.cc/en/Reference/WiFiServerAvailable</a></p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">client.connected()</span></code> to get whether or not the client is connected.
+<a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiClientConnected">https://www.arduino.cc/en/Reference/WiFiClientConnected</a></p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">client.println()</span></code> to print data followed by a carriage return and newline.
+<a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiClientPrintln">https://www.arduino.cc/en/Reference/WiFiClientPrintln</a></p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">client.print()</span></code> to print data to the server that a client is connected to.
+<a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiClientPrint">https://www.arduino.cc/en/Reference/WiFiClientPrint</a></p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">client.available()</span></code> to return the number of bytes available for reading.
+<a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiClientAvailable">https://www.arduino.cc/en/Reference/WiFiClientAvailable</a></p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">client.read()</span></code> to read the next byte received from the server the client is connected to.
+<a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiClientRead">https://www.arduino.cc/en/Reference/WiFiClientRead</a></p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">client.stop()</span></code> to disconnect from the server the client is connected to.
+<a class="reference external" href="https://www.arduino.cc/en/Reference/WiFIClientStop">https://www.arduino.cc/en/Reference/WiFIClientStop</a></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Peripheral Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Audio%20Codec%20-%20Basic%20Input%20Output.html" class="btn btn-neutral float-right" title="Audio Codec – Basic Input Output" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

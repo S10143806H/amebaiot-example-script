@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WiFi &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Resources" href="../resources/index.html" />
+    <link rel="prev" title="UART" href="MicroPython_UART.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_arduino/arduino_index.html">Arduino SDK</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../micropython_index.html">MicroPython SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/mp_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/index.html">Examples</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">API Documents</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="MicroPython_ADC.html">ADC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MicroPython_I2C.html">I2C</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MicroPython_Pin.html">Pin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MicroPython_PWM.html">PWM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MicroPython_RTC.html">RTC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MicroPython_SDFS.html">SDFS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MicroPython_Socket.html">Socket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MicroPython_SPI.html">SPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MicroPython_Time.html">Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MicroPython_Timer.html">Timer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MicroPython_UART.html">UART</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">WiFi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../micropython_index.html">MicroPython SDK</a> &raquo;</li>
+          <li><a href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+          <li><a href="index.html">API Documents</a> &raquo;</li>
+      <li>WiFi</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_micropython/AMB21/api_documents/MicroPython_WiFi.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="wifi">
+<h1>WiFi<a class="headerlink" href="#wifi" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#0070C0; font-size:26px"></span>
+<strong>API Documents</strong>
+<span class="raw-html"></p></span></p>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Constructors</strong>
+<span class="raw-html"></p></span></p>
+<div class="line-block">
+<div class="line"><strong>WLAN(</strong><em>mode</em>[required]<strong>)</strong></div>
+<div class="line">Create a WLAN object and configure it to the given mode. This then allows you to control WiFi and check its status.</div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code>: use WLAN.STA for station mode</p></li>
+</ul>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Methods</strong>
+<span class="raw-html"></p></span></p>
+<div class="line-block">
+<div class="line"><strong>WLAN.scan()</strong></div>
+<div class="line">This method scan and list out all available WiFi network in the surroundings.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>WLAN.connect(</strong><em>ssid</em>[required], <em>pswd</em>[optional], <em>security</em>[optional]<strong>)</strong></div>
+<div class="line">This method attempts to establish a connection to a WiFi access point.</div>
+</div>
+<ul class="simple">
+<li><p><strong>ssid</strong>: The name of your WiFi network</p></li>
+<li><p><strong>pswd:</strong> The password of your WiFi network</p></li>
+<li><p><strong>security:</strong> The security type of your WiFi network</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Leaving optional parameters blank will assume taking default values, which are:</p>
+</div>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 41%" />
+<col style="width: 59%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Default value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>pswd</p></td>
+<td><p>NULL</p></td>
+</tr>
+<tr class="row-odd"><td><p>security</p></td>
+<td><p>WPA2_AES_PSK</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="line-block">
+<div class="line">Connecting to an <strong>OPEN</strong> network is also supported, just omit</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">pswd</span></code> parameter and type in <code class="docutils literal notranslate"><span class="pre">security</span> <span class="pre">=</span> <span class="pre">WLAN.OPEN</span></code> followed by ssid.</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>WLAN.get_ip()</strong></div>
+<div class="line">This method returns the IP address of the current WLAN interface. Only works after successful connection to an AP.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>WLAN.disconnect()</strong></div>
+<div class="line">This method disconnect ameba from current WiFi AP, but still keep WiFi module on.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>WLAN.on()</strong></div>
+<div class="line">This method turns on the WiFi device.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>WLAN.off()</strong></div>
+<div class="line">This method shut down WiFi device and suspend all connections.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>WLAN.wifi_is_running()</strong></div>
+<div class="line">This method returns the WiFi status. True when WiFi is on, and False when off.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>WLAN.is_connect_to_ap()</strong></div>
+<div class="line">This method returns the connection status. True if ameba is connected to an AP, False if ameba is not connected to anything.</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="MicroPython_UART.html" class="btn btn-neutral float-left" title="UART" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../resources/index.html" class="btn btn-neutral float-right" title="Resources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

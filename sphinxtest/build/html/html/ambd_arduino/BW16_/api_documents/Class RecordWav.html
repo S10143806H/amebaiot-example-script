@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class RecordWav &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Class BLEAddr" href="Class%20BLEAddr.html" />
+    <link rel="prev" title="Class PlaybackWav" href="Class%20PlaybackWav.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../AMB21/index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">BW16 (RTL8720DN)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples_and_components/index.html">Examples &amp; Components</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">API Documents</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="index.html#analog">Analog</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#audiocodec">AudioCodec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ble">BLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#epdif">EPDIF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#fatfssdcard">FatfsSDCard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#flashmemory">FlashMemory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gpio">GPIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gtimer">GTimer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#http">Http</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#irdevice">IRDevice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#mdns">MDNS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#mqttclient">MQTTClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ntpclient">NTPClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#powersave">PowerSave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#rtc">RTC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#softwareserial">SoftwareSerial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#spi">SPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#sys">Sys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wdt">WDT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wifi">WiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wire">Wire</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ws2812b">WS2812B</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/index.html">Support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../index.html">BW16 (RTL8720DN)</a> &raquo;</li>
+          <li><a href="index.html">API Documents</a> &raquo;</li>
+      <li>Class RecordWav</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_arduino/BW16_/api_documents/Class RecordWav.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-recordwav">
+<h1>Class RecordWav<a class="headerlink" href="#class-recordwav" title="Permalink to this heading"></a></h1>
+<p><strong>Description</strong></p>
+<p>A class used for control and recording of .wav file format audio data.</p>
+<p><strong>Syntax</strong></p>
+<p>class RecordWav</p>
+<p><strong>Members</strong></p>
+<p><strong>Public Constructors</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 60%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>RecordWav:: RecordWav</p></td>
+<td><p>Create an instance of the RecordWav class</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Public Methods</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 69%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>RecordWav::openFile</p></td>
+<td><p>Open a .wav file for playback</p></td>
+</tr>
+<tr class="row-even"><td><p>RecordWav::closeFile</p></td>
+<td><p>Close a previously opened file</p></td>
+</tr>
+<tr class="row-odd"><td><p>RecordWav::fileOpened</p></td>
+<td><p>Check if a .wav file is already opened</p></td>
+</tr>
+<tr class="row-even"><td><p>RecordWav::setSampleRate</p></td>
+<td><p>Get the sample rate of the .wav file</p></td>
+</tr>
+<tr class="row-odd"><td><p>RecordWav::setChannelCount</p></td>
+<td><p>Set the number of audio channels in the .wav file</p></td>
+</tr>
+<tr class="row-even"><td><p>RecordWav::setBitDepth</p></td>
+<td><p>Set the bit depth of each sample in the .wav file</p></td>
+</tr>
+<tr class="row-odd"><td><p>RecordWav::getLengthMillis</p></td>
+<td><p>Get the current record length of the .wav file in milliseconds</p></td>
+</tr>
+<tr class="row-even"><td><p>RecordWav::millisToBytes</p></td>
+<td><p>Convert a playback duration to equivalent number of bytes</p></td>
+</tr>
+<tr class="row-odd"><td><p>RecordWav::bytesToMillis</p></td>
+<td><p>Convert number of bytes to an equivalent playback duration</p></td>
+</tr>
+<tr class="row-even"><td><p>RecordWav::writeAudioData</p></td>
+<td><p>Write audio data to the .wav file</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<p><strong>RecordWav::RecordWav</strong></p>
+<p><strong>Description</strong></p>
+<p>Create a RecordWav class object.</p>
+<p><strong>Syntax</strong></p>
+<p>void RecordWav(void);</p>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: RecordWavFile</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<p><strong>RecordWav::openFile</strong></p>
+<p><strong>Description</strong></p>
+<p>Open a .wav file for recording.</p>
+<p><strong>Syntax</strong></p>
+<p>void openFile(const char* absFilepath);</p>
+<p><strong>Parameters</strong></p>
+<p>absFilepath: the filepath of the .wav file to open.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: RecordWavFile</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<p><strong>RecordWav::closeFile</strong></p>
+<p><strong>Description</strong></p>
+<p>Close a previously opened file.</p>
+<p><strong>Syntax</strong></p>
+<p>void closeFile(void);</p>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: RecordWavFile</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Any open .wav files should be closed after recording is complete, otherwise, loss of recorded audio data may occur.</p>
+<hr class="docutils" />
+<p><strong>RecordWav::fileOpened</strong></p>
+<p><strong>Description</strong></p>
+<p>Check if a .wav file is already opened.</p>
+<p><strong>Syntax</strong></p>
+<p>bool fileOpened(void);</p>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns true if a .wav file is already open, false otherwise.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: RecordWavFile</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<p><strong>RecordWav::setSampleRate</strong></p>
+<p><strong>Description</strong></p>
+<p>Set the recording sample rate of the .wav file.</p>
+<p><strong>Syntax</strong></p>
+<p>void setSampleRate(uint32_t sampleRate);</p>
+<p><strong>Parameters</strong></p>
+<p>sampleRate: The desired recording sample rate.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: RecordWavFile</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<p><strong>RecordWav::setChannelCount</strong></p>
+<p><strong>Description</strong></p>
+<p>Set the number of recording audio channels in the .wav file.</p>
+<p><strong>Syntax</strong></p>
+<p>void setChannelCount(uint16_t channelCount);</p>
+<p><strong>Parameters</strong></p>
+<p>channelCount: number of recording audio channels.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<p><strong>RecordWav::setBitDepth</strong></p>
+<p><strong>Description</strong></p>
+<p>Set the recording bit depth of each sample in the .wav file.</p>
+<p><strong>Syntax</strong></p>
+<p>void setBitDepth(uint16_t bitDepth);</p>
+<p><strong>Parameters</strong></p>
+<p>bitDepth: number of bits per sample.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<p><strong>RecordWav::getLengthMillis</strong></p>
+<p><strong>Description</strong></p>
+<p>Get the current recorded length of the .wav file in milliseconds.</p>
+<p><strong>Syntax</strong></p>
+<p>uint32_t getLengthMillis(void);</p>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns the current recorded length of the currently open .wav file in milliseconds.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<p><strong>RecordWav::millisToBytes</strong></p>
+<p><strong>Description</strong></p>
+<p>Convert a playback duration to equivalent number of bytes.</p>
+<p><strong>Syntax</strong></p>
+<p>uint32_t millisToBytes(uint32_t ms);</p>
+<p><strong>Parameters</strong></p>
+<p>ms: playback duration in milliseconds.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns the number of bytes that is equivalent to the input playback duration, converted using the current sample rate, number of channels and bit depth.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<p><strong>RecordWav::bytesToMillis</strong></p>
+<p><strong>Description</strong></p>
+<p>Convert number of bytes to an equivalent playback duration.</p>
+<p><strong>Syntax</strong></p>
+<p>uint32_t bytesToMillis(uint32_t bytes);</p>
+<p><strong>Parameters</strong></p>
+<p>bytes: playback duration in number of bytes.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns the time duration in milliseconds that is equivalent to the input number of bytes, converted using the current sample rate, number of channels and bit depth.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<p><strong>RecordWav::writeAudioData</strong></p>
+<p><strong>Description</strong></p>
+<p>Write audio data to the .wav file.</p>
+<p><strong>Syntax</strong></p>
+<p>uint32_t writeAudioData(int8_t* src, uint32_t len);
+uint32_t writeAudioData(int16_t* src, uint32_t len);</p>
+<p><strong>Parameters</strong></p>
+<p>src: pointer to array containing data to write to .wav file.
+len: number of audio samples to write to .wav file.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns number of audio samples written.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: RecordWavFile</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Class%20PlaybackWav.html" class="btn btn-neutral float-left" title="Class PlaybackWav" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Class%20BLEAddr.html" class="btn btn-neutral float-right" title="Class BLEAddr" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

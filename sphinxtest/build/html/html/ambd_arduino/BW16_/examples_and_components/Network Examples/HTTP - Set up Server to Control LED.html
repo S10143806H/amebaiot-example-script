@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTTP - Set up Server to Control LED &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="HTTP - Set up Server to Get the Ameba Status" href="HTTP%20-%20Set%20up%20Server%20to%20Get%20the%20Ameba%20Status.html" />
+    <link rel="prev" title="HTTP - Retrieve HTTP websites from the Internet" href="HTTP%20-%20Retrieve%20HTTP%20websites%20from%20the%20Internet.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB21/index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">BW16 (RTL8720DN)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Network Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Peripheral%20Examples/index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">BW16 (RTL8720DN)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Network Examples</a> &raquo;</li>
+      <li>HTTP - Set up Server to Control LED</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/BW16_/examples_and_components/Network Examples/HTTP - Set up Server to Control LED.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="http-set-up-server-to-control-led">
+<h1>HTTP - Set up Server to Control LED<a class="headerlink" href="#http-set-up-server-to-control-led" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Materials</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22 / AMB23 / BW16] x 1</p></li>
+<li><p>Breadboard x 1</p></li>
+<li><p>LED x 1</p></li>
+<li><p>1KΩ Resistor x 1</p></li>
+</ul>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Procedure</strong>
+<span class="raw-html"></p></span></p>
+<div class="line-block">
+<div class="line">In this example, we connect Ameba to WiFi and use Ameba as server, the
+user can control the LED on/off through a webpage.</div>
+<div class="line">First, connect Ameba with the LED.</div>
+<div class="line">In a LED, the longer pin is the positive pole, and the shorter pin is
+the negative pole. So, we connect the shorter pin to GND and connect the
+longer pin to D13. Additionally, to avoid the electric current exceeds
+the tolerance of the LED and causes damage, we connect a resistance on
+the positive pole.</div>
+</div>
+<p><strong>AMB21 / AMB22</strong> Wiring Diagram:</p>
+<p>  <a class="reference internal" href="../../../../_images/image110.png"><img alt="1" src="../../../../_images/image110.png" style="width: 479.4px; height: 337.8px;" /></a></p>
+<p><strong>AMB23</strong> Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image1-12.png"><img alt="1-1" src="../../../../_images/image1-12.png" style="width: 407.0px; height: 379.0px;" /></a></p>
+</div></blockquote>
+<p><strong>BW16</strong> Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image1-23.png"><img alt="1-2" src="../../../../_images/image1-23.png" style="width: 441.90000000000003px; height: 411.3px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><strong>Note</strong>:</div>
+<div class="line">For BW16 board, you may consider to re-define “LED_PIN” macro to <strong>10</strong> for built-in green LED, or <strong>11</strong> for blue built-in LED, or <strong>12</strong> for red built-in LED to avoid using extra components.</div>
+</div>
+<div class="line-block">
+<div class="line">Then open <code class="docutils literal notranslate"><span class="pre">“File”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span> <span class="pre">“WiFi”</span> <span class="pre">-&gt;</span> <span class="pre">“SimpleWebServerWiFi”</span></code></div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image29.png"><img alt="2" src="../../../../_images/image29.png" style="width: 501.2px; height: 704.1999999999999px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">In the sample code, modify the highlighted snippet to corresponding
+information.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image35.png"><img alt="3" src="../../../../_images/image35.png" style="width: 501.2px; height: 606.9px;" /></a></p>
+</div></blockquote>
+<p>Upload the code and press the reset button on Ameba. When the connection
+is established, you will see the message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>“To see this page in action, open a browser to http://xxx.xxx.xxx.xxx”
+</pre></div>
+</div>
+<p>in the Arduino IDE as shown in the figure:</p>
+<p>  <a class="reference internal" href="../../../../_images/image44.png"><img alt="4" src="../../../../_images/image44.png" style="width: 704.0px; height: 355.0px;" /></a></p>
+<p>Next, open the browser of a computer or a cell phone under the same WiFi
+domain, enter the address in the message.</p>
+<p>  <a class="reference internal" href="../../../../_images/image55.png"><img alt="5" src="../../../../_images/image55.png" style="width: 604.0px; height: 470.0px;" /></a></p>
+<p>In the webpage, you can turn on/off the LED.</p>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Code Reference</strong>
+<span class="raw-html"></p></span></p>
+<div class="line-block">
+<div class="line">Use <code class="docutils literal notranslate"><span class="pre">WiFi.begin()</span></code> to establish WiFi connection.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiBegin">https://www.arduino.cc/en/Reference/WiFiBegin</a></div>
+<div class="line">To get the information of a WiFi connection:</div>
+<div class="line">Use <code class="docutils literal notranslate"><span class="pre">WiFi.SSID()</span></code> to get SSID of the current connected network.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiSSID">https://www.arduino.cc/en/Reference/WiFiSSID</a></div>
+<div class="line">Use WiFi.RSSI() to get the signal strength of the connection.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiRSSI">https://www.arduino.cc/en/Reference/WiFiRSSI</a></div>
+<div class="line">Use <code class="docutils literal notranslate"><span class="pre">WiFi.localIP()</span></code> to get the IP address of Ameba.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiLocalIP">https://www.arduino.cc/en/Reference/WiFiLocalIP</a></div>
+<div class="line">Use <code class="docutils literal notranslate"><span class="pre">WiFiServer</span> <span class="pre">server()</span></code> to create a server that listens on the
+specified port.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiServer">https://www.arduino.cc/en/Reference/WiFiServer</a></div>
+<div class="line">Use <code class="docutils literal notranslate"><span class="pre">server.begin()</span></code> to tell the server to begin listening for incoming
+connections.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiServerBegin">https://www.arduino.cc/en/Reference/WiFiServerBegin</a></div>
+<div class="line">Use <code class="docutils literal notranslate"><span class="pre">server.available()</span></code> to get a client that is connected to the server
+and has data available for reading.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiServerAvailable">https://www.arduino.cc/en/Reference/WiFiServerAvailable</a></div>
+<div class="line">Use <code class="docutils literal notranslate"><span class="pre">client.connected()</span></code> to get whether or not the client is connected.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiClientConnected">https://www.arduino.cc/en/Reference/WiFiClientConnected</a></div>
+<div class="line">Use <code class="docutils literal notranslate"><span class="pre">client.println()</span></code> to print data followed by a carriage return and
+newline.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiClientPrintln">https://www.arduino.cc/en/Reference/WiFiClientPrintln</a></div>
+<div class="line">Use <code class="docutils literal notranslate"><span class="pre">client.print()</span></code> to print data to the server that a client is
+connected to.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiClientPrint">https://www.arduino.cc/en/Reference/WiFiClientPrint</a></div>
+<div class="line">Use <code class="docutils literal notranslate"><span class="pre">client.available()</span></code> to return the number of bytes available for
+reading.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiClientAvailable">https://www.arduino.cc/en/Reference/WiFiClientAvailable</a></div>
+<div class="line">Use <code class="docutils literal notranslate"><span class="pre">client.read()</span></code> to read the next byte received from the server the
+client is connected to.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiClientRead">https://www.arduino.cc/en/Reference/WiFiClientRead</a></div>
+<div class="line">Use <code class="docutils literal notranslate"><span class="pre">client.stop()</span></code> to disconnect from the server the client is
+connected to.</div>
+<div class="line"><a class="reference external" href="https://www.arduino.cc/en/Reference/WiFIClientStop">https://www.arduino.cc/en/Reference/WiFIClientStop</a></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="HTTP%20-%20Retrieve%20HTTP%20websites%20from%20the%20Internet.html" class="btn btn-neutral float-left" title="HTTP - Retrieve HTTP websites from the Internet" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="HTTP%20-%20Set%20up%20Server%20to%20Get%20the%20Ameba%20Status.html" class="btn btn-neutral float-right" title="HTTP - Set up Server to Get the Ameba Status" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

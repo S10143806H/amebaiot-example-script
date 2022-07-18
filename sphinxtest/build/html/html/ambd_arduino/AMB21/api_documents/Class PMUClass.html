@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class PMUClass &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Class RTC" href="Class%20RTC.html" />
+    <link rel="prev" title="Readme" href="Readme%20NTPClient.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples_and_components/index.html">Examples &amp; Components</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">API Documents</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="index.html#analog">Analog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#audiocodec">AudioCodec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ble">BLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#epdif">EPDIF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#fatfssdcard">FatfsSDCard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#flashmemory">FlashMemory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gpio">GPIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gtimer">GTimer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#http">Http</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#irdevice">IRDevice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#mdns">MDNS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#mqttclient">MQTTClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ntpclient">NTPClient</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#powersave">PowerSave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#rtc">RTC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#softwareserial">SoftwareSerial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#spi">SPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#sys">Sys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#usb">USB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wdt">WDT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wifi">WiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wire">Wire</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ws2812b">WS2812B</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+          <li><a href="index.html">API Documents</a> &raquo;</li>
+      <li>Class PMUClass</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_arduino/AMB21/api_documents/Class PMUClass.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-pmuclass">
+<h1>Class PMUClass<a class="headerlink" href="#class-pmuclass" title="Permalink to this heading"></a></h1>
+<p><strong>PMUClass Class</strong></p>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Defines a class of using Power Save API</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">class PMUClass</div>
+</div>
+<p><strong>Members</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 49%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Public Constructors</strong></p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PMUClass::PMUClass</p></td>
+<td><p>Constructs a PMUClass object</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Public Methods</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>PMUCLASS::begin</p></td>
+<td><p>Initialize the PMUCLASS and
+select sleep mode</p></td>
+</tr>
+<tr class="row-odd"><td><p>PMUCLASS::AONTimerDuration</p></td>
+<td><p>Set the duration of AON Timer</p></td>
+</tr>
+<tr class="row-even"><td><p>PMUCLASS::AONTimerCmd</p></td>
+<td><p>Disable the AON Timer for power
+save usage</p></td>
+</tr>
+<tr class="row-odd"><td><p>PMUCLASS::RTCWakeSetup</p></td>
+<td><p>Set up RTC Timer for power save
+usage</p></td>
+</tr>
+<tr class="row-even"><td><p>PMUCLASS::enable</p></td>
+<td><p>Enable power save deep sleep mode</p></td>
+</tr>
+<tr class="row-odd"><td><p>PMUCLASS::AONWakeReason</p></td>
+<td><p>Check AON wakeup source</p></td>
+</tr>
+<tr class="row-even"><td><p>PMUCLASS::WakePinCheck</p></td>
+<td><p>Check AON GPIO pin wakeup source</p></td>
+</tr>
+<tr class="row-odd"><td><p>PMUCLASS::AONWakeClear</p></td>
+<td><p>Clear all the AON wakeup source</p></td>
+</tr>
+<tr class="row-even"><td><p>PMUCLASS::DsleepWakeStatusGet</p></td>
+<td><p>Check if deepsleep mode is set</p></td>
+</tr>
+<tr class="row-odd"><td><p>PMUCLASS::TL_sysactive_time</p></td>
+<td><p>Tickless mode system active time</p></td>
+</tr>
+<tr class="row-even"><td><p>PMUCLASS::TL_wakelock</p></td>
+<td><p>Tickless mode wake lock, select
+acquire of release</p></td>
+</tr>
+<tr class="row-odd"><td><p>PMUCLASS::DS_AON_TIMER_WAKEUP</p></td>
+<td><p>Return the Wakeup source</p></td>
+</tr>
+<tr class="row-even"><td><p>PMUCLASS::DS_RTC_WAKEUP</p></td>
+<td><p>Return the Wakeup source</p></td>
+</tr>
+<tr class="row-odd"><td><p>PMUCLASS::TL_UART_WAKEUP</p></td>
+<td><p>Return the Wakeup source</p></td>
+</tr>
+<tr class="row-even"><td><p>PMUCLASS::TL_RTC_WAKEUP</p></td>
+<td><p>Return the Wakeup source</p></td>
+</tr>
+<tr class="row-odd"><td><p>PMUC
+LASS::AON_WAKEPIN_WAKEUP_GPIOA12</p></td>
+<td><p>Return the Wakeup source</p></td>
+</tr>
+<tr class="row-even"><td><p>PMUC
+LASS::AON_WAKEPIN_WAKEUP_GPIOA13</p></td>
+<td><p>Return the Wakeup source</p></td>
+</tr>
+<tr class="row-odd"><td><p>PMUC
+LASS::AON_WAKEPIN_WAKEUP_GPIOA14</p></td>
+<td><p>Return the Wakeup source</p></td>
+</tr>
+<tr class="row-even"><td><p>PMUC
+LASS::AON_WAKEPIN_WAKEUP_GPIOA15</p></td>
+<td><p>Return the Wakeup source</p></td>
+</tr>
+<tr class="row-odd"><td><p>PMUC
+LASS::AON_WAKEPIN_WAKEUP_GPIOA16</p></td>
+<td><p>Return the Wakeup source</p></td>
+</tr>
+<tr class="row-even"><td><p>PMUC
+LASS::AON_WAKEPIN_WAKEUP_GPIOA17</p></td>
+<td><p>Return the Wakeup source</p></td>
+</tr>
+<tr class="row-odd"><td><p>PMUC
+LASS::AON_WAKEPIN_WAKEUP_GPIOA18</p></td>
+<td><p>Return the Wakeup source</p></td>
+</tr>
+<tr class="row-even"><td><p>PMUC
+LASS::AON_WAKEPIN_WAKEUP_GPIOA19</p></td>
+<td><p>Return the Wakeup source</p></td>
+</tr>
+<tr class="row-odd"><td><p>PMUC
+LASS::AON_WAKEPIN_WAKEUP_GPIOA20</p></td>
+<td><p>Return the Wakeup source</p></td>
+</tr>
+<tr class="row-even"><td><p>PMUC
+LASS::AON_WAKEPIN_WAKEUP_GPIOA21</p></td>
+<td><p>Return the Wakeup source</p></td>
+</tr>
+<tr class="row-odd"><td><p>PMUC
+LASS::AON_WAKEPIN_WAKEUP_GPIOA25</p></td>
+<td><p>Return the Wakeup source</p></td>
+</tr>
+<tr class="row-even"><td><p>PMUC
+LASS::AON_WAKEPIN_WAKEUP_GPIOA26</p></td>
+<td><p>Return the Wakeup source</p></td>
+</tr>
+</tbody>
+</table>
+<section id="pmuclass-pmuclass">
+<h2><strong>PMUCLASS::PMUCLASS</strong><a class="headerlink" href="#pmuclass-pmuclass" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Constructs a PMUCLASS object.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">PMUCLASS::PMUCLASS(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-begin">
+<h2><strong>PMUCLASS::begin</strong><a class="headerlink" href="#pmuclass-begin" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Initialize the PMUCLASS and select sleep mode.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::begin(uint32_t sleep_mode);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">sleep_mode: Selection value, “11” enters the DeepSleep Mode, “22”
+enters the Tickless Mode</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-aontimerduration">
+<h2><strong>PMUCLASS::AONTimerDuration</strong><a class="headerlink" href="#pmuclass-aontimerduration" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Set the duration of AON Timer</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::AONTimerDuration(uint32_t duration_ms);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">duration_ms: Timer duration between 0 to 32760000ms.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-aontimercmd">
+<h2><strong>PMUCLASS::AONTimerCmd</strong><a class="headerlink" href="#pmuclass-aontimercmd" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Disable the AON timer for power save usage.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::AONTimerCmd(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">c: The value in Celcius.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-rtcwakesetup">
+<h2><strong>PMUCLASS::RTCWakeSetup</strong><a class="headerlink" href="#pmuclass-rtcwakesetup" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Set up the RTC timer for power save usage.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::RTCWakeSetu(uint32_t duration_d, unit32_t duration_h,
+uint32_t duration_m, uint32_t duration_s);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">duration_d: Set alarm for number of days from 0.</div>
+<div class="line">duration_h: Set alarm for number of hours from 0.</div>
+<div class="line">duration_m: Set alarm for number of minutes from 0.</div>
+<div class="line">duration_s: Set alarm for number of seconds from0.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-enable">
+<h2><strong>PMUCLASS::enable</strong><a class="headerlink" href="#pmuclass-enable" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Enable power save deep sleep mode</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::enable(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-aonwakereason">
+<h2><strong>PMUCLASS::AONWakeReason</strong><a class="headerlink" href="#pmuclass-aonwakereason" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Check the AON wakeup source</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">uint32_t PMUClass::AONWakeReason(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">Returns the value of wakeup deepsleep source. “11” for AON pin, “22”
+for AON timer, “33” for RTC timer and “0” for none.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-wakepincheck">
+<h2><strong>PMUCLASS::WakePinCheck</strong><a class="headerlink" href="#pmuclass-wakepincheck" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Check which AON GPIO pins are the wakeup source</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">int PMUClass::WakePinCheck(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">Return the pin number for indicating Arduino pin names.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-aonwakeclear">
+<h2><strong>PMUCLASS::AONWakeClear</strong><a class="headerlink" href="#pmuclass-aonwakeclear" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Clear all AON Wakeup source.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::AONWakeClear(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-dsleepwakestatusget">
+<h2><strong>PMUCLASS::DsleepWakeStatusGet</strong><a class="headerlink" href="#pmuclass-dsleepwakestatusget" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Check if deepsleep mode is set.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">bool PMUClass::DsleepWakeStatusGet(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">Return TRUE when enter DeepSleep Mode or FALSE for negative.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-tl-sysactive-time">
+<h2><strong>PMUCLASS::TL_sysactive_time</strong><a class="headerlink" href="#pmuclass-tl-sysactive-time" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Tickless mode system active time.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::TL_sysactive_time(uint32_t duration_ms);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">duration_ms: Set the duration of system active time. The unit is in
+milliseconds.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-tl-wakelock">
+<h2><strong>PMUCLASS::TL_wakelock</strong><a class="headerlink" href="#pmuclass-tl-wakelock" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Tickless mode wake lock, select acquire or release.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::TL_wakelock(uint32_t select_lock);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">select_lock: Wake lock selection value, “1” for acquire or “0” for
+release.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-ds-aon-timer-wakeup">
+<h2><strong>PMUCLASS::DS_AON_TIMER_WAKEUP</strong><a class="headerlink" href="#pmuclass-ds-aon-timer-wakeup" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Return the Wakeup source for DeepSleep Mode.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::DS_AON_TIMER_WAKEUP(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">This function returns AON Timer as the wakeup source and output it on
+the Serial monitor.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-ds-rtc-wakeup">
+<h2><strong>PMUCLASS::DS_RTC_WAKEUP</strong><a class="headerlink" href="#pmuclass-ds-rtc-wakeup" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Return the Wakeup source for DeepSleep Mode.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::DS_RTC_WAKEUP(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">This function returns RTC as the wakeup source and output it on the
+Serial monitor.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-tl-uart-wakeup">
+<h2><strong>PMUCLASS::TL_UART_WAKEUP</strong><a class="headerlink" href="#pmuclass-tl-uart-wakeup" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Return the Wakeup source for Tickless Mode.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::TL_UART_WAKEUP(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">This function returns LOGUART as the wakeup source and output it on
+the Serial monitor.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-tl-rtc-wakeup">
+<h2><strong>PMUCLASS::TL_RTC_WAKEUP</strong><a class="headerlink" href="#pmuclass-tl-rtc-wakeup" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Return the Wakeup source for Tickless Mode.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::TL_RTC_WAKEUP(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">This function returns RTC as the wakeup source and output it on the
+Serial monitor.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-aon-wakepin-wakeup-gpioa12">
+<h2><strong>PMUCLASS::AON_WAKEPIN_WAKEUP_GPIOA12</strong><a class="headerlink" href="#pmuclass-aon-wakepin-wakeup-gpioa12" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Return the Wakeup source.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::AON_WAKEPIN_WAKEUP_GPIOA12(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">This function returns AON GPIOA12 pin as the wakeup source and output
+it on the Serial monitor.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-aon-wakepin-wakeup-gpioa13">
+<h2><strong>PMUCLASS::AON_WAKEPIN_WAKEUP_GPIOA13</strong><a class="headerlink" href="#pmuclass-aon-wakepin-wakeup-gpioa13" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Return the Wakeup source.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::AON_WAKEPIN_WAKEUP_GPIOA13(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">This function returns AON GPIOA13 pin as the wakeup source and output
+it on the Serial monitor.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-aon-wakepin-wakeup-gpioa14">
+<h2><strong>PMUCLASS::AON_WAKEPIN_WAKEUP_GPIOA14</strong><a class="headerlink" href="#pmuclass-aon-wakepin-wakeup-gpioa14" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Return the Wakeup source.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::AON_WAKEPIN_WAKEUP_GPIOA14(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">This function returns AON GPIOA14 pin as the wakeup source and output
+it on the Serial monitor.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-aon-wakepin-wakeup-gpioa15">
+<h2><strong>PMUCLASS::AON_WAKEPIN_WAKEUP_GPIOA15</strong><a class="headerlink" href="#pmuclass-aon-wakepin-wakeup-gpioa15" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Return the Wakeup source.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::AON_WAKEPIN_WAKEUP_GPIOA15(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">This function returns AON GPIOA15 pin as the wakeup source and output
+it on the Serial monitor.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-aon-wakepin-wakeup-gpioa16">
+<h2><strong>PMUCLASS::AON_WAKEPIN_WAKEUP_GPIOA16</strong><a class="headerlink" href="#pmuclass-aon-wakepin-wakeup-gpioa16" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Return the Wakeup source.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::AON_WAKEPIN_WAKEUP_GPIOA16(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">This function returns AON GPIOA16 pin as the wakeup source and output
+it on the Serial monitor.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-aon-wakepin-wakeup-gpioa17">
+<h2><strong>PMUCLASS::AON_WAKEPIN_WAKEUP_GPIOA17</strong><a class="headerlink" href="#pmuclass-aon-wakepin-wakeup-gpioa17" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Return the Wakeup source.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::AON_WAKEPIN_WAKEUP_GPIOA17(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">This function returns AON GPIOA17 pin as the wakeup source and output
+it on the Serial monitor.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-aon-wakepin-wakeup-gpioa18">
+<h2><strong>PMUCLASS::AON_WAKEPIN_WAKEUP_GPIOA18</strong><a class="headerlink" href="#pmuclass-aon-wakepin-wakeup-gpioa18" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Return the Wakeup source.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::AON_WAKEPIN_WAKEUP_GPIOA18(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">This function returns AON GPIOA18 pin as the wakeup source and output
+it on the Serial monitor.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-aon-wakepin-wakeup-gpioa19">
+<h2><strong>PMUCLASS::AON_WAKEPIN_WAKEUP_GPIOA19</strong><a class="headerlink" href="#pmuclass-aon-wakepin-wakeup-gpioa19" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Return the Wakeup source.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::AON_WAKEPIN_WAKEUP_GPIOA19(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">This function returns AON GPIOA19 pin as the wakeup source and output
+it on the Serial monitor.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-aon-wakepin-wakeup-gpioa20">
+<h2><strong>PMUCLASS::AON_WAKEPIN_WAKEUP_GPIOA20</strong><a class="headerlink" href="#pmuclass-aon-wakepin-wakeup-gpioa20" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Return the Wakeup source.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::AON_WAKEPIN_WAKEUP_GPIOA20(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">This function returns AON GPIOA20 pin as the wakeup source and output
+it on the Serial monitor.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-aon-wakepin-wakeup-gpioa21">
+<h2><strong>PMUCLASS::AON_WAKEPIN_WAKEUP_GPIOA21</strong><a class="headerlink" href="#pmuclass-aon-wakepin-wakeup-gpioa21" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Return the Wakeup source.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::AON_WAKEPIN_WAKEUP_GPIOA21(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">This function returns AON GPIOA21 pin as the wakeup source and output
+it on the Serial monitor.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-aon-wakepin-wakeup-gpioa25">
+<h2><strong>PMUCLASS::AON_WAKEPIN_WAKEUP_GPIOA25</strong><a class="headerlink" href="#pmuclass-aon-wakepin-wakeup-gpioa25" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Return the Wakeup source.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::AON_WAKEPIN_WAKEUP_GPIOA25(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">This function returns AON GPIOA25 pin as the wakeup source and output
+it on the Serial monitor.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+<section id="pmuclass-aon-wakepin-wakeup-gpioa26">
+<h2><strong>PMUCLASS::AON_WAKEPIN_WAKEUP_GPIOA26</strong><a class="headerlink" href="#pmuclass-aon-wakepin-wakeup-gpioa26" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Return the Wakeup source.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void PMUClass::AON_WAKEPIN_WAKEUP_GPIOA26(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">This function returns AON GPIOA26 pin as the wakeup source and output
+it on the Serial monitor.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: DeepSleep_DHT_Eink_Example; DeepSleep_DHT_LCD_Example;
+DeepSleepMode; TicklessMode;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Include “PMUCLASS.h” in order to use the class function.</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Readme%20NTPClient.html" class="btn btn-neutral float-left" title="Readme" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Class%20RTC.html" class="btn btn-neutral float-right" title="Class RTC" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

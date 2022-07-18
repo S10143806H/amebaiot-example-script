@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Release History &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="arduino_index.html">Arduino SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Release History</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/ambd_arduino/release_history.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="release-history">
+<h1>Release History<a class="headerlink" href="#release-history" title="Permalink to this heading"></a></h1>
+<p><strong>Version 3.1.2 - 2021/12/28</strong></p>
+<ul class="simple">
+<li><p>Feature:</p>
+<ul>
+<li><p>Update SimpleWebServerWiFi example</p></li>
+<li><p>Support BW16</p></li>
+</ul>
+</li>
+<li><p>API Updates:</p>
+<ul>
+<li><p>Update Wlan related naming from “AmebaWiFi” become “WiFi”</p></li>
+<li><p>Update RTC library for minor bug fix</p></li>
+</ul>
+</li>
+<li><p>Misc:</p>
+<ul>
+<li><p>Update all Fritzing files for new name updates</p></li>
+<li><p>AMB21, AMB22, AMB23, and BW16</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p><strong>Version 3.1.1 - 2021/12/25</strong></p>
+<ul class="simple">
+<li><p>Feature:</p>
+<ul>
+<li><p>Add BLE HID and examples</p></li>
+<li><p>BLEHIDGamepad, BLEHIDKeyboard, and BLEHIDMouse</p></li>
+<li><p>Update PowerSave examples</p></li>
+<li><p>Support RTL8722DM MINI and RTL8720DN/BW16</p></li>
+<li><p>Enable LwIP hostname edit</p></li>
+</ul>
+</li>
+<li><p>API Updates:</p>
+<ul>
+<li><p>Update API for PowerSave</p></li>
+<li><p>Update ameba_d_tools 1.0.7 for all 3 platforms</p></li>
+<li><p>Support RTL8720DN/BW16 and RTL8722DM MINI</p></li>
+<li><p>Add more Aon wake up pins</p></li>
+<li><p>Update API for IR</p></li>
+<li><p>Removed requirement to define both IR TX and RX pins in IRDevice::begin</p></li>
+<li><p>Removed previous limit on number of time durations IRDevice::send can accept</p></li>
+<li><p>Update GPIO Int</p></li>
+<li><p>Enable INPUT_IRQ_CHANGE</p></li>
+<li><p>Add definition inside wiring_constants.h and wiring_digital.c, also complete the TODO part for attachInterrupt() as well</p></li>
+<li><p>Update UART, for RTL8720DN/BW16 not showing log issue</p></li>
+<li><p>Fix wrong attribute permissions for characteristic CCCD descriptor. Remove unused variable warnings</p></li>
+<li><p>Update GTimer, for the internal timer ID validation test</p></li>
+<li><p>Updated SPI connection for RTL8720DN/BW16</p></li>
+<li><p>Update Google_Cloud_IoT example with new Google TLS cert</p></li>
+<li><p>Update Analog Pin remove A0 and A1</p></li>
+<li><p>Update Platform.txt for Windows OS with User Name having a space in between</p></li>
+<li><p>Update all libs</p></li>
+</ul>
+</li>
+<li><p>Misc:</p>
+<ul>
+<li><p>Update AmebaEink.zip, SPI connection for RTL8720DN/BW16</p></li>
+<li><p>Add Autoflash_patch folder</p></li>
+<li><p>Update the Fritzing of RTL8720DN/BW16, remove A0 and A1</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p><strong>Version 3.1.0 - 2021/11/05</strong></p>
+<ul class="simple">
+<li><p>Feature:</p>
+<ul>
+<li><p>Support board RTL8720DN(BW16)</p></li>
+<li><p>Add WiFiControlCar example</p></li>
+<li><p>Add Arduboy zip library</p></li>
+<li><p>Add WPA3 support</p></li>
+<li><p>Add Amebad_HMI_MQTT zip library</p></li>
+<li><p>Add support for IPV6 wiht 4 examples</p></li>
+<li><p>WLAN lib update</p></li>
+<li><p>Minor bug fix</p></li>
+</ul>
+</li>
+<li><p>API Updates:</p>
+<ul>
+<li><p>Support Microsoft Azure IoT cloud</p></li>
+<li><p>Enable “strnlen” from rom</p></li>
+<li><p>Add “#define yield” for compilation</p></li>
+<li><p>Update PubSubClient lib</p></li>
+<li><p>Update APIs for RTL8720DN(BW16) (SPI, I2C, Fatfs, Audiocodec and UART</p></li>
+<li><p>Update jtag enable functions</p></li>
+<li><p>Update wifi security option</p></li>
+<li><p>Remove the unused libs lib_wifi_fw.a lib_wifi_ucps_fw.a</p></li>
+<li><p>Update watchdog</p></li>
+<li><p>Update AudioCodec</p></li>
+<li><p>Pin mapping updates</p></li>
+<li><p>Remove unused marcos</p></li>
+<li><p>RTL8720DN(BW16) related naming update for all examples</p></li>
+<li><p>Update PowerSave</p></li>
+</ul>
+</li>
+<li><p>Misc</p>
+<ul>
+<li><p>Add RTL8720DN_BW16 frizting folder</p></li>
+<li><p>Move RTL8720DN_BW16 frizting files to correct folder</p></li>
+<li><p>Rename folder name to short the length of path</p></li>
+<li><p>Add Offline_SDK_installation_tool (Windows, Linux and MacOS)</p></li>
+<li><p>Update linux tools for compatibility issue</p></li>
+<li><p>Update RTL8722DM MINI and RTL8720DN(BW16) Fritzing and Pinmux</p></li>
+<li><p>Update ameba_d_tools V1.0.6</p></li>
+<li><p>Add Image_Releated folder</p></li>
+<li><p>Correct the core from Cortex-M4 to Cortex-M33</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p><strong>Version 3.0.11 - 2021/10/26</strong></p>
+<ul class="simple">
+<li><p>Feature:</p>
+<ul>
+<li><p>Add example, FatfsSDIO - Read and open HTML file from SD card</p></li>
+</ul>
+</li>
+<li><p>API Updates:</p>
+<ul>
+<li><p>RTL8720DN/BW16 related compatibility update for all examples</p></li>
+</ul>
+</li>
+<li><p>Misc</p>
+<ul>
+<li><p>Update RTL8722DM MINI and RTL8720DN Fritzing and Pinmux</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p><strong>Version 3.0.10 - 2021/09/22</strong></p>
+<ul class="simple">
+<li><p>Feature:</p>
+<ul>
+<li><p>Add AudioCodec wav examples</p></li>
+</ul>
+</li>
+<li><p>API Updates:</p>
+<ul>
+<li><p>Pin mapping updates for RTL8722DM MINI</p></li>
+<li><p>Remove unused marcos</p></li>
+<li><p>Update platform.txt for bin files process</p></li>
+<li><p>rollback for “wifi.h” update</p></li>
+<li><p>Minor bug fix patch</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p><strong>Version 3.0.9 - 2021/09/13</strong></p>
+<ul class="simple">
+<li><p>API Updates:</p>
+<ul>
+<li><p>Pin mapping updates</p></li>
+<li><p>Remove unused marcos</p></li>
+<li><p>“wifi.h” related files change to “Amebawifi.h”</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p><strong>Version 3.0.8 - 2021/05/06</strong></p>
+<ul class="simple">
+<li><p>Feature:</p>
+<ul>
+<li><p>Add RTL8722DM_mini board</p></li>
+<li><p>Add fatfs for SD card</p></li>
+<li><p>Add AudioCodec</p></li>
+<li><p>Add TensorFlow lite support with examples</p></li>
+<li><p>Add zip libraries for TensorFlow lite support</p></li>
+<li><p>Update SDK for supporting Arduino IDE 2.0</p></li>
+<li><p>Update wlan lib</p></li>
+</ul>
+</li>
+<li><p>API Updates:</p>
+<ul>
+<li><p>Update zip libraries of Eink</p></li>
+<li><p>ADC updates, Change calculation method to use EFUSE calibration parameters and SDK formula to improve accuracy</p></li>
+<li><p>writing_analog updates, minor bug fix and support for mini board</p></li>
+<li><p>SPI updates, minor bug fix and support for mini board</p></li>
+<li><p>I2S updates, minor bug fix and support for mini board</p></li>
+<li><p>IRDevice updates, minor bug fix</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p><strong>Version 3.0.7 - 2020/11/19</strong></p>
+<ul class="simple">
+<li><p>Feature:</p>
+<ul>
+<li><p>Add AmebaIRDevice example IRSendSONY</p></li>
+<li><p>Update Ameba Arduino IRDevice API</p></li>
+<li><p>Update Ameba Arduino SSL related API</p></li>
+<li><p>Update Ameba Arduino Wlan API to support static IP function</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p><strong>Version 3.0.6 - 2020/10/28</strong></p>
+<ul class="simple">
+<li><p>Feature:</p>
+<ul>
+<li><p>Add Ameba RTC support</p></li>
+<li><p>Add AmebaRTC example RTC and RTCAlarm</p></li>
+<li><p>Add Ameba Watchdog support</p></li>
+<li><p>Add AmebaWatchdog example WatchdogTimer</p></li>
+<li><p>Update Ameba BLE support</p></li>
+<li><p>Add AmebaBLE example BLEUartService, DHT_over_BLEUart</p></li>
+<li><p>Update Ameba Wlan library</p></li>
+<li><p>Update Ameba Wlan SDK structure, add AP mode hidden SSID support</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p><strong>Version 3.0.5 - 2020/09/09</strong></p>
+<ul class="simple">
+<li><p>Feature:</p>
+<ul>
+<li><p>Build in tool updates V1.0.4</p></li>
+<li><p>Add zip lib AmebaEink</p></li>
+<li><p>Add AmebaEink example EinkDisplayImage, EinkDisplayQR, and EinkDisplayText</p></li>
+<li><p>Add google cloud examples</p></li>
+<li><p>Update Amazon AWS related examples</p></li>
+<li><p>Add power save support</p></li>
+<li><p>Add AmebaPowerSave example TicklessMode, DeepSleepMode, DeepSleep_DHT_LCD_Example, and DeepSleep_DHT_Eink_Example</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p><strong>Version 3.0.4 - 2020/07/27</strong></p>
+<ul class="simple">
+<li><p>Feature:</p>
+<ul>
+<li><p>Update BLE library. Add example BLEBatteryClient and BLEWIfiConfig</p></li>
+<li><p>Update from polarssl to mbedtls 2.4.0</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p><strong>Version 3.0.3 - 2020/07/03</strong></p>
+<ul class="simple">
+<li><p>Feature:</p>
+<ul>
+<li><p>Build in Image tool updates V1.0.3</p></li>
+<li><p>Upload log clean up</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p><strong>Version 3.0.2 - 2020/06/30</strong></p>
+<ul class="simple">
+<li><p>Feature:</p>
+<ul>
+<li><p>Windows, Linux and macOS X support</p></li>
+<li><p>Build in Image tool updates</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p><strong>Version 3.0.1 - 2020/05/15</strong></p>
+<ul class="simple">
+<li><p>Feature:</p>
+<ul>
+<li><p>Official release of AmebaD Arduino SDK</p></li>
+<li><p>warning cleaning</p></li>
+<li><p>I2C lib updates</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p><strong>Version 3.0.0 - 2020/05/01</strong></p>
+<ul class="simple">
+<li><p>Feature:</p>
+<ul>
+<li><p>Support Boards Manager and Arduino IDE development</p></li>
+<li><p>WiFi scan AP, connect to AP, TCP Server/Client, including 5G</p></li>
+<li><p>Bluetooth, BLE</p></li>
+<li><p>GPIO digital in/out and interrupt</p></li>
+<li><p>ADC analog in/out (0 ~ 3.3V)</p></li>
+<li><p>PWM getting analog results with digital means</p></li>
+<li><p>SPI master and slave mode</p></li>
+<li><p>UART 1 for log, 2 for customize usage</p></li>
+<li><p>I2C master mode</p></li>
+</ul>
+</li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

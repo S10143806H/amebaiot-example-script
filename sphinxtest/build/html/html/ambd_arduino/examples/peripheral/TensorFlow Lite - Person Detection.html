@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TensorFlow Lite - Person Detection &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_index.html">Arduino SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>TensorFlow Lite - Person Detection</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_arduino/examples/peripheral/TensorFlow Lite - Person Detection.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tensorflow-lite-person-detection">
+<h1>TensorFlow Lite - Person Detection<a class="headerlink" href="#tensorflow-lite-person-detection" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Materials</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22 / AMB23 / BW16] x 1</p></li>
+<li><p>Arducam Mini 2MP Plus OV2640 SPI Camera Module x 1</p></li>
+<li><p>LED x 3</p></li>
+</ul>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<p><strong>Procedure</strong></p>
+<div class="line-block">
+<div class="line"><strong>AMB21 / AMB22</strong> Wiring Diagram:</div>
+<div class="line">Connect the camera and LEDs to the RTL8722 board following the diagram.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image174.png"><img alt="1" src="../../../_images/image174.png" style="width: 621.6px; height: 373.6px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><strong>AMB23</strong> Wiring Diagram:</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image1-16.png"><img alt="1-1" src="../../../_images/image1-16.png" style="width: 640.1999999999999px; height: 354.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><strong>BW16</strong> Wiring Diagram:</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image1-24.png"><img alt="1-2" src="../../../_images/image1-24.png" style="width: 580.1999999999999px; height: 334.2px;" /></a></p>
+</div></blockquote>
+<p>Download the Ameba customized version of TensorFlow Lite for
+Microcontrollers library at
+<a class="reference external" href="https://github.com/ambiot/tree/master/Arduino_zip_libraries">https://github.com/ambiot/tree/master/Arduino_zip_libraries</a>.</p>
+<p>Follow the instructions at <a class="reference external" href="https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries">https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries</a> to
+install it.</p>
+<p>Ensure that the patch files found at
+<a class="reference external" href="https://github.com/ambiot/tree/master/Ameba_misc/">https://github.com/ambiot/tree/master/Ameba_misc/</a> are also installed.</p>
+<p>You will also need to install the Ameba_ArduCAM library, found together
+with the TensorFlow Lite library.</p>
+<p>In the Arduino IDE library manager, install the JPEGDecoder library.
+This example has been tested with version 1.8.0 of the JPEGDecoder
+library.</p>
+<p>Once the library has installed, you will need to configure it to disable
+some optional components that are not compatible with the RTL8722DM.
+Open the following file:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">Arduino/libraries/JPEGDecoder/src/User_Config.h</span></code></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Make sure that both <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">LOAD_SD_LIBRARY</span></code> and <code class="docutils literal notranslate"><span class="pre">#define</span>
+<span class="pre">LOAD_SDFAT_LIBRARY</span></code> are commented out, as shown in this excerpt from the
+file:</div>
+</div>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">//#define LOAD_SD_LIBRARY // Default SD Card library</span>
+<span class="c1">//#define LOAD_SDFAT_LIBRARY // Use SdFat library instead, so SD Card SPI can be bit bashed</span>
+</pre></div>
+</div>
+<p>Open the example, <code class="docutils literal notranslate"><span class="pre">&quot;Files&quot;</span> <span class="pre">-&gt;</span> <span class="pre">&quot;Examples&quot;</span> <span class="pre">-&gt;</span> <span class="pre">“TensorFlowLite_Ameba”</span> <span class="pre">-&gt;</span>
+<span class="pre">“person_detection”</span></code>.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image267.png"><img alt="2" src="../../../_images/image267.png" style="width: 389.2px; height: 581.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">User can define the LED pins by using any GPIO pins on the boards.</div>
+</div>
+<div class="line-block">
+<div class="line">Upload the code and press the reset button on Ameba once the upload is
+finished.</div>
+<div class="line">Once it is running, you should see the blue LED flashing once every few
+seconds, indicating that it has finished processing an image. The red
+LED will light up if it determines that there is no person in the
+previous image captured, and the green LED will light up if it
+determines that there is a person.</div>
+<div class="line">The inference results are also output to the Arduino serial monitor,
+which appear as follows:</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image344.png"><img alt="3" src="../../../_images/image344.png" style="width: 511.20000000000005px; height: 381.6px;" /></a></p>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Code Reference</strong>
+<span class="raw-html"></p></span></p>
+<p>More information on TensorFlow Lite for Microcontrollers can be found
+at: <a class="reference external" href="https://www.tensorflow.org/lite/microcontrollers">https://www.tensorflow.org/lite/microcontrollers</a></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class BLEHIDDevice &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Class BLEHIDGamepad" href="Class%20BLEHIDGamepad.html" />
+    <link rel="prev" title="Class BLEDevice" href="Class%20BLEDevice.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../AMB21/index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">AMB23 (RTL8722DM MINI)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/ambd_mini_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples_and_components/index.html">Examples &amp; Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">API Documents</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="index.html#analog">Analog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#audiocodec">AudioCodec</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#ble">BLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#epdif">EPDIF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#fatfssdcard">FatfsSDCard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#flashmemory">FlashMemory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gpio">GPIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gtimer">GTimer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#http">Http</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#irdevice">IRDevice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#mdns">MDNS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#mqttclient">MQTTClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ntpclient">NTPClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#powersave">PowerSave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#rtc">RTC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#softwareserial">SoftwareSerial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#spi">SPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#sys">Sys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#usb">USB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wdt">WDT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wifi">WiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wire">Wire</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ws2812b">WS2812B</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../index.html">AMB23 (RTL8722DM MINI)</a> &raquo;</li>
+          <li><a href="index.html">API Documents</a> &raquo;</li>
+      <li>Class BLEHIDDevice</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_arduino/AMB23/api_documents/Class BLEHIDDevice.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-blehiddevice">
+<h1>Class BLEHIDDevice<a class="headerlink" href="#class-blehiddevice" title="Permalink to this heading"></a></h1>
+<p><strong>BLEHIDDevice Class</strong></p>
+<p><strong>Description</strong></p>
+<p>A class used for creating and managing HID over GATT Profile (HOGP)
+services.</p>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">class BLEHIDDevice</div>
+</div>
+<p><strong>Members</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Public Constructors</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>The public constructor should not be used as this class is intended
+to be a singleton class. Access member functions using the object
+instance named BLEHIDDev.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Public Methods</strong></p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BLEHIDDevice::init</p></td>
+<td><p>Initialize the HID Device Profile by
+creating the required services</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEHIDD
+evice::setNumOutputReport</p></td>
+<td><p>Configure the number of HID output
+reports</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEHID
+Device::setNumInputReport</p></td>
+<td><p>Configure the number of HID input
+reports</p></td>
+</tr>
+<tr class="row-odd"><td><p>B
+LEHIDDevice::setReportMap</p></td>
+<td><p>Configure the HID report map</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEHIDDevice::inputReport</p></td>
+<td><p>Send a HID input report</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEHIDDevice
+::setOutputReportCallback</p></td>
+<td><p>Set a user callback function for
+receiving HID output reports</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEHIDD
+evice::bootKeyboardReport</p></td>
+<td><p>Send a HID boot keyboard input report</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEHIDDevice::setHidInfo</p></td>
+<td><p>Set HID info of the HID service</p></td>
+</tr>
+<tr class="row-even"><td><p>B
+LEHIDDevice::setBattLevel</p></td>
+<td><p>Set battery level info of the Battery
+service</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEHIDDevice::setPNPInfo</p></td>
+<td><p>Set PNP information of the Device
+Information service</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEHIDDevi
+ce::setManufacturerString</p></td>
+<td><p>Set manufacturer information of the
+Device Information service</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLE
+HIDDevice::setModelString</p></td>
+<td><p>Set model information of the Device
+Information service</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEHIDDevice::hidService</p></td>
+<td><p>Get reference to HID service</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLE
+HIDDevice::devInfoService</p></td>
+<td><p>Get reference to Device Information
+service</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEHIDDevice::battService</p></td>
+<td><p>Get reference to Battery service</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>BLEHIDDevice::init</strong></p>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Initialize the HID Device profile by creating the required services.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void init(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: BLEHIDGamepad</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">The HID Device object should be initialized before any HID reports can
+be sent.</div>
+</div>
+<p><strong>BLEHIDDevice::setNumOutputReport</strong></p>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Configure the number of HID output reports.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void setNumOutputReport (uint8_t numOutputReports);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">numOutputReports: number of output reports</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">The number of output reports should be configured before BLEHIDDevice
+init() function is called.</div>
+</div>
+<p><strong>BLEHIDDevice::setNumInputReport</strong></p>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Configure the number of HID input reports.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void setNumInputReport (uint8_t numInputReports);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">numInputReports: number of input reports</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">The number of input reports should be configured before BLEHIDDevice
+init() function is called.</div>
+</div>
+<p><strong>BLEHIDDevice::setReportMap</strong></p>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Configure the HID report map characteristic with a HID report
+descriptor.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void setReportMap (uint8_t* report_map, uint16_t len);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">report_map: pointer to HID report descriptor</div>
+<div class="line">len: HID report descriptor length in bytes</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: BLEHIDGamepad</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">The HID report map characteristic can only be configured after
+BLEHIDDevice init() function is called.</div>
+</div>
+<p><strong>BLEHIDDevice::inputReport</strong></p>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Send a HID input report.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void inputReport (uint8_t reportID, uint8_t* data, uint16_t len,
+uint8_t conn_id);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">reportID: HID report ID of input report</div>
+<div class="line">data: pointer to HID input report data to send</div>
+<div class="line">len: length of HID input report data in bytes</div>
+<div class="line">conn_id: connection ID of device to send HID report to</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">HID input reports can only be sent after BLEHIDDevice init() function
+has been called.</div>
+</div>
+<p><strong>BLEHIDDevice::setOutputReportCallback</strong></p>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Set a user callback function for receiving HID output report data.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void setOutputReportCallback (uint8_t reportID, void (*fCallback)
+(BLECharacteristic* chr, uint8_t conn_id));</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">reportID: HID report ID of output report to link callback function
+with</div>
+<div class="line">chr: BLECharacteristic class object containing received HID output
+report data</div>
+<div class="line">conn_id: connection ID of device which sent HID report data</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Setting a user callback function for output reports can only occur
+after BLEHIDDevice init() function has been called.</div>
+</div>
+<p><strong>BLEHIDDevice::bootKeyboardReport</strong></p>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Send a HID boot keyboard input report.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void bootKeyboardReport (uint8_t* data, uint16_t len, uint8_t
+conn_id);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">data: pointer to HID input report data to send</div>
+<div class="line">len: length of HID input report data in bytes</div>
+<div class="line">conn_id: connection ID of device to send HID report to</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">By default, the HID service Protocol Mode characteristic has boot mode
+disabled. To send boot keyboard input reports, the Protocol Mode
+characteristic needs to have boot mode enabled.</div>
+</div>
+<p><strong>BLEHIDDevice::setHidInfo</strong></p>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Set data of the HID Info characteristic of the HID service.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void setHidInfo (uint16_t bcd, uint8_t country, uint8_t flags);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">bcd: 16-bit unsigned integer representing version number of base USB
+HID Specification implemented by HID Device</div>
+<div class="line">country: 8-bit integer identifying country HID Device hardware is
+localized for. Most hardware is not localized (value 0x00).</div>
+<div class="line">flags: Bit flags indicating remote-wake capability and advertising
+when bonded but not connected.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">For detailed information on the characteristic, refer to Bluetooth SIG
+HID Service specifications.</div>
+</div>
+<p><strong>BLEHIDDevice::setBattLevel</strong></p>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Set battery level data of the Battery service.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void setBattLevel (uint8_t level);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">level: battery level expressed as % of full charge</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Battery level is set to 100% by default. For detailed information
+refer to Bluetooth SIG Battery service specifications.</div>
+</div>
+<p><strong>BLEHIDDevice::setPNPInfo</strong></p>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Set PNP data of the Device Information service.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void setPNPInfo (uint8_t sig, uint16_t vid, uint16_t pid, uint16_t
+version);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">sig: The Vendor ID Source field designates which organization assigned
+the value used in the Vendor ID field value.</div>
+<div class="line">vid: The Vendor ID field is intended to uniquely identify the vendor
+of the device.</div>
+<div class="line">pid: The Product ID field is intended to distinguish between different
+products made by the vendor.</div>
+<div class="line">version: The Product Version field is a numeric expression identifying
+the device release number in Binary-Coded Decimal.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">By default, sig and vid are configured to indicate Realtek as the
+vendor. For detailed information refer to Bluetooth SIG Device
+Information service specifications.</div>
+</div>
+<p><strong>BLEHIDDevice::setManufacturerString</strong></p>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Set manufacturer information of the Device Information service.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void setManufacturerString (const char* manufacturer);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">manufacturer: pointer to character string containing manufacturer name
+info.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Manufacturer is set to “Realtek” by default. For detailed information
+refer to Bluetooth SIG Device Information service specifications.</div>
+</div>
+<p><strong>BLEHIDDevice::setModelString</strong></p>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Set model information of the Device Information service.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void setModelString (const char* model);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">model: pointer to character string containing device model info.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">Model is set to “Ameba_BLE_HID” by default. For detailed information
+refer to Bluetooth SIG Device Information service specifications.</div>
+</div>
+<p><strong>BLEHIDDevice::hidService</strong></p>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Get reference to HID service</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">BLEService&amp; hidService ();</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns a reference to the BLEService class object for
+the HID service.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: BLEHIDMouse</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+<p><strong>BLEHIDDevice::devInfoService</strong></p>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Get reference to Device Information service</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">BLEService&amp; devInfoService ();</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns a reference to the BLEService class object for
+the Device Information service.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: BLEHIDMouse</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+<p><strong>BLEHIDDevice::battService</strong></p>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Get reference to Battery service</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">BLEService&amp; battService ();</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns a reference to the BLEService class object for
+the Battery service.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: BLEHIDMouse</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Class%20BLEDevice.html" class="btn btn-neutral float-left" title="Class BLEDevice" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Class%20BLEHIDGamepad.html" class="btn btn-neutral float-right" title="Class BLEHIDGamepad" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

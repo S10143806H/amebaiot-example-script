@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UART - Retrieve GPS Position &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="UART – Set Callback Function For UART Communications" href="UART%20-%20Set%20Callback%20Function%20For%20UART%20Communications.html" />
+    <link rel="prev" title="UART - Communicate with PC over USB to Serial Module" href="UART%20-%20Communicate%20with%20PC%20over%20USB%20to%20Serial%20Module.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB21/index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">BW16 (RTL8720DN)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Network%20Examples/index.html">Network Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">BW16 (RTL8720DN)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Peripheral Examples</a> &raquo;</li>
+      <li>UART - Retrieve GPS Position</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/BW16_/examples_and_components/Peripheral Examples/UART - Retrieve GPS Position.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="uart-retrieve-gps-position">
+<h1>UART - Retrieve GPS Position<a class="headerlink" href="#uart-retrieve-gps-position" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Preparation</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22 / AMB23 / BW16] x 1</p></li>
+<li><p><a class="reference external" href="https://www.adafruit.com/products/746">Adafruit Ultimate GPS Breakout</a> x 1
+(Refer to <a class="reference external" href="https://learn.adafruit.com/adafruit-ultimate-gps?view=all">official document</a>)</p></li>
+</ul>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<p>In this example, we use Adafruit Ultimate GPS Breakout. Its data format
+is pure text, so we can connect it to USB to TTL Adapter and observe the
+output.</p>
+<p><a class="reference internal" href="../../../../_images/image177.png"><img alt="1" src="../../../../_images/image177.png" style="width: 626.0px; height: 147.0px;" /></a></p>
+<p><a class="reference internal" href="../../../../_images/image270.png"><img alt="2" src="../../../../_images/image270.png" style="width: 649.0px; height: 372.0px;" /></a></p>
+<p>It follows the NMEA sentence format (refer to <a class="reference external" href="http://aprs.gids.nl/nmea/">http://aprs.gids.nl/nmea/</a>)
+The GPS signal is weak in indoor environment.
+The status that the GPS signal is not received is called “not fix”.
+Bring the GPS module outdoors, when the GPS signal is “fix”,
+you would get message similar to the figure below.</p>
+<p><a class="reference internal" href="../../../../_images/image347.png"><img alt="3" src="../../../../_images/image347.png" style="width: 777.0px; height: 425.0px;" /></a></p>
+<div class="line-block">
+<div class="line">In this example we are only interested in the “$GPRMC (Global Positioning Recommended
+Minimum Coordinates)”:</div>
+<div class="line"><strong>$GPRMC,032122.000,A,2446.8181,N,12059.7251,E,0.39,78.89,270116,,,A*53</strong></div>
+<div class="line">Each field is separated by a comma.</div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><p>First field is the GMT time (Greenwich Mean Time), that is 032122.000
+in this example. The time format is HH:MM:SS.SSS, i.e.,
+03:21:22.000. Note that the time zone and the daylight-saving time
+adjustment should be handled on your own.</p></li>
+<li><p>Second field represents the status code</p>
+<ul>
+<li><p>V: Void (Invalid)</p></li>
+<li><p>A: Active, meaning the GPS signal is fix.</p></li>
+</ul>
+</li>
+<li><p>The third to sixth fields represent the geolocation</p></li>
+</ul>
+</div></blockquote>
+<p>In this example, 2446.8181,N represents 24 degrees 46.8181 minutes north
+latitude, and 12059.7251,E represents 120 degrees 59.7251 minutes east
+longitude.</p>
+<p>We can search <strong>+24 46.8181’, +120 59.7251’</strong> in Google map
+to check whether the position is correct.</p>
+<p><a class="reference internal" href="../../../../_images/image436.png"><img alt="4" src="../../../../_images/image436.png" style="width: 616.8px; height: 390.59999999999997px;" /></a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The seventh field is relative speed(knot). 1 knot = 1.852km/hr, in
+this example the relative speed is 0.39 knot.</p></li>
+<li><p>The eighth field is the moving angle, which is calculated by its
+moving orbit.</p></li>
+<li><p>The ninth field is the date with format ddMMyy. In this example,
+“270116” stands for day 27, January, year 2016.</p></li>
+<li><p>The last field is checksum. In the example we have *53 as checksum.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>AMB21 / AMB22</strong> Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image526.png"><img alt="5" src="../../../../_images/image526.png" style="width: 518.0px; height: 419.6px;" /></a></p>
+</div></blockquote>
+<p><strong>AMB23</strong> Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image5-1.png"><img alt="5-1" src="../../../../_images/image5-1.png" style="width: 440.0px; height: 323.6px;" /></a></p>
+</div></blockquote>
+<p><strong>AMB23</strong> Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image5-3.png"><img alt="5-3" src="../../../../_images/image5-3.png" style="width: 505.2px; height: 354.0px;" /></a></p>
+</div></blockquote>
+<p>Open the example in <code class="docutils literal notranslate"><span class="pre">“Files”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span>
+<span class="pre">“AmebaSoftwareSerial”</span> <span class="pre">-&gt;</span> <span class="pre">“Adafruit_GPS_parsing”</span></code>.</p>
+<div class="line-block">
+<div class="line">Compile and upload to Ameba, then press the reset button.</div>
+<div class="line">The result will be output to Serial Monitor:</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image614.png"><img alt="6" src="../../../../_images/image614.png" style="width: 649.0px; height: 410.0px;" /></a></p>
+<p><a class="reference internal" href="../../../../_images/image711.png"><img alt="7" src="../../../../_images/image711.png" style="width: 649.0px; height: 410.0px;" /></a></p>
+</div></blockquote>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="UART%20-%20Communicate%20with%20PC%20over%20USB%20to%20Serial%20Module.html" class="btn btn-neutral float-left" title="UART - Communicate with PC over USB to Serial Module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="UART%20-%20Set%20Callback%20Function%20For%20UART%20Communications.html" class="btn btn-neutral float-right" title="UART – Set Callback Function For UART Communications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

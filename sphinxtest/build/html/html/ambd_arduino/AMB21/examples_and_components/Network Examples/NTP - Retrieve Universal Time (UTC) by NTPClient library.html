@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NTP - Retrieve Universal Time (UTC) by NTPClient library &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="WiFi - Approximate UDP Receive Delay" href="WiFi%20-%20Approximate%20UDP%20Receive%20Delay.html" />
+    <link rel="prev" title="MQTT - Upload PM2.5 Data to LASS System" href="MQTT%20-%20Upload%20PM2.5%20Data%20to%20LASS%20System.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Network Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Peripheral%20Examples/index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Network Examples</a> &raquo;</li>
+      <li>NTP - Retrieve Universal Time (UTC) by NTPClient library</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/AMB21/examples_and_components/Network Examples/NTP - Retrieve Universal Time (UTC) by NTPClient library.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ntp-retrieve-universal-time-utc-by-ntpclient-library">
+<h1>NTP - Retrieve Universal Time (UTC) by NTPClient library<a class="headerlink" href="#ntp-retrieve-universal-time-utc-by-ntpclient-library" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Preparation</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22 / AMB23 / BW16] x 1</p></li>
+</ul>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<p>In this example, we use an NTP client to sync with NTP
+servers using UDP and keep track of time locally.
+Open the example.
+<code class="docutils literal notranslate"><span class="pre">“File”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”-&gt;</span> <span class="pre">“NTPClient”</span> <span class="pre">-&gt;</span> <span class="pre">“Advanced”</span></code></p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image124.png"><img alt="image1" src="../../../../_images/image124.png" style="width: 510.99999999999994px; height: 819.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Modify the highlighted code section (ssid, password) to connect to your WiFi network.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image223.png"><img alt="image2" src="../../../../_images/image223.png" style="width: 511.7px; height: 660.8px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Compile the code and upload it to Ameba. After pressing the Reset button, Ameba
+connects to WiFi, gets the UTC time from the NTP server, and prints out
+the current time with time zone offset to the serial monitor.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image316.png"><img alt="image3" src="../../../../_images/image316.png" style="width: 545.3px; height: 433.29999999999995px;" /></a></p>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Code Reference</strong>
+<span class="raw-html"></p></span></p>
+<div class="line-block">
+<div class="line">Configure NTP client:</div>
+<div class="line">The NTPClient needs to use a UDP client for
+communications. A WiFiUDP client is declared and passed to the NTPClient
+constructor, along with an NTP server address, time zone offset in
+seconds, and update interval in milliseconds. If detailed configuration
+is not needed, just passing in the UDP client is also sufficient, refer
+to the “NTPClient” -&gt; “Basic” example.</div>
+</div>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">WiFiUDP</span><span class="w"> </span><span class="n">ntpUDP</span><span class="p">;</span><span class="w"></span>
+<span class="n">NTPClient</span><span class="w"> </span><span class="nf">timeClient</span><span class="p">(</span><span class="n">ntpUDP</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;europe.pool.ntp.org&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3600</span><span class="p">,</span><span class="w"> </span><span class="mi">60000</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Start NTP client:</div>
+<div class="line">After connecting to WiFi, the NTPClient is started
+using the <code class="docutils literal notranslate"><span class="pre">begin()</span></code> function, which causes the client to sync with the NTP
+server and get the UTC time.</div>
+</div>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">WiFiUDP</span><span class="w"> </span><span class="n">ntpUDP</span><span class="p">;</span><span class="w"></span>
+<span class="n">timeClient</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Get local time:</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">getFormattedTime()</span></code> is used to format the received UTC
+time into the local time zone. <code class="docutils literal notranslate"><span class="pre">update()</span></code> is called every loop so that the
+NTPClient will sync with the NTP server once every update interval.</div>
+</div>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">timeClient</span><span class="p">.</span><span class="n">update</span><span class="p">();</span><span class="w"></span>
+<span class="n">timeClient</span><span class="p">.</span><span class="n">getFormattedTime</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="MQTT%20-%20Upload%20PM2.5%20Data%20to%20LASS%20System.html" class="btn btn-neutral float-left" title="MQTT - Upload PM2.5 Data to LASS System" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="WiFi%20-%20Approximate%20UDP%20Receive%20Delay.html" class="btn btn-neutral float-right" title="WiFi - Approximate UDP Receive Delay" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

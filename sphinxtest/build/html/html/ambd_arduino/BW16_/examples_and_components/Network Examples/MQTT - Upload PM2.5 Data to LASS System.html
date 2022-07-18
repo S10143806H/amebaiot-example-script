@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MQTT - Upload PM2.5 Data to LASS System &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="NTP - Retrieve Universal Time (UTC) by NTPClient library" href="NTP%20-%20Retrieve%20Universal%20Time%20%28UTC%29%20by%20NTPClient%20library.html" />
+    <link rel="prev" title="MQTT - Use Google Cloud IoT" href="MQTT%20-%20Use%20Google%20Cloud%20IoT.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB21/index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">BW16 (RTL8720DN)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Network Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Peripheral%20Examples/index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">BW16 (RTL8720DN)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Network Examples</a> &raquo;</li>
+      <li>MQTT - Upload PM2.5 Data to LASS System</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/BW16_/examples_and_components/Network Examples/MQTT - Upload PM2.5 Data to LASS System.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mqtt-upload-pm2-5-data-to-lass-system">
+<h1>MQTT - Upload PM2.5 Data to LASS System<a class="headerlink" href="#mqtt-upload-pm2-5-data-to-lass-system" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Intro to LASS</strong>
+<span class="raw-html"></p></span></p>
+<div class="line-block">
+<div class="line">The LASS stands for “Location Aware Sensor System”. It is an open
+project and was started only for the interest of public welfare. Find
+detailed
+introduction <a class="reference external" href="http://makerpro.cc/2015/09/projectplus-lass/">here</a>.</div>
+<div class="line">Practically, LASS is based on MQTT protocol to collect all kinds of
+uploaded data, and for those who need these data can subscribe top as
+well.</div>
+<div class="line">Find more LASS information at their <a class="reference external" href="https://lass.hackpad.com/">official hackpad</a>.</div>
+</div>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Preparation</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22 / AMB23 / BW16] x 1</p></li>
+<li><p>PlanTower PMS3003 or PMS5003 x1</p></li>
+</ul>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<p>In this example, we use applications mentioned at our website,
+including:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.amebaiot.com/amebad-arduino-mqtt-upload-listen/">MQTT</a>:
+a MQTT-Broker to connect to LASS. The Client is “FT1_0XXXX”, the
+XXXX are the four last digits of Ameba’s Wi-Fi MAC, and the
+outTopic is “LASS/Test/Pm25Ameba/<strong>clientID</strong>“, where clientID
+is the actual Ameba’s MQTT client ID.</p></li>
+<li><p><a class="reference external" href="https://www.amebaiot.com/amebad-arduino-utc-time/">NTP</a>: uploaded
+data must have time notation</p></li>
+<li><p><a class="reference external" href="https://www.amebaiot.com/amebad-arduino-pm25/">PM2.5</a>: uploaded
+data includes PM2.5 information</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Open the example. <code class="docutils literal notranslate"><span class="pre">“File”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span> <span class="pre">“AmebaMQTTClient”</span> <span class="pre">-&gt;</span>
+<span class="pre">“lass_basic”</span></code></div>
+<div class="line"><a class="reference internal" href="../../../../_images/image119.png"><img alt="1" src="../../../../_images/image119.png" style="width: 427.2px; height: 639.6px;" /></a></div>
+<div class="line">This example requires internet connection, so make sure you fill in SSID
+and PASS into AP information that you wish to connect.</div>
+</div>
+<div class="line-block">
+<div class="line">Also, LASS requires GPS information. There is no GPS sensor
+included in this example, so you must manually provide GPS information.
+Use Google Map to find the coordinates you plan to place your Ameba. You
+can see in this example that the latitude is 24.7814033, and the
+longitude is 120.9933676</div>
+<div class="line"><a class="reference internal" href="../../../../_images/image217.png"><img alt="2" src="../../../../_images/image217.png" style="width: 959.0px; height: 668.0px;" /></a></div>
+<div class="line">Fill in GPS info at <code class="docutils literal notranslate"><span class="pre">gps_lat</span></code> and <code class="docutils literal notranslate"><span class="pre">gps_lon</span></code>.</div>
+<div class="line"><a class="reference internal" href="../../../../_images/image313.png"><img alt="3" src="../../../../_images/image313.png" style="width: 679.0px; height: 843.0px;" /></a></div>
+</div>
+<div class="line-block">
+<div class="line">Then connect sensors according to UART-PlanTower PMS3003 wiring example.</div>
+<div class="line"><strong>AMB21 / AMB22</strong>:</div>
+<div class="line"><a class="reference internal" href="../../../../_images/image411.png"><img alt="4" src="../../../../_images/image411.png" style="width: 742.4000000000001px; height: 384.8px;" /></a></div>
+<div class="line"><strong>AMB23</strong>:</div>
+<div class="line"><a class="reference internal" href="../../../../_images/image4-1.png"><img alt="4-1" src="../../../../_images/image4-1.png" style="width: 557.6px; height: 522.4px;" /></a></div>
+<div class="line"><strong>BW16</strong>:</div>
+<div class="line"><a class="reference internal" href="../../../../_images/image4-2.png"><img alt="4-2" src="../../../../_images/image4-2.png" style="width: 601.0px; height: 462.0px;" /></a></div>
+</div>
+<div class="line-block">
+<div class="line">Compile the code and upload it to Ameba. After pressing the Reset button,
+Ameba will attempt to read PM2.5 data every minute and upload it to LASS
+MQTT-Broker. Open Serial Monitor to see the uploaded data, including client
+id, topic, and current PM2.5 status.</div>
+<div class="line"><a class="reference internal" href="../../../../_images/image511.png"><img alt="5" src="../../../../_images/image511.png" style="width: 608.5px; height: 419.5px;" /></a></div>
+</div>
+<div class="line-block">
+<div class="line">We can also use MQTTlens to verify if the data is properly uploaded.</div>
+</div>
+<div class="line-block">
+<div class="line">Enter “gpssensor.ddns.net” as the MQTT-Broker server and “LASS/Test/PM25/live”
+as the subscribe topic to receive data.</div>
+</div>
+<div class="line-block">
+<div class="line">The time uses UTC format, and the PM2.5 data stores in s-d0. In the figure,
+s_d0 = 9 represents that the PM2.5 is 9, meaning that the entire publish/subscribe
+process is working successfully.</div>
+<div class="line"><a class="reference internal" href="../../../../_images/image66.png"><img alt="6" src="../../../../_images/image66.png" style="width: 608.5px; height: 419.5px;" /></a></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="MQTT%20-%20Use%20Google%20Cloud%20IoT.html" class="btn btn-neutral float-left" title="MQTT - Use Google Cloud IoT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="NTP%20-%20Retrieve%20Universal%20Time%20%28UTC%29%20by%20NTPClient%20library.html" class="btn btn-neutral float-right" title="NTP - Retrieve Universal Time (UTC) by NTPClient library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

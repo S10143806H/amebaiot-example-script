@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class BLEHIDKeyboard &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Class BLEHIDMouse" href="Class%20BLEHIDMouse.html" />
+    <link rel="prev" title="Class BLEHIDGamepad" href="Class%20BLEHIDGamepad.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../AMB21/index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">BW16 (RTL8720DN)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples_and_components/index.html">Examples &amp; Components</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">API Documents</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="index.html#analog">Analog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#audiocodec">AudioCodec</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#ble">BLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#epdif">EPDIF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#fatfssdcard">FatfsSDCard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#flashmemory">FlashMemory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gpio">GPIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gtimer">GTimer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#http">Http</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#irdevice">IRDevice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#mdns">MDNS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#mqttclient">MQTTClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ntpclient">NTPClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#powersave">PowerSave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#rtc">RTC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#softwareserial">SoftwareSerial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#spi">SPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#sys">Sys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wdt">WDT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wifi">WiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wire">Wire</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ws2812b">WS2812B</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/index.html">Support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../index.html">BW16 (RTL8720DN)</a> &raquo;</li>
+          <li><a href="index.html">API Documents</a> &raquo;</li>
+      <li>Class BLEHIDKeyboard</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_arduino/BW16_/api_documents/Class BLEHIDKeybaord.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-blehidkeyboard">
+<h1>Class BLEHIDKeyboard<a class="headerlink" href="#class-blehidkeyboard" title="Permalink to this heading"></a></h1>
+<p><strong>BLEHIDKeyboard Class</strong></p>
+<p><strong>Description</strong></p>
+<p>A class used for creating and managing a BLE HID Keyboard.</p>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">class BLEHIDKeyboard</div>
+</div>
+<p><strong>Members</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Public
+Constructors</strong></p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BLEHIDKeybo
+ard::BLEHIDKeyboard</p></td>
+<td><p>Constructs a BLEHIDKeyboard object</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Public Methods</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>BLEHIDKe
+yboard::setReportID</p></td>
+<td><p>Set HID report ID for the HID Keyboard and HID
+consumer control</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEHIDKeybo
+ard::consumerReport</p></td>
+<td><p>Send a HID Consumer report</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEHIDKeybo
+ard::keyboardReport</p></td>
+<td><p>Send a HID Keyboard report</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEHIDKeyb
+oard::consumerPress</p></td>
+<td><p>Send a HID Consumer report indicating button
+pressed</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEHIDKeyboa
+rd::consumerRelease</p></td>
+<td><p>Send a HID Consumer report indicating button
+released</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEHI
+DKeyboard::keypress</p></td>
+<td><p>Send a HID Keyboard report indicating keys
+pressed</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEHIDK
+eyboard::keyRelease</p></td>
+<td><p>Send a HID Keyboard report indicating keys
+released</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEHIDKeyb
+oard::keyReleaseAll</p></td>
+<td><p>Send a HID Keyboard report indicating no keys
+pressed</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEHIDKey
+board::keyCharPress</p></td>
+<td><p>Send a HID Keyboard report indicating keys
+pressed to output an ASCII character</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEHIDKe
+yboard::keySequence</p></td>
+<td><p>Send a HID Keyboard report indicating keys
+pressed to output an ASCII string</p></td>
+</tr>
+</tbody>
+</table>
+<section id="blehidkeyboard-blehidkeyboard">
+<h2><strong>BLEHIDKeyboard::BLEHIDKeyboard</strong><a class="headerlink" href="#blehidkeyboard-blehidkeyboard" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Constructs a BLEHIDKeyboard object.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">BLEHIDKeyboard::BLEHIDKeyboard();</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: BLEHIDKeyboard</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+</section>
+<section id="blehidkeyboard-setreportid">
+<h2><strong>BLEHIDKeyboard::setReportID</strong><a class="headerlink" href="#blehidkeyboard-setreportid" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Set HID report ID for the HID Keyboard and HID consumer control.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void setReportID (uint8_t reportIDKeyboard, uint8_t reportIDConsumer);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">reportIDKeyboard: The report ID for the HID keyboard device,
+corresponding to the HID report descriptor.</div>
+<div class="line">reportIDConsumer: The report ID for the HID consumer control device,
+corresponding to the HID report descriptor.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+</section>
+<section id="blehidkeyboard-consumerreport">
+<h2><strong>BLEHIDKeyboard::consumerReport</strong><a class="headerlink" href="#blehidkeyboard-consumerreport" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Send a HID Consumer report.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void consumerReport (uint16_t usage_code);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">usage_code: HID consumer control usage code for the button pressed.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+</section>
+<section id="blehidkeyboard-keyboardreport">
+<h2><strong>BLEHIDKeyboard::keyboardReport</strong><a class="headerlink" href="#blehidkeyboard-keyboardreport" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Send a HID Keyboard report.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void keyboardReport (void);</div>
+<div class="line">void keyboardReport (uint8_t modifiers, uint8_t keycode[6]);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">modifiers: bitmap indicating key modifiers pressed (CTRL, ALT, SHIFT).</div>
+<div class="line">keycode: byte array indicating keys pressed.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+</section>
+<section id="blehidkeyboard-consumerpress">
+<h2><strong>BLEHIDKeyboard::consumerPress</strong><a class="headerlink" href="#blehidkeyboard-consumerpress" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Send a HID Consumer report indicating button pressed.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void consumerPress (uint16_t usage_code);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">usage_code: HID consumer control usage code for the button pressed.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+</section>
+<section id="blehidkeyboard-consumerrelease">
+<h2><strong>BLEHIDKeyboard::consumerRelease</strong><a class="headerlink" href="#blehidkeyboard-consumerrelease" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Send a HID Consumer report indicating button released.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void consumerRelease (void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+</section>
+<section id="blehidkeyboard-keypress">
+<h2><strong>BLEHIDKeyboard::keypress</strong><a class="headerlink" href="#blehidkeyboard-keypress" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Send a HID Keyboard report indicating keys pressed.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void keyPress (uint16_t key);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">key: HID keycode for key pressed, value ranges from 0x00 to 0xE7.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: BLEHIDKeyboard</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+</section>
+<section id="blehidkeyboard-keyrelease">
+<h2><strong>BLEHIDKeyboard::keyRelease</strong><a class="headerlink" href="#blehidkeyboard-keyrelease" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Send a HID Keyboard report indicating keys released.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void keyRelease (uint16_t key);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">key: HID keycode for key pressed, value ranges from 0x00 to 0xE7.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+</section>
+<section id="blehidkeyboard-keyreleaseall">
+<h2><strong>BLEHIDKeyboard::keyReleaseAll</strong><a class="headerlink" href="#blehidkeyboard-keyreleaseall" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Send a HID Keyboard report indicating no keys pressed.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void keyReleaseAll(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: BLEHIDKeyboard</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+</section>
+<section id="blehidkeyboard-keycharpress">
+<h2><strong>BLEHIDKeyboard::keyCharPress</strong><a class="headerlink" href="#blehidkeyboard-keycharpress" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Send a HID Keyboard report indicating keys pressed to output an ASCII
+character.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void keyCharPress (char ch);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">ch: ASCII character to output.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+</section>
+<section id="blehidkeyboard-keysequence">
+<h2><strong>BLEHIDKeyboard::keySequence</strong><a class="headerlink" href="#blehidkeyboard-keysequence" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Send a HID Keyboard report indicating keys pressed to output an ASCII
+string.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void keySequence (const char* str, uint16_t delayTime);</div>
+<div class="line">void keySequence (String str, uint16_t delayTime);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">str: pointer to character string to output</div>
+<div class="line">str: String object containing character string to output</div>
+<div class="line">delayTime: time delay between key press and release, in milliseconds.
+Default value of 5.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: BLEHIDKeyboard</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Class%20BLEHIDGamepad.html" class="btn btn-neutral float-left" title="Class BLEHIDGamepad" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Class%20BLEHIDMouse.html" class="btn btn-neutral float-right" title="Class BLEHIDMouse" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

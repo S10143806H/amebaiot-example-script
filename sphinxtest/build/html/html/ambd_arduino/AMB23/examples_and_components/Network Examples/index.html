@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Network Examples &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="BLE - BLE Battery Service" href="BLE%20-%20BLE%20Battery%20Service.html" />
+    <link rel="prev" title="Basic Examples" href="../Basic%20Examples.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB21/index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">AMB23 (RTL8722DM MINI)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_mini_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Network Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Peripheral%20Examples/index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">AMB23 (RTL8722DM MINI)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+      <li>Network Examples</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/AMB23/examples_and_components/Network Examples/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="network-examples">
+<h1>Network Examples<a class="headerlink" href="#network-examples" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Wi-Fi/Network/BLE Library &amp; Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="BLE%20-%20BLE%20Battery%20Service.html">BLE - BLE Battery Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BLE%20-%20BLE%20Beacon.html">BLE – BLE Beacon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BLE%20-%20BLE%20Scan.html">BLE – BLE Scan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BLE%20-%20Battery%20Client.html">BLE – Battery Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BLE%20-%20WiFi%20Configuration%20Service.html">BLE – WiFi Configuration Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BLE%20-%20BLE%20UART%20Client.html">BLE – BLE UART Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BLE%20-%20BLE%20UART%20Service.html">BLE – BLE UART Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BLE%20-%20DHT%20over%20BLE%20UART.html">BLE – DHT over BLE UART</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BLE%20-%20PWM%20over%20BLE%20UART.html">BLE – PWM over BLE UART</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BLE%20-%20HID%20Gamepad.html">BLE - HID Gamepad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BLE%20-%20HID%20Keyboard.html">BLE - HID Keyboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BLE%20-%20HID%20Mouse.html">BLE - HID Mouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HTTP%20-%20Retrieve%20HTTP%20websites%20from%20the%20Internet.html">HTTP - Retrieve HTTP websites from the Internet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HTTP%20-%20Set%20up%20Server%20to%20Control%20LED.html">HTTP - Set up Server to Control LED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HTTP%20-%20Set%20up%20Server%20to%20Get%20the%20Ameba%20Status.html">HTTP - Set up Server to Get the Ameba Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HTTP%20-%20Use%20IFTTT%20for%20Web%20Service.html">HTTP - Use IFTTT for Web Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IPv6%20-%20Ameba%20as%20IPv6%20Server%20Client%20over%20TCP.html">IPv6 – Ameba as IPv6 Server/Client over TCP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IPv6%20-%20Ameba%20as%20IPv6%20Server%20Client%20over%20UDP.html">IPv6 – Ameba as IPv6 Server/Client over UDP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MDNS%20-%20Set%20up%20mDNS%20Client%20on%20Arduino%20IDE.html">MDNS - Set up mDNS Client on Arduino IDE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MQTT%20-%20Set%20up%20MQTT%20Client%20to%20Communicate%20with%20Broker.html">MQTT - Set up MQTT Client to Communicate with Broker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MQTT%20-%20Set%20up%20MQTT%20Client%20over%20TLS.html">MQTT - Set up MQTT Client over TLS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MQTT%20-%20Use%20Amazon%20AWS%20IoT%20Shadow%20Service.html">MQTT - Use Amazon AWS IoT Shadow Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MQTT%20-%20Use%20Google%20Cloud%20IoT.html">MQTT - Use Google Cloud IoT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MQTT%20-%20Upload%20PM2.5%20Data%20to%20LASS%20System.html">MQTT - Upload PM2.5 Data to LASS System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NTP%20-%20Retrieve%20Universal%20Time%20%28UTC%29%20by%20NTPClient%20library.html">NTP - Retrieve Universal Time (UTC) by NTPClient library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WiFi%20-%20Approximate%20UDP%20Receive%20Delay.html">WiFi - Approximate UDP Receive Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WiFi%20-%20Approximate%20UDP%20Sending%20Delay.html">WiFi - Approximate UDP Sending Delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WiFi%20-%20Approximate%20UDP%20Receive%20Timeout.html">WiFi - Approximate UDP Receive Timeout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WiFi%20-%20Connect%20to%20WiFi%20networks.html">WiFi - Connect to WiFi networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WiFi%20-%20Retrieve%20Universal%20Time%20%28UTC%29%20by%20UDP.html">WiFi - Retrieve Universal Time (UTC) by UDP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WiFi%20-%20Scan%20the%20surrounding%20WiFi%20networks.html">WiFi - Scan the surrounding WiFi networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WiFi%20-%20Set%20up%20Server%20to%20communicate.html">WiFi - Set up Server to communicate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WiFi%20-%20Set%20up%20Client%20to%20Retrieve%20Google%20Search%20Information.html">WiFi - Set up Client to Retrieve Google Search Informations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WiFi%20-%20Set%20up%20UDP%20Server%20to%20Communicate.html">WiFi - Set up UDP Server to Communicate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WiFi%20-%20Set%20up%20WiFi%20AP%20Mode.html">WiFi - Set up WiFi AP Mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WiFi%20-%20Set%20up%20SSL%20Client%20for%20HTTPS%20Communication.html">WiFi - Set up SSL Client for HTTPS Communication</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Basic%20Examples.html" class="btn btn-neutral float-left" title="Basic Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="BLE%20-%20BLE%20Battery%20Service.html" class="btn btn-neutral float-right" title="BLE - BLE Battery Service" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

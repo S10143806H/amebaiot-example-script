@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting Started &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Examples &amp; Components" href="../examples_and_components/index.html" />
+    <link rel="prev" title="AMB23 (RTL8722DM MINI)" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../AMB21/index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">AMB23 (RTL8722DM MINI)</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ameba-arduino-getting-started-with-amb23">Ameba ARDUINO: Getting Started with AMB23</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setting-up-development-environment">Setting up Development Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#try-the-first-example">Try the First Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../examples_and_components/index.html">Examples &amp; Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../index.html">AMB23 (RTL8722DM MINI)</a> &raquo;</li>
+      <li>Getting Started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_arduino/AMB23/getting_started/ambd_mini_getting_started.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h1>
+<section id="ameba-arduino-getting-started-with-amb23">
+<h2>Ameba ARDUINO: Getting Started with AMB23<a class="headerlink" href="#ameba-arduino-getting-started-with-amb23" title="Permalink to this heading"></a></h2>
+<section id="required-environment">
+<h3>Required Environment<a class="headerlink" href="#required-environment" title="Permalink to this heading"></a></h3>
+<p>AMB23 board currently supports Windows OS 32-bits and 64-bits (WIN7/8/10),
+Linux OS (Ubuntu 18 LTS/20 LTS/latest) and macOS operating systems. Please use the latest
+OS version to have the best experiences. In this documentation, please use the latest
+version Arduino IDE (at least version 1.8.12).</p>
+</section>
+<section id="introduction-to-amebad-amb23">
+<h3>Introduction to AmebaD[AMB23]<a class="headerlink" href="#introduction-to-amebad-amb23" title="Permalink to this heading"></a></h3>
+<p>Ameba is an easy-to-program platform for developing all kind of IoT applications. AmebaD
+is equipped with various peripheral interfaces, including WiFi, GPIO INT, I2C, UART, SPI,
+PWM, ADC. Through these interfaces, AmebaD can connect with electronic components such as
+LED, switches, manometer, hygrometer, PM2.5 dust sensors, …etc.</p>
+<p>The collected data can be uploaded via WiFi and be utilized by applications on smart
+devices to realize IoT implementation.</p>
+<p><a class="reference internal" href="../../../_images/image15.jpeg"><img alt="board-front" src="../../../_images/image15.jpeg" style="width: 262.8px; height: 438.40000000000003px;" /></a></p>
+<p>AMB23 has smaller size than Arduino Uno, as shown in the above figure.</p>
+<p><a class="reference internal" href="../../../_images/image23.jpeg"><img alt="board-bottom" src="../../../_images/image23.jpeg" style="width: 252.4px; height: 412.40000000000003px;" /></a></p>
+<p>AMB23 uses Micro USB to supply power, which is common in many smart devices.</p>
+<p>Please refer to the following figure and table for the pin diagram and function of AMB23.</p>
+<p><a class="reference internal" href="../../../_images/image3-110.png"><img alt="pin-diagram-front" src="../../../_images/image3-110.png" style="width: 1051.5px; height: 547.0px;" /></a></p>
+<p><a class="reference internal" href="../../../_images/image3-23.png"><img alt="pin-diagram-bottom" src="../../../_images/image3-23.png" style="width: 420.6px; height: 526.0px;" /></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 19%" />
+<col style="width: 17%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>#</p></th>
+<th class="head"><p>PIN name</p></th>
+<th class="head"><p>GPIO INT</p></th>
+<th class="head"><p>ADC</p></th>
+<th class="head"><p>PWM</p></th>
+<th class="head"><p>UART</p></th>
+<th class="head"><p>SPI</p></th>
+<th class="head"><p>I2C</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>D0</p></td>
+<td><p>GPIOB_0</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>I2C0 SDA</p></td>
+</tr>
+<tr class="row-odd"><td><p>D1</p></td>
+<td><p>GPIOB_1</p></td>
+<td><p>✓</p></td>
+<td><p>A4</p></td>
+<td></td>
+<td><p>Serial2_TX</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>D2</p></td>
+<td><p>GPIOB_2</p></td>
+<td><p>✓</p></td>
+<td><p>A5</p></td>
+<td></td>
+<td><p>Serial2_RX</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>D3</p></td>
+<td><p>GPIOB_3</p></td>
+<td><p>✓</p></td>
+<td><p>A6</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>D4</p></td>
+<td><p>GPIOB_4</p></td>
+<td><p>✓</p></td>
+<td><p>A0</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>D5</p></td>
+<td><p>GPIOB_5</p></td>
+<td><p>✓</p></td>
+<td><p>A1</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td><p>I2C0 SCL</p></td>
+</tr>
+<tr class="row-even"><td><p>D6</p></td>
+<td><p>GPIOB_6</p></td>
+<td><p>✓</p></td>
+<td><p>A2</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>I2C0 SDA</p></td>
+</tr>
+<tr class="row-odd"><td><p>D7</p></td>
+<td><p>GPIOB_7</p></td>
+<td><p>✓</p></td>
+<td><p>A3</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>D8</p></td>
+<td><p>GPIOA_2</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>D9</p></td>
+<td><p>GPIOA_12</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td><p>✓</p></td>
+<td><p>Serial2_TX</p></td>
+<td><p>SPI1_MOSI</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>D10</p></td>
+<td><p>GPIOA_13</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td><p>✓</p></td>
+<td><p>Serial2_RX</p></td>
+<td><p>SPI1_MISO</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>D11</p></td>
+<td><p>GPIOA_14</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>SPI1_CLK</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>D12</p></td>
+<td><p>GPIOA_15</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>SPI1_CS</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>D13</p></td>
+<td><p>GPIOA_16</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>D14</p></td>
+<td><p>GPIOA_28</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>D15</p></td>
+<td><p>GPIOA_18</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td><p>Serial1_TX</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>D16</p></td>
+<td><p>GPIOA_19</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td><p>Serial1_RX</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>D17</p></td>
+<td><p>GPIOA_30</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>D18</p></td>
+<td><p>GPIOA_21</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td><p>Serial1_TX</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>D19</p></td>
+<td><p>GPIOA_22</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td><p>Serial1_RX</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>D20</p></td>
+<td><p>GPIOA_23</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>D21</p></td>
+<td><p>GPIOA_24</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>D22</p></td>
+<td><p>GPIOA_31</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>I2C0 SCL</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="setting-up-development-environment">
+<h2>Setting up Development Environment<a class="headerlink" href="#setting-up-development-environment" title="Permalink to this heading"></a></h2>
+<section id="step-1-installing-the-driver">
+<h3>Step 1. Installing the Driver<a class="headerlink" href="#step-1-installing-the-driver" title="Permalink to this heading"></a></h3>
+<p>First, connect AMB23 to the computer via Micro USB (same as power):</p>
+<p><a class="reference internal" href="../../../_images/image23.jpeg"><img alt="board-bottom" src="../../../_images/image23.jpeg" style="width: 252.4px; height: 412.40000000000003px;" /></a></p>
+<p>If this is the first time you connect AMB23 to your computer,
+the USB driver for AMB23 will be automatically installed.</p>
+<p>If you have driver issue of connect board to your computer please go to
+<a class="reference external" href="https://ftdichip.com/drivers/">here</a> for USB driver.</p>
+<p>You can check the <span class="guilabel">COM</span> port number in <span class="guilabel">Device Manager</span> of your computer:</p>
+<p><a class="reference internal" href="../../../_images/image43.jpeg"><img alt="install-driver" src="../../../_images/image43.jpeg" style="width: 298.0px; height: 628.0px;" /></a></p>
+</section>
+<section id="step-2-set-up-arduino-ide">
+<h3>Step 2. Set up Arduino IDE<a class="headerlink" href="#step-2-set-up-arduino-ide" title="Permalink to this heading"></a></h3>
+<p>From version 1.6.5, Arduino IDE supports third-party hardware.
+Therefore, we can use Arduino IDE to develop applications on
+AMB23, and the examples of Arduino can run on AMB23
+too. Refer to <a class="reference external" href="https://www.amebaiot.com.cn/amebad-mini-arduino-compatible-ex/">basic example link</a>.</p>
+<p>Arduino IDE can be downloaded in the Arduino website:
+<a class="reference external" href="https://www.arduino.cc/en/Main/Software">https://www.arduino.cc/en/Main/Software</a>
+When the installation is finished, open Arduino IDE. To set up
+AMB23 correctly in Arduino IDE, go to <span class="guilabel">“File” -&gt; “Preferences”</span>.</p>
+<p><a class="reference internal" href="../../../_images/image54.jpeg"><img alt="get-start-6" src="../../../_images/image54.jpeg" style="width: 386.0px; height: 441.0px;" /></a></p>
+<p>And paste the following URL into <span class="guilabel">“Additional Boards Manager URLs”</span> field:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ambiot</span><span class="o">/</span><span class="n">ambd_arduino</span><span class="o">/</span><span class="n">raw</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">Arduino_package</span><span class="o">/</span><span class="n">package_realtek</span><span class="o">.</span><span class="n">com_amebad_index</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>Next, go to <span class="guilabel">“Tools” -&gt; “Board” -&gt; “Boards Manager”</span>:</p>
+<p><a class="reference internal" href="../../../_images/image61.jpeg"><img alt="get-start-7" src="../../../_images/image61.jpeg" style="width: 664.0px; height: 600.0px;" /></a></p>
+<p>The <span class="guilabel">“Boards Manager”</span> requires about 10~20 seconds to refresh all
+hardware files (if the network is in bad condition, it may take longer).
+Every time the new hardware is connected, we need to reopen the Board
+Manager. So, we close the <span class="guilabel">“Boards Manager”</span>, and then open it again. Find
+<span class="guilabel">“Realtek Ameba Boards (32-bits ARM Cortex-M33 &#64;200MHz)”</span> in the list,
+click <span class="guilabel">“Install”</span>, then the Arduino IDE starts to download required files
+for AmebaD.</p>
+<p><a class="reference internal" href="../../../_images/image7-1.jpeg"><img alt="get-start-8" src="../../../_images/image7-1.jpeg" style="width: 781.0px; height: 440.0px;" /></a></p>
+<p>If you are facing GitHub downloading issue, please refer to the
+following link at <a class="reference external" href="https://www.amebaiot.com.cn/en/ameba-arduino-summary/">Download/Software Development Kit</a>. There are 3
+sections:</p>
+<ol class="arabic simple">
+<li><p><span class="guilabel">“AmebaD_Arduino_patch1_SDK”</span>, please select at least 1 of the SDKs. There are 5 latest released SDK options.</p></li>
+<li><p><span class="guilabel">“AmebaD_Arduino_patch2_Tools”</span>, please select according to your operation system. There are Windows, Linux and MacOS.</p></li>
+<li><p><span class="guilabel">“AmebaD_Arduino_Source_Code”</span>, this section is optional download only wants to refer the latest source code.</p></li>
+</ol>
+<p>Download the files selected, then unzip (patch1 and patch2 are compulsory).
+There are “Install.doc”/“Install.pdf” for you to refer installation steps.
+According to your system, please run the installation tool in the
+“Offline_SDK_installation_tool” folder.</p>
+<p>After the installation tool running successfully, you may open Arduino
+IDE and proceed to <span class="guilabel">“Tools” -&gt; “Board“ -&gt; “Boards Manager…”</span>. Try to find
+<span class="guilabel">“Realtek Ameba Boards (32-bits ARM Cortex-M33 &#64;200MHz)”`</span> in the list,
+click <span class="guilabel">“Install”</span>, then the Arduino IDE starts to download required files
+for AmebaD.</p>
+<hr class="docutils" />
+<p>Finally, we select AmebaD as current connected board in
+<span class="guilabel">“Tools” -&gt; “Board” -&gt; “Ameba ARM (32-bits) Boards” -&gt;” RTL8722DM MINI”</span>：</p>
+<p><a class="reference internal" href="../../../_images/image8.jpeg"><img alt="get-start-9" src="../../../_images/image8.jpeg" style="width: 824.0px; height: 600.0px;" /></a></p>
+</section>
+</section>
+<section id="try-the-first-example">
+<h2>Try the First Example<a class="headerlink" href="#try-the-first-example" title="Permalink to this heading"></a></h2>
+<section id="step-1-compile-upload">
+<h3>Step 1. Compile &amp; Upload<a class="headerlink" href="#step-1-compile-upload" title="Permalink to this heading"></a></h3>
+<p>Arduino IDE provides many built-in examples, which can be compiled,
+uploaded and run directly on the boards. Here, we take the “Blink”
+example as the first try.</p>
+<p>Open <span class="guilabel">“File” -&gt; “Examples” -&gt; “01.Basics” -&gt; “Blink”</span>:</p>
+<p><a class="reference internal" href="../../../_images/image9.jpeg"><img alt="get-start-10" src="../../../_images/image9.jpeg" style="width: 588.0px; height: 711.0px;" /></a></p>
+<p>Arduino IDE opens a new window with the complete sample code.</p>
+<p><a class="reference internal" href="../../../_images/image10.jpeg"><img alt="get-start-11" src="../../../_images/image10.jpeg" style="width: 678.0px; height: 746.0px;" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>There are two onboard LEDs on AMB23, <code class="docutils literal notranslate"><span class="pre">LED_B</span></code> and <code class="docutils literal notranslate"><span class="pre">LED_G</span></code> (Blue and Green),
+the default <code class="docutils literal notranslate"><span class="pre">LED_BUILTIN</span></code> is the onboard blue LED.</p>
+</div>
+<p>Change <code class="docutils literal notranslate"><span class="pre">LED_BUILTIN</span></code> to <code class="docutils literal notranslate"><span class="pre">LED_B</span></code> or <code class="docutils literal notranslate"><span class="pre">LED_G</span></code> for different colour.</p>
+<p><a class="reference internal" href="../../../_images/image111.jpeg"><img alt="get-start-12" src="../../../_images/image111.jpeg" style="width: 216.15px; height: 337.15000000000003px;" /></a></p>
+<p>Next, we compile the sample code directly; click
+<span class="guilabel">“Sketch” -&gt; “Verify/Compile”</span></p>
+<p><a class="reference internal" href="../../../_images/image121.jpeg"><img alt="get-start-13" src="../../../_images/image121.jpeg" style="width: 678.0px; height: 746.0px;" /></a></p>
+<p>Arduino IDE prints the compiling messages in the bottom area of the IDE
+window. When the compilation is finished, you will get the message
+similar to the following figure:</p>
+<p><a class="reference internal" href="../../../_images/image131.jpeg"><img alt="get-start-14" src="../../../_images/image131.jpeg" style="width: 678.0px; height: 746.0px;" /></a></p>
+<p>Afterwards, we will upload the compiled code to AMB23.
+Please make sure AMB23 is connected to your computer, then
+click <span class="guilabel">“Sketch” -&gt; “Upload”</span>.</p>
+<p>The Arduino IDE will compile first then upload. Users are required to enter the upload mode of the board.</p>
+<p><a class="reference internal" href="../../../_images/image141.jpeg"><img alt="get-start-15" src="../../../_images/image141.jpeg" style="width: 711.0px; height: 752.0px;" /></a></p>
+<p>To enter the upload mode, first press and hold the <span class="guilabel">UART_DOWNLOAD</span> button, then press and release
+the <span class="guilabel">RESET</span> button, lastly release the <span class="guilabel">UART_DOWNLOAD</span> button. There is a 5-seconds count down
+set as a reminder to enter the upload mode.</p>
+<p><a class="reference internal" href="../../../_images/image151.jpeg"><img alt="get-start-16" src="../../../_images/image151.jpeg" style="width: 528.0px; height: 459.0px;" /></a></p>
+<p>It is optional for users to check if the board entered the upload mode.
+Open serial monitor/terminal and look for “#Flash Download Start”.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is normal that some serial terminals may show unknown characters as the following picture.</p>
+</div>
+<p><a class="reference internal" href="../../../_images/image16.jpeg"><img alt="get-start-17" src="../../../_images/image16.jpeg" style="width: 744.0px; height: 482.40000000000003px;" /></a></p>
+<p>Again, during the uploading procedure the IDE prints messages. Uploading
+procedure takes considerably longer time (about 30 seconds to 1 minute).
+When upload completed, the “Done uploading” message is printed.</p>
+</section>
+<section id="step-2-run-the-blink-example">
+<h3>Step 2.Run the Blink example<a class="headerlink" href="#step-2-run-the-blink-example" title="Permalink to this heading"></a></h3>
+<p>In each example, Arduino not only provides sample code, but also
+detailed documentation, including wiring diagram, sample code
+explanation, technical details, …etc. These examples can be directly
+used on AMB23.
+So, we can find the detailed information of the “Blink” example: <a class="reference external" href="https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink">https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink</a></p>
+<p>In short, for AMB23, the example can be run on both onboard
+LEDs (green or blue) or external LED (use any GPIO pins for signal
+output).</p>
+<p>Finally, press the <span class="guilabel">RESET</span> button, and you can see the <span class="guilabel">LED</span> blinking.</p>
+<p><strong>(End)</strong></p>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you face any issue, please refer to the FAQ and Trouble shooting sections on  <a class="reference internal" href="../support/index.html"><span class="doc">Support</span></a> page.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="AMB23 (RTL8722DM MINI)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../examples_and_components/index.html" class="btn btn-neutral float-right" title="Examples &amp; Components" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

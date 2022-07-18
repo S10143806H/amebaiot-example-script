@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class SdFatFs &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Class SdFatFile" href="Class%20SdFatFile.html" />
+    <link rel="prev" title="Class EpdIF" href="Class%20EpdIF.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples_and_components/index.html">Examples &amp; Components</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">API Documents</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="index.html#analog">Analog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#audiocodec">AudioCodec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ble">BLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#epdif">EPDIF</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#fatfssdcard">FatfsSDCard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#flashmemory">FlashMemory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gpio">GPIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gtimer">GTimer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#http">Http</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#irdevice">IRDevice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#mdns">MDNS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#mqttclient">MQTTClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ntpclient">NTPClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#powersave">PowerSave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#rtc">RTC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#softwareserial">SoftwareSerial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#spi">SPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#sys">Sys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#usb">USB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wdt">WDT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wifi">WiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wire">Wire</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ws2812b">WS2812B</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+          <li><a href="index.html">API Documents</a> &raquo;</li>
+      <li>Class SdFatFs</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_arduino/AMB21/api_documents/Class SdFatFs.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-sdfatfs">
+<h1>Class SdFatFs<a class="headerlink" href="#class-sdfatfs" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="SdFatFs">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SdFatFs</span></span><a class="headerlink" href="#SdFatFs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Defines a class of SD FAT File system.</p>
+<p><strong>Syntax</strong></p>
+<p>class SdFatFs</p>
+<p><strong>Members</strong></p>
+<p><strong>Public Constructors</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 63%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>SdFatFs::SdFatFs</p></td>
+<td><p>Constructs a SdFatFs object</p></td>
+</tr>
+<tr class="row-even"><td><p>SdFatFs::~SdFatFs</p></td>
+<td><p>Destructs a SdFatFs object</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Public Methods</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>SdFatFs::begin</p></th>
+<th class="head"><p>Initialize SD FAT File System</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SdFatFs::end</p></td>
+<td><p>Deinitialize SD FAT File System</p></td>
+</tr>
+<tr class="row-odd"><td><p>SdFatFs::*getRootPath</p></td>
+<td><p>Get the root path of the SD FAT File
+System</p></td>
+</tr>
+<tr class="row-even"><td><p>SdFatFs::readDir</p></td>
+<td><p>List items under a specific folder</p></td>
+</tr>
+<tr class="row-odd"><td><p>SdFatFs::mkdir</p></td>
+<td><p>Create folder</p></td>
+</tr>
+<tr class="row-even"><td><p>SdFatFs::rm</p></td>
+<td><p>Remove folder or file</p></td>
+</tr>
+<tr class="row-odd"><td><p>SdFatFs::isDir</p></td>
+<td><p>Check if a specific path is a directory</p></td>
+</tr>
+<tr class="row-even"><td><p>SdFatFs::isFile</p></td>
+<td><p>Check if a specific path is a file</p></td>
+</tr>
+<tr class="row-odd"><td><p>SdFatFs::getLastModTime</p></td>
+<td><p>Get the last modified time for a file or
+directory</p></td>
+</tr>
+<tr class="row-even"><td><p>SdFatFs::setLastModTime</p></td>
+<td><p>Set the last modified time for a file or
+directory</p></td>
+</tr>
+<tr class="row-odd"><td><p>SdFatFs::status</p></td>
+<td><p>Return the current status of SD</p></td>
+</tr>
+<tr class="row-even"><td><p>SdFatFs::open</p></td>
+<td><p>Open a file</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SdFatFs::begin</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Initialize SD FAT File System.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">SdFatFs::begin</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>Returns <strong>0</strong> if success, else returns a negative value.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: create_folder; file_read_write; get_file_attribute; last_modified_time; list_root_files.</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Include “SdFatFs.h” to use the class function.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SdFatFs::end</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>De-initialize SD FAT File System.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">SdFatFs::end</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>Returns “0” if success, else returns a negative value.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: create_folder; file_read_write; get_file_attribute; last_modified_time; list_root_files.</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Include “SdFatFs.h” to use the class function.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SdFatFs::*getRootPath**</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Get the root path of the SD FAT File System. The logical volume
+character is starting from ‘0’, so the root path would like “0:/”.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="nf">SdFatFs::getRootPath</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns the root path.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: create_folder; file_read_write; get_file_attribute; last_modified_time; list_root_files.</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Include “SdFatFs.h” to use the class function.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SdFatFs::readDir</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>List items under a specific folder. List items under a specific folder
+and store the result in the buffer that user specified. Each item is
+separated by ‘0’.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">SdFatFs::readDir</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">result_buf</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">bufsize</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">path</span></code>: The absolute directory path to be listed.</p>
+<p><code class="docutils literal notranslate"><span class="pre">result_buf</span></code> : The buffer to be stored results.</p>
+<p><code class="docutils literal notranslate"><span class="pre">bufsize</span></code> : The size of result_buf. If results exceed this size, then the results larger than this size would be discarded.</p>
+<p><strong>Returns</strong></p>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">0</span></code> if success, else returns a negative value.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: get_file_attribute; list_root_files</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Include “SdFatFs.h” to use the class function.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SdFatFs::mkdir</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Create folder.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">SdFatFs::mkdir</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">absolute_path</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">absolute_path</span></code> : The absolute directory path to be created</p>
+<p><strong>Returns</strong></p>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">0</span></code> if success, else returns a negative value.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: create_folder</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Include “SdFatFs.h” to use the class function.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SdFatFs::rm</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Remove folder or file.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">SdFatFs::rm</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">absolute_path</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">absolute_path</span></code> : The absolute directory or file path to be deleted</p>
+<p><strong>Returns</strong></p>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">0</span></code> if success, else returns a negative value.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Include “SdFatFs.h” to use the class function.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SdFatFs::isDir</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Check if a specific path is a directory.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="nf">SdFatFs::isDir</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">absolute_path</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">absolute_path</span></code>: The absolute path to be queried</p>
+<p><strong>Returns</strong></p>
+<p>The function returns <code class="docutils literal notranslate"><span class="pre">1</span></code> if it is a directory, else returns <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: get_file_attribute</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Include “SdFatFs.h” to use the class function.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SdFatFs::isFile</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Check if a specific path is a file.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="nf">SdFatFs::isFile</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">absolute_path</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">absolute_path</span></code> : The absolute path to be queried</p>
+<p><strong>Returns</strong></p>
+<p>The function returns “1” if it is a directory, else returns “0”.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: get_file_attribute</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Include “SdFatFs.h” to use the class function.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SdFatFs::getLastModTime</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Get the last modified time for a file or directory.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">SdFatFs::getLastModTime</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">absolute_path</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="o">*</span><span class="n">year</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="o">*</span><span class="n">month</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="o">*</span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="o">*</span><span class="n">hour</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="o">*</span><span class="n">minute</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="o">*</span><span class="n">second</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">absolute_path</span></code>: The absolute path to be queried.</p>
+<p><code class="docutils literal notranslate"><span class="pre">year</span></code>: The value of the year.</p>
+<p><code class="docutils literal notranslate"><span class="pre">month</span></code>: The value of the month.</p>
+<p><code class="docutils literal notranslate"><span class="pre">date</span></code>: The value of the date.</p>
+<p><code class="docutils literal notranslate"><span class="pre">hour</span></code>: The value of an hour.</p>
+<p><code class="docutils literal notranslate"><span class="pre">minute</span></code>: The value of a minute.</p>
+<p><code class="docutils literal notranslate"><span class="pre">second</span></code>: field “second” contains no valid information in the current version.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns “0” if success, otherwise returns a negative</p>
+<p>value for failure.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: last_modified_time</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Include “SdFatFs.h” to use the class function.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SdFatFs::setLastModTime</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Set the last modified time for a file or directory. Ameba doesn’t have built-in RTC. So we manually change file/directory last modified time.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">SdFatFs::setLastModTime</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">absolute_path</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">year</span><span class="p">,</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">month</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">hour</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">minute</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">second</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">absolute_path</span></code>: The absolute path to be queried.</p>
+<p><code class="docutils literal notranslate"><span class="pre">year</span></code>: The value of the year.</p>
+<p><code class="docutils literal notranslate"><span class="pre">month</span></code>: The value of the month.</p>
+<p><code class="docutils literal notranslate"><span class="pre">date</span></code>: The value of the date.</p>
+<p><code class="docutils literal notranslate"><span class="pre">hour</span></code>: The value of an hour.</p>
+<p><code class="docutils literal notranslate"><span class="pre">minute</span></code>: The value of a minute.</p>
+<p><code class="docutils literal notranslate"><span class="pre">second</span></code>: field “second” contains no valid information in the current version.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns “0” if success, otherwise returns a negative
+value for failure.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: last_modified_time</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Include “SdFatFs.h” to use the class function.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SdFatFs::open</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Open a file.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SdFatFile</span><span class="w"> </span><span class="nf">SdFatFs::open</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">absolute_path</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">absolute_path</span></code>: The path to a file.</p>
+<p><strong>Returns</strong></p>
+<p>The file object is an instance of SdFatFile.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: create_folder; file_read_write; get_file_attribute; last_modified_time; list_root_files.</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Include “SdFatFs.h” to use the class function.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SdFatFs::status</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Return the current status of SD.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">SdFatFs::status</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>Function returns “1” if ready to use, else return “0” if the status is
+inactivating or abnormal.</p>
+<p><strong>Example Code</strong></p>
+<p>NA.</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Include “SdFatFs.h” to use the class function.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Class%20EpdIF.html" class="btn btn-neutral float-left" title="Class EpdIF" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Class%20SdFatFile.html" class="btn btn-neutral float-right" title="Class SdFatFile" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

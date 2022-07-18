@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MQTT - Set up MQTT Client to Communicate with Broker &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_index.html">Arduino SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>MQTT - Set up MQTT Client to Communicate with Broker</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_arduino/examples/network/MQTT - Set up MQTT Client to Communicate with Broker.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mqtt-set-up-mqtt-client-to-communicate-with-broker">
+<h1>MQTT - Set up MQTT Client to Communicate with Broker<a class="headerlink" href="#mqtt-set-up-mqtt-client-to-communicate-with-broker" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Intro to MQTT</strong>
+<span class="raw-html"></p></span></p>
+<p>MQTT (Message Queuing Telemetry Transport) is a protocol proposed by IBM
+and Eurotech. The introduction in <a class="reference external" href="http://mqtt.org/">MQTT Official
+Website</a>: MQTT is a machine-to-machine
+(M2M)/”Internet of Things” connectivity protocol. It was designed as an
+extremely lightweight publish/subscribe messaging transport. We can say
+MQTT is a protocol designed for IoT. MQTT is based on TCP/IP and
+transmits/receives data via publish/subscribe. Please refer to the
+figure below:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image118.png"><img alt="1" src="../../../_images/image118.png" style="width: 572.0px; height: 375.5px;" /></a></p>
+</div></blockquote>
+<p>In the operation of MQTT, there are several roles:</p>
+<ul class="simple">
+<li><p><strong>Publisher</strong>: Usually publishers are the devices equipped with sensors
+(ex. Ameba). Publishers uploads the data of the sensors to
+MQTT-Broker, which serves as a database with MQTT service.</p></li>
+<li><p><strong>Subscriber</strong>: Subscribers are referred to the devices which receive and
+observe messages, such as a laptop or a mobile phone.</p></li>
+<li><p><strong>Topic</strong>: Topic is used to categorized the messages, for example the
+topic of a message can be “PM2.5” or “Temperature”. Subscribers
+can choose messages of which topics they want to receive.</p></li>
+</ul>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Preparation</strong>
+<span class="raw-html"></p></span></p>
+<ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22 / AMB23 / BW16] x 1</p></li>
+</ul>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<div class="line-block">
+<div class="line">In this example, we connect Ameba to MQTT-Broker. Then send messages as
+publisher and receive messages from MQTT-Broker as subscriber.</div>
+<div class="line">Open the MQTT example <code class="docutils literal notranslate"><span class="pre">“File”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span> <span class="pre">“AmebaMQTTClient”</span> <span class="pre">-&gt;</span>
+<span class="pre">“MQTT_Basic”</span></code></div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image216.png"><img alt="2" src="../../../_images/image216.png" style="width: 478.09999999999997px; height: 704.1999999999999px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Please modify some WiFi-related parameters.</div>
+<div class="line">And some information related to MQTT:</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image312.png"><img alt="3" src="../../../_images/image312.png" style="width: 478.09999999999997px; height: 599.1999999999999px;" /></a></p>
+</div></blockquote>
+<p>The “mqttServer” refers to the MQTT-Broker, we use the free MQTT sandbox
+“test.mosquitto.org” for testing.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>“clientId” is an identifier for MQTT-Broker to identify the connected device.</p></li>
+<li><p>“publishTopic” is the topic of the published message, we use “outTopic” in the example. The devices subscribe to “outTopic”
+will receive the message.</p></li>
+<li><p>“publishPayload” is the content to be published.</p></li>
+<li><p>“subscribeTopic” is to tell MQTT-broker which topic we want to subscribe to.</p></li>
+</ul>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Next, compile the code and upload it to Ameba. Press the reset button, then open the serial monitor</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image410.png"><img alt="4" src="../../../_images/image410.png" style="width: 704.0px; height: 355.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">After Ameba is connected to MQTT server, it sends the message “hello world” to “outTopic”.</div>
+<div class="line">To see the message, we need another MQTT client.</div>
+<div class="line">Here we use a chrome plugin “MQTTLens” to be the MQTT client. You can find it in google webstore.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image510.png"><img alt="5" src="../../../_images/image510.png" style="width: 707.0px; height: 520.8px;" /></a></p>
+</div></blockquote>
+<p>Install and open the MQTTLens, click “+” next
+to “Connection” on the left, and fill in the required information</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Connection Name</strong>: Used to identify the connection, you can choose a
+name you like.</p></li>
+<li><p><strong>Hostname</strong>: The MQTT-Broker server, here we use “iot.eclipse.org”</p></li>
+<li><p><strong>Client ID</strong>: We use the default randomly generated ID.</p></li>
+</ul>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Then click “CREATE CONNECTION”.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image65.png"><img alt="6" src="../../../_images/image65.png" style="width: 724.8px; height: 500.4px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Since we have not registered the topic we want to listen to, we would not receive any messages now.</div>
+<div class="line">Fill in “outTopic” in the “Topic” field and click “Subscribe”.</div>
+<div class="line">Wait for Ameba to send next message (or you can press the reset button). Then you can see the
+“hello world” message show up.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image74.png"><img alt="7" src="../../../_images/image74.png" style="width: 730.1999999999999px; height: 507.0px;" /></a></p>
+</div></blockquote>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

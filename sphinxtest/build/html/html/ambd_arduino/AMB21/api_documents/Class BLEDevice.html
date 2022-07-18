@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class BLEDevice &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Class BLEHIDDevice" href="Class%20BLEHIDDevice.html" />
+    <link rel="prev" title="Class BLEConnect" href="Class%20BLEConnect.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples_and_components/index.html">Examples &amp; Components</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">API Documents</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="index.html#analog">Analog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#audiocodec">AudioCodec</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#ble">BLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#epdif">EPDIF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#fatfssdcard">FatfsSDCard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#flashmemory">FlashMemory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gpio">GPIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gtimer">GTimer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#http">Http</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#irdevice">IRDevice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#mdns">MDNS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#mqttclient">MQTTClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ntpclient">NTPClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#powersave">PowerSave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#rtc">RTC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#softwareserial">SoftwareSerial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#spi">SPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#sys">Sys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#usb">USB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wdt">WDT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wifi">WiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wire">Wire</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ws2812b">WS2812B</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+          <li><a href="index.html">API Documents</a> &raquo;</li>
+      <li>Class BLEDevice</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_arduino/AMB21/api_documents/Class BLEDevice.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-bledevice">
+<h1>Class BLEDevice<a class="headerlink" href="#class-bledevice" title="Permalink to this heading"></a></h1>
+<blockquote>
+<div><p><strong>Description</strong></p>
+<p>A class used for general control and management of BLE functions.</p>
+<p><strong>Syntax</strong></p>
+</div></blockquote>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">BLEDevice</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Members</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Public Constructors</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>The public constructor should not be used as this class is intended
+to be a singleton class. Access member functions using the object
+instance named BLE.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 47%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Public Methods</strong></p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BLEDevice::init</p></td>
+<td><p>Allocate resources required for
+BLE functionality</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEDevice::deinit</p></td>
+<td><p>Free resources used by BLE
+functionality</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEDevice::connected</p></td>
+<td><p>Check if a BLE device is connected</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEDevice::setDeviceName</p></td>
+<td><p>Set BLE GAP device name</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEDevice::setDeviceAppearance</p></td>
+<td><p>Set BLE GAP device appearance</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEDevice::configAdvert</p></td>
+<td><p>Configure BLE advertising
+parameters</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEDevice::configScan</p></td>
+<td><p>Configure BLE scan parameters</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEDevice::setScanCallback</p></td>
+<td><p>Set callback function for BLE
+scans</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEDevice::beginCentral</p></td>
+<td><p>Start BLE stack in central mode</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEDevice::beginPeripheral</p></td>
+<td><p>Start BLE stack in peripheral mode</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEDevice::end</p></td>
+<td><p>Stop BLE stack</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEDevice::configServer</p></td>
+<td><p>Configure BLE stack for services</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEDevice::addService</p></td>
+<td><p>Add a service to the BLE stack</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEDevice::configClient</p></td>
+<td><p>Configure BLE stack for clients</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEDevice::addClient</p></td>
+<td><p>Add a client to the BLE stack</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEDevice::getLocalAddr</p></td>
+<td><p>Get local device Bluetooth address</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEDevice::init</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Allocate resources required for BLE functionality.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: BLEBatteryService</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Call this member function first before using any other member functions in the BLEDevice class.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEDevice::deinit</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Free up resources used for BLE functionality.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">deinit</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Call this member function last after all other BLE operations are stopped.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEDevice::connected</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Check if a BLE device is connected.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">connected</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p><strong>TRUE</strong> if another BLE device is connected, <strong>FALSE</strong> if no BLE device is connected.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEdevice::setDeviceName</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Set the BLE GAP device name.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setDeviceName</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">devName</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">devName</span></code> : desired device name contained in an Arduino String object</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>The GAP device name has a maximum length of 39 characters. Other devices can see this name after a BLE connection is established. This name is separate and different from the device name sent in a BLE
+advertisement, the names should be the same but are not required.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEDevice::setDeviceAppearance</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Set the BLE GAP device appearance.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setDeviceAppearance</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">devAppearance</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">devAppearance</span></code>: desired device appearance expressed as a 16-bit unsigned integer.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Refer to Bluetooth SIG assigned device appearances at <a class="reference external" href="https://www.bluetooth.com/specifications/gatt/characteristics/">https://www.bluetooth.com/specifications/gatt/characteristics/</a>.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEDevice::configAdvert</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Configure BLE advertising parameters.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">BLEAdvert</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">configAdvert</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>A pointer to a BLEAdvert class instance for configuring BLE advertising parameters.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: BLEBatteryService</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Use this member function instead of creating a BLEAdvert class instance manually.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEDevice::configScan</span></span></dt>
+<dd></dd></dl>
+
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Configure BLE scanning parameters.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">BLEScan* configScan(void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">A pointer to a BLEScan class instance for configuring BLE scanning
+parameters.</div>
+</div>
+<p><strong>Example Code</strong></p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">BLEScan.ino</span><a class="headerlink" href="#id1" title="Permalink to this code"></a></div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;BLEDevice.h&quot;</span><span class="cp"></span>
+<span class="linenos"> 2</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;BLEScan.h&quot;</span><span class="cp"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="kt">int</span><span class="w"> </span><span class="n">dataCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="kt">void</span><span class="w"> </span><span class="nf">scanFunction</span><span class="p">(</span><span class="n">T_LE_CB_DATA</span><span class="o">*</span><span class="w"> </span><span class="n">p_data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\r\n</span><span class="s">Scan Data %d</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">++</span><span class="n">dataCount</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="n">BLE</span><span class="p">.</span><span class="n">configScan</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">printScanInfo</span><span class="p">(</span><span class="n">p_data</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="n">BLE</span><span class="p">.</span><span class="n">init</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="n">BLE</span><span class="p">.</span><span class="n">configScan</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">setScanMode</span><span class="p">(</span><span class="n">GAP_SCAN_MODE_ACTIVE</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="n">BLE</span><span class="p">.</span><span class="n">configScan</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">setScanInterval</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w">   </span><span class="c1">// Start a scan every 500ms</span>
+<span class="linenos">15</span><span class="w">    </span><span class="n">BLE</span><span class="p">.</span><span class="n">configScan</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">setScanWindow</span><span class="p">(</span><span class="mi">250</span><span class="p">);</span><span class="w">     </span><span class="c1">// Each scan lasts for 250ms</span>
+<span class="linenos">16</span><span class="w">    </span><span class="c1">// Provide a callback function to process scan data.</span>
+<span class="linenos">17</span><span class="w">    </span><span class="c1">// If no function is provided, default BLEScan::printScanInfo is used</span>
+<span class="linenos">18</span><span class="w">    </span><span class="n">BLE</span><span class="p">.</span><span class="n">setScanCallback</span><span class="p">(</span><span class="n">scanFunction</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">    </span><span class="n">BLE</span><span class="p">.</span><span class="n">beginCentral</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="w">    </span><span class="n">BLE</span><span class="p">.</span><span class="n">configScan</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">startScan</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span><span class="w">    </span><span class="c1">// Repeat scans for 5 seconds, then stop</span>
+<span class="linenos">22</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">23</span>
+<span class="linenos">24</span><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">25</span>
+<span class="linenos">26</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p><strong>Notes and Warnings</strong></p>
+<p>Use this member function instead of creating a BLEScan class instance manually.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEDevice::setScanCallback</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Set a callback function for processing BLE scan results.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setScanCallback</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">scanCB</span><span class="p">)(</span><span class="n">T_LE_CB_DATA</span><span class="o">*</span><span class="p">));</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">scanCB</span></code> : a function that returns nothing and takes in a scan data pointer of type T_LE_CB_DATA*</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: BLEScan</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Use this member function to set a callback function that will be called for each BLE device scan result found.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEDevice::beginCentral</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Start the BLE stack in central mode.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">beginCentral</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">connCount</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">connCount</span></code> : maximum number of allowed connected devices. If no argument is provided, default to maximum allowed connected devices for specific board.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: BLEScan</p>
+<p>The function returns nothing.</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Use this member function to start the device in BLE central mode, after other BLE parameters are set correctly.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEDevice::beginPeripheral</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Start the BLE stack in peripheral mode.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">beginPeripheral</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: BLEBatteryService</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Use this member function to start the device in BLE peripheral mode, after other BLE parameters are set correctly.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEDevice::end</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Stop the BLE stack.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">end</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Use this member function to stop the device operating in either BLE peripheral mode or BLE central mode.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEDevice::configServer</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Configure the BLE stack for services.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">configServer</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">maxServiceCount</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">maxServiceCount</span></code> : Maximum number of services that will run on the device</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: BLEBatteryService</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Use this member function before adding any service to the BLE stack.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEDevice::addService</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Add a new service to the BLE stack.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">addService</span><span class="p">(</span><span class="n">BLEService</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">newService</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">newService</span></code> : the service to be added, defined using a BLEService class object.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: BLEBatteryService</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>N/A</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEDevice::configClient</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Configure the BLE stack for clients.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">configClient</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requries no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: BLEBatteryClient</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Use this member function before adding any client to the BLE stack.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEDevice::addClient</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Add a new client to the BLE stack.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">BLEClient</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">addClient</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">connId</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">connId</span></code>: the connection ID of the connected device to create a client for.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns a pointer to a BLEClient class object, corresponding to the device with the specified connection ID, which
+can be used to access the services and characteristics on the connected device.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: BLEBatteryClient</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Only one client should be added per connected device. The BLEClient object and any service, characteristic, descriptor associated with the connected device will be deleted when the device
+is disconnected.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEDevice::getLocalAddr</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Get local device Bluetooth address.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">getLocalAddr</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="p">(</span><span class="o">&amp;</span><span class="n">addr</span><span class="p">)[</span><span class="n">GAP_BD_ADDR_LEN</span><span class="p">]);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">addr</span></code> : 6 byte array to store local device Bluetooth address.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Local device address is only available after starting in central or peripheral mode. This function will return all zeros for the address if central or peripheral mode is not in operation.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Class%20BLEConnect.html" class="btn btn-neutral float-left" title="Class BLEConnect" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Class%20BLEHIDDevice.html" class="btn btn-neutral float-right" title="Class BLEHIDDevice" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class BLEHIDGamepad &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Class BLEHIDKeyboard" href="Class%20BLEHIDKeybaord.html" />
+    <link rel="prev" title="Class BLEHIDDevice" href="Class%20BLEHIDDevice.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../AMB21/index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">AMB23 (RTL8722DM MINI)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/ambd_mini_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples_and_components/index.html">Examples &amp; Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">API Documents</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="index.html#analog">Analog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#audiocodec">AudioCodec</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#ble">BLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#epdif">EPDIF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#fatfssdcard">FatfsSDCard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#flashmemory">FlashMemory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gpio">GPIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gtimer">GTimer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#http">Http</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#irdevice">IRDevice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#mdns">MDNS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#mqttclient">MQTTClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ntpclient">NTPClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#powersave">PowerSave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#rtc">RTC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#softwareserial">SoftwareSerial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#spi">SPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#sys">Sys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#usb">USB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wdt">WDT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wifi">WiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wire">Wire</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ws2812b">WS2812B</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../index.html">AMB23 (RTL8722DM MINI)</a> &raquo;</li>
+          <li><a href="index.html">API Documents</a> &raquo;</li>
+      <li>Class BLEHIDGamepad</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_arduino/AMB23/api_documents/Class BLEHIDGamepad.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-blehidgamepad">
+<h1>Class BLEHIDGamepad<a class="headerlink" href="#class-blehidgamepad" title="Permalink to this heading"></a></h1>
+<p><strong>BLEHIDGamepad Class</strong></p>
+<p><strong>Description</strong></p>
+<p>A class used for creating and managing a BLE HID Gamepad.</p>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">class BLEHIDGamepad</div>
+</div>
+<p><strong>Members</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Public
+Constructors</strong></p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BLEHIDGame
+pad::BLEHIDGamepad</p></td>
+<td><p>Constructs a BLEHIDGamepad object</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Public Methods</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>BLEHIDGa
+mepad::setReportID</p></td>
+<td><p>Set HID report ID for the HID Gamepad</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEHIDGame
+pad::gamepadReport</p></td>
+<td><p>Send a HID Gamepad report</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEHIDGa
+mepad::buttonPress</p></td>
+<td><p>Send a HID Gamepad report indicating buttons
+pressed</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEHIDGame
+pad::buttonRelease</p></td>
+<td><p>Send a HID Gamepad report indicating buttons
+released</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEHIDGamepad
+::buttonReleaseAll</p></td>
+<td><p>Send a HID Gamepad report indicating no buttons
+pressed</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLE
+HIDGamepad::setHat</p></td>
+<td><p>Send a HID Gamepad report indicating hat switch
+position</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEH
+IDGamepad::setAxes</p></td>
+<td><p>Send a HID Gamepad report indicating position
+of all axes</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEHIDGam
+epad::setLeftStick</p></td>
+<td><p>Send a HID Gamepad report indicating position
+of axes corresponding to left analog stick</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEHIDGame
+pad::setRightStick</p></td>
+<td><p>Send a HID Gamepad report indicating position
+of axes corresponding to right analog stick</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEHIDGa
+mepad::setTriggers</p></td>
+<td><p>Send a HID Gamepad report indicating position
+of axes corresponding to triggers</p></td>
+</tr>
+</tbody>
+</table>
+<section id="blehidgamepad-blehidgamepad">
+<h2><strong>BLEHIDGamepad::BLEHIDGamepad</strong><a class="headerlink" href="#blehidgamepad-blehidgamepad" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Constructs a BLE object</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">BLEHIDGamepad::BLEHIDGamepad();</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: BLEHIDGamepad</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">By default, the BLEHIDGamepad class assumes the HID report descriptor
+implements a gamepad device with 16 buttons, 6 16-bit axes and an
+8-direction hat switch. This class will not work if a different
+gamepad report descriptor is implemented.</div>
+</div>
+</section>
+<section id="blehidgamepad-setreportid">
+<h2><strong>BLEHIDGamepad::setReportID</strong><a class="headerlink" href="#blehidgamepad-setreportid" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Set HID report ID for the HID Gamepad.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void setReportID (uint8_t reportID);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">reportID: The report ID for the gamepad device, corresponding to the
+HID report descriptor.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: BLEHIDGamepad</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">HID report ID should start at 1. Some systems may consider a report ID
+of 0 as invalid.</div>
+</div>
+</section>
+<section id="blehidgamepad-gamepadreport">
+<h2><strong>BLEHIDGamepad::gamepadReport</strong><a class="headerlink" href="#blehidgamepad-gamepadreport" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Send a HID Gamepad report.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void gamepadReport (hid_gamepad_report_t* report);</div>
+<div class="line">void gamepadReport (uint16_t buttons, uint8_t hat, int16_t x, int16_t
+y, int16_t z, int16_t Rz, int16_t Rx, int16_t Ry);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">report: pointer to gamepad report structure containing data on all
+inputs</div>
+<div class="line">buttons: bitmap indicating state of each button. 1 = pressed, 0 =
+released.</div>
+<div class="line">hat: position of hat switch. Valid values:</div>
+<div class="line">– GAMEPAD_HAT_CENTERED = 0</div>
+<div class="line">– GAMEPAD_HAT_UP = 1</div>
+<div class="line">– GAMEPAD_HAT_UP_RIGHT = 2</div>
+<div class="line">– GAMEPAD_HAT_RIGHT = 3</div>
+<div class="line">– GAMEPAD_HAT_DOWN_RIGHT = 4</div>
+<div class="line">– GAMEPAD_HAT_DOWN = 5</div>
+<div class="line">– GAMEPAD_HAT_DOWN_LEFT = 6</div>
+<div class="line">– GAMEPAD_HAT_LEFT = 7</div>
+<div class="line">– GAMEPAD_HAT_UP_LEFT = 8</div>
+<div class="line">x: position of x axis. Integer value from -32767 to 32767.</div>
+<div class="line">y: position of y axis. Integer value from -32767 to 32767.</div>
+<div class="line">z: position of z axis. Integer value from -32767 to 32767.</div>
+<div class="line">Rz: position of Rz axis. Integer value from -32767 to 32767.</div>
+<div class="line">Rx: position of Rx axis. Integer value from -32767 to 32767.</div>
+<div class="line">Ry: position of Ry axis. Integer value from -32767 to 32767.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: BLEHIDGamepad</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+</section>
+<section id="blehidgamepad-buttonpress">
+<h2><strong>BLEHIDGamepad::buttonPress</strong><a class="headerlink" href="#blehidgamepad-buttonpress" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Send a HID Gamepad report indicating buttons pressed.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void buttonPress (uint16_t buttons);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">buttons: bitmap indicating buttons pressed. 1 = pressed.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+</section>
+<section id="blehidgamepad-buttonrelease">
+<h2><strong>BLEHIDGamepad::buttonRelease</strong><a class="headerlink" href="#blehidgamepad-buttonrelease" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Send a HID Gamepad report indicating buttons released.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void buttonRelease (uint16_t buttons);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">buttons: bitmap indicating buttons released. 1 = released.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+</section>
+<section id="blehidgamepad-buttonreleaseall">
+<h2><strong>BLEHIDGamepad::buttonReleaseAll</strong><a class="headerlink" href="#blehidgamepad-buttonreleaseall" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Send a HID Gamepad report indicating no buttons pressed.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void buttonReleaseAll (void);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">The function requires no input parameter.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: BLEHIDGamepad</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+</section>
+<section id="blehidgamepad-sethat">
+<h2><strong>BLEHIDGamepad::setHat</strong><a class="headerlink" href="#blehidgamepad-sethat" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Send a HID Gamepad report indicating hat switch position.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void setHat (uint8_t hat);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">hat: position of hat switch. Valid values:</div>
+<div class="line">– GAMEPAD_HAT_CENTERED = 0</div>
+<div class="line">– GAMEPAD_HAT_UP = 1</div>
+<div class="line">– GAMEPAD_HAT_UP_RIGHT = 2</div>
+<div class="line">– GAMEPAD_HAT_RIGHT = 3</div>
+<div class="line">– GAMEPAD_HAT_DOWN_RIGHT = 4</div>
+<div class="line">– GAMEPAD_HAT_DOWN = 5</div>
+<div class="line">– GAMEPAD_HAT_DOWN_LEFT = 6</div>
+<div class="line">– GAMEPAD_HAT_LEFT = 7</div>
+<div class="line">– GAMEPAD_HAT_UP_LEFT = 8</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+</section>
+<section id="blehidgamepad-setaxes">
+<h2><strong>BLEHIDGamepad::setAxes</strong><a class="headerlink" href="#blehidgamepad-setaxes" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Send a HID Gamepad report indicating position of all axes.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void setAxes (int16_t x, int16_t y, int16_t z, int16_t Rz, int16_t Rx,
+int16_t Ry);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">x: position of x axis. Integer value from -32767 to 32767.</div>
+<div class="line">y: position of y axis. Integer value from -32767 to 32767.</div>
+<div class="line">z: position of z axis. Integer value from -32767 to 32767.</div>
+<div class="line">Rz: position of Rz axis. Integer value from -32767 to 32767.</div>
+<div class="line">Rx: position of Rx axis. Integer value from -32767 to 32767.</div>
+<div class="line">Ry: position of Ry axis. Integer value from -32767 to 32767.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">Example: BLEHIDGamepad</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+</section>
+<section id="blehidgamepad-setleftstick">
+<h2><strong>BLEHIDGamepad::setLeftStick</strong><a class="headerlink" href="#blehidgamepad-setleftstick" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Send a HID Gamepad report indicating position of axes corresponding to
+left analog stick.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void setLeftStick (int16_t x, int16_t y);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">x: position of x axis. Integer value from -32767 to 32767.</div>
+<div class="line">y: position of y axis. Integer value from -32767 to 32767.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+</section>
+<section id="blehidgamepad-setrightstick">
+<h2><strong>BLEHIDGamepad::setRightStick</strong><a class="headerlink" href="#blehidgamepad-setrightstick" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Send a HID Gamepad report indicating position of axes corresponding to
+right analog stick.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void setLeftStick (int16_t z, int16_t Rz);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">z: position of z axis. Integer value from -32767 to 32767.</div>
+<div class="line">Rz: position of Rz axis. Integer value from -32767 to 32767.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+</section>
+<section id="blehidgamepad-settriggers">
+<h2><strong>BLEHIDGamepad::setTriggers</strong><a class="headerlink" href="#blehidgamepad-settriggers" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><strong>Description</strong></div>
+<div class="line">Send a HID Gamepad report indicating position of axes corresponding to
+triggers.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Syntax</strong></div>
+<div class="line">void setTriggers (int16_t Rx, int16_t Ry);</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Parameters</strong></div>
+<div class="line">Rx: position of Rx axis. Integer value from -32767 to 32767.</div>
+<div class="line">Ry: position of Ry axis. Integer value from -32767 to 32767.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Returns</strong></div>
+<div class="line">The function returns nothing.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Example Code</strong></div>
+<div class="line">NA</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Notes and Warnings</strong></div>
+<div class="line">NA</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Class%20BLEHIDDevice.html" class="btn btn-neutral float-left" title="Class BLEHIDDevice" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Class%20BLEHIDKeybaord.html" class="btn btn-neutral float-right" title="Class BLEHIDKeyboard" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

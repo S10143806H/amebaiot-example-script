@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class BLEConnect &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Class BLEDevice" href="Class%20BLEDevice.html" />
+    <link rel="prev" title="Class BLEClient" href="Class%20BLEClient.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples_and_components/index.html">Examples &amp; Components</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">API Documents</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="index.html#analog">Analog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#audiocodec">AudioCodec</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#ble">BLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#epdif">EPDIF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#fatfssdcard">FatfsSDCard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#flashmemory">FlashMemory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gpio">GPIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gtimer">GTimer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#http">Http</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#irdevice">IRDevice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#mdns">MDNS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#mqttclient">MQTTClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ntpclient">NTPClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#powersave">PowerSave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#rtc">RTC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#softwareserial">SoftwareSerial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#spi">SPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#sys">Sys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#usb">USB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wdt">WDT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wifi">WiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wire">Wire</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ws2812b">WS2812B</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+          <li><a href="index.html">API Documents</a> &raquo;</li>
+      <li>Class BLEConnect</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_arduino/AMB21/api_documents/Class BLEConnect.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-bleconnect">
+<h1>Class BLEConnect<a class="headerlink" href="#class-bleconnect" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="BLEConnect">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BLEConnect</span></span><a class="headerlink" href="#BLEConnect" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>A class used for managing BLE connection settings.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">BLEConnect</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Members</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Public Constructors</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>No public constructor is available as this class is intended to be a
+singleton class. You can get a pointer to this class using
+BLEDevice::configConnection.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Public Methods</strong></p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BLEConnect::connect</p></td>
+<td><p>Connect to a target BLE device</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEConnect::disconnect</p></td>
+<td><p>Disconnect from a target BLE device</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEConnect::setScanInterval</p></td>
+<td><p>Set the BLE scanning interval when
+connecting</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEConnect::setScanWindow</p></td>
+<td><p>Set the BLE scanning window when
+connecting</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEConnect::setConnInterval</p></td>
+<td><p>Set the BLE connection interval
+duration</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEConnect::setConnLatency</p></td>
+<td><p>Set the BLE connection slave latency</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEConnect::setConnTimeout</p></td>
+<td><p>Set the BLE connection timeout value</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEConnect::updateConnParams</p></td>
+<td><p>Send new BLE connection parameters
+to a connected device</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEConnect::getConnInfo</p></td>
+<td><p>Get connection information</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLEConnect::getConnAddr</p></td>
+<td><p>Get the Bluetooth address for a
+certain connection</p></td>
+</tr>
+<tr class="row-even"><td><p>BLEConnect::getConnId</p></td>
+<td><p>Get the connection ID for a certain
+device</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEConnect::connect</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Connect to a target BLE device.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">connect</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">btAddr</span><span class="p">,</span><span class="w"> </span><span class="n">T_GAP_REMOTE_ADDR_TYPE</span><span class="w"> </span><span class="n">destAddrType</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">scanTimeout</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">connect</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="p">(</span><span class="o">&amp;</span><span class="n">btAddr</span><span class="p">)[</span><span class="mi">6</span><span class="p">],</span><span class="w"> </span><span class="n">T_GAP_REMOTE_ADDR_TYPE</span><span class="w"> </span><span class="n">destAddrType</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">scanTimeout</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">connect</span><span class="p">(</span><span class="n">BLEAdvertData</span><span class="w"> </span><span class="n">targetDevice</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">scanTimeout</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">connect</span><span class="p">(</span><span class="n">BLEAddr</span><span class="w"> </span><span class="n">destAddr</span><span class="p">,</span><span class="w"> </span><span class="n">T_GAP_REMOTE_ADDR_TYPE</span><span class="w"> </span><span class="n">destAddrType</span><span class="p">,</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">scanTimeout</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">btAddr</span></code> : target device Bluetooth address expressed as a character string.</p>
+<p><code class="docutils literal notranslate"><span class="pre">uint8_t</span> <span class="pre">(&amp;btAddr)</span></code> : target device Bluetooth address contained in a 6 byte array.</p>
+<p><code class="docutils literal notranslate"><span class="pre">destAddr</span></code> : target device Bluetooth address contained in BLEAddr class object.</p>
+<p><code class="docutils literal notranslate"><span class="pre">targetDevice</span></code> : advertising data packet scanned from target device.</p>
+<p><code class="docutils literal notranslate"><span class="pre">destAddrType</span></code> : Bluetooth address type of target device.</p>
+<p>Valid values:</p>
+<p>– GAP_REMOTE_ADDR_LE_PUBLIC</p>
+<p>– GAP_REMOTE_ADDR_LE_RANDOM</p>
+<p><code class="docutils literal notranslate"><span class="pre">scan</span> <span class="pre">timeout</span></code> : duration in milliseconds for which to look for target device before giving up.</p>
+<p><strong>Returns</strong></p>
+<p>True if connection successful, false if connection failed.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: BLEBatteryClient</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEConnect::disconnect</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Disconnect from a target BLE device.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">disconnect</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">connId</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">connId</span></code> : connection ID for target device.</p>
+<p><strong>Returns</strong></p>
+<p>True if operation successful, false if otherwise.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEConnect::setScanInterval</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Set the BLE scan interval when searching for a target device to connect to.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setScanInterval</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">scanInt_ms</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">scanInt_ms</span></code> : scan interval in milliseconds. Value range of 3 to 10240.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEConnect::setScanWindow</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Set the BLE scan window when searching for a target device to connect to.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setScanWindow</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">scanWindow_ms</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">scanWindow_ms</span></code> : scan window in milliseconds. Value range of 3 to 10240.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEConnect::setConnInterval</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Set the BLE connection interval value.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setConnInterval</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">min_ms</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">max_ms</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">min_ms</span></code> : minimum acceptable connection interval in milliseconds. Value range of 8 to 4000.</p>
+<p><code class="docutils literal notranslate"><span class="pre">max_ms</span></code> : maximum acceptable connection interval in milliseconds. Value range of 8 to 4000.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>The BLE connection interval defines the period between successive connection events between a connected central and peripheral device. Even if there is no data to exchange, a connection event is required
+to maintain the connection. max_ms should be larger than or equal to min_ms.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEConnect::setConnLatency</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Set the BLE connection slave latency value.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setConnLatency</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">latency</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">latency</span></code> : Connection slave latency value. Value range of 0 to 499.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>The BLE connection slave latency defines the number of successive connection events a connected peripheral device can ignore without being considered as disconnected by the central device.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEConnect::setConnTimeout</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Set the BLE connection timeout value.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setConnTimeout</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">timeout_ms</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code> : connection timeout in milliseconds. Value range of 100 to 32000.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>The BLE connection timeout defines the duration after a failed connection events before a peripheral or central device considers the connection broken.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEConnect::updateConnParams</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Update a connected device with new connection parameters.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">updateConnParams</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">conn_id</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">conn_id</span></code>: connection ID of target device to update connection parameters.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>Update a connected device with previously set connection interval, slave latency and timeout values. The connected device may reject the new values if it is unable to conform to them.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEConnect::getConnInfo</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Get connection information.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">getConnInfo</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">connId</span><span class="p">,</span><span class="w"> </span><span class="n">T_GAP_CONN_INFO</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pConnInfo</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">connId</span></code>: connection ID to get connection information from.</p>
+<p><code class="docutils literal notranslate"><span class="pre">pConnInfo</span></code> : pointer to T_GAP_CONN_INFO structure to store obtained connection information.</p>
+<p><strong>Returns</strong></p>
+<p>True if operation success, false if operation failed.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEConnect::getConnAddr</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Get the Bluetooth address for a certain connection.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">getConnAddr</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">connId</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">addr</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">addrType</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">connId</span></code>: connection ID to get address information for</p>
+<p><code class="docutils literal notranslate"><span class="pre">addr</span></code>: pointer to 6 byte array to store retrieved Bluetooth address</p>
+<p><code class="docutils literal notranslate"><span class="pre">addrType</span></code>: pointer to uint8_t variable to store retrieved Bluetooth address type</p>
+<p><strong>Returns</strong></p>
+<p>True if operation success, false if operation failed.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BLEConnect::getConnId</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Get the connection ID for a certain device.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int8_t</span><span class="w"> </span><span class="nf">getConnId</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">btAddr</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">addrType</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int8_t</span><span class="w"> </span><span class="nf">getConnId</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">btAddr</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">addrType</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int8_t</span><span class="w"> </span><span class="nf">getConnId</span><span class="p">(</span><span class="n">BLEAdvertData</span><span class="w"> </span><span class="n">targetDevice</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">char\*</span> <span class="pre">btAddr</span></code>: target device Bluetooth address expressed as a character string.</p>
+<p><code class="docutils literal notranslate"><span class="pre">uint8_t\*</span> <span class="pre">btAddr</span></code> : pointer to a 6 byte array containing target device Bluetooth address.</p>
+<p><code class="docutils literal notranslate"><span class="pre">targetDevice</span></code> : advertising data packet scanned from target device.</p>
+<p><code class="docutils literal notranslate"><span class="pre">addrType</span></code> : Bluetooth address type of target device.
+Valid values:</p>
+<p>– GAP_REMOTE_ADDR_LE_PUBLIC</p>
+<p>– GAP_REMOTE_ADDR_LE_RANDOM</p>
+<p><strong>Returns</strong></p>
+<p>The function returns the requested connection ID. Returns -1 if failed to obtain connection ID.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: BLEBatteryClient</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Class%20BLEClient.html" class="btn btn-neutral float-left" title="Class BLEClient" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Class%20BLEDevice.html" class="btn btn-neutral float-right" title="Class BLEDevice" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

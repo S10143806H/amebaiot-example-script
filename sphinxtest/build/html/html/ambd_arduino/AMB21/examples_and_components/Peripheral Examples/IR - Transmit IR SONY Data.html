@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IR - Transmit IR Sony Data &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Power Save - Deep Sleep Mode" href="Power%20Save%20-%20Deep%20Sleep%20Mode.html" />
+    <link rel="prev" title="IR - Transmit IR NEC Raw Data And Decode" href="IR%20-%20Transmit%20IR%20NEC%20Raw%20Data%20And%20Decode.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Network%20Examples/index.html">Network Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Peripheral Examples</a> &raquo;</li>
+      <li>IR - Transmit IR Sony Data</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/AMB21/examples_and_components/Peripheral Examples/IR - Transmit IR SONY Data.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ir-transmit-ir-sony-data">
+<h1>IR - Transmit IR Sony Data<a class="headerlink" href="#ir-transmit-ir-sony-data" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Materials</strong>
+<span class="raw-html"></p></span></p>
+<ul class="simple">
+<li><p>AmebaD [ AMB21 / AMB22 / BW16 ] x 2</p></li>
+<li><p>Grove – Infrared Emitter x1 (Figure 1)</p></li>
+</ul>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<p>In this example, we use one Ameba RTL8722 modules that connecting with
+an infrared (IR) Emitter to transmit and receive IR SONY data “0xA90”
+(Sony TV power code). For the receiver side, you can either use an
+oscilloscope/logic analyser to view the waveform and decode accordingly.</p>
+<p><a class="reference internal" href="../../../../_images/image158.png"><img alt="1" src="../../../../_images/image158.png" style="width: 150.0px; height: 150.0px;" /></a></p>
+<p>Figure 1: Grove – Infrared Transmitter</p>
+<p>On the transmission side, the transmitter will send IR SONY data. For
+more details, please refer to SB-Projects’ topic of IR Remote Control
+Theory to learn the theory of IR remote controls operation and a
+collection of IR protocol descriptions. In this example, we are going to
+use Sony as the transmission protocol.</p>
+<p><strong>Sony Features</strong></p>
+<ul class="simple">
+<li><p>12-bit version, 7 command bits, 5 address bits.</p></li>
+<li><p>Pulse width modulation.</p></li>
+<li><p>Carrier frequency of 40kHz.</p></li>
+<li><p>Bit time of 1.2ms or 0.6ms.</p></li>
+</ul>
+<p><strong>Sony SIRC Modulation</strong></p>
+<p>The SIRC protocol uses pulse width encoding of the bits. The pulse
+representing a logical “1” is a 1200us long burst of the 40kHz carrier,
+while the burst width for a logical “0” is 600us long. All bursts are
+separated by a 600us long space interval as shown in Figure 2 below.</p>
+<p><a class="reference internal" href="../../../../_images/image254.png"><img alt="2" src="../../../../_images/image254.png" style="width: 338.0px; height: 94.0px;" /></a></p>
+<p>Figure 2: Sony SIRC Modulation</p>
+<p><strong>Protocol</strong></p>
+<p><a class="reference internal" href="../../../../_images/image336.png"><img alt="3" src="../../../../_images/image336.png" style="width: 332.0px; height: 83.0px;" /></a></p>
+<p>Figure 3: 12-bit Sony SIRC protocol</p>
+<p>The Figure 3 above shows a typical pulse train of the 12-bit SIRC
+protocol. With this protocol the LSB is transmitted first. The start
+burst is always 2.4ms wide, followed by a standard space of 0.6ms. Apart
+from signalling the start of a SIRC message this start burst is also
+used to adjust the gain of the IR receiver. Then the 7-bit Command is
+transmitted, followed by the 5-bit Device address. In this case Address
+1 and Command 19 is transmitted.</p>
+<p>Commands are repeated every 45ms (measured from start to start) for as
+long as the key on the remote control is held down.</p>
+<p>Figure 4 shows the pin configuration of IR Emitter with AMB21 / AMB22
+board.</p>
+<p><a class="reference internal" href="../../../../_images/image429.png"><img alt="4" src="../../../../_images/image429.png" style="width: 419.0px; height: 301.0px;" /></a></p>
+<p>Figure 4: Pin configuration of IR Emitter and AMB21 / AMB22</p>
+<p>Figure 6 shows the pin configuration of IR Emitter with BW16.</p>
+<p><a class="reference internal" href="../../../../_images/image520.png"><img alt="5" src="../../../../_images/image520.png" style="width: 378.5px; height: 355.0px;" /></a></p>
+<p>Figure 5: Pin configuration of the IR Emitter and BW16</p>
+<p>After the connection is being set up correctly, we will move to the
+coding part for this example. First, make sure the correct Ameba
+development board is selected in Arduino IDE: “Tools” -&gt; “Board”.</p>
+<p>Open the “IRSendSONY” example in “File” -&gt; “Examples” -&gt; “AmebaIRDevice”
+-&gt; “IRSendSONY” (Figure 6) and upload to the board connected with IR
+Emitter:</p>
+<p><a class="reference internal" href="../../../../_images/image610.png"><img alt="6" src="../../../../_images/image610.png" style="width: 440.0px; height: 394.0px;" /></a></p>
+<p>Figure 6: Example Location of IRSendSONY</p>
+<p>After successfully upload the sample code for IRSendSONY, you could use
+oscilloscope or Pulse View software to find out the waveform of the
+signal transmitted from the IR Emitter is “0xA90” as shown in Figure
+below:</p>
+<p><a class="reference internal" href="../../../../_images/image78.png"><img alt="7" src="../../../../_images/image78.png" style="width: 602.0px; height: 325.0px;" /></a></p>
+<p>Figure 7: Waveform of IRSendSONY “0xA90”</p>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Code Reference</strong>
+<span class="raw-html"></p></span></p>
+<p>[1] Seed Official website for Grove – Infrared Emitter</p>
+<p><a class="reference external" href="https://wiki.seeedstudio.com/Grove-Infrared_Emitter/">https://wiki.seeedstudio.com/Grove-Infrared_Emitter/</a></p>
+<p>[2] Ken SHirriff’s blog on A Multi-Protocol Infrared Remote Library for
+the Arduino</p>
+<p><a class="reference external" href="http://www.righto.com/2009/08/multi-protocol-infrared-remote-library.html">http://www.righto.com/2009/08/multi-protocol-infrared-remote-library.html</a></p>
+<p>[3] SB-Projects: IR Remote Control Project</p>
+<p><a class="reference external" href="https://www.sbprojects.net/knowledge/ir/index.php">https://www.sbprojects.net/knowledge/ir/index.php</a></p>
+<p>[4] SONY SIRC Protocol</p>
+<p><a class="reference external" href="https://www.sbprojects.net/knowledge/ir/sirc.php">https://www.sbprojects.net/knowledge/ir/sirc.php</a></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="IR%20-%20Transmit%20IR%20NEC%20Raw%20Data%20And%20Decode.html" class="btn btn-neutral float-left" title="IR - Transmit IR NEC Raw Data And Decode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Power%20Save%20-%20Deep%20Sleep%20Mode.html" class="btn btn-neutral float-right" title="Power Save - Deep Sleep Mode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

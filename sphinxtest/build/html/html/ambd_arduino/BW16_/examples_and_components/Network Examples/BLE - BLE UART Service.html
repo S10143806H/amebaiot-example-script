@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLE – BLE UART Service &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="BLE – DHT over BLE UART" href="BLE%20-%20DHT%20over%20BLE%20UART.html" />
+    <link rel="prev" title="BLE – BLE UART Client" href="BLE%20-%20BLE%20UART%20Client.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB21/index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">BW16 (RTL8720DN)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Network Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Peripheral%20Examples/index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">BW16 (RTL8720DN)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Network Examples</a> &raquo;</li>
+      <li>BLE – BLE UART Service</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/BW16_/examples_and_components/Network Examples/BLE - BLE UART Service.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ble-ble-uart-service">
+<h1>BLE – BLE UART Service<a class="headerlink" href="#ble-ble-uart-service" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Materials</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22 / AMB23 / BW16] x 1</p></li>
+<li><p>Android / iOS smartphone</p></li>
+</ul>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<p><strong>Introduction</strong></p>
+<div class="line-block">
+<div class="line">With BLE, application data is sent and received using the GATT system.
+GATT uses services, characteristics, and attributes to organise data
+and control how the data can be read from and written to. The
+Bluetooth SIG specification for BLE includes several predefined
+services for common applications, but users are free to implement
+custom services and characteristics to best fit their data structure
+and application needs</div>
+<div class="line">In this example, the BLEService and BLECharacteristic classes are used
+to implement a custom service for transmitting ASCII characters
+similar to regular UART. This custom service is the Nordic UART
+Service, which is supported in several smartphone apps.</div>
+</div>
+<p><strong>Procedure</strong></p>
+<div class="line-block">
+<div class="line">Ensure that a compatible BLE UART app is installed on your smartphone,
+it is available at:</div>
+<div class="line">– Google Play Store:</div>
+<div class="line"><a class="reference external" href="https://play.google.com/store/apps/details?id=com.adafruit.bluefruit.le.connect">https://play.google.com/store/apps/details?id=com.adafruit.bluefruit.le.connect</a></div>
+<div class="line"><a class="reference external" href="https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal">https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal</a></div>
+</div>
+<div class="line-block">
+<div class="line">– Apple App Store:</div>
+<div class="line"><a class="reference external" href="https://apps.apple.com/us/app/bluefruit-connect/id830125974">https://apps.apple.com/us/app/bluefruit-connect/id830125974</a></div>
+</div>
+<p>Open the example, <code class="docutils literal notranslate"><span class="pre">“Files”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span> <span class="pre">“AmebaBLE”</span> <span class="pre">-&gt;</span>
+<span class="pre">“BLEUartService”</span></code>.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image14.png"><img alt="1" src="../../../../_images/image14.png" style="width: 417.59999999999997px; height: 675.6px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Upload the code and press the reset button on Ameba once the upload is
+finished.</div>
+<div class="line">Open the app on your smartphone, scan and connect to the Ameba board
+shown as “AMEBA_BLE_DEV” and choose the UART function in the app. Note
+that the BLE UART service on the Ameba board will only work with the
+UART and Plotter functions in the Bluefruit Connect app, other
+functions (Pin I/O, Image Transfer) require other BLE services that
+are not included in this example.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image1-2.png"><img alt="2" src="../../../../_images/image1-2.png" style="width: 288.0px; height: 576.0px;" /></a></p>
+<p><a class="reference internal" href="../../../../_images/image1-3.png"><img alt="3" src="../../../../_images/image1-3.png" style="width: 288.0px; height: 576.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">In the UART terminal section of the app, enter a message and click
+send. You should see the message appear in the Arduino serial monitor.</div>
+<div class="line">In the Arduino serial monitor, enter a message and click send. The
+message will appear in the smartphone app.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image1-4.png"><img alt="4" src="../../../../_images/image1-4.png" style="width: 288.0px; height: 576.0px;" /></a></p>
+<p><a class="reference internal" href="../../../../_images/image51.png"><img alt="5" src="../../../../_images/image51.png" style="width: 545.3px; height: 433.29999999999995px;" /></a></p>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Code Reference</strong>
+<span class="raw-html"></p></span></p>
+<div class="line-block">
+<div class="line">The BLECharacteristic class is used to create two characteristics, one
+for receive (Rx) and one for transmit (Tx), and added to a service
+created with the BLEService class.</div>
+<div class="line">The required read/write/notify properties are set for each
+characteristic using the <code class="docutils literal notranslate"><span class="pre">set__Property()</span></code> methods, and callback
+functions are registered using the <code class="docutils literal notranslate"><span class="pre">set__Callback()</span></code> methods. The
+required buffer size is also set for each characteristic so that it
+has enough memory to store a complete string.</div>
+<div class="line">When data is written to the receive characteristic, the registered
+callback function is called, which prints out the received data as a
+string to the serial monitor.</div>
+<div class="line">When data is received on the serial port, it is copied into the
+transmit characteristic buffer, and the <code class="docutils literal notranslate"><span class="pre">notify()</span></code> method is used to
+inform the connected device of the new data.</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="BLE%20-%20BLE%20UART%20Client.html" class="btn btn-neutral float-left" title="BLE – BLE UART Client" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="BLE%20-%20DHT%20over%20BLE%20UART.html" class="btn btn-neutral float-right" title="BLE – DHT over BLE UART" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

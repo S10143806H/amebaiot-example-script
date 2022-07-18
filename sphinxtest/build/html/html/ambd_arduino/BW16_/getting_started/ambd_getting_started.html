@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting Started &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Examples &amp; Components" href="../examples_and_components/index.html" />
+    <link rel="prev" title="BW16 (RTL8720DN)" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../AMB21/index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">BW16 (RTL8720DN)</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ameba-arduino-getting-started-with-bw16">Ameba ARDUINO: Getting Started with BW16</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setting-up-development-environment">Setting up Development Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-upload-firmware-into-bw16">How to upload firmware into BW16</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#uploading-solution">Uploading Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#try-the-first-example">Try the First Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../examples_and_components/index.html">Examples &amp; Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/index.html">Support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../index.html">BW16 (RTL8720DN)</a> &raquo;</li>
+      <li>Getting Started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_arduino/BW16_/getting_started/ambd_getting_started.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h1>
+<section id="ameba-arduino-getting-started-with-bw16">
+<h2>Ameba ARDUINO: Getting Started with BW16<a class="headerlink" href="#ameba-arduino-getting-started-with-bw16" title="Permalink to this heading"></a></h2>
+<section id="required-environment">
+<h3>Required Environment<a class="headerlink" href="#required-environment" title="Permalink to this heading"></a></h3>
+<p>BW16 Dual-Band Wi-Fi board currently supports Windows XP/7/8/10 32-bits and 64-bits
+operating systems. In this documentation, please use Arduino IDE with version 1.8.15 or later.</p>
+</section>
+<section id="introduction-to-bw16">
+<h3>Introduction to BW16<a class="headerlink" href="#introduction-to-bw16" title="Permalink to this heading"></a></h3>
+<p>Realtek RTL8720DN is a Wi-Fi and Bluetooth IC that supports 2.4GHz and 5GHz dual bands for
+Wi-Fi communication, and Bluetooth Low Energy (BLE) 5.0. BW16 is a module manufactured by B&amp;T,
+this module is a highly integrated Wi-Fi and Bluetooth module with the RTL8720DN as the main SoC
+(System on Chip), it can be regarded as an SoC for the Wi-Fi and Bluetooth application with typical SBCs.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image197.png"><img alt="bw16-get-start-1" src="../../../_images/image197.png" style="width: 412.8px; height: 350.40000000000003px;" /></a></p>
+</div></blockquote>
+<p>BW16 has a smaller size than AMB21 and AMB23 as shown in the above figure.
+It uses Micro USB to supply power, which is common in many smart devices.
+Please refer to the following figure and table for the pin diagram and function of BW16.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image285.png"><img alt="bw16-get-start-2" src="../../../_images/image285.png" style="width: 945.2px; height: 441.20000000000005px;" /></a></p>
+</div></blockquote>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 13%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 8%" />
+<col style="width: 23%" />
+<col style="width: 15%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>#</p></th>
+<th class="head"><p>PIN name</p></th>
+<th class="head"><p>GPIO</p></th>
+<th class="head"><p>ADC</p></th>
+<th class="head"><p>PWM</p></th>
+<th class="head"><p>UART</p></th>
+<th class="head"><p>SPI</p></th>
+<th class="head"><p>I2C</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>D0(PA7)</p></td>
+<td><p>GPIOA_7</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td><p>UART_LOG_TX</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>D1(PA8)</p></td>
+<td><p>GPIOA_8</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td><p>UART_LOG_RX</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>D2(PA27)</p></td>
+<td><p>GPIOA_27</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>D3(PA30)</p></td>
+<td><p>GPIOA_30</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>D4(PB1)</p></td>
+<td><p>GPIOB_1</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td><p>Serial_TX</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>D5(PB2)</p></td>
+<td><p>GPIOB_2</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td><p>Serial_RX</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>D6(PB3)</p></td>
+<td><p>GPIOB_3</p></td>
+<td><p>✓</p></td>
+<td><p>A2</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>D7(PA25)</p></td>
+<td><p>GPIOA_25</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>✓</p></td>
+<td></td>
+<td><p>I2C0_CLK</p></td>
+</tr>
+<tr class="row-even"><td><p>D8(PA26)</p></td>
+<td><p>GPIOA_26</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td><p>I2C0_SDA</p></td>
+</tr>
+<tr class="row-odd"><td><p>D9(PA15)</p></td>
+<td><p>GPIOA_15</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>SPI_CS</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>D10(PA14)</p></td>
+<td><p>GPIOA_14</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>SPI_CLK</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>D11(PA13)</p></td>
+<td><p>GPIOA_13</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td><p>✓</p></td>
+<td></td>
+<td><p>SPI_MISO</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>D12(PA12)</p></td>
+<td><p>GPIOA_12</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td><p>✓</p></td>
+<td></td>
+<td><p>SPI_MOSI</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="setting-up-development-environment">
+<h2>Setting up Development Environment<a class="headerlink" href="#setting-up-development-environment" title="Permalink to this heading"></a></h2>
+<section id="step-1-installing-the-driver">
+<h3>Step 1. Installing the Driver<a class="headerlink" href="#step-1-installing-the-driver" title="Permalink to this heading"></a></h3>
+<p>First, connect BW16 to the computer via Micro USB:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image358.png"><img alt="bw16-get-start-3" src="../../../_images/image358.png" style="width: 207.0px; height: 345.0px;" /></a></p>
+</div></blockquote>
+<p>If this is the first time you connect BW16 to your computer,
+here is something that you might take note of:</p>
+<p>From the pinmap above, we know D0 and D1 pins are used for program uploading.
+However, according to the schematic design of AI Thinker, the onboard USB-to-UART
+module is connected to D4 and D5 which cannot be directly used for program upload.
+In order to upload firmware to this board, we suggested that you could choose to
+add in an external USB-to-UART module connecting to D0 and D1 as shown in the
+pin connection below:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image447.png"><img alt="bw16-get-start-4" src="../../../_images/image447.png" style="width: 492.0px; height: 350.4px;" /></a></p>
+</div></blockquote>
+<p>Optionally, you could short the pins indicated below to use the on-board USB:</p>
+<div class="line-block">
+<div class="line">D1 ––– D5</div>
+<div class="line">D0 ––– D4</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image533.png"><img alt="bw16-get-start-5" src="../../../_images/image533.png" style="width: 437.25000000000006px; height: 318.45000000000005px;" /></a></p>
+</div></blockquote>
+<p>After connecting accordingly, the USB driver for BW16 will be
+automatically installed.</p>
+<p>If you have driver issue of connecting board, please
+go to <a class="reference external" href="http://www.wch-ic.com/downloads/CH341SER_ZIP.html">http://www.wch-ic.com/downloads/CH341SER_ZIP.html</a> for USB driver.</p>
+<p>You can check the <span class="guilabel">COM</span> Port number in your <span class="guilabel">Device Manager</span>:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image621.png"><img alt="bw16-get-start-6" src="../../../_images/image621.png" style="width: 307.0px; height: 484.0px;" /></a></p>
+</div></blockquote>
+</section>
+<section id="step-2-set-up-arduino-ide">
+<h3>Step 2. Set up Arduino IDE<a class="headerlink" href="#step-2-set-up-arduino-ide" title="Permalink to this heading"></a></h3>
+<p>From version 1.6.5, Arduino IDE supports third-party hardware.
+TTherefore, we can use Arduino IDE to develop applications on BW16,
+and the basic examples of Arduino can run on BW16 too.
+Refer to the <a class="reference internal" href="../examples_and_components/Basic%20Examples.html"><span class="doc">Basic Examples</span></a>.</p>
+<p>Arduino IDE can be
+downloaded in the <a class="reference external" href="https://www.arduino.cc/en/Main/Software">Arduino website</a>.</p>
+<p>When the installation is finished, open Arduino IDE. To set up BW16
+correctly in Arduino IDE, go to <span class="guilabel">“File” -&gt; “Preferences”</span>.</p>
+<p>And paste the following URL into <span class="guilabel">“Additional Boards Manager URLs”</span> field:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ambiot</span><span class="o">/</span><span class="n">ambd_arduino</span><span class="o">/</span><span class="n">raw</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">Arduino_package</span><span class="o">/</span><span class="n">package_realtek</span><span class="o">.</span><span class="n">com_amebad_index</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<p>BW16 will be supported from v3.0.8 officially.</p>
+<hr class="docutils" />
+<p>Next, go to <span class="guilabel">“Tools” -&gt; “Board” -&gt; “Boards Manager”</span>:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image718.png"><img alt="bw16-get-start-7" src="../../../_images/image718.png" style="width: 567.0px; height: 519.0px;" /></a></p>
+</div></blockquote>
+<p>The <span class="guilabel">“Boards Manager”</span> requires about 10~20 seconds to refresh all
+hardware files (if the network is in bad condition, it may take longer).
+Every time the new hardware is connected, we need to reopen the Board
+Manager. So, we close the <span class="guilabel">“Boards Manager”</span>, and then open it again. Find
+<span class="guilabel">“Realtek Ameba Boards (32-bits ARM Cortex-M33 &#64;200MHz)”</span> in the list,
+click <span class="guilabel">“Install”</span>, then the Arduino IDE starts to download required files
+for RTL8722DM.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image8-11.png"><img alt="bw16-get-start-8" src="../../../_images/image8-11.png" style="width: 781.0px; height: 440.0px;" /></a></p>
+</div></blockquote>
+<p>If you are facing GitHub downloading issue, please refer to the
+following link at <a class="reference external" href="https://www.amebaiot.com.cn/en/ameba-arduino-summary/">Download/Software Development Kit</a>. There are 3
+sections:</p>
+<ol class="arabic simple">
+<li><p><span class="guilabel">“AmebaD_Arduino_patch1_SDK”</span>, please select at least 1 of the SDKs. There are 5 latest released SDK options.</p></li>
+<li><p><span class="guilabel">“AmebaD_Arduino_patch2_Tools”</span>, please select according to your operation system. There are Windows, Linux and MacOS.</p></li>
+<li><p><span class="guilabel">“AmebaD_Arduino_Source_Code”</span>, this section is optional download only wants to refer the latest source code.</p></li>
+</ol>
+<p>Download the files selected, then unzip (patch1 and patch2 are compulsory).
+There are “Install.doc”/“Install.pdf” for you to refer installation steps.
+According to your system, please run the installation tool in the
+“Offline_SDK_installation_tool” folder.</p>
+<p>After the installation tool running successfully, you may open Arduino
+IDE and proceed to <span class="guilabel">“Tools” -&gt; “Board“ -&gt; “Boards Manager…”</span>. Try to find
+<span class="guilabel">“Realtek Ameba Boards (32-bits ARM Cortex-M33 &#64;200MHz)”`</span> in the list,
+click <span class="guilabel">“Install”</span>, then the Arduino IDE starts to download required files
+for AmebaD.</p>
+<hr class="docutils" />
+<p>Finally, we select RTL8722DM as current connected board in
+<span class="guilabel">“Tools” -&gt; “Board” -&gt; “Ameba ARM (32-bits) Boards” -&gt;” RTL8722DM”</span>：</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image910.png"><img alt="bw16-get-start-9" src="../../../_images/image910.png" style="width: 801.9px; height: 366.3px;" /></a></p>
+</div></blockquote>
+</section>
+</section>
+<section id="how-to-upload-firmware-into-bw16">
+<h2>How to upload firmware into BW16<a class="headerlink" href="#how-to-upload-firmware-into-bw16" title="Permalink to this heading"></a></h2>
+<p>Depending on the batch of manufacturing, some BW16 modules on the development board
+might have built-in the default B&amp;T firmware, the firmware information is shown in
+the image below:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image106.png"><img alt="bw16-get-start-10" src="../../../_images/image106.png" style="width: 481.0px; height: 351.0px;" /></a></p>
+</div></blockquote>
+<p>This will cause Arduino Image unable to flash into the module. Although information
+of “All images are sent successfully! Image tool closed! Upload Image did.” is
+showing in the Image Tool, however, the factory image is unable to be erased.
+Unfortunately after press the onboard RST button, you will find the factory image
+still remains in the flash.</p>
+<p>Arduino IDE provides many built-in examples, which can be compiled,
+uploaded and run directly on the boards. Here, we take the “Blink”
+example as the first try.</p>
+<p>Open <span class="guilabel">“File” -&gt; “Examples” -&gt; “01.Basics” -&gt; “Blink”</span>:</p>
+</section>
+<section id="uploading-solution">
+<h2>Uploading Solution<a class="headerlink" href="#uploading-solution" title="Permalink to this heading"></a></h2>
+<section id="method-1-use-amebad-image-tool-to-erase-flash">
+<h3>Method 1: Use AmebaD Image Tool to erase flash<a class="headerlink" href="#method-1-use-amebad-image-tool-to-erase-flash" title="Permalink to this heading"></a></h3>
+<p>The B&amp;T default factory image can be washed using “Erase” function
+provided by Realtek’s Image Tool. Using Image Tool to erase the flash
+image memory starting from memory address: 0x8000_0000 till the end
+of 2MB memory location, later on, we need to upload Realtek’s image
+back to the module again using Arduino IDE.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image1114.png"><img alt="bw16-get-start-11" src="../../../_images/image1114.png" style="width: 602.0px; height: 348.0px;" /></a></p>
+</div></blockquote>
+<section id="step-1-download-and-prepare-the-image-tool">
+<h4>Step 1 – Download and prepare the Image Tool<a class="headerlink" href="#step-1-download-and-prepare-the-image-tool" title="Permalink to this heading"></a></h4>
+<p>Download ambd_sdk from the link ambiot GitHub: <a class="reference external" href="https://github.com/ambiot/ambd_sdk">https://github.com/ambiot/ambd_sdk</a>.</p>
+<p>The Realtek’s Image Tool can be found under the following file path:
+<span class="guilabel">“ambd_sdk\tools\AmbaD\Image_tool\image_tool.exe”</span></p>
+</section>
+<section id="step-2-setup-the-image-tool">
+<h4>Step 2 – Setup the Image Tool<a class="headerlink" href="#step-2-setup-the-image-tool" title="Permalink to this heading"></a></h4>
+<ol class="arabic">
+<li><p>In the <span class="guilabel">Chip Select</span> option, choose <span class="guilabel">AmebaD(8721D)</span> which is also suitable for RTL8720DN chip.</p></li>
+<li><p>Select correct <span class="guilabel">COM</span> Port that you are using.</p></li>
+<li><p>Set the Baudrate to <span class="guilabel">115200</span>.</p></li>
+<li><p>Then key in the Flash Erase starting position from Memory Address of <strong>0x0800 0000</strong>.</p></li>
+<li><p>The size to be 2048 KB.</p></li>
+<li><p>Set the module to “Download mode” first, then click the <span class="guilabel">Erase</span> button.</p>
+<p><a class="reference internal" href="../../../_images/image1212.png"><img alt="bw16-get-start-12" src="../../../_images/image1212.png" style="width: 517.0px; height: 204.0px;" /></a></p>
+</li>
+</ol>
+<p>Upon finishing the above image erase and press the reset button, we could find that the
+<code class="docutils literal notranslate"><span class="pre">&quot;#calibration&quot;</span></code> will no longer pop out, only <code class="docutils literal notranslate"><span class="pre">&quot;#&quot;</span></code> will appear in the Serial Monitor.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image1312.png"><img alt="bw16-get-start-13" src="../../../_images/image1312.png" style="width: 581.6px; height: 380.0px;" /></a></p>
+</div></blockquote>
+</section>
+<section id="step-3-download-image-using-arduino-ide">
+<h4>Step 3 – Download Image using Arduino IDE<a class="headerlink" href="#step-3-download-image-using-arduino-ide" title="Permalink to this heading"></a></h4>
+<p>Now you are able to download the program via UART in Ardunio IDE. In order to upload the program,
+you could choose to either use an external USB-to-UART module connecting to D0 and D1, or short
+the pins indicated below to use the on-board USB:</p>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="../../../_images/image533.png"><img alt="bw16-get-start-5" src="../../../_images/image533.png" style="width: 437.25000000000006px; height: 318.45000000000005px;" /></a></div>
+</div>
+<blockquote>
+<div><div class="line-block">
+<div class="line">D1 ––– D5</div>
+<div class="line">D0 ––– D4</div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="optional-uploading-solution">
+<h3>Optional Uploading Solution<a class="headerlink" href="#optional-uploading-solution" title="Permalink to this heading"></a></h3>
+<section id="ota-over-the-air">
+<h4>OTA (Over The Air)<a class="headerlink" href="#ota-over-the-air" title="Permalink to this heading"></a></h4>
+<p>Ai-Thinker is providing a guide for OTA firmware upload in Section 6.1 of B&amp;T “RTL8720D AT Command User Manual”
+of which can be retrieved from this
+<a class="reference external" href="https://docs.ai-thinker.com/_media/rtl8710/docs/rtl8720d-at%E6%8C%87%E4%BB%A4%E6%89%8B%E5%86%8Cv2.4.1-20190814.pdf">link</a> here.</p>
+</section>
+</section>
+</section>
+<section id="try-the-first-example">
+<h2>Try the First Example<a class="headerlink" href="#try-the-first-example" title="Permalink to this heading"></a></h2>
+<section id="step-1-compile-upload">
+<h3>Step 1. Compile &amp; Upload<a class="headerlink" href="#step-1-compile-upload" title="Permalink to this heading"></a></h3>
+<p>Arduino IDE provides many built-in examples, which can be compiled, uploaded, and run directly on the boards.
+Here, we take the “Blink” example as the first try.</p>
+<p>Open <span class="guilabel">“File” -&gt; “Examples” -&gt; “01.Basics” -&gt; “Blink”</span>:</p>
+<p><a class="reference internal" href="../../../_images/image1412.png"><img alt="bw16-get-start-14" src="../../../_images/image1412.png" style="width: 409.0px; height: 406.0px;" /></a></p>
+<p>Arduino IDE opens a new window with the complete sample code.</p>
+<p><a class="reference internal" href="../../../_images/image1512.png"><img alt="bw16-get-start-15" src="../../../_images/image1512.png" style="width: 418.0px; height: 413.0px;" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>There is two onboard LED on BW16, the default <code class="docutils literal notranslate"><span class="pre">LED_BUILTIN</span></code> is the onboard green LED.
+Change <code class="docutils literal notranslate"><span class="pre">LED_BUILTIN</span></code> to <code class="docutils literal notranslate"><span class="pre">LED_B</span></code> or <code class="docutils literal notranslate"><span class="pre">LED_R</span></code> for different colors such as blue and red.</p>
+</div>
+<p>Here we use <code class="docutils literal notranslate"><span class="pre">LED_B</span></code> for demonstration purpose.</p>
+<p>Next, we compile the sample code directly; click
+<span class="guilabel">“Sketch” -&gt; “Verify/Compile”</span></p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image1612.png"><img alt="bw16-get-start-16" src="../../../_images/image1612.png" style="width: 378.0px; height: 583.0px;" /></a></p>
+</div></blockquote>
+<p>Arduino IDE prints the compiling messages in the bottom area of the IDE
+window. When the compilation is finished, you will get the message
+similar to the following figure:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image1712.png"><img alt="bw16-get-start-17" src="../../../_images/image1712.png" style="width: 378.0px; height: 527.0px;" /></a></p>
+</div></blockquote>
+<p>Afterwards, we will upload the compiled code to BW16.</p>
+<p>Please make sure BW16 is connected to your computer, then
+click <span class="guilabel">“Sketch” -&gt; “Upload”</span>.</p>
+<p>The Arduino IDE will compile first then upload. During the uploading process,
+users are required to enter the upload mode of the board.
+To enter the upload mode, first press and hold the BW16 <span class="guilabel">Burn</span>
+button, press the <span class="guilabel">RST</span> button, and then release the <span class="guilabel">Burn</span> button.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image1811.png"><img alt="bw16-get-start-18" src="../../../_images/image1811.png" style="width: 144.0px; height: 272.0px;" /></a></p>
+</div></blockquote>
+<p>Please make sure the board is connected to your computer, then click <span class="guilabel">“sketch” → “Upload”</span>.
+There is a 5-seconds count down set as a reminder to enter the upload mode.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/image198.png"><img alt="bw16-get-start-19" src="../../../_images/image198.png" style="width: 351.0px; height: 488.0px;" /></a></p>
+</div></blockquote>
+<p>Again, during the uploading procedure the IDE prints messages. Uploading
+procedure takes considerably longer time (about 30 seconds to 1 minute).
+When upload completed, the “Done uploading” message is printed.</p>
+</section>
+<section id="step-2-run-the-blink-example">
+<h3>Step 2. Run the Blink example<a class="headerlink" href="#step-2-run-the-blink-example" title="Permalink to this heading"></a></h3>
+<p>In each example, Arduino not only provides sample code, but also
+detailed documentation, including wiring diagram, sample code
+explanation, technical details, …etc. These examples can be directly
+used on BW16.</p>
+<p>So, we find the detailed information of the <a class="reference external" href="https://www.arduino.cc/en/Tutorial/Blink">Blink example</a>.</p>
+<p>In short, for BW16, the example can be run on both the
+onboard RGB LED or external LED (use any GPIO pins for signal output).
+Finally, press the <span class="guilabel">RST</span> button, and you can see the RGB LED turns into blue and keep blinking.</p>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Introduction of BW16 on Instructable:
+<a class="reference external" href="https://www.instructables.com/RTL8720DN/">https://www.instructables.com/RTL8720DN/</a></p></li>
+<li><p>Load Arduino image into BW16:
+<a class="reference external" href="https://forum.amebaiot.com/t/how-to-load-bw16-program-with-arduino/517/13">How to load BW16 program with Arduino – #13</a></p></li>
+<li><p>BW16 IMG2 SIGN Invalid Solution:
+<a class="reference external" href="https://forum.amebaiot.com/t/rtl8720dn-bw16-img2-sign-invalid-solution/669">RTL8720DN(BW16) IMG2 SIGN Invalid Solution</a></p></li>
+<li><p>FTDI Driver Download from here:
+<a class="reference external" href="https://ftdichip.com/wp-content/uploads/2021/02/CDM21228_Setup.zip">https://ftdichip.com/wp-content/uploads/2021/02/CDM21228_Setup.zip</a></p></li>
+</ol>
+<p><strong>(End)</strong></p>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you face any issue, please refer to the FAQ and Trouble shooting sections on <a class="reference internal" href="../support/index.html"><span class="doc">Support</span></a> page.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="BW16 (RTL8720DN)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../examples_and_components/index.html" class="btn btn-neutral float-right" title="Examples &amp; Components" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

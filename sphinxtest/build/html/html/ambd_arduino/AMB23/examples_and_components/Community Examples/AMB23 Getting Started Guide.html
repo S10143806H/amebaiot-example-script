@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AMB23 Getting Started Guide &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="OpenMV Bluetooth TripWire" href="OpenMV%20Bluetooth%20TripWire.html" />
+    <link rel="prev" title="Community Examples" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB21/index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">AMB23 (RTL8722DM MINI)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_mini_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Network%20Examples/index.html">Network Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Peripheral%20Examples/index.html">Peripheral Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">AMB23 (RTL8722DM MINI)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Community Examples</a> &raquo;</li>
+      <li>AMB23 Getting Started Guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/AMB23/examples_and_components/Community Examples/AMB23 Getting Started Guide.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="amb23-getting-started-guide">
+<h1>AMB23 Getting Started Guide<a class="headerlink" href="#amb23-getting-started-guide" title="Permalink to this heading"></a></h1>
+<p><strong>CONTRIBUTED BY: 董勝源</strong> (<a class="reference external" href="mailto:tung79107910&#37;&#52;&#48;gmail&#46;com">mailto:tung79107910<span>&#64;</span>gmail<span>&#46;</span>com</a> )</p>
+<div class="line-block">
+<div class="line">Ameba RTL8722DM物聯網開發板為瑞昱(Realtek)公司的產品，
+它是Ameba物聯網解決方案系列的最新一代SoC，並內含高性能32-bit的雙Arm®的新架構與最新的無線技術，具有高性能、超低功耗，適用於物聯網（IoT）應用。</div>
+</div>
+<p><strong>一、RTL87系列產品與型號區分如下：</strong></p>
+<p><a class="reference internal" href="../../../../_images/image0.png"><img alt="image0" src="../../../../_images/image0.png" style="width: 478.09999999999997px; height: 386.4px;" /></a></p>
+<div class="line-block">
+<div class="line">其中AmebaD為超低功耗多功能物聯網單晶片解決方案(RTL8722DM)，具有非常高的安全級別架構和低功耗。成為智能門鎖和IoT
+Wi-Fi音頻/娛樂設備的最佳IoT解決方案。使客戶能夠開發具有最高安全性的高級物聯網應用程序。</div>
+</div>
+<p><strong>二、RTL8722DM特性：</strong></p>
+<ol class="arabic">
+<li><p>支持 Arduino IDE可掛載部份 Arduino的擴展板。</p></li>
+<li><p>雙Arm®的CPU：內含串列線偵錯器(SWD: Serial Wire Debug)、巢狀向量中斷控制器(NVIC: Nested Vectored Interrupt
+Controller)、不可遮蔽中斷(NMI: Non-maskable Interrupt)及系統節拍計時器(System tick timer)，可共同使用SRAM及周邊設備。</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">(1) 低功耗的Cortex-M23，內含16KB指令快取(I-Cache)及4KB資料快取(D-Cache)記憶體，最高工作頻率為20MHz，其性能相當於Cortex-M0。</div>
+</div>
+<div class="line-block">
+<div class="line">(2) 高性能的Cortex-M33，內含浮點運算器(FPU: floating point unit)、數位信號處理(DSP: Digital signal processing)、
+三階管道的TrustZone-M、記憶體保護單元(MPU: Memory Protection Unit)、安全指令、32-bit硬體整數除法、
+32KB指令快取(I-Cache)及4KB資料快取(D-Cache)記憶體，最高工作頻率為200MHz。其性能相當於Cortex-M4。</div>
+</div>
+</div></blockquote>
+</li>
+<li><p>超大容量記憶體：RTL8722DM記憶體分配，如下：</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image189.png"><img alt="image1" src="../../../../_images/image189.png" style="width: 558.4px; height: 326.40000000000003px;" /></a></p>
+<div class="line-block">
+<div class="line">(1) KM0 CPU內部記憶體專用於Cortex-M23，最高128K-Byte的指令ITCH
+ROM、32K-Byte的資料DTCH ROM、64K-Byte
+SRAM及1K-Byte的SRAM用於在省電模式時可以保留資料，最高工作頻率為20MHz。</div>
+</div>
+<div class="line-block">
+<div class="line">(2) KM4 CPU內部記憶體專用於Cortex-M33，最高768K-Byte的指令ITCH
+ROM、96K-Byte的資料DTCH ROM、128K-Byte的、512K-Byte的SRAM工作頻率200MHz</div>
+</div>
+<div class="line-block">
+<div class="line">(3) 外部擴展PSRAM，記憶體容量4M-Byte，工作頻率50MHz。</div>
+</div>
+<div class="line-block">
+<div class="line">(4) 外部擴展Flash，最高2/4M-Byte(32M-bit)，可藉由串列介面SPI/DSPI/QSPI控制及線上燒錄(ICP:In-Circuit Programming)來存取程式。</div>
+</div>
+<div class="line-block">
+<div class="line">(5) 外部擴展DDR，可外接8-bit的DDR SDRAM（Double Data Rate <a class="reference external" href="https://zh.wikipedia.org/wiki/SDRAM">SDRAM</a>）。</div>
+</div>
+<div class="line-block">
+<div class="line">(6) 周邊直接記憶體存取(GDMA：Peripheral Direct Memory Access)，可直接令周邊設備與KM0及KM4記憶體存取大量的資料，如語音及影像資料等。</div>
+</div>
+</div></blockquote>
+</li>
+<li><p>豐富的I/O周邊設備，可應用於各種物聯網控制場合：</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">(1)  GPIO腳：PA0~PA31(無PA3、PA29)及PB0~PB31(無PB8~PB11、PB24~PB27)共54支腳。
+每支腳輸入時可配置內含提升(pull-up)或下降(pull-down)電阻，且均具有外部中斷(GPIOINT)功能，
+觸發條件可設定為上升緣(rising)、下降緣(falling)或雙邊緣(both)。</div>
+</div>
+<div class="line-block">
+<div class="line">(2)  通用非同步收發傳輸器(UART: Universal Asynchronous Receiver/Transmitter)：
+有三組高速HS_UART0及低功耗(LP_UART0、LP_UART1)，可外接UART模組，如USB、藍牙、Wi-Fi、GPS等。</div>
+</div>
+<div class="line-block">
+<div class="line">(3)  串列周邊介面(SPI: Serial Peripheral Interface)：有兩組高速HS_SPI0及HS_SPI1，可外接SPI晶片與模組，如Flash、繪圖型LCD等。</div>
+</div>
+<div class="line-block">
+<div class="line">(4)  積體匯流排電路(I²C: Inter-Integrated Circuit）：有一組低功耗LP_I2C0，可外接I<sup>2</sup>C 晶片與模組，如EEPROM、LCD等。</div>
+</div>
+<div class="line-block">
+<div class="line">(5)  通用串列介面(USI: Universal SerialInterface)：可設定為高速HS_USI_UART、HS_USI_SPI或HS_USI_I2C。</div>
+</div>
+<div class="line-block">
+<div class="line">(6)  紅外線(IR: Infra Ray)：可外接紅外線感測器。</div>
+</div>
+<div class="line-block">
+<div class="line">(7)  單線One wire(SGPIO)介面：可藉由一條信號線來進行串列資料傳輸，來控制串列元件。</div>
+</div>
+<div class="line-block">
+<div class="line">(8)  計時器(Timer)：含基本(BASE)計時(HS_TIM0 ~ HS_TIM3 &amp; LP_TIM0 ~LP_TIM3)、PWM計時器(HS_TIM5 &amp;LP_TIM5)及脈衝(Pulse)計時器(HS_TIM4 &amp; LP_TIM4)。</div>
+</div>
+<div class="line-block">
+<div class="line">(9)  脈波寬度調變(PWM:Pulse Width Modulation)輸出：有17通道(PWM1~17)，藉由方波的佔空比(duty)來進行功率控制，如LED亮度、馬達轉速等。</div>
+</div>
+<div class="line-block">
+<div class="line">(10) 即時時脈(RTC: Real Time Clock)：關機時，可使用電池及石英晶體32.768KHz，提供年、月、日、週、時、分、秒的萬年曆與鬧鐘計時功能。</div>
+</div>
+<div class="line-block">
+<div class="line">(11) 類比數位轉換器(ADC: Analog-to-Digital Converter)：有7通道(A0~A6)，
+最高精度為12-bit，但平時精度為10-bit，可將類比電壓0~3.3V轉換為數位資料0~1023(10-bit)或0~4095(12-bit)。</div>
+</div>
+<div class="line-block">
+<div class="line">(12) 脈衝編碼調變(PCM:Pulse-code modulation)：是一種<a class="reference external" href="https://zh.wikipedia.org/wiki/%E6%A8%A1%E6%93%AC%E4%BF%A1%E8%99%9F">類比</a>訊號的<a class="reference external" href="https://zh.wikipedia.org/wiki/%E6%95%B8%E4%BD%8D">數位</a>化方法，常被用於數位<a class="reference external" href="https://zh.wikipedia.org/wiki/%E9%9B%BB%E4%BF%A1">電信</a>系統上。</div>
+</div>
+<div class="line-block">
+<div class="line">(13) 音頻編解碼器(I<sup>2</sup>S: Inter-IC Sound或Integrated InterchipSound）：
+是IC間傳輸數位音訊資料的一種介面標準，常用於CD等音頻信號處理。</div>
+</div>
+<div class="line-block">
+<div class="line">(14) 安全數位介面(SD: Secure Digital)與高速SDIO，可外接SD記憶卡。</div>
+</div>
+<div class="line-block">
+<div class="line">(15) 通用序列匯流排(USB：Universal Serial Bus)：為USB 2.0可設定為HS/FS/LS模式，具有host(主控制器)或device(裝置)功能。</div>
+</div>
+<div class="line-block">
+<div class="line">(16) 按鍵掃描：最多可使用16支 GPIO腳來進行8*8按鍵掃描。</div>
+</div>
+<div class="line-block">
+<div class="line">(17) 觸摸按鍵：可連接4通道電容式觸摸感測器。</div>
+</div>
+<div class="line-block">
+<div class="line">(18) LCD面板控制器：具有8-bit、16-bit及RGB模式控制，可連接TFT(Thin Film Transistor)彩色LCD。</div>
+</div>
+</div></blockquote>
+</li>
+<li><p>內含最新的無線技術：雙頻Wi-Fi（2.4GHz/5GHz）和低功耗藍牙(BLE5)。</p></li>
+<li><p>超低功耗，適合物聯網應用。</p></li>
+<li><p>最新的高安全性架構，附帶安全啟動。</p></li>
+<li><p>全方位便捷的開發套件，可從IAR/GCC/Arduino軟體SDK入手。</p></li>
+<li><p>應用領域：可以連接LED、開關、壓力計、濕度計、PM2.5粉塵感測器等電子元件，由Ameba所收集的資料可以通過Wi-Fi無線上傳，可應用於物聯網範圍如下：</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">(1)智能家居</div>
+</div>
+<div class="line-block">
+<div class="line">(2)智慧城市</div>
+</div>
+<div class="line-block">
+<div class="line">(3)工業物聯網</div>
+</div>
+<div class="line-block">
+<div class="line">(4)物聯網中心/網關</div>
+</div>
+<div class="line-block">
+<div class="line">(5)智能玩具</div>
+</div>
+<div class="line-block">
+<div class="line">(6)Wi-Fi音頻/娛樂設備</div>
+</div>
+<div class="line-block">
+<div class="line">(7)遊戲操縱桿/Wi-Fi遙控器</div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+<p><strong>三、RTL8722DM相關電路板介紹：有RTL8722DM及RTL8722DM_MINI比較如下表所示：</strong></p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image280.png"><img alt="image2" src="../../../../_images/image280.png" style="width: 358.0px; height: 479.5px;" /></a></p>
+<p>RTL8722DM_MINI電路板外型如下圖(a)(b)所示：</p>
+</div></blockquote>
+<p><a class="reference internal" href="../../../../_images/image354.png"><img alt="image3" src="../../../../_images/image354.png" style="width: 785.7px; height: 360.90000000000003px;" /></a></p>
+<p>圖1-(a) RTL8722DM_MINI電路板正面圖</p>
+<p><a class="reference internal" href="../../../../_images/image444.png"><img alt="image4" src="../../../../_images/image444.png" style="width: 331.0px; height: 441.0px;" /></a></p>
+<p>圖1-(b) RTL8722DM_MINI電路板背面圖</p>
+<ol class="arabic simple">
+<li><p>RTL8722DM_MINI電路板的GPIO接腳有D0~D22共23支腳，均可作為外部中斷(INT)及兼具各種特殊功能接腳，如下表所示：</p></li>
+</ol>
+<p><a class="reference internal" href="../../../../_images/image531.png"><img alt="image5" src="../../../../_images/image531.png" style="width: 443.4px; height: 593.4px;" /></a></p>
+<ol class="arabic" start="2">
+<li><p>RTL8722DM_MINI內含實習電路，如下：</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">(1) LED電路：LED1藍(PA9)，LED2綠(PA10)，輸出高電位(1)時亮。</div>
+</div>
+<div class="line-block">
+<div class="line">(2) User按鍵開關(SW2)：Button(PA20)，未按鍵時輸入為0，按鍵時輸入為1，具有防止機械彈跳電路。</div>
+</div>
+<div class="line-block">
+<div class="line">(3) 麥克風(MK1)：MIC1_P(PA4)及MIC1_Bias(PA0)。</div>
+</div>
+<div class="line-block">
+<div class="line">(4) 耳機(J4)：左聲道AOUTP_L(PB31)及右聲道AOUTP_R(PB29)</div>
+</div>
+<div class="line-block">
+<div class="line">(5) USB轉UART(CON3)：插入Micro
+USB埠提供+5V電源，轉換成工作電壓+3.3V，經FT232提供虛擬UART連接MCU的接腳FT_UART_RX(PA7)及FT_UART_TX(PA8)，來燒錄程式與UART傳輸。</div>
+</div>
+<div class="line-block">
+<div class="line">(6) Download(SW1)：連接FT_UART_RX(PA7)，SW1按下再重置(Reset)會進入燒錄功能。</div>
+</div>
+<div class="line-block">
+<div class="line">(7) Reset(S1)：按下時為重置(Reset)動作。</div>
+</div>
+<div class="line-block">
+<div class="line">(8) Host USB(CON1)：連接HSDP(PA26)及HSDM(PA25)。</div>
+</div>
+<div class="line-block">
+<div class="line">(9) Micro SD卡(CON2)：SD_D1(PA23)、SD_D0(PA22)、SD_CLK(PA21)、SD_CMD(PA20)、SD_D3(PA19)、SD_D2(PA18)，SD_PWR_EN(PA20)</div>
+</div>
+</div></blockquote>
+</li>
+<li><p>RTL8722DM_MINI程式燒錄操作：</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>進入下載模式：按SW1(Download)按S1(Reset)鍵放開S1(Reset)鍵放開SW1(Download)，即可進入Download(下載)模式。</p></li>
+<li><p>允許燒錄程式，燒錄程式完畢。</p></li>
+<li><p>按S1(Reset)鍵放開S1(Reset)鍵進入執行模式。</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+<p><strong>四、RTL8722DM_MINI的Arduino IDE開發環境：</strong></p>
+<ol class="arabic simple">
+<li><p>首先使用Micro USB經CON3將RTL8722DM_MINI連接到電腦:</p></li>
+<li><p>如果是第一次將RTL8722DM_MINI連接電腦，會自動安裝USB驅動程式(FT232)，在裝置管理員顯示連接埠COM編號(如COM５):</p></li>
+</ol>
+<p><a class="reference internal" href="../../../../_images/image619.png"><img alt="image6" src="../../../../_images/image619.png" style="width: 447.0px; height: 216.0px;" /></a></p>
+<ol class="arabic" start="3">
+<li><p>設定Arduino IDE環境：</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">(1) 必須執行Arduino IDE的1.8.1以後版本，才可以使用Arduino
+IDE在RTL8722DM上開發應用程式，</div>
+</div>
+<div class="line-block">
+<div class="line">(2) 打開Arduino IDE的“偏好設定“，如下：</div>
+</div>
+<p><a class="reference internal" href="../../../../_images/image716.png"><img alt="image7" src="../../../../_images/image716.png" style="width: 742.9px; height: 437.75px;" /></a></p>
+<div class="line-block">
+<div class="line">(3)  並將以下網址複製到“額外的開發板管理員網址”欄位:
+<a class="reference external" href="https://github.com/ambiot/ambd_arduino/raw/master/Arduino_package/package_realtek.com_amebad_index.json">https://github.com/ambiot/ambd_arduino/raw/master/Arduino_package/package_realtek.com_RTL8722DM_MINI_index.json</a></div>
+</div>
+<div class="line-block">
+<div class="line">(4) 選擇“工具”-&gt;“開發板”-&gt;“開發板管理員”:</div>
+</div>
+<p><a class="reference internal" href="../../../../_images/image89.png"><img alt="image8" src="../../../../_images/image89.png" style="width: 629.85px; height: 312.8px;" /></a></p>
+<div class="line-block">
+<div class="line">(5) 在“開發板管理員”用RTL8722DM來尋找及點擊“安裝”，Arduino
+IDE會自動開始下載RTL8722DM_MINI所需的檔案與範例程式。</div>
+</div>
+<p><a class="reference internal" href="../../../../_images/image98.png"><img alt="image9" src="../../../../_images/image98.png" style="width: 609.0px; height: 141.0px;" /></a></p>
+<div class="line-block">
+<div class="line">(6) 開始在網路下載RTL8722DM_MINI所需的檔案，包括軟體開發套件(SDK:
+Software Development Kit)及範例程式：</div>
+</div>
+<p><a class="reference internal" href="../../../../_images/image105.png"><img alt="image10" src="../../../../_images/image105.png" style="width: 636.8000000000001px; height: 150.4px;" /></a></p>
+<div class="line-block">
+<div class="line">(7) 選擇選擇RTL8722DM_MINI作為開發板:</div>
+</div>
+<p><a class="reference internal" href="../../../../_images/image1113.png"><img alt="image11" src="../../../../_images/image1113.png" style="width: 367.20000000000005px; height: 529.6px;" /></a></p>
+<div class="line-block">
+<div class="line">同時會加入各種範程式，包括RTL8722DM_MINI的範例程式(Ameba*****)。</div>
+</div>
+<p><a class="reference internal" href="../../../../_images/image1211.png"><img alt="image12" src="../../../../_images/image1211.png" style="width: 416.4px; height: 465.0px;" /></a></p>
+</div></blockquote>
+</li>
+<li><p>測試GPIO輸出範例：RTL8722DM_MINI的GPIO接腳，如下：</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">(1) 開啟內部範例程式(Blink)：</div>
+</div>
+<p><a class="reference internal" href="../../../../_images/image1311.png"><img alt="image13" src="../../../../_images/image1311.png" style="width: 401.6px; height: 320.0px;" /></a></p>
+<p><a class="reference internal" href="../../../../_images/image1411.png"><img alt="image14" src="../../../../_images/image1411.png" style="width: 371.7px; height: 338.09999999999997px;" /></a></p>
+<div class="line-block">
+<div class="line">(2) LED_BUILTIN預定為LED1(藍)，可改為LED_B(LED1藍)、LED_G(LED2綠)或0~22(D0~D22)。不過改為PA_0~PA_31及PB_0~PB_7雖然編譯正確，但無輸出。</div>
+</div>
+<div class="line-block">
+<div class="line">(3) RTL8722DM_MINI程式燒錄操作順序：(a)按SW1(Download)，(b)按、放S1(Reset)鍵，(c)放開SW1(Download)鍵等待燒錄程式，燒錄完畢(d)按、放S1(Reset)鍵開始執行程式。如下圖所示：</div>
+</div>
+<p><a class="reference internal" href="../../../../_images/image1511.png"><img alt="image15" src="../../../../_images/image1511.png" style="width: 469.7px; height: 280.0px;" /></a></p>
+<div class="line-block">
+<div class="line">(4) 編譯並上傳：在底下視窗顯示編譯及上傳結果，如下：</div>
+</div>
+<p><a class="reference internal" href="../../../../_images/image1611.png"><img alt="image16" src="../../../../_images/image1611.png" style="width: 599.25px; height: 416.25px;" /></a></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">a. 編譯時會顯示警告(WARNING)訊息。</div>
+</div>
+<div class="line-block">
+<div class="line">b. 編譯完畢，顯示使用程式碼(草稿)記憶體的容量(192K-byte)、比率與上限(2M-byte)。</div>
+</div>
+<div class="line-block">
+<div class="line">c. 進入上傳(upload)模式，即開始燒錄程式碼，上傳過程需要相當長的時間(大約30秒到1分鐘)。</div>
+</div>
+<div class="line-block">
+<div class="line">d. 下載完畢，按、放S1(Reset)鍵會進入執行模式，令LED1(藍)閃爍。如下圖所示：</div>
+</div>
+<p><a class="reference internal" href="../../../../_images/image1711.png"><img alt="image17" src="../../../../_images/image1711.png" style="width: 873.0px; height: 405.0px;" /></a></p>
+</div></blockquote>
+</div></blockquote>
+</li>
+<li><p>測試GPIO輸入與輸出範例：由按鍵開關(PUSH_BTN)控制LED_G(綠)，如下圖所示：</p></li>
+</ol>
+<p><a class="reference internal" href="../../../../_images/image1810.png"><img alt="image18" src="../../../../_images/image1810.png" style="width: 698.4000000000001px; height: 319.20000000000005px;" /></a></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">(1) 開啟內部範例程式(Button)：修改按鍵開關接腳為buttonPin =
+PUSH_BTN及LED接腳為ledPin = LED_G，如下圖所示：</div>
+</div>
+<p><a class="reference internal" href="../../../../_images/image193.png"><img alt="image19" src="../../../../_images/image193.png" style="width: 545.35px; height: 360.1px;" /></a></p>
+</div></blockquote>
+<ol class="arabic simple" start="6">
+<li><p>測試ADC範例：RTL8722DM_MINI的ADC接腳有A0~A6，如下圖所示：</p></li>
+</ol>
+<p><a class="reference internal" href="../../../../_images/image202.png"><img alt="image20" src="../../../../_images/image202.png" style="width: 785.7px; height: 364.5px;" /></a></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">(1) 開啟內部範例程式(AnalogReadSerial)：RTL8722DM_MINI的ADC應為12-bit，其中在Arduino執行時bit0~1會被捨棄，可應用的數位資料僅有10-bit為0~1023。</div>
+</div>
+<p><a class="reference internal" href="../../../../_images/image2111.png"><img alt="image21" src="../../../../_images/image2111.png" style="width: 335.29999999999995px; height: 274.4px;" /></a></p>
+<p><a class="reference internal" href="../../../../_images/image2210.png"><img alt="image22" src="../../../../_images/image2210.png" style="width: 348.0px; height: 317.25px;" /></a></p>
+<div class="line-block">
+<div class="line">(2) 其中類比輸入接腳A0可改為A0~A6。</div>
+</div>
+<div class="line-block">
+<div class="line">(3) 進入序列埠監控視窗。</div>
+</div>
+<p><a class="reference internal" href="../../../../_images/image2310.png"><img alt="image23" src="../../../../_images/image2310.png" style="width: 354.0px; height: 247.0px;" /></a></p>
+<div class="line-block">
+<div class="line">(4) 在接腳D4(A0)輸入類比電壓(0~3.3V)，會在序列埠監控視窗顯示數位資料(0~1023)，顯示如下圖所示：</div>
+</div>
+<p><a class="reference internal" href="../../../../_images/image2410.png"><img alt="image24" src="../../../../_images/image2410.png" style="width: 382.85px; height: 363.35px;" /></a></p>
+</div></blockquote>
+<ol class="arabic simple" start="7">
+<li><p>測試呼吸燈範例：RTL8722DM_MINI的PWM接腳，以D9(PWM)為例，如下圖所示：</p></li>
+</ol>
+<p><a class="reference internal" href="../../../../_images/image2510.png"><img alt="image25" src="../../../../_images/image2510.png" style="width: 698.4000000000001px; height: 324.0px;" /></a></p>
+<p>開啟內部範例程式(Fade)：其中9(D9)外接LED，執行時可觀察呼吸燈的動作，如下所示：</p>
+<p><a class="reference internal" href="../../../../_images/image2610.png"><img alt="image26" src="../../../../_images/image2610.png" style="width: 383.20000000000005px; height: 312.8px;" /></a></p>
+<p><a class="reference internal" href="../../../../_images/image2710.png"><img alt="image27" src="../../../../_images/image2710.png" style="width: 360.75px; height: 528.45px;" /></a></p>
+<ol class="arabic simple">
+<li><p>在ARDUINO內建範例，配合RTL8722DM_MINI接腳可修改的名稱如下表所示：</p></li>
+</ol>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 23%" />
+<col style="width: 31%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Category</strong></p></th>
+<th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Comment</strong></p></th>
+<th class="head"><p><strong>Remarks</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>01.
+Basics</p></td>
+<td><p>AnalogRead
+Serial</p></td>
+<td><p>Connect
+potentiometer to
+3.3V.</p></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6.
+ADC pin reading
+voltage range 0
+to 3.3V.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Bare
+Minimum</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Blink</p></td>
+<td><p>Pin LED_BUILTIN sets
+to LED_B</p></td>
+<td><p>Onboard LEDs
+options LED_B
+and LED_G. (blue
+and green)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>DigitalRead
+Serial</p></td>
+<td></td>
+<td><p>Onboard button
+PUSH_BTN.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Fade</p></td>
+<td><p>Replace “led = 9;”
+by a PWM pin (D4,
+D5, D7, D12, D13,
+D14, D17, D20, or
+D21). e.g. “led =
+4;”</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ReadAnalog
+Voltage</p></td>
+<td></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6.
+ADC pin reading
+voltage range 0
+to 3.3V.</p></td>
+</tr>
+<tr class="row-even"><td><p>02.
+Digital</p></td>
+<td><p>BlinkWitout
+Delay</p></td>
+<td><p>The onboard blue LED
+(LED_B) has been
+used.</p></td>
+<td><p>Onboard LEDs
+options LED_G.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Button</p></td>
+<td></td>
+<td><p>Onboard LEDs
+options LED_B
+and LED_G.
+Onboard button
+PUSH_BTN.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Debounce</p></td>
+<td></td>
+<td><p>Onboard LEDs
+options LED_B
+and LED_G.
+Onboard button
+PUSH_BTN.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>DigitalInput
+Pullup</p></td>
+<td></td>
+<td><p>Onboard LEDs
+options LED_B
+and LED_G.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>StateChange
+Detection</p></td>
+<td></td>
+<td><p>Onboard LEDs
+options LED_B
+and LED_G.
+Onboard button
+PUSH_BTN.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>toneKeyboard</p></td>
+<td><p>Replace “tone(8,
+notes[thisSensor],
+20);” by a PWM pin
+(D4, D5, D7, D12,
+D13, D14, D17, D20,
+or D21). e.g.
+“tone(21,
+notes[thisSensor],
+20);”</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>toneMelody</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>tone
+Multiple</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>tonePitch
+Follower</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>03.
+Analog</p></td>
+<td><p>AnalogIn
+OutSerial</p></td>
+<td><p>Replace
+“analogOutPin = 9;”
+by a PWM pin (D4,
+D5, D7, D12, D13,
+D14, D17, D20, or
+D21). e.g.
+“analogOutPin = 4;”</p></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6.
+ADC pin reading
+voltage range 0
+to 3.3V.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>AnalogInput</p></td>
+<td></td>
+<td><p>Onboard LEDs
+options LED_B
+and LED_G. ADC
+pin reading
+voltage range 0
+to 3.3V.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Analog
+Write
+Mega</p></td>
+<td><p>Use PWM pins D4, D5,
+D7, D12, D13, D14,
+D17, D20, or D21.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Calibration</p></td>
+<td></td>
+<td><p>Onboard LEDs
+options LED_B
+and LED_G.
+Onboard button
+PUSH_BTN. ADC
+pin options A0,
+A1, A2, A3, A4,
+A5 and A6. ADC
+pin reading
+voltage range 0
+to 3.3V.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Fading</p></td>
+<td><p>Replace “ledPin =
+9;” by a PWM pin
+(D4, D5, D7, D12,
+D13, D14, D17, D20,
+or D21). e.g.
+“ledPin = 4;”</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Smoothing</p></td>
+<td></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6.
+ADC pin reading
+voltage range 0
+to 3.3V.</p></td>
+</tr>
+<tr class="row-odd"><td><p>04.
+Communication</p></td>
+<td><p>ASCIITable</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Dimmer</p></td>
+<td></td>
+<td><p>Onboard LEDs
+options LED_B
+and LED_G.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Graph</p></td>
+<td><p>Connect
+potentiometer to
+3.3V.</p></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6.
+ADC pin reading
+voltage range 0
+to 3.3V.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Midi</p></td>
+<td><p>Use Serial1 and pin
+D18, or use Serial2
+and pin D1.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>MultiSerial</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Physical
+Pixel</p></td>
+<td></td>
+<td><p>Onboard LEDs
+options LED_B
+and LED_G.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ReadASCII
+String</p></td>
+<td><p>Use PWM pin for LED
+(D4, D5, D7, D12,
+D13, D14, D17, D20,
+or D21).</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>SerialCall
+Response</p></td>
+<td></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6.
+ADC pin reading
+voltage range 0
+to 3.3V.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Serial
+CallResponse
+ASCII</p></td>
+<td></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6.
+ADC pin reading
+voltage range 0
+to 3.3V.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>SerialEvent</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>SerialPa
+ssthrough</p></td>
+<td></td>
+<td><p>Serial options,
+Serial1 or
+Serial2.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>VirtualColor
+Mixer</p></td>
+<td></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6.
+ADC pin reading
+voltage range 0
+to 3.3V.</p></td>
+</tr>
+<tr class="row-odd"><td><p>05.
+Control</p></td>
+<td><p>Arrays</p></td>
+<td><p>Use pins D1, D2, D3,
+D4, D5, D6.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ForLoop
+Iteration</p></td>
+<td><p>Use pins D1, D2, D3,
+D4, D5, D6.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>IfStatement
+Conditional</p></td>
+<td></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6.
+ADC pin reading
+voltage range 0
+to 3.3V. Onboard
+LEDs options
+LED_B and LED_G.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>switchCase</p></td>
+<td></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6.
+ADC pin reading
+voltage range 0
+to 3.3V.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>switchCase2</p></td>
+<td><p>Use pins D1, D2, D3,
+D4, D5, D6.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>WhileStatement
+Conditional</p></td>
+<td><p>Replace “ledPin =
+9;” by a PWM pin
+(D4, D5, D7, D12,
+D13, D14, D17, D20,
+or D21). e.g.
+“ledPin = 4;”</p></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6.
+ADC pin reading
+voltage range 0
+to 3.3V.</p></td>
+</tr>
+<tr class="row-odd"><td><p>06.
+Display</p></td>
+<td><p>barGraph</p></td>
+<td></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6.
+ADC pin reading
+voltage range 0
+to 3.3V.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>RowColumn
+Scanning</p></td>
+<td></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6.
+ADC pin reading
+voltage range 0
+to 3.3V.</p></td>
+</tr>
+<tr class="row-odd"><td><p>07.
+Strings</p></td>
+<td><p>Character
+Analysis</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>String
+Addition
+Operator</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>String
+Append
+Operator</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>StringCase
+Changes</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>String
+Characters</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>String
+Comparison
+Operators</p></td>
+<td></td>
+<td><p>ADC pin options
+A0, A1, A2, A3,
+A4, A5 and A6.
+ADC pin reading
+voltage range 0
+to 3.3V.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>String
+IndexOf</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>String
+Length</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>StringLength
+Trim</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>String
+Replace</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>String
+StartsWith
+EndsWith</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>String
+Substring</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>String
+ToInt</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Community Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="OpenMV%20Bluetooth%20TripWire.html" class="btn btn-neutral float-right" title="OpenMV Bluetooth TripWire" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

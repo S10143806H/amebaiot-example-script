@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SPI – Print Image And Text On LCD Screen &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="SPI – Show PM2.5 Concentration On ILI9341 TFT LCD" href="SPI%20-%20Show%20PM2.5%20Concentration%20On%20ILI9341%20TFT%20LCD.html" />
+    <link rel="prev" title="RTC - Simple RTC Alarm" href="RTC%20-%20Simple%20RTC%20Alarm.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Network%20Examples/index.html">Network Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Peripheral Examples</a> &raquo;</li>
+      <li>SPI – Print Image And Text On LCD Screen</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/AMB21/examples_and_components/Peripheral Examples/SPI - Print Image And Text On LCD Screen.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="spi-print-image-and-text-on-lcd-screen">
+<h1>SPI – Print Image And Text On LCD Screen<a class="headerlink" href="#spi-print-image-and-text-on-lcd-screen" title="Permalink to this heading"></a></h1>
+<p>If you are not familiar with SPI, please read <a class="reference external" href="https://www.amebaiot.com/spi-intro/">Introduction to
+SPI</a> first.</p>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Preparation</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22 / AMB23 / BW16] x 1</p></li>
+<li><p>ILI9341 TFT LCD with SPI interface x 1</p></li>
+</ul>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<p>We have tested the following two models of ILI9341 TFT LCD with SPI interface:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Adafruit 2.8″ TFT LCD (with touch screen)</p>
+<ul>
+<li><p><a class="reference external" href="https://www.adafruit.com/products/1651">https://www.adafruit.com/products/1651</a></p></li>
+<li><p><a class="reference external" href="https://learn.adafruit.com/adafruit-2-8-tft-touch-shield-v2?view=all">https://learn.adafruit.com/adafruit-2-8-tft-touch-shield-v2?view=all</a></p></li>
+</ul>
+</li>
+<li><p>QVGA 2.2″ TFT LCD</p>
+<ul>
+<li><p><a class="reference external" href="http://www.lcdwiki.com/2.2inch_SPI_Module_ILI9341_SKU:MSP2202">http://www.lcdwiki.com/2.2inch_SPI_Module_ILI9341_SKU:MSP2202</a></p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+<p>Common pins in ILI9341 TFT LCD with SPI interface:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>MOSI: Standard SPI Pin</p></li>
+<li><p>MISO: Standard SPI Pin</p></li>
+<li><p>SLK: Standard SPI Pin</p></li>
+<li><p>CS: Standard SPI Pin</p></li>
+<li><p>RESET: Used to reboot LCD.</p></li>
+<li><p>D/C: Data/Command. When it is at Low, the signal transmitted are
+commands, otherwise the data transmitted are data.</p></li>
+<li><p>LED (or BL): Adapt the screen backlight. Can be controlled by PWM or
+connected to VCC for 100% backlight.</p></li>
+<li><p>VCC: Connected to 3V or 5V, depends on its spec.</p></li>
+<li><p>GND: Connected to GND.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>AMB21/ AMB22 and QVGA TFT LCD</strong> Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image169.png"><img alt="1" src="../../../../_images/image169.png" style="width: 656.0px; height: 407.20000000000005px;" /></a></p>
+</div></blockquote>
+<p><strong>AMB23 and QVGA TFT LCD</strong> Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image1-14.png"><img alt="1-1" src="../../../../_images/image1-14.png" style="width: 625.8px; height: 417.0px;" /></a></p>
+</div></blockquote>
+<p><strong>BW16 and QVGA TFT LCD</strong> Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image1-31.png"><img alt="1-2" src="../../../../_images/image1-31.png" style="width: 618.5px; height: 349.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Wiring example of Adafruit 2.8” TFT LCD touch shield:</div>
+<div class="line">Please note that this shield model enables the backlight by default
+and pin 8 is not for backlight, and the VCC should be connected to 5V.</div>
+</div>
+<p><strong>AMB21 / AMB22 and Adafruit 2.8’’ TFT LCD touch shield</strong> Wiring Diagram:</p>
+<div class="line-block">
+<div class="line">Please note that this shield model enables the backlight by default
+and pin 8 is not for backlight, and the VCC should be connected to 5V.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image264.png"><img alt="2" src="../../../../_images/image264.png" style="width: 570.4px; height: 402.40000000000003px;" /></a></p>
+</div></blockquote>
+<p><strong>AMB23 and Adafruit 2.8’’ TFT LCD touch shield</strong>  Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image2-16.png"><img alt="2-1" src="../../../../_images/image2-16.png" style="width: 627.0px; height: 398.4px;" /></a></p>
+</div></blockquote>
+<p><strong>BW16 and Adafruit 2.8’’ TFT LCD touch shield</strong>  Wiring Diagram:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image2-32.png"><img alt="2-3" src="../../../../_images/image2-32.png" style="width: 582.6px; height: 382.8px;" /></a></p>
+</div></blockquote>
+<p>Open the example, <code class="docutils literal notranslate"><span class="pre">“Files”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span> <span class="pre">“AmebaSPI”</span> <span class="pre">-&gt;</span> <span class="pre">“ILI9341_TFT_LCD_basic”</span></code></p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image342.png"><img alt="2" src="../../../../_images/image342.png" style="width: 672.0px; height: 720.3px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Compile and upload to Ameba, then press the reset button.</div>
+<div class="line">Then you can see some display tests appear on the LCD screen, such as
+displaying different colors, drawing vertical and horizontal lines,
+drawing circles, etc.…</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image432.png"><img alt="4" src="../../../../_images/image432.png" style="width: 562.8px; height: 180.0px;" /></a></p>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Code Reference</strong>
+<span class="raw-html"></p></span></p>
+<ul>
+<li><p><strong>RGB 16-bit</strong></p>
+<p>ILI9341 uses RGB 16-bit to display colors. Different from RGB
+24-bit, it uses 5 bits for red, 6 bits for green, 5 bits for
+blue. For example, the RGB 24-bit representation of sky blue is
+0x87CEFF, that is in binary:</p>
+<ul class="simple">
+<li><p>Red: 0x87 = B10000111</p></li>
+<li><p>Green: 0xCE = B11001110</p></li>
+<li><p>Blue: 0xFF = B11111111</p></li>
+</ul>
+<p>and converted to RGB 16-bit:</p>
+<ul class="simple">
+<li><p>Red: B10000</p></li>
+<li><p>Green: B110011</p></li>
+<li><p>Blue: B11111</p></li>
+</ul>
+<p>Then concatenate them, which forms B1000011001111111 = 0x867F</p>
+</li>
+<li><p><strong>Drawing of ILI9341</strong></p>
+<ul class="simple">
+<li><p>First you must specify the range of the rectangle to draw, then
+pass the 2-byte RGB 16-bit color to ILI9341 corresponding to
+each pixel one by one, in this way ILI9341 fills each color to
+each pixel.</p></li>
+<li><p>You still must specify the drawing range even though the range
+covers only one pixel.</p></li>
+<li><p>From the rules we mentioned above, we can conclude that drawing
+vertical or horizontal lines are faster than diagonal lines.</p></li>
+</ul>
+</li>
+<li><p><strong>Printing text on ILI9341</strong></p>
+<ul>
+<li><p>In our API, each character is 5×7 but each character is printed to
+size 6×8 (its right side and below are left blank), so as to
+separate from next character. For example, the character
+“A”:</p>
+<p><a class="reference internal" href="../../../../_images/image523.png"><img alt="5" src="../../../../_images/image523.png" style="width: 193.0px; height: 258.0px;" /></a></p>
+</li>
+<li><p>The font size represents the dot size. For example, if the font
+size is 2, each dot in the character is a 2×2 rectangle</p></li>
+</ul>
+</li>
+<li><p><strong>Screen rotation</strong></p>
+<ul class="simple">
+<li><p>ILI9341 provides 0, 90, 180, 270 degrees screen rotation.</p></li>
+<li><p>If the original width is 240 and original height is 320, when the
+screen rotates 90 degrees, the width becomes 320 and the height
+becomes 240.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="RTC%20-%20Simple%20RTC%20Alarm.html" class="btn btn-neutral float-left" title="RTC - Simple RTC Alarm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="SPI%20-%20Show%20PM2.5%20Concentration%20On%20ILI9341%20TFT%20LCD.html" class="btn btn-neutral float-right" title="SPI – Show PM2.5 Concentration On ILI9341 TFT LCD" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

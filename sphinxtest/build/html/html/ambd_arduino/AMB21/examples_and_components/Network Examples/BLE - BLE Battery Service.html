@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLE - BLE Battery Service &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="BLE – BLE Beacon" href="BLE%20-%20BLE%20Beacon.html" />
+    <link rel="prev" title="Network Examples" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Network Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Peripheral%20Examples/index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Network Examples</a> &raquo;</li>
+      <li>BLE - BLE Battery Service</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/AMB21/examples_and_components/Network Examples/BLE - BLE Battery Service.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ble-ble-battery-service">
+<h1>BLE - BLE Battery Service<a class="headerlink" href="#ble-ble-battery-service" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Materials</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22 / AMB23 / BW16] x 1</p></li>
+<li><p>Android / iOS mobile phone</p></li>
+</ul>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<p><strong>Introduction</strong></p>
+<p>BLE connections use a server client model. The server contains the data
+of interest, while the client connects to the server to read the data.
+Commonly, a Bluetooth peripheral device acts as a server, while a
+Bluetooth central device acts as a client. Servers can contain many
+services, with each service containing a some set of data. Clients can
+send requests to read or write some data and can also subscribe to
+notifications so that the server can send data updates to a client.</p>
+<p>In this example, a basic battery service is set up on the Ameba
+Bluetooth stack. A mobile phone is used to connect to the Ameba
+peripheral device and read the battery data.</p>
+<p><strong>Procedure</strong></p>
+<p>Ensure that the following Bluetooth apps are installed on your mobile
+phone. These apps will show you the raw data sent by Ameba and allow you
+to interact with the data.</p>
+<p>The recommended application is nRF connect, and is available at the
+links below:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Android: <a class="reference external" href="https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp">https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp</a></p></li>
+<li><p>iOS : <a class="reference external" href="https://apps.apple.com/us/app/nrf-connect/id1054362403">https://apps.apple.com/us/app/nrf-connect/id1054362403</a></p></li>
+</ul>
+</div></blockquote>
+<p>LightBlue is an alternative application that can also be used, but has
+less features:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Android: <a class="reference external" href="https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer">https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer</a></p></li>
+<li><p>iOS : <a class="reference external" href="https://apps.apple.com/us/app/lightblue/id557428110">https://apps.apple.com/us/app/lightblue/id557428110</a></p></li>
+</ul>
+</div></blockquote>
+<p>Open the example, <code class="docutils literal notranslate"><span class="pre">“Files”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span> <span class="pre">“AmebaBLE”</span> <span class="pre">-&gt;</span>
+<span class="pre">“BLEBatteryService”</span></code></p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image1.png"><img alt="1" src="../../../../_images/image1.png" style="width: 529.0px; height: 486.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Upload the code and press the reset button on Ameba once the upload is
+finished.</div>
+<div class="line">On your mobile phone, open the Bluetooth app and scan for the
+Bluetooth signal broadcast by Ameba, it should appear as a device
+named “AMEBA_BLE_DEV”.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image2.png"><img alt="2" src="../../../../_images/image2.png" style="width: 344.4px; height: 864.0px;" /></a></p>
+</div></blockquote>
+<p>Connect to the Ameba Bluetooth device, and a list of available services
+should appear. Click on the battery service to expand it, and you can
+see the battery level data value. The arrows highlighted in the box on
+the right are used to read data and subscribe to notifications. Click on
+the single arrow to read the battery level value, and a 90% value will
+appear.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image3.png"><img alt="3" src="../../../../_images/image3.png" style="width: 344.4px; height: 864.0px;" /></a></p>
+</div></blockquote>
+<p>Click on the triple arrow to subscribe to updates on the battery level
+value, and the battery value will start updating by itself.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image4.png"><img alt="4" src="../../../../_images/image4.png" style="width: 344.4px; height: 864.0px;" /></a></p>
+</div></blockquote>
+<p>The serial monitor will show the sketch increasing the battery level
+every second. When you click on either of the arrows, the sketch running
+on the Ameba will be notified, and will print out the action taken.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image5.png"><img alt="5" src="../../../../_images/image5.png" style="width: 749.0px; height: 509.0px;" /></a></p>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Code Reference</strong>
+<span class="raw-html"></p></span></p>
+<p>BLEService and BLECharacteristic classes are used to create and define
+the battery service to run on the Bluetooth device.</p>
+<p><code class="docutils literal notranslate"><span class="pre">BLE.configAdvert()-&gt;setAdvType(GAP_ADTYPE_ADV_IND)</span></code> is used to set the
+advertisement type to a general undirected advertisement that allows for
+connections.</p>
+<p><code class="docutils literal notranslate"><span class="pre">setReadCallback()</span></code> and <code class="docutils literal notranslate"><span class="pre">setCCCDCallback()</span></code> is used to register functions
+that will be called when the battery level data is read, or notification
+is enabled by the user.</p>
+<p><code class="docutils literal notranslate"><span class="pre">BLE.configServer(1)</span></code> is used to tell the Bluetooth stack that there will
+be one service running.</p>
+<p><code class="docutils literal notranslate"><span class="pre">addService()</span></code> registers the battery service to the Bluetooth stack.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Network Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="BLE%20-%20BLE%20Beacon.html" class="btn btn-neutral float-right" title="BLE – BLE Beacon" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

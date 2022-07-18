@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MQTT - Use Amazon AWS IoT Shadow Service &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="MQTT - Use Google Cloud IoT" href="MQTT%20-%20Use%20Google%20Cloud%20IoT.html" />
+    <link rel="prev" title="MQTT - Set up MQTT Client over TLS" href="MQTT%20-%20Set%20up%20MQTT%20Client%20over%20TLS.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/ambd_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Examples &amp; Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Basic%20Examples.html">Basic Examples</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Network Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Peripheral%20Examples/index.html">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Community%20Examples/index.html">Community Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Components%20Used.html">Components Used</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+          <li><a href="../index.html">Examples &amp; Components</a> &raquo;</li>
+          <li><a href="index.html">Network Examples</a> &raquo;</li>
+      <li>MQTT - Use Amazon AWS IoT Shadow Service</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/ambd_arduino/AMB21/examples_and_components/Network Examples/MQTT - Use Amazon AWS IoT Shadow Service.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mqtt-use-amazon-aws-iot-shadow-service">
+<h1>MQTT - Use Amazon AWS IoT Shadow Service<a class="headerlink" href="#mqtt-use-amazon-aws-iot-shadow-service" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Preparation</strong>
+<span class="raw-html"></p></span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>AmebaD [AMB21 / AMB22 / AMB23 / BW16] x 1</p></li>
+</ul>
+</div></blockquote>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Example</strong>
+<span class="raw-html"></p></span></p>
+<div class="line-block">
+<div class="line"><strong>Introduction</strong></div>
+<div class="line">Amazon AWS IoT is a cloud IoT service platform:</div>
+<div class="line">Amazon AWS IoT is a platform that enables you to connect devices to AWS
+Services and other devices, secure data and interactions, process and
+act upon device data, and enable applications to interact with devices
+even when they are offline. (<a class="reference external" href="https://aws.amazon.com/iot/how-it-works/">https://aws.amazon.com/iot/how-it-works/</a>)</div>
+<div class="line">The service architecture of AWS IoT:</div>
+<div class="line"><a class="reference internal" href="../../../../_images/image120.png"><img alt="1" src="../../../../_images/image120.png" style="width: 810.0px; height: 360.0px;" /></a></div>
+<div class="line">(Picture from <a class="reference external" href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html</a> )</div>
+<div class="line">In the architecture, Ameba belongs to the upper-left “Things” block. A
+TLS secure channel will be established between “Things” and the MQTT
+Message Broker. Afterwards, “Things” and “Message Broker” communicate
+using MQTT Protocol via this secure channel. Behind the “Message
+Broker”, the “Thing Shadows” keeps messages temporarily when Ameba is
+offline, and sends the control message to Ameba next time it is
+connected. The “Rules Engine” allows you to place restrictions to the
+behavior of Things or to connect Things to other services of Amazon.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>AWS Management Console</strong></div>
+</div>
+<div class="line-block">
+<div class="line">First, create an account and sign up for AWS IoT <a class="reference external" href="service:https://aws.amazon.com/">service:https://aws.amazon.com/</a></div>
+<div class="line">Afterwards, log in to the Amazon Management Console and click “IoT Core” found under services -&gt;
+Internet of Things.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image218.png"><img alt="2" src="../../../../_images/image218.png" style="width: 949.0px; height: 4.5px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Then you will enter the home page of AWS IoT. To offer the best service quality,
+Amazon offers servers in different regions for users to choose from.</div>
+<div class="line">Click the region dropdown menu at the upper-right:</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image314.png"><img alt="3" src="../../../../_images/image314.png" style="width: 639.5px; height: 492.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Choose a nearby region.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image412.png"><img alt="4" src="../../../../_images/image412.png" style="width: 639.5px; height: 492.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Then from Services, go to Onboard then Get Started.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image67.png"><img alt="6" src="../../../../_images/image67.png" style="width: 639.5px; height: 493.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Enter the main page of AWS IoT. Under the Onboard a device, click Get started.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image512.png"><img alt="5" src="../../../../_images/image512.png" style="width: 949.0px; height: 415.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Click Create single thing</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image75.png"><img alt="7" src="../../../../_images/image75.png" style="width: 949.0px; height: 415.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Fill in “ameba” on the name field. Attributes represent the status of Ameba.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image83.png"><img alt="8" src="../../../../_images/image83.png" style="width: 949.0px; height: 415.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Under the searchable thing attributes. The value of the attributes can be updated
+directly by Ameba or by the control side and control side can request Ameba to
+set the attribute to desired value.</div>
+<div class="line">Here we add an attribute named “led” with value “0” and click “Next”.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image91.png"><img alt="9" src="../../../../_images/image91.png" style="width: 949.0px; height: 415.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Click Skip creating a certificate at this time and then Create thing</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image101.png"><img alt="10" src="../../../../_images/image101.png" style="width: 949.0px; height: 415.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Next, click Policy¸ and create a policy. Policy is used to restrict the functions
+that a “thing” can do, it can limit the MQTT actions or specific topic that can
+be performed. Learn more about policy:</div>
+<div class="line"><a class="reference external" href="http://docs.aws.amazon.com/iot/latest/developerguide/authorization.html">http://docs.aws.amazon.com/iot/latest/developerguide/authorization.html</a></div>
+<div class="line">Here we do not place policy on Ameba. Fill in “amebaPolicy” in the Name field,
+“iot:<em>” in Action field and “</em>” in resources field. Then “Allow”. Finally,
+click “Create”.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image1110.png"><img alt="11" src="../../../../_images/image1110.png" style="width: 949.0px; height: 415.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Next, we have to setup the TLS certificate. You can choose to user-defined or generate a
+certificate by AWS IoT. In this example we click Create Certificate to generate a TLS
+certificate.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image121.png"><img alt="12" src="../../../../_images/image121.png" style="width: 799.5px; height: 400.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">You can see 4 Links. Please download each of the link, “public key”, “private key”,
+“Certificate” and “rootCA”. After downloading the 4 files, click Done and go back to
+the certificate main page.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image132.png"><img alt="13" src="../../../../_images/image132.png" style="width: 634.5px; height: 308.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Click Attach a policy in the Actions dropdown menu.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image191.png"><img alt="14" src="../../../../_images/image191.png" style="width: 949.0px; height: 415.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Choose amebaPolicy and click attach.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image20.png"><img alt="15" src="../../../../_images/image20.png" style="width: 949.0px; height: 415.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Then go back to the “Actions” drop-down menu at the top right of the
+certificates homepage, click on “Attach thing”, select the thing
+“ameba” you just created when the window below appears, then click on
+“Attach”</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image219.png"><img alt="16" src="../../../../_images/image219.png" style="width: 949.0px; height: 451.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Go back to certificate main page and click Certificate and click Activate
+in the Actions drop down menu.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image182.png"><img alt="17" src="../../../../_images/image182.png" style="width: 639.5px; height: 217.5px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Next, click Manage, and click Things, then click “ameba” the thing we created just now.</div>
+<div class="line">Click on Interact and View settings.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image221.png"><img alt="18" src="../../../../_images/image221.png" style="width: 960.0px; height: 376.5px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Find out the information of Rest API Endpoint to set Amazon Alexa:</div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><p>REST API endpoint: In the value “<a class="reference external" href="https://a1a7oo4baosgyy.iot.us-east-1.amazonaws.com/things/ameba/shadow">https://a1a7oo4baosgyy.iot.us-east-1.amazonaws.com/things/ameba/shadow</a>”,
+the part “a1a7oo4baosgyy.iot.us-east-1.amazonaws.com” is the MQTT Broker server address.</p></li>
+<li><p>MQTT topic：The value “$aws/things/ameba/shadow/update” represents the MQTT topic we will use in the AWS
+IoT Shadow service (if we use MQTT only, without AWS IoT Shadow service, then we can specify other topic
+name). It is recommended to use “$aws/things/ameba/shadow/update” here.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Ameba setting</strong></p>
+<div class="line-block">
+<div class="line">Open <code class="docutils literal notranslate"><span class="pre">“File”</span> <span class="pre">-&gt;</span> <span class="pre">“Examples”</span> <span class="pre">-&gt;</span> <span class="pre">“AmebaMQTTClient”</span> <span class="pre">-&gt;</span> <span class="pre">“Amazon_AWS_IoT_Basic”</span></code></div>
+<div class="line">In the sample code, modify the highlighted snippet to reflect your WiFi
+network settings.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image241.png"><img alt="19" src="../../../../_images/image241.png" style="width: 447.29999999999995px; height: 592.1999999999999px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Then fill in the “thing” name “ameba”.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image251.png"><img alt="20" src="../../../../_images/image251.png" style="width: 639.0px; height: 846.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">And the MQTT Broker server address we found earlier in AWS IoT.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image261.png"><img alt="21" src="../../../../_images/image261.png" style="width: 639.0px; height: 846.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Next, fill in the root CA used in TLS. Download and make sure the
+downloaded root CA contents conforms to the root CA used in the
+sketch.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image271.png"><img alt="22" src="../../../../_images/image271.png" style="width: 639.0px; height: 846.0px;" /></a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Next, fill in the certificate we created in the AWS IoT Console (i.e.,
+client certificate), usually its file name ends with
+“-certificate.pem.crt” (e.g., “efae24a533-certificate.pem.crt”). Open
+the certificate with a text editor, and adjust its format as follows
+to use in the sketch:</div>
+<div class="line">– Add the new line character “n” at the end of each line.</div>
+<div class="line">– Add double-quote at the beginning and the end of each line.</div>
+<div class="line">– To concatenate each line as a string, add “” at the end of each
+line.</div>
+<div class="line">– The last line ends with semicolon.</div>
+<div class="line">Adjust the format of the private key in the same way and add it to
+privateKeyBuff.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image281.png"><img alt="23" src="../../../../_images/image281.png" style="width: 639.0px; height: 846.0px;" /></a></p>
+</div></blockquote>
+<p><strong>Compile and run</strong></p>
+<div class="line-block">
+<div class="line">Upload the code and press the reset button on Ameba once the upload is
+finished.</div>
+<div class="line">Open the serial monitor in the Arduino IDE and observe as Ameba
+connects to the AWS IoT server and sends updates on the LED state
+variable.</div>
+</div>
+<blockquote>
+<div><p><a class="reference internal" href="../../../../_images/image291.png"><img alt="24" src="../../../../_images/image291.png" style="width: 425.5px; height: 273.0px;" /></a></p>
+</div></blockquote>
+<p><strong>Alternatives</strong></p>
+<p>Ameba can also retrieve the current LED status variable from the AWS
+shadow. This is done by sending a message to the “shadow/get” topic.
+Refer to the Amazon_AWS_IoT_with_ACK example code for more information.</p>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Code Reference</strong>
+<span class="raw-html"></p></span></p>
+<div class="line-block">
+<div class="line">Change led state:</div>
+<div class="line">In this example, we use GPIO interface to control the led. We set
+led_pin to 10 and led_state to 1 by default in the sample code.</div>
+</div>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">pinMode</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"></span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span><span class="w"> </span><span class="n">led_state</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Set up certificate:</div>
+<div class="line">Note that we use the WiFiSSLClient type of wifiClient.</div>
+</div>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">WiFiSSLClient</span><span class="w"> </span><span class="n">wifiClient</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">WiFiSSLClient inherits Client, so it can be passed as the parameter of
+PubSubClient constructor.</div>
+<div class="line">Next, set up TLS certificate required in connection.</div>
+</div>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">wifiClient</span><span class="p">.</span><span class="n">setRootCA</span><span class="p">((</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">rootCABuff</span><span class="p">);</span><span class="w"></span>
+<span class="n">wifiClient</span><span class="p">.</span><span class="n">setClientCertificate</span><span class="p">((</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">certificateBuff</span><span class="p">,(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">privateKeyBuff</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Configure MQTT Broker server</div>
+<div class="line">Then MQTT PubClient set MQTT Broker server to connect</div>
+</div>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">client</span><span class="p">.</span><span class="n">setServer</span><span class="p">(</span><span class="n">mqttServer</span><span class="p">,</span><span class="w"> </span><span class="mi">8883</span><span class="p">);</span><span class="w"></span>
+<span class="n">client</span><span class="p">.</span><span class="n">setCallback</span><span class="p">(</span><span class="n">callback</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Connect to MQTT Broker server:</div>
+<div class="line">In <code class="docutils literal notranslate"><span class="pre">loop()</span></code>, call <code class="docutils literal notranslate"><span class="pre">reconnect()</span></code> function and try to connect to MQTT Broker
+server and do the certificate verification.</div>
+</div>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">client</span><span class="p">.</span><span class="n">connected</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Subscribe &amp; Publish</div>
+<div class="line">Next, subscribe to topics.</div>
+</div>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">client</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">subscribeTopic</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">There are some common topics:</div>
+<div class="line">“$aws/things/ameba/shadow/update/accepted”,</div>
+<div class="line">“$aws/things/ameba/shadow/update/rejected”,</div>
+<div class="line">“$aws/things/ameba/shadow/update/delta”,</div>
+<div class="line">“$aws/things/ameba/shadow/get/accepted”,</div>
+<div class="line">“$aws/things/ameba/shadow/get/rejected”</div>
+<div class="line">Related documentation:</div>
+<div class="line"><a class="reference external" href="http://docs.aws.amazon.com/iot/latest/developerguide/thing-shadow-data-flow.html">http://docs.aws.amazon.com/iot/latest/developerguide/thing-shadow-data-flow.html</a></div>
+</div>
+<div class="line-block">
+<div class="line">Then publish current status::</div>
+</div>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">sprintf</span><span class="p">(</span><span class="n">publishPayload</span><span class="p">,</span><span class="w"></span>
+<span class="s">&quot;{</span><span class="se">\&quot;</span><span class="s">state</span><span class="se">\&quot;</span><span class="s">:{</span><span class="se">\&quot;</span><span class="s">reported</span><span class="se">\&quot;</span><span class="s">:{</span><span class="se">\&quot;</span><span class="s">led</span><span class="se">\&quot;</span><span class="s">:%d}},</span><span class="se">\&quot;</span><span class="s">clientToken</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">%s</span><span class="se">\&quot;</span><span class="s">}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="n">led_state</span><span class="p">,</span><span class="w"> </span><span class="n">clientId</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">client</span><span class="p">.</span><span class="n">publish</span><span class="p">(</span><span class="n">publishTopic</span><span class="p">,</span><span class="w"> </span><span class="n">publishPayload</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Listen to topic and make response:</div>
+<div class="line">In the callback function, we listen to the 5 subscribed topics and
+check if there are messages of “/shadow/get/accepted”:</div>
+</div>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">strstr</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;/shadow/get/accepted&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+</pre></div>
+</div>
+<p>If there is, the message is from the control side. If the attribute
+state in the message is different from current state, publish the new
+state.</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">updateLedState</span><span class="p">(</span><span class="n">desired_led_state</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="MQTT%20-%20Set%20up%20MQTT%20Client%20over%20TLS.html" class="btn btn-neutral float-left" title="MQTT - Set up MQTT Client over TLS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="MQTT%20-%20Use%20Google%20Cloud%20IoT.html" class="btn btn-neutral float-right" title="MQTT - Use Google Cloud IoT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[RTL8722CSM] [RTL8722DM] Socket - Get information from HTTP website &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="[RTL8722CSM] [RTL8722DM] SPI - Slave Receive" href="%5BRTL8722CSM%5D%20%5BRTL8722DM%5D%20SPI%20-%20Slave%20Receive.html" />
+    <link rel="prev" title="[RTL8722CSM] [RTL8722DM] Socket - Echo Server and Client" href="%5BRTL8722CSM%5D%20%5BRTL8722DM%5D%20Socket%20-%20Echo%20Server%20and%20Client.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_arduino/arduino_index.html">Arduino SDK</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../micropython_index.html">MicroPython SDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/mp_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Examples</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#peripheral-examples">Peripheral Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#network-examples">Network Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../api_documents/index.html">API Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../AMB23/index.html">AMB23 (RTL8722DM MINI)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../micropython_index.html">MicroPython SDK</a> &raquo;</li>
+          <li><a href="../index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a> &raquo;</li>
+          <li><a href="index.html">Examples</a> &raquo;</li>
+      <li>[RTL8722CSM] [RTL8722DM] Socket - Get information from HTTP website</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_micropython/AMB21/examples/[RTL8722CSM] [RTL8722DM] Socket - Get information from HTTP website.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rtl8722csm-rtl8722dm-socket-get-information-from-http-website">
+<h1>[RTL8722CSM] [RTL8722DM] Socket - Get information from HTTP website<a class="headerlink" href="#rtl8722csm-rtl8722dm-socket-get-information-from-http-website" title="Permalink to this heading"></a></h1>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Materials</strong>
+<span class="raw-html"></p></span></p>
+<ul class="simple">
+<li><p>AmebaD[AMB21 / AMB22] x 1</p></li>
+</ul>
+<p><span class="raw-html"><p style="color:#E67E22; font-size:24px"></span>
+<strong>Steps</strong>
+<span class="raw-html"></p></span></p>
+<p>With socket created, we can visit an HTTP website and get information from it.</p>
+<p>Copy and paste the following code into REPL under paste mode.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">socket</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">wireless</span> <span class="kn">import</span> <span class="n">WLAN</span>
+<span class="linenos"> 3</span><span class="n">wifi</span> <span class="o">=</span> <span class="n">WLAN</span><span class="p">(</span><span class="n">mode</span> <span class="o">=</span> <span class="n">WLAN</span><span class="o">.</span><span class="n">STA</span><span class="p">)</span>
+<span class="linenos"> 4</span><span class="n">wifi</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">ssid</span> <span class="o">=</span> <span class="s2">&quot;YourWiFiSSID&quot;</span><span class="p">,</span> <span class="n">pswd</span> <span class="o">=</span> <span class="s2">&quot;YourPassword&quot;</span><span class="p">)</span> <span class="c1"># change the ssid and pswd to yours</span>
+<span class="linenos"> 5</span><span class="k">def</span> <span class="nf">http_get</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+<span class="linenos"> 6</span>     <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="linenos"> 7</span>     <span class="n">c</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK</span><span class="p">()</span>
+<span class="linenos"> 8</span>     <span class="c1"># We are visiting MicroPython official website&#39;s test page</span>
+<span class="linenos"> 9</span>     <span class="n">c</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
+<span class="linenos">10</span>     <span class="n">c</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="s1">&#39;GET /</span><span class="si">%s</span><span class="s1"> HTTP/1.0</span><span class="se">\r\n</span><span class="s1">Host: </span><span class="si">%s</span><span class="se">\r\n\r\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">host</span><span class="p">),</span> <span class="s1">&#39;utf8&#39;</span><span class="p">))</span>
+<span class="linenos">11</span>     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="linenos">12</span>             <span class="n">data</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="linenos">13</span>             <span class="k">if</span> <span class="n">data</span><span class="p">:</span>
+<span class="linenos">14</span>             <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="s1">&#39;utf8&#39;</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="linenos">15</span>             <span class="k">else</span><span class="p">:</span>
+<span class="linenos">16</span>             <span class="k">break</span>
+<span class="linenos">17</span><span class="n">http_get</span><span class="p">(</span><span class="s1">&#39;http://micropython.org/ks/test.html&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="%5BRTL8722CSM%5D%20%5BRTL8722DM%5D%20Socket%20-%20Echo%20Server%20and%20Client.html" class="btn btn-neutral float-left" title="[RTL8722CSM] [RTL8722DM] Socket - Echo Server and Client" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="%5BRTL8722CSM%5D%20%5BRTL8722DM%5D%20SPI%20-%20Slave%20Receive.html" class="btn btn-neutral float-right" title="[RTL8722CSM] [RTL8722DM] SPI - Slave Receive" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

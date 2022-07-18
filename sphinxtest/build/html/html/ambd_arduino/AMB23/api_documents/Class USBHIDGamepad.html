@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class USBHIDGamepad &mdash; 123 123 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Class USBHIDKeyboard" href="Class%20USBHIDKeyboard.html" />
+    <link rel="prev" title="Class USBHIDDevice" href="Class%20USBHIDDevice.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 123
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Open Source SDKs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../arduino_index.html">Arduino SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../AMB21/index.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">AMB23 (RTL8722DM MINI)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/ambd_mini_getting_started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples_and_components/index.html">Examples &amp; Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release_history/Release_History.html">Release History</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">API Documents</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="index.html#analog">Analog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#audiocodec">AudioCodec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ble">BLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#epdif">EPDIF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#fatfssdcard">FatfsSDCard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#flashmemory">FlashMemory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gpio">GPIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#gtimer">GTimer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#http">Http</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#irdevice">IRDevice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#mdns">MDNS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#mqttclient">MQTTClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ntpclient">NTPClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#powersave">PowerSave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#rtc">RTC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#softwareserial">SoftwareSerial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#spi">SPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#sys">Sys</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#usb">USB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wdt">WDT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wifi">WiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#wire">Wire</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#ws2812b">WS2812B</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../resources/index.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/index.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../BW16_/index.html">BW16 (RTL8720DN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/micropython_index.html">MicroPython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB21_download.html">AMB21/AMB22 (RTL8722DM/RTL8722CSM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/AMB23_download.html">AMB23 (RTL8722DM MINI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/BW16_download.html">BW16 (RTL8720DN)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">123</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../arduino_index.html">Arduino SDK</a> &raquo;</li>
+          <li><a href="../index.html">AMB23 (RTL8722DM MINI)</a> &raquo;</li>
+          <li><a href="index.html">API Documents</a> &raquo;</li>
+      <li>Class USBHIDGamepad</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ambd_arduino/AMB23/api_documents/Class USBHIDGamepad.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-usbhidgamepad">
+<h1>Class USBHIDGamepad<a class="headerlink" href="#class-usbhidgamepad" title="Permalink to this heading"></a></h1>
+<p><strong>Description</strong></p>
+<p>A class used for creating and managing a USB HID Gamepad.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">USBHIDGamepad</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Members</strong></p>
+<p><strong>Public Constructors</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 55%" />
+<col style="width: 45%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>USBHIDGamepad::USBHIDGamepad</p></td>
+<td><p>Constructs a USBHIDGamepad
+object</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Public Methods</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 52%" />
+<col style="width: 48%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>USBHIDGamepad::setReportID</p></td>
+<td><p>Set HID report ID for the HID
+Gamepad</p></td>
+</tr>
+<tr class="row-even"><td><p>USBHIDGamepad::gamepadReport</p></td>
+<td><p>Send a HID Gamepad report</p></td>
+</tr>
+<tr class="row-odd"><td><p>USBHIDGamepad::buttonPress</p></td>
+<td><p>Send a HID Gamepad report
+indicating buttons pressed</p></td>
+</tr>
+<tr class="row-even"><td><p>USBHIDGamepad::buttonRelease</p></td>
+<td><p>Send a HID Gamepad report
+indicating buttons released</p></td>
+</tr>
+<tr class="row-odd"><td><p>USBHIDGamepad::buttonReleaseAll</p></td>
+<td><p>Send a HID Gamepad report
+indicating no buttons pressed</p></td>
+</tr>
+<tr class="row-even"><td><p>USBHIDGamepad::setHat</p></td>
+<td><p>Send a HID Gamepad report
+indicating hat switch position</p></td>
+</tr>
+<tr class="row-odd"><td><p>USBHIDGamepad::setAxes</p></td>
+<td><p>Send a HID Gamepad report
+indicating position of all axes</p></td>
+</tr>
+<tr class="row-even"><td><p>USBHIDGamepad::setLeftStick</p></td>
+<td><p>Send a HID Gamepad report
+indicating position of axes
+corresponding to left analog
+stick</p></td>
+</tr>
+<tr class="row-odd"><td><p>USBHIDGamepad::setRightStick</p></td>
+<td><p>Send a HID Gamepad report
+indicating position of axes
+corresponding to right analog
+stick</p></td>
+</tr>
+<tr class="row-even"><td><p>USBHIDGamepad::setTriggers</p></td>
+<td><p>Send a HID Gamepad report
+indicating position of axes
+corresponding to triggers</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">USBHIDGamepad::USBHIDGamepad</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Constructs a USBHIDGamepad object.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">USBHIDGamepad</span><span class="o">::</span><span class="n">USBHIDGamepad</span><span class="w"> </span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function requires no input parameter.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: USBHIDGamepad</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>By default, the USBHIDGamepad class assumes the HID report descriptor
+implements a gamepad device with 16 buttons, 6 axes with 16-bit
+resolution and an 8-direction hat switch. This class will not work if a
+different gamepad report descriptor is implemented.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">USBHIDGamepad::setReportID</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Set HID report ID for the HID Gamepad.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setReportID</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">reportID</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">reportID</span></code> : The report ID for the gamepad device, corresponding to the HID
+report descriptor.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>HID report ID should start at 1. Some systems may consider a report ID
+of 0 as invalid.</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">USBHIDGamepad::gamepadReport</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Send a HID Gamepad report.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">gamepadReport</span><span class="w"> </span><span class="p">(</span><span class="n">hid_gamepad_report_t</span><span class="o">*</span><span class="w"> </span><span class="n">report</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">gamepadReport</span><span class="w"> </span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">buttons</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">hat</span><span class="p">,</span><span class="w"> </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"></span>
+<span class="kt">int16_t</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">Rz</span><span class="p">,</span><span class="w"> </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">Rx</span><span class="p">,</span><span class="w"> </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">Ry</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">report</span></code> : pointer to gamepad report structure containing data on all
+inputs</p>
+<p><code class="docutils literal notranslate"><span class="pre">buttons</span></code> : bitmap indicating state of each button. 1 = pressed, 0 =
+released.</p>
+<p><code class="docutils literal notranslate"><span class="pre">hat</span></code> : position of hat switch. Valid values:</p>
+<ul class="simple">
+<li><p>GAMEPAD_HAT_CENTERED = 0</p></li>
+<li><p>GAMEPAD_HAT_UP = 1</p></li>
+<li><p>GAMEPAD_HAT_UP_RIGHT = 2</p></li>
+<li><p>GAMEPAD_HAT_RIGHT = 3</p></li>
+<li><p>GAMEPAD_HAT_DOWN_RIGHT = 4</p></li>
+<li><p>GAMEPAD_HAT_DOWN = 5</p></li>
+<li><p>GAMEPAD_HAT_DOWN_LEFT = 6</p></li>
+<li><p>GAMEPAD_HAT_LEFT = 7</p></li>
+<li><p>GAMEPAD_HAT_UP_LEFT = 8</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">x</span></code> : position of x axis. Integer value from -32767 to 32767.</p>
+<p><code class="docutils literal notranslate"><span class="pre">y</span></code> : position of y axis. Integer value from -32767 to 32767.</p>
+<p><code class="docutils literal notranslate"><span class="pre">z</span></code> : position of z axis. Integer value from -32767 to 32767.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Rz</span></code> : position of Rz axis. Integer value from -32767 to 32767.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Rx</span></code> : position of Rx axis. Integer value from -32767 to 32767.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Ry</span></code> : position of Ry axis. Integer value from -32767 to 32767.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: USBHIDGamepad</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">USBHIDGamepad::buttonPress</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Send a HID Gamepad report indicating buttons pressed.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">buttonPress</span><span class="w"> </span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">buttons</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">buttons</span></code> : bitmap indicating buttons pressed. 1 = pressed.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">USBHIDGamepad::buttonRelease</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Send a HID Gamepad report indicating buttons released.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">buttonRelease</span><span class="w"> </span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">buttons</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">buttons</span></code> : bitmap indicating buttons released. 1 = released.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">USBHIDGamepad::buttonReleaseAll</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Send a HID Gamepad report indicating no buttons pressed.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">buttonReleaseAll</span><span class="w"> </span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>The function takes no parameter.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: USBHIDGamepad</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">USBHIDGamepad::setHat</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Send a HID Gamepad report indicating hat switch position.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setHat</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">hat</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">hat</span></code> : position of hat switch. Valid values:</p>
+<ul class="simple">
+<li><p>GAMEPAD_HAT_CENTERED = 0</p></li>
+<li><p>GAMEPAD_HAT_UP = 1</p></li>
+<li><p>GAMEPAD_HAT_UP_RIGHT = 2</p></li>
+<li><p>GAMEPAD_HAT_RIGHT = 3</p></li>
+<li><p>GAMEPAD_HAT_DOWN_RIGHT = 4</p></li>
+<li><p>GAMEPAD_HAT_DOWN = 5</p></li>
+<li><p>GAMEPAD_HAT_DOWN_LEFT = 6</p></li>
+<li><p>GAMEPAD_HAT_LEFT = 7</p></li>
+<li><p>GAMEPAD_HAT_UP_LEFT = 8</p></li>
+</ul>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">USBHIDGamepad::setAxes</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Send a HID Gamepad report indicating position of all axes.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setAxes</span><span class="w"> </span><span class="p">(</span><span class="kt">int16_t</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">Rz</span><span class="p">,</span><span class="w"> </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">Rx</span><span class="p">,</span><span class="w"></span>
+<span class="kt">int16_t</span><span class="w"> </span><span class="n">Ry</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">x</span></code> : position of x axis. Integer value from -32767 to 32767.</p>
+<p><code class="docutils literal notranslate"><span class="pre">y</span></code> : position of y axis. Integer value from -32767 to 32767.</p>
+<p><code class="docutils literal notranslate"><span class="pre">z</span></code> : position of z axis. Integer value from -32767 to 32767.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Rz</span></code> : position of Rz axis. Integer value from -32767 to 32767.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Rx</span></code> : position of Rx axis. Integer value from -32767 to 32767.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Ry</span></code> : position of Ry axis. Integer value from -32767 to 32767.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>Example: USBHIDGamepad</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">USBHIDGamepad::setLeftStick</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Send a HID Gamepad report indicating position of axes corresponding to
+left analog stick.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setLeftStick</span><span class="w"> </span><span class="p">(</span><span class="kt">int16_t</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">x</span></code>: position of x axis. Integer value from -32767 to 32767.</p>
+<p><code class="docutils literal notranslate"><span class="pre">y</span></code> : position of y axis. Integer value from -32767 to 32767.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">USBHIDGamepad::setRightStick**</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Send a HID Gamepad report indicating position of axes corresponding to
+right analog stick.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setLeftStick</span><span class="w"> </span><span class="p">(</span><span class="kt">int16_t</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">Rz</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">z</span></code> : position of z axis. Integer value from -32767 to 32767.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Rz</span></code> : position of Rz axis. Integer value from -32767 to 32767.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">USBHIDGamepad::setTrigger</span></span></dt>
+<dd></dd></dl>
+
+<p><strong>Description</strong></p>
+<p>Send a HID Gamepad report indicating position of axes corresponding to
+triggers.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setTriggers</span><span class="w"> </span><span class="p">(</span><span class="kt">int16_t</span><span class="w"> </span><span class="n">Rx</span><span class="p">,</span><span class="w"> </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">Ry</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">Rx</span></code> : position of Rx axis. Integer value from -32767 to 32767.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Ry</span></code> : position of Ry axis. Integer value from -32767 to 32767.</p>
+<p><strong>Returns</strong></p>
+<p>The function returns nothing.</p>
+<p><strong>Example Code</strong></p>
+<p>NA</p>
+<p><strong>Notes and Warnings</strong></p>
+<p>NA</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Class%20USBHIDDevice.html" class="btn btn-neutral float-left" title="Class USBHIDDevice" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Class%20USBHIDKeyboard.html" class="btn btn-neutral float-right" title="Class USBHIDKeyboard" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 123.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
