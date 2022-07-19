@@ -15,6 +15,6 @@ convert `.rst` files into `.html` template for official website to update
 
 #### Progress
 - [ ] changing to insert **line numbers** in `appendSplit2Template()`
+- [ ] change logic to: everytime copy template and rename with `.rst` filename in `appendSplit2Template()`
 - [-] align `.rst` file format
-- [ ] adding conditions to filter intro & procedure divisions
--     [-] 1) <blockquote>
+- [-] adding <blockquote> & conditions filter 
