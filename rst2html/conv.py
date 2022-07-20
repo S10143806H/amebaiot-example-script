@@ -1,5 +1,6 @@
 import os
 import sys
+import shutil
 import docutils.core
 from bs4 import BeautifulSoup
 
@@ -77,7 +78,7 @@ def splitHTMLContent():
             f = os.path.join(root_path, filename)
             if os.path.isfile(f):
                 filename, file_extension = os.path.splitext(f)
-                print("[INFO] Currently processing '%s.html'..." % filename)
+                print("[INFO] Currently splitting '%s.html'..." % filename)
                 soup = BeautifulSoup(open(filename + ".html", encoding="utf-8"), "html.parser")
                 introduction_content = BeautifulSoup(str(soup.find_all("div", {"id": "introduction"}, limit=1)), 'html.parser').prettify()
                 procedure_content = BeautifulSoup(str(soup.find_all("div", {"id": "procedure"}, limit=1)), 'html.parser').prettify()
@@ -95,7 +96,7 @@ def splitHTMLContent():
                 file2.close()
 
         if filename.endswith("intro.html"):
-            print(filename)
+            # print(filename)
             soup = BeautifulSoup(open((os.path.join(root_path, filename)), encoding="utf-8"), "html.parser")
             introduction_content = soup.find_all('p')  # filter content area
             introduction_content = BeautifulSoup(str(introduction_content), 'html.parser').prettify()
@@ -116,7 +117,7 @@ def splitHTMLContent():
                 output.truncate()
         
         if filename.endswith("proce.html"):
-            print(filename)
+            # print(filename)
             soup = BeautifulSoup(open((os.path.join(root_path, filename)), encoding="utf-8"), "html.parser").find_all(['p', 'blockquote'])
             procedure_content = BeautifulSoup(str(soup), 'html.parser').prettify()
             with open((os.path.join(root_path, filename)), "w+", encoding="utf-8") as file:
@@ -174,7 +175,7 @@ def splitHTMLContent():
 def processSplitHTML():
     for file in os.listdir(root_path):
         if file.endswith("intro.html"):
-            print(file)
+            # print(file)
             soup = BeautifulSoup(
                 open((os.path.join(root_path, file)), encoding="utf-8"), "html.parser")
             introduction_content = soup.find_all('p')  # filter content area
@@ -210,6 +211,9 @@ def processSplitHTML():
                 write_content = write_content.replace("<p>", "  ")   # remove <p>
                 write_content = write_content.replace("</p>", "  ")  # remove </p>
                 write_content = write_content.replace("<tt class=\"docutils literal\">", "  ") 
+                write_content = write_content.replace(" <tt class=\"docutils\">", "  ") 
+                write_content = write_content.replace("   <tt class=\"docutils\">", "  ")
+                write_content = write_content.replace("     <tt class=\"docutils\">", "  ")
                 write_content = write_content.replace("</tt>", "  ") 
                 file.write(write_content)
             file.close()
@@ -258,61 +262,102 @@ def processSplitHTML():
             if line.startswith(",") != 0 or line.startswith(" ,") != 0 or line.startswith("<p style=\"color:#E67E22; font-size:24px\">") != 0 or line.startswith("</p>") != 0:
                 line = ''
                 continue
-            if line.startswith("<p style=\"color:#E67E22; font-size:24px\">") != 0:
-                print(line)
+            # if line.startswith("<p style=\"color:#E67E22; font-size:24px\">") != 0:
+            #     print(line)
             if line.strip():
                 output.write(line)
         output.truncate()
     
 # append to template
 def appendSplit2Template():
-    file1="intro.html"
-    file2="proce.html"
     temp = root_path + "\\template\\mindy.html"
+    output_dir = root_path + "\\output\\"
+    
+    for file in os.listdir(root_path):
+        if file.endswith("intro.html"):
+            if os.path.isfile(file):
+                filename = file.split('_')[0]
+                print("[INFO] Currently processing '%s_intro.html'..." % filename)
+                # create a new folder to store output files
+                if os.path.isdir(output_dir):
+                    shutil.copy(temp , output_dir + filename + ".html")
+                    if os.path.isfile(output_dir + filename + ".html"):
+                        with open(output_dir + filename + ".html", "r+", encoding="utf-8") as file_output:
+                            for x in range(12): 
+                                print(file_output.readline())
+                            pos = file_output.tell()
+                            print(pos)
+                            file_remainder = file_output.read()
+                            print(file_remainder)
+                            file_output.seek(pos)
+
+                            with open(file, "r", encoding="utf-8") as f1:
+                                for line in f1:
+                                    print(line)
+                                    file_output.write(line)
+                            file_output.write(file_remainder)
+                            pos = file_output.tell()
+                            print(pos)
+                        f1.close()
+                        file_output.close()
+                else:
+                    os.mkdir(output_dir)
+            print("===========================================")
+
+            
+    for file in os.listdir(root_path):
+        if file.endswith("proce.html"):
+            if os.path.isfile(file):
+                filename = file.split('_')[0]
+                print("[INFO] Currently processing '%s_proce.html'..." % filename)
+                # continue writing to the output file
+                if os.path.isfile(output_dir + filename + ".html"):
+                    with open(output_dir + filename + ".html", "r+", encoding="utf-8") as file_output:
+                        for x in range(pos): 
+                            print(file_output.readline())
+                        pos = file_output.tell()
+                        print(pos)
+                        file_remainder = file_output.read()
+                        print(file_remainder)
+                        file_output.seek(pos)
+
+                        with open(file, "r", encoding="utf-8") as f1:
+                            for line in f1:
+                                print(line)
+                                file_output.write(line)
+                        file_output.write(file_remainder)
+                        pos = file_output.tell()
+                        print(pos)
+                    f1.close()
+                    file_output.close()
+                else:
+                    os.mkdir(output_dir)
+            print("===========================================")
+
+# remove processing middle files
+def removeFiles():
+    output_dir = root_path + "\\output\\"
     
     for filename in os.listdir(root_path):
-        if filename.endswith("intro.html"):
-            print(filename)
-    
-    with open(temp, "r+", encoding="utf-8") as file:
-        for x in range(12): # change to line number
-            print(file.readline())
-        pos = file.tell()
-        print(pos)
-        file_remainder = file.read()
-        file.seek(pos)
-        with open(file1, "r", encoding="utf-8") as f1:
-            for line in f1:
-                print(line)
-                file.write(line)
-        file.write(file_remainder)
-        pos = file.tell()
-        print(pos)
-        f1.close()
-        file.close()
-    
-    with open(temp, "r+", encoding="utf-8") as file:
-        for x in range(pos):
-            print(file.readline())
-        pos = file.tell()
-        print(pos)
-        file_remainder = file.read()
-        file.seek(pos)
-        with open(file2, "r", encoding="utf-8") as f3:
-            for line in f3:
-                print(line)
-                file.write(line)
-        file.write(file_remainder)
-    f3.close()
-    file.close()
-       
+        if filename.endswith(".rst"):
+            f = os.path.join(root_path, filename)
+            if os.path.isfile(f):
+                filename, file_extension = os.path.splitext(f)
+                if os.path.isfile(output_dir + filename.split('\\')[-1] + ".html"):
+                    print("[INFO] Found output file '%s.html'..." % (output_dir + filename.split('\\')[-1]))
+                    for file in os.listdir(root_path):
+                        if file.endswith(".html"):
+                            os.remove(file)
+            print("[INFO] Removed .html files" )
+
 #########################################
 # Main Function
 #########################################
 if __name__ == '__main__':
     print("===== [MAIN Function] =====")
 
-    formatRST()
-    convRST2HTML()
-    splitHTMLContent()
-    appendSplit2Template()
+    # formatRST()
+    # convRST2HTML()
+    # splitHTMLContent()
+    # appendSplit2Template()
+    removeFiles()

@@ -34,39 +34,35 @@ Connect the DHT sensor to the Ameba board following the diagram.
 
 **AMB21 / AMB22:**
 
-   |1|
+|1|
 
 **AMB23:**
 
-   |1-1|
+|1-1|
 
 **BW16:**
 
-   |1-2|
+|1-2|
 
-| Ensure that a compatible BLE UART app is installed on your smartphone,
-  it is available at:
-| - Google Play Store:
-| `https://play.google.com/store/apps/details?id=com.adafruit.bluefruit.le.connecta>
-   <https://play.google.com/store/apps/details?id=com.adafruit.bluefruit.le.connect>`__\ https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal
+Ensure that a compatible BLE UART app is installed on your smartphone, it is available at:
 
-| - Apple App Store:
-| https://apps.apple.com/us/app/bluefruit-connect/id830125974
+- Google Play Store: `https://play.google.com/store/apps/details?id=com.adafruit.bluefruit.le.connect>`__\ https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal
+- Apple App Store: https://apps.apple.com/us/app/bluefruit-connect/id830125974
 
-| Open the example, ``“Files” -> “Examples” -> “AmebaBLE” ->  
-  “DHT_over_BLEUart”``.
+Open the example, ``“Files” → “Examples” → “AmebaBLE” → “DHT_over_BLEUart”``.
 
-   |2|
+|2|
 
-| Upload the code and press the reset button on Ameba once the upload is
-  finished.
-| Open the app on your smartphone, scan and connect to the Ameba board
-  shown as “AMEBA_BLE_DEV” and choose the UART function in the app.
-| |3|
-| |4|
-| After starting the UART function, notifications should be received every
-  5 seconds containing the measured temperature and humidity.
-| |5|
+Upload the code and press the reset button on Ameba once the upload is finished.
+Open the app on your smartphone, scan and connect to the Ameba board shown as “AMEBA_BLE_DEV” and choose the UART function in the app.
+
+|3|
+
+|4|
+
+After starting the UART function, notifications should be received every 5 seconds containing the measured temperature and humidity.
+
+|5|
 
 .. |1| image:: /media/ambd_arduino/BLE_DHT_over_BLE_UART/image1.png
    :width: 1077
