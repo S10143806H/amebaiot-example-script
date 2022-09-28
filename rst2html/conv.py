@@ -8,6 +8,7 @@ from bs4 import BeautifulSoup
 root_path = os.path.abspath(os.path.join(os.path.dirname(sys.argv[0])))
 
 # Align RST to standard format
+# add introduction and procedure section if it does not contained
 def formatRST():
     convFlag = False
     for filename in os.listdir(root_path):
@@ -327,11 +328,11 @@ def appendSplit2Template():
                                 file_output.write(line)
                         file_output.write(file_remainder)
                         pos = file_output.tell()
-                        print(pos)
+                        # print(pos)
                     f1.close()
                     file_output.close()
-                else:
-                    os.mkdir(output_dir)
+                # else:
+                    # os.mkdir(output_dir)
             print("===========================================")
 
 # remove processing middle files
@@ -356,8 +357,9 @@ def removeFiles():
 if __name__ == '__main__':
     print("===== [MAIN Function] =====")
 
-    # formatRST()
-    # convRST2HTML()
-    # splitHTMLContent()
-    # appendSplit2Template()
-    removeFiles()
+    formatRST()
+    convRST2HTML()
+    splitHTMLContent()
+    processSplitHTML()
+    appendSplit2Template() #pending to debug 
+    removeFiles() #pending to debug 
