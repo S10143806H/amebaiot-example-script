@@ -1,0 +1,343 @@
+
+<div class="document" id="amebamotors-use-ameba-as-server-to-control-motors">
+ <h1 class="title">
+  AmebaMotors - Use Ameba as Server to Control Motors
+ </h1>
+ <p>
+  <span class="raw-html">
+   <p style="color:#E67E22; font-size:24px">
+   </p>
+  </span>
+  <strong>
+   Materials
+  </strong>
+  <span class="raw-html">
+  </span>
+ </p>
+ <ul class="simple">
+  <li>
+   AmebaD [AMB21 / AMB22] x 1
+  </li>
+  <li>
+   L298N H-Bridge x 1
+  </li>
+  <li>
+   4-wheel motorcar or 2-wheel motorcar+Universal wheel
+  </li>
+ </ul>
+ <p>
+  <span class="raw-html">
+   <p style="color:#E67E22; font-size:24px">
+   </p>
+  </span>
+  <strong>
+   Example
+  </strong>
+  <span class="raw-html">
+  </span>
+ </p>
+ <div class="section" id="introduction">
+  <h1>
+   Introduction
+  </h1>
+  <p>
+   In this example, we connect Ameba to WiFi and use Ameba as server, the user can control a 4-wheel/2-wheel motorcar through a webpage.
+  </p>
+ </div>
+ <div class="section" id="procedure">
+  <h1>
+   Procedure
+  </h1>
+  <p>
+   First, connect Ameba to the L298N H-Bridge and the motorcar.
+  </p>
+  <p>
+   Open the example,
+   <tt class="docutils literal">
+    "Files" → "Examples" → “WiFiControlCar”
+   </tt>
+   .
+  </p>
+  <p>
+   You will see we use the following pins in the example:
+  </p>
+  <table border="1" class="docutils">
+   <colgroup>
+    <col width="17%"/>
+    <col width="17%"/>
+    <col width="17%"/>
+    <col width="17%"/>
+    <col width="17%"/>
+    <col width="17%"/>
+   </colgroup>
+   <thead valign="bottom">
+    <tr>
+     <th class="head">
+      ENA
+     </th>
+     <th class="head">
+      IN1
+     </th>
+     <th class="head">
+      IN2
+     </th>
+     <th class="head">
+      IN3
+     </th>
+     <th class="head">
+      IN4
+     </th>
+     <th class="head">
+      IN5
+     </th>
+    </tr>
+   </thead>
+   <tbody valign="top">
+    <tr>
+     <td>
+      8
+     </td>
+     <td>
+      9
+     </td>
+     <td>
+      10
+     </td>
+     <td>
+      11
+     </td>
+     <td>
+      12
+     </td>
+     <td>
+      13
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <strong>
+    Wiring
+   </strong>
+  </p>
+  <img alt="/media/ambd_arduino/AmebaMotors/image1.png" class="align-center" src="/media/ambd_arduino/AmebaMotors/image1.png" style="width: 689.0px; height: 591.5px;"/>
+  <div class="admonition note">
+   <p class="first admonition-title">
+    Note
+   </p>
+   <ul class="last simple">
+    <li>
+     We connect Ameba 5V to L298N +12V to supply power. However, not every L298N accepts 5V power supply, if this does not work, please connect L298N +12V to other power supply (e.g., +12V) and use L298N +5V to supply power to Ameba.
+    </li>
+    <li>
+     The correct wiring of the motor depends on each model (may be opposite). Please run the test program first, make sure it runs correctly before assembling the motorcar.
+    </li>
+    <li>
+     For convenience purposes, it’s recommended to use Dupont line to organize the wiring of motors and L298N.
+    </li>
+   </ul>
+  </div>
+  <p>
+   Every time you modify your program, please remember to unplug the power of L298N to avoid the motor running unexpectedly.
+Connect Ameba to power, upload the program, and then connect L298N to power when you are going to test the program.
+  </p>
+  <p>
+   Then, upload the code to Ameba
+  </p>
+  <p>
+   In the sample code, modify the highlighted snippet to corresponding information.
+  </p>
+  <img alt="/media/ambd_arduino/AmebaMotors/image2.png" class="align-center" src="/media/ambd_arduino/AmebaMotors/image2.png" style="width: 795px; height: 592px;"/>
+  <p>
+   Upload the code and press the reset button on Ameba. When the connection is established,
+you will see the message “To see this page in action, open a browser to
+   <a class="reference external" href="http://xxx.xxx.xxx.xxx">
+    http://xxx.xxx.xxx.xxx
+   </a>
+   ” in the Arduino IDE,
+as shown in the figure:
+  </p>
+  <img alt="/media/ambd_arduino/AmebaMotors/image3.png" class="align-center" src="/media/ambd_arduino/AmebaMotors/image3.png" style="width: 811.3px; height: 392.34999999999997px;"/>
+  <p>
+   Next, open the browser of a computer or a cell phone under the same WiFi domain, enter the address in the message.
+  </p>
+  <img alt="/media/ambd_arduino/AmebaMotors/image4.png" class="align-center" src="/media/ambd_arduino/AmebaMotors/image4.png" style="width: 714px; height: 478px;"/>
+  <p>
+   In the webpage, you can press the corresponding button to control the motor car in any of the 4 directions.
+  </p>
+  <p>
+   <strong>
+    Demo Video
+   </strong>
+  </p>
+  <blockquote>
+   <style="position: 0;="" 56.25%;="" auto;="" auto;"="" height:="" hidden;="" max-width:="" overflow:="" padding-bottom:="" relative;="">
+    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/ItVaPQ4dv8Q" title="Ameba WiFi Remote Control Car" width="640">
+    </iframe>
+   </style="position:>
+  </blockquote>
+  <p>
+   <span class="raw-html">
+    <p style="color:#E67E22; font-size:24px">
+    </p>
+   </span>
+   <strong>
+    Code Reference
+   </strong>
+   <span class="raw-html">
+   </span>
+  </p>
+  <p>
+   Use
+   <tt class="docutils literal">
+    WiFi.begin()
+   </tt>
+   to establish WiFi connection.
+   <a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiBegin">
+    https://www.arduino.cc/en/Reference/WiFiBegin
+   </a>
+  </p>
+  <p>
+   To get the information of a WiFi connection:
+  </p>
+  <p>
+   Use
+   <tt class="docutils literal">
+    WiFi.SSID()
+   </tt>
+   to get SSID of the current connected network.
+   <a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiSSID">
+    https://www.arduino.cc/en/Reference/WiFiSSID
+   </a>
+  </p>
+  <p>
+   Use
+   <tt class="docutils literal">
+    WiFi.RSSI()
+   </tt>
+   to get the signal strength of the connection.
+   <a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiRSSI">
+    https://www.arduino.cc/en/Reference/WiFiRSSI
+   </a>
+  </p>
+  <p>
+   Use
+   <tt class="docutils literal">
+    WiFi.localIP()
+   </tt>
+   to get the IP address of Ameba.
+   <a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiLocalIP">
+    https://www.arduino.cc/en/Reference/WiFiLocalIP
+   </a>
+  </p>
+  <p>
+   Use
+   <tt class="docutils literal">
+    WiFiServer server()
+   </tt>
+   to create a server that listens on the specified port.
+   <a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiServer">
+    https://www.arduino.cc/en/Reference/WiFiServer
+   </a>
+  </p>
+  <p>
+   Use
+   <tt class="docutils literal">
+    server.begin()
+   </tt>
+   to tell the server to begin listening for incoming connections.
+   <a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiServerBegin">
+    https://www.arduino.cc/en/Reference/WiFiServerBegin
+   </a>
+  </p>
+  <p>
+   Use
+   <tt class="docutils literal">
+    server.available()
+   </tt>
+   to get a client that is connected to the server and has data available for reading.
+   <a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiServerAvailable">
+    https://www.arduino.cc/en/Reference/WiFiServerAvailable
+   </a>
+  </p>
+  <p>
+   Use
+   <tt class="docutils literal">
+    client.connected()
+   </tt>
+   to get whether or not the client is connected.
+   <a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiClientConnected">
+    https://www.arduino.cc/en/Reference/WiFiClientConnected
+   </a>
+  </p>
+  <p>
+   Use
+   <tt class="docutils literal">
+    client.println()
+   </tt>
+   to print data followed by a carriage return and newline.
+   <a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiClientPrintln">
+    https://www.arduino.cc/en/Reference/WiFiClientPrintln
+   </a>
+  </p>
+  <p>
+   Use
+   <tt class="docutils literal">
+    client.print()
+   </tt>
+   to print data to the server that a client is connected to.
+   <a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiClientPrint">
+    https://www.arduino.cc/en/Reference/WiFiClientPrint
+   </a>
+  </p>
+  <p>
+   Use
+   <tt class="docutils literal">
+    client.available()
+   </tt>
+   to return the number of bytes available for reading.
+   <a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiClientAvailable">
+    https://www.arduino.cc/en/Reference/WiFiClientAvailable
+   </a>
+  </p>
+  <p>
+   Use
+   <tt class="docutils literal">
+    client.read()
+   </tt>
+   to read the next byte received from the server the client is connected to.
+   <a class="reference external" href="https://www.arduino.cc/en/Reference/WiFiClientRead">
+    https://www.arduino.cc/en/Reference/WiFiClientRead
+   </a>
+  </p>
+  <p>
+   Use
+   <tt class="docutils literal">
+    client.stop()
+   </tt>
+   to disconnect from the server the client is connected to.
+   <a class="reference external" href="https://www.arduino.cc/en/Reference/WiFIClientStop">
+    https://www.arduino.cc/en/Reference/WiFIClientStop
+   </a>
+  </p>
+  <p>
+   ambd_arduino/AmebaMotors is a library which provides API related to controlling motors.
+Please download the library:
+   <a class="reference external" href="https://github.com/ambiot/raw/master/Arduino_zip_libraries/ambd_arduino/AmebaMotors.zip">
+    ambd_arduino/AmebaMotors
+   </a>
+   And add the library to Ameba:
+   <a class="reference external" href="https://www.arduino.cc/en/Guide/Libraries#toc4">
+    https://www.arduino.cc/en/Guide/Libraries#toc4
+   </a>
+  </p>
+  <p>
+   To know more about motor movement and the technical details of the L298N H-Bridge,
+please check out this
+   <cite>
+    link &lt;https://www.amebaiot.com/en/ameba-arduino-amebamotors-basic/&gt;
+   </cite>
+   .
+  </p>
+ </div>
+</div>

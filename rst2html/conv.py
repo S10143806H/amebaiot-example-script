@@ -48,6 +48,7 @@ def formatRST():
                     file.write(file_remainder)
                     convFlag = True
             file.close()
+    print("[%s][INFO] Done" % ("formatRST"))
 
 # convert from rst to html and remove unnecessary portion
 def convRST2HTML():
@@ -57,7 +58,7 @@ def convRST2HTML():
             if os.path.isfile(f):
                 # print(f)
                 filename, file_extension = os.path.splitext(f)
-                print("[INFO] Currently processing '%s.html'..." % filename)
+                print("[INFO] Currently converting '%s.html'..." % filename)
                 docutils.core.publish_file(
                     source_path = f,
                     destination_path = filename + ".html",
@@ -69,8 +70,9 @@ def convRST2HTML():
                 with open(filename + ".html", "w", encoding='utf-8') as file:
                     write_content = ''.join(str(model_content)[1:-2])
                     file.write(write_content)
-                    print("[INFO] Processed output file is stored in '%s.html'" % filename)
+                    print("[INFO] Converted output file is stored in '%s.html'" % filename)
             file.close()
+    print("[%s][INFO] Done" % ("convRST2HTML"))
 
 # split raw html to introduction & procedure section
 def splitHTMLContent():
@@ -96,95 +98,115 @@ def splitHTMLContent():
                     file2.write(write_content)
                 file2.close()
 
-        if filename.endswith("intro.html"):
-            # print(filename)
-            soup = BeautifulSoup(open((os.path.join(root_path, filename)), encoding="utf-8"), "html.parser")
-            introduction_content = soup.find_all('p')  # filter content area
-            introduction_content = BeautifulSoup(str(introduction_content), 'html.parser').prettify()
-            with open((os.path.join(root_path, filename)), "w+", encoding="utf-8") as file:
-                # remove start and end unnecessary part
-                write_content = ''.join(str(introduction_content)[1:-2])
-                write_content = write_content.replace("<p>", "  ")  # remove <p>
-                write_content = write_content.replace("</p>", "  ")  # remove </p>
-                file.write(write_content)
-            file.close()
-            with open((os.path.join(root_path, filename)), "r", encoding="utf-8") as input, open((os.path.join(root_path, filename)), 'r+') as output:
-                for line in input:
-                    if line.startswith(",") != 0:
-                        line = ''
-                        continue
-                    if line.strip():
-                        output.write(line)
-                output.truncate()
+        # if filename.endswith("intro.html"):
+        #     # print(filename)
+        #     soup = BeautifulSoup(open((os.path.join(root_path, filename)), encoding="utf-8"), "html.parser")
+        #     introduction_content = soup.find_all('p')  # filter content area
+        #     introduction_content = BeautifulSoup(str(introduction_content), 'html.parser').prettify()
+        #     with open((os.path.join(root_path, filename)), "w+", encoding="utf-8") as file:
+        #         # remove start and end unnecessary part
+        #         write_content = ''.join(str(introduction_content)[1:-2])
+        #         # Remove <p>
+        #         write_content = write_content.replace("<p>", "  ")
+        #         write_content = write_content.replace("</p>", "  ")
+        #         file.write(write_content)
+        #     file.close()
+        #     with open((os.path.join(root_path, filename)), "r", encoding="utf-8") as input, open((os.path.join(root_path, filename)), 'r+') as output:
+        #         for line in input:
+        #             if line.startswith(",") != 0:
+        #                 line = ''
+        #                 continue
+        #             if line.strip():
+        #                 output.write(line)
+        #         output.truncate()
         
-        if filename.endswith("proce.html"):
-            # print(filename)
-            soup = BeautifulSoup(open((os.path.join(root_path, filename)), encoding="utf-8"), "html.parser").find_all(['p', 'blockquote'])
-            procedure_content = BeautifulSoup(str(soup), 'html.parser').prettify()
-            with open((os.path.join(root_path, filename)), "w+", encoding="utf-8") as file:
-                write_content = ''.join(str(procedure_content)[1:-2])
-                write_content = write_content.replace("<p>", "  ")   # remove <p>
-                write_content = write_content.replace("</p>", "  ")  # remove </p>
-                write_content = write_content.replace("<tt class=\"docutils literal\">", "  ") 
-                write_content = write_content.replace("</tt>", "  ") 
-                file.write(write_content)
-            file.close()
+        # if filename.endswith("proce.html"):
+        #     # print(filename)
+        #     soup = BeautifulSoup(open((os.path.join(root_path, filename)), encoding="utf-8"), "html.parser").find_all(['p', 'blockquote'])
+        #     procedure_content = BeautifulSoup(str(soup), 'html.parser').prettify()
+        #     with open((os.path.join(root_path, filename)), "w+", encoding="utf-8") as file:
+        #         write_content = ''.join(str(procedure_content)[1:-2])
+        #         # Remove <p>
+        #         write_content = write_content.replace("<p>", "  ")
+        #         write_content = write_content.replace("</p>", "  ")
+        #         # Remove <tt>
+        #         write_content = write_content.replace("<tt class=\"docutils literal\">", "  ") 
+        #         write_content = write_content.replace("</tt>", "  ") 
+        #         file.write(write_content)
+        #     file.close()
        
-        if filename.endswith("proce.html"):
-            soup = BeautifulSoup(open((os.path.join(root_path, filename)), encoding="utf-8"), "html.parser")
-            img_hearders = soup.find_all("img")
-            link_headers = soup.find_all("a")
-            span_headers = soup.select("span")
-            strong_headers = soup.find_all("strong")
-            count = 0
+        # if filename.endswith("proce.html"):
+        #     soup = BeautifulSoup(open((os.path.join(root_path, filename)), encoding="utf-8"), "html.parser")
+        #     img_hearders = soup.find_all("img")
+        #     link_headers = soup.find_all("a")
+        #     span_headers = soup.select("span")
+        #     strong_headers = soup.find_all("strong")
+        #     note_headers = soup.find_all('div', class_='admonition note')
+        #     print(note_headers)
+        #     # .decompose()
+        #     count = 0
+
+        #     # Modify <img>
+        #     for img_header in img_hearders:
+        #         count = count + 1
+        #         # Change <img class>
+        #         img_header['class'] = "size-full wp-image-3851 aligncenter"
+        #         # Remove <img alt>
+        #         del img_header['alt']
+        #         img_header['src'] = "/wp-content/uploads/YYYY/MM/EXAMPLE/" + str(count) + ".png"
+        #         # Change <img style> to <img height> & <img width>  
+        #         del img_header['style']
+        #         img_header['width'] = "500"
+        #         img_header['height'] = "500"
+
+        #     # Modify <a>
+        #     for link_header in link_headers:
+        #         # Remove <a class>
+        #         del link_header ["class"]
+
+        #     # Modify <span>
+        #     for span_header in span_headers:
+        #         span_header.extract()
+        #     last_header = "Code Reference"
+
+        #     # Modify <strong>
+        #     for last_header in strong_headers:pass
+        #     if last_header:
+        #         last_header["style"] = "color: #e67e22; background-color: white; font-size: 28px"
+        #         last_header.name = "span"
+        #     else:
+        #         break
+
+        #     soup = BeautifulSoup(str(soup), 'html.parser').prettify()
+        #     with open((os.path.join(root_path, filename)), "w+", encoding="utf-8") as file:
+        #         write_content = ''.join(str(soup))
+        #         file.write(write_content)
+        #     file.close()
             
-            for img_header in img_hearders:
-                count = count + 1
-                img_header['class'] = "size-full wp-image-3851 aligncenter"
-                del img_header['alt']
-                img_header['src'] = "/wp-content/uploads/YYYY/MM/EXAMPLE/" + str(count) + ".png"
-                del img_header['style']
-                img_header['width'] = "800"
-                img_header['height'] = "500"
-            for link_header in link_headers:
-                del link_header ["class"]
-            for span_header in span_headers:
-                span_header.extract()
-            last_header = "Code Reference"
-            for last_header in strong_headers:pass
-            if last_header:
-                last_header["style"] = "color: #e67e22; background-color: white; font-size: 28px"
-                last_header.name = "span"
-            else:
-                break
-            soup = BeautifulSoup(str(soup), 'html.parser').prettify()
-            with open((os.path.join(root_path, filename)), "w+", encoding="utf-8") as file:
-                write_content = ''.join(str(soup))
-                file.write(write_content)
-            file.close()
-            
-            with open((os.path.join(root_path, filename)), "r", encoding="utf-8") as input, open((os.path.join(root_path, filename)), 'r+', encoding="utf-8") as output:
-                for line in input:
-                    if line.startswith(",") != 0 or line.startswith(" ,") != 0 or line.startswith("<p style=\"color:#E67E22; font-size:24px\">") != 0 or line.startswith("</p>") != 0 or line.startswith("<blockquote>")!=0 or line.startswith("</blockquote>")!=0:
-                        line = ''
-                        continue
-                    if line.strip():
-                        output.write(line)
-                output.truncate()
+        #     with open((os.path.join(root_path, filename)), "r", encoding="utf-8") as input, open((os.path.join(root_path, filename)), 'r+', encoding="utf-8") as output:
+        #         for line in input:
+        #             if line.startswith(",") != 0 or line.startswith(" ,") != 0 or line.startswith("<p style=\"color:#E67E22; font-size:24px\">") != 0 or line.startswith("</p>") != 0 or line.startswith("<blockquote>")!=0 or line.startswith("</blockquote>")!=0:
+        #                 line = ''
+        #                 continue
+        #             if line.strip():
+        #                 output.write(line)
+        #         output.truncate()
+    print("[%s][INFO] Done" % ("splitHTMLContent"))
 
 # filter content-only in introduction & procedure section
 def processSplitHTML():
     for filename in os.listdir(root_path):
+        # processing _intro.html
         if filename.endswith("intro.html"):
-            print(filename)
             soup = BeautifulSoup(open((os.path.join(root_path, filename)), encoding="utf-8"), "html.parser")
             introduction_content = soup.find_all('p')  # filter content area
             introduction_content = BeautifulSoup(str(introduction_content), 'html.parser').prettify()
             with open((os.path.join(root_path, filename)), "w+", encoding="utf-8") as file:
                 # remove start and end unnecessary part
                 write_content = ''.join(str(introduction_content)[1:-2])
-                write_content = write_content.replace("<p>", "  ")  # remove <p>
-                write_content = write_content.replace("</p>", "  ")  # remove </p>
+                # remove <p>
+                write_content = write_content.replace("<p>", "  ")
+                write_content = write_content.replace("</p>", "  ")
                 file.write(write_content)
             file.close()
             with open((os.path.join(root_path, filename)), "r", encoding="utf-8") as input, open((os.path.join(root_path, filename)), 'r+') as output:
@@ -195,22 +217,27 @@ def processSplitHTML():
                     if line.strip():
                         output.write(line)
                 output.truncate()
-            
+            print("[%s] %s created successfully" % ("processSplitHTML", filename))
+        
+        # processing _proce.html
         if filename.endswith("proce.html"):
-            print(filename)
-            soup = BeautifulSoup(open((os.path.join(root_path, filename)), encoding="utf-8"), "html.parser").find_all(['p', 'blockquote'])
+            # print(filename)
+            soup = BeautifulSoup(open((os.path.join(root_path, filename)), encoding="utf-8"), "html.parser").find_all(['p', 'blockquote', 'table'])
+            # print(soup)
             procedure_content = BeautifulSoup(str(soup), 'html.parser').prettify()
             with open((os.path.join(root_path, filename)), "w+", encoding="utf-8") as file:
                 write_content = ''.join(str(procedure_content)[1:-2])
-                write_content = write_content.replace("<p>", "  ")   # remove <p>
-                write_content = write_content.replace("</p>", "  ")  # remove </p>
+                # remove <p>
+                write_content = write_content.replace("<p>", "  ")   
+                write_content = write_content.replace("</p>", "  ")  
+                # remove <tt>
                 write_content = write_content.replace("<tt class=\"docutils literal\">", "  ") 
                 write_content = write_content.replace("</tt>", "  ") 
                 file.write(write_content)
             file.close()
             
         if filename.endswith("proce.html"):
-            print(filename)
+            # print(filename)
             soup = BeautifulSoup(open((os.path.join(root_path, filename)), encoding="utf-8"), "html.parser")
             img_hearders = soup.find_all("img")
             link_headers = soup.find_all("a")
@@ -226,17 +253,21 @@ def processSplitHTML():
                 del img_header['style']
                 img_header['width'] = "800"
                 img_header['height'] = "500"
+            
             for link_header in link_headers:
                 del link_header ["class"]
+            
             for span_header in span_headers:
                 span_header.extract()
             last_header = "Code Reference"
+            
             for last_header in strong_headers:pass
             if last_header:
                 last_header["style"] = "color: #e67e22; background-color: white; font-size: 28px"
                 last_header.name = "span"
             else:
                 break
+            
             soup = BeautifulSoup(str(soup), 'html.parser').prettify()
             with open((os.path.join(root_path, filename)), "w+", encoding="utf-8") as file:
                 write_content = ''.join(str(soup))
@@ -251,7 +282,9 @@ def processSplitHTML():
                     if line.strip():
                         output.write(line)
                 output.truncate()
-    
+            print("[%s] %s created successfully" % ("processSplitHTML", filename))
+    print("[%s][INFO] Done" % ("processSplitHTML"))
+
 # append to template
 def appendSplit2Template():
     temp = root_path + "\\template_self\\mindy.html"
@@ -352,9 +385,9 @@ def removeFiles():
 if __name__ == '__main__':
     print("===== [MAIN Function] =====")
 
-    # formatRST()
+    formatRST()
     convRST2HTML()
-    # splitHTMLContent()
-    # processSplitHTML()
+    splitHTMLContent()
+    processSplitHTML()
     # appendSplit2Template()
     # removeFiles() #pending to debug 
