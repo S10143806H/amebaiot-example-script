@@ -13,6 +13,26 @@ Welcome to Ameba IoT Family Online SDK Documentation!
 
 | All Getting-started guides, Examples, Tutorials, API reference and Datasheet can be found under the respective link below: 
 
+.. table::
+   :align: left
+   :widths: auto
+   
+   ================================== ======
+   Website                            Type                                           
+   ================================== ======
+   `Google <https://www.google.com>`_ Search
+   `Yahoo <https://www.yahoo.com>`_   Search
+   `CNN <https://www.cnn.com>`_       News  
+   ================================== ======
+
++-----------------------------------------------------------+--------------------------------------+
+| **Public Constructors**                                   |                                      |
++-----------------------------------------------------------+--------------------------------------+
+| `WiFiClass::WiFiClass <#WiFiClass_WiFiClass>`_            | Constructs a WiFiClass object and    |
+|                                                           | initializes the WiFi libraries and   |
+|                                                           | network settings                     |
++-----------------------------------------------------------+--------------------------------------+
+
 .. toctree::
    :maxdepth: 1
    :caption: Open Source SDKs 

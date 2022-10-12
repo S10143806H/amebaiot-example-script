@@ -8,82 +8,85 @@ Defines a class of WiFi and network implementation for Ameba.
 
 **Syntax**
 
-
-
   class WiFiClass
 
 **Members**
 
-+------------------------------+--------------------------------------+
-| **Public Constructors**      |                                      |
-+==============================+======================================+
-| WiFiClass::WiFiClass         | Constructs a WiFiClass object and    |
-|                              | initializes the WiFi libraries and   |
-|                              | network settings                     |
-+------------------------------+--------------------------------------+
++-----------------------------------------------------------+--------------------------------------+
+| **Public Constructors**                                   |                                      |
++-----------------------------------------------------------+--------------------------------------+
+| `WiFiClass::WiFiClass <#WiFiClass_WiFiClass>`_            | Constructs a WiFiClass object and    |
+|                                                           | initializes the WiFi libraries and   |
+|                                                           | network settings                     |
++-----------------------------------------------------------+--------------------------------------+
 
-
-+------------------------------+--------------------------------------+
-| **Public Methods**           |                                      |
-+==============================+======================================+
-| WiFiClass::firmwareVersion   | Get firmware version                 |
-+------------------------------+--------------------------------------+
-| WiFiClass:: begin            | Start Wifi connection for OPEN       |
-|                              | networks                             |
-+------------------------------+--------------------------------------+
-| WiFiClass:: config           | Configure network IP settings        |
-+------------------------------+--------------------------------------+
-| WiFiClass:: setDNS           | Set the DNS server IP address to use |
-+------------------------------+--------------------------------------+
-| WiFiClass:: disconnect       | Disconnect from the network          |
-+------------------------------+--------------------------------------+
-| WiFiClass:: macAddress       | Get the interface MAC address        |
-+------------------------------+--------------------------------------+
-| WiFiClass:: localIP          | Get the interface IP address         |
-+------------------------------+--------------------------------------+
-| WiFiClass:: subnetMask       | Get the interface subnet mask        |
-|                              | address                              |
-+------------------------------+--------------------------------------+
-| WiFiClass:: gatewayIP        | Get the gateway IP address           |
-+------------------------------+--------------------------------------+
-| WiFiClass:: SSID             | Return the current SSID associated   |
-|                              | with the network                     |
-+------------------------------+--------------------------------------+
-| WiFiClass:: BSSID            | Return the current BSSID associated  |
-|                              | with the network                     |
-+------------------------------+--------------------------------------+
-| WiFiClass:: RSSI             | Return the current RSSI (Received    |
-|                              | Signal Strength in dBm) associated   |
-|                              | with the network                     |
-+------------------------------+--------------------------------------+
-| WiFiClass:: encryptionType   | Return the Encryption Type           |
-|                              | associated with the network          |
-+------------------------------+--------------------------------------+
-| WiFiClass:: scanNetworks     | Start scan WiFi networks available   |
-+------------------------------+--------------------------------------+
-| WiFiClass:: SSID             | Return the SSID discovered during    |
-|                              | the network scan                     |
-+------------------------------+--------------------------------------+
-| WiFiClass:: encryptionType   | Return the encryption type of the    |
-|                              | networks discovered during the       |
-|                              | scanNetworks                         |
-+------------------------------+--------------------------------------+
-| WiFiClass:: encryptionTypeEx | Return the security type and         |
-|                              | encryption type of the networks      |
-|                              | discovered during the scanNetworks   |
-+------------------------------+--------------------------------------+
-| WiFiClass:: RSSI             | Return the RSSI of the networks      |
-|                              | discovered during the scanNetworks   |
-+------------------------------+--------------------------------------+
-| WiFiClass:: status           | Return Connection status             |
-+------------------------------+--------------------------------------+
-| WiFiClass:: hostByName       | Resolve the given hostname to an IP  |
-|                              | address                              |
-+------------------------------+--------------------------------------+
-| WiFiClass:: apbegin          | Start AP mode                        |
-+------------------------------+--------------------------------------+
-| WiFiClass:: disablePowerSave | Disable power-saving mode            |
-+------------------------------+--------------------------------------+
+.. +------------------------------+--------------------------------------+
+.. | **Public Constructors**      |                                      |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass::WiFiClass         | Constructs a WiFiClass object and    |
+.. |                              | initializes the WiFi libraries and   |
+.. |                              | network settings                     |
+.. +------------------------------+--------------------------------------+
+.. | **Public Methods**           |                                      |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass::firmwareVersion   | Get firmware version                 |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass:: begin            | Start Wifi connection for OPEN       |
+.. |                              | networks                             |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass:: config           | Configure network IP settings        |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass:: setDNS           | Set the DNS server IP address to use |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass:: disconnect       | Disconnect from the network          |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass:: macAddress       | Get the interface MAC address        |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass:: localIP          | Get the interface IP address         |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass:: subnetMask       | Get the interface subnet mask        |
+.. |                              | address                              |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass:: gatewayIP        | Get the gateway IP address           |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass:: SSID             | Return the current SSID associated   |
+.. |                              | with the network                     |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass:: BSSID            | Return the current BSSID associated  |
+.. |                              | with the network                     |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass:: RSSI             | Return the current RSSI (Received    |
+.. |                              | Signal Strength in dBm) associated   |
+.. |                              | with the network                     |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass:: encryptionType   | Return the Encryption Type           |
+.. |                              | associated with the network          |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass:: scanNetworks     | Start scan WiFi networks available   |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass:: SSID             | Return the SSID discovered during    |
+.. |                              | the network scan                     |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass:: encryptionType   | Return the encryption type of the    |
+.. |                              | networks discovered during the       |
+.. |                              | scanNetworks                         |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass:: encryptionTypeEx | Return the security type and         |
+.. |                              | encryption type of the networks      |
+.. |                              | discovered during the scanNetworks   |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass:: RSSI             | Return the RSSI of the networks      |
+.. |                              | discovered during the scanNetworks   |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass:: status           | Return Connection status             |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass:: hostByName       | Resolve the given hostname to an IP  |
+.. |                              | address                              |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass:: apbegin          | Start AP mode                        |
+.. +------------------------------+--------------------------------------+
+.. | WiFiClass:: disablePowerSave | Disable power-saving mode            |
+.. +------------------------------+--------------------------------------+
 
 -----
 
@@ -96,7 +99,7 @@ network settings.
 
 **Syntax**
 
-WiFiClass()
+WiFiClass::WiFiClass()
 
 **Parameters**
 
@@ -158,11 +161,11 @@ Start Wifi connection for OPEN networks
 
 **Syntax**
 
-  int WiFiClass::begin(char* ssid)
+  int begin(char* ssid)
 
-  int WiFiClass::begin(char* ssid, uint8_t key_idx, const char *key)
+  int begin(char* ssid, uint8_t key_idx, const char* key)
 
-  int WiFiClass::begin(char* ssid, const char *passphrase)
+  int begin(char* ssid, const char* passphrase)
 
 **Parameters**
 
@@ -856,6 +859,9 @@ The function requires no input parameter.
 
 NA
 
+**Notes and Warnings**
+
+NA
 **Notes and Warnings**
 
 NA
