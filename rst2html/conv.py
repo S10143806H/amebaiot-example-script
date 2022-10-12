@@ -12,19 +12,20 @@ keyword = 'Class'
 # Align RST to standard format
 # add introduction and procedure section if it does not contained
 
-
 def formatRST():
     convFlag = False
     insert_pos = 0
     replace_list = ['.. method::']
     delete_list = ['.. code:: cpp', '``']
+    delete_list_EG = ['``']
     
     # Convert keywords in .rst to standard format
     for filename in os.listdir(root_path):
         if filename.endswith(".rst"):
             f = os.path.join(root_path, filename)
             if os.path.isfile(f):
-                if keyword in f:                                                # API Documents
+                if keyword in f:
+                    # API Documents
                     print("[INFO] %s" % f)
                     with open(f, "r+", encoding="utf-8") as input, open(f, "r+", encoding="utf-8") as output:
                         # delete rst keyword cannot be recognized
@@ -34,7 +35,8 @@ def formatRST():
                             for word in delete_list:
                                 line = line.replace(word, '')
                             output.write(line)
-                else:                                                           # Example Guides                    
+                else:                                                           
+				# Example Guides                    
                     with open(f, "r+", encoding="utf-8") as input, open(f, "r+", encoding="utf-8") as output:
                         for num, line in enumerate(input, 1):
                             if line.startswith("Introduction") != 0 and convFlag is False:
@@ -53,28 +55,29 @@ def formatRST():
                             output.write(line)
                         input.close()
                         output.close()
-                    with open(f, "r+", encoding="utf-8") as file:               # CASE3: Adding keyword to RST
-                        for x in range(insert_pos):
-                            file.readline()
-                        if convFlag is False:
-                            # print("[DEBUG] CASE 3 CONT")
-                            pos = file.tell()
-                            file_remainder = file.read()
-                            file.seek(pos)
-                            file.write("Introduction\n-------------------\n\n")
-                            file.write(file_remainder)
-                            convFlag = True
-                    file.close()
+                        # CASE3: Adding keyword to RST
+                        with open(f, "r+", encoding="utf-8") as file:
+                            for x in range(insert_pos):
+                                file.readline()
+                            if convFlag is False:
+                                # print("[DEBUG] CASE 3 CONT")
+                                pos = file.tell()
+                                file_remainder = file.read()
+                                file.seek(pos)
+                                file.write("Introduction\n-------------------\n\n")
+                                file.write(file_remainder)
+                                convFlag = True
+                        file.close()
+            
     print("[%s][INFO] ------------ Done -----------" % ("formatRST"))
 
 # convert from rst to html and remove unnecessary portion
-
-
 def convRST2HTML():
     for filename in os.listdir(root_path):
         if filename.endswith(".rst"):
             f = os.path.join(root_path, filename)
             if os.path.isfile(f):
+                # print(f)
                 filename, file_extension = os.path.splitext(f)
                 print("[INFO] Currently converting '%s.html'..." % filename)
                 docutils.core.publish_file(
@@ -98,8 +101,6 @@ def convRST2HTML():
     print("[%s][INFO] ---------- Done ----------" % ("convRST2HTML"))
 
 # split raw html to introduction & procedure section
-
-
 def splitHTMLContent():
     for filename in os.listdir(root_path):
         if filename.endswith(".rst"):
@@ -107,11 +108,13 @@ def splitHTMLContent():
             if os.path.isfile(f):
                 filename, file_extension = os.path.splitext(f)
                 # check whether the file name contains Class
-                if keyword in filename:                                                 # API Documents
+                if keyword in filename:
+                    # API Documents
                     print("[INFO] [API] Currently splitting '%s.html'..." % filename)
                     # soup = BeautifulSoup(open(filename + ".html", encoding="utf-8"), "html.parser")
                     # currently processing as a whole file
-                else:                                                                   # Example Guides
+                else:
+                    # Example Guides
                     print("[INFO] [EXP] Currently splitting '%s.html'..." % filename)
                     soup = BeautifulSoup(
                         open(filename + ".html", encoding="utf-8"), "html.parser")
@@ -129,7 +132,8 @@ def splitHTMLContent():
                         soup = BeautifulSoup(materials_content, 'html.parser')
                         write_content = write_content.replace(
                             "</ul>", "  ")  # remove </ul>
-                        # add im hyper link
+
+                        # add in hyper link
                         write_content = write_content.replace(
                             "AMB21",  "<a href=" "'/amebad/#rtk_amb21'" ">AMB21</a>")
                         write_content = write_content.replace(
@@ -159,11 +163,10 @@ def splitHTMLContent():
 
 
 # filter content-only in introduction & procedure section
-
-
 def processSplitHTML():
     for filename in os.listdir(root_path):
-        if keyword in filename:                                                     # API Documents
+        if keyword in filename:
+            # API Documents
             if filename.endswith(".html"):
                 soup = BeautifulSoup(
                     open((os.path.join(root_path, filename)), encoding="utf-8"), "html.parser")
@@ -229,7 +232,8 @@ def processSplitHTML():
                     write_content = ''.join(str(soup))
                     file.write(write_content)
                 file.close()
-        else:                                                                       # Example Guides
+        else:
+            # Example Guides
             # processing _intro.html
             if filename.endswith("intro.html"):
                 soup = BeautifulSoup(
@@ -258,24 +262,7 @@ def processSplitHTML():
                       ("processSplitHTML", filename))
 
             # processing _proce.html
-            if filename.endswith("proce.html"):
-                # print(filename)
-                soup = BeautifulSoup(open((os.path.join(root_path, filename)), encoding="utf-8"),
-                                     "html.parser").find_all(['p', 'blockquote', 'table'])
-                # print(soup)
-                procedure_content = BeautifulSoup(
-                    str(soup), 'html.parser').prettify()
-                with open((os.path.join(root_path, filename)), "w+", encoding="utf-8") as file:
-                    write_content = ''.join(str(procedure_content)[1:-2])
-                    # remove <p>
-                    write_content = write_content.replace("<p>", "  ")
-                    write_content = write_content.replace("</p>", "  ")
-                    # remove <tt>
-                    write_content = write_content.replace(
-                        "<tt class=\"docutils literal\">", "  ")
-                    write_content = write_content.replace("</tt>", "  ")
-                    file.write(write_content)
-                file.close()
+            
 
             if filename.endswith("proce.html"):
                 # print(filename)
@@ -283,10 +270,11 @@ def processSplitHTML():
                     open((os.path.join(root_path, filename)), encoding="utf-8"), "html.parser")
                 img_hearders = soup.find_all("img")
                 link_headers = soup.find_all("a")
-                span_headers = soup.select("span")
+                span_headers = soup.find_all("span")
                 strong_headers = soup.find_all("strong")
+
                 count = 0
-                
+
                 for img_header in img_hearders:
                     count = count + 1
                     img_header['class'] = "size-full wp-image-3851 aligncenter"
@@ -301,6 +289,7 @@ def processSplitHTML():
                     del link_header["class"]
 
                 for span_header in span_headers:
+                    print(span_header)
                     span_header.extract()
                 last_header = "Code Reference"
 
@@ -317,6 +306,32 @@ def processSplitHTML():
                     write_content = ''.join(str(soup))
                     file.write(write_content)
                 file.close()
+                
+                if filename.endswith("proce.html"):
+                # print(filename)
+                    soup = BeautifulSoup(open((os.path.join(root_path, filename)), encoding="utf-8"),
+                                        "html.parser").find_all(['p', 'blockquote', 'table'])
+                    # print(soup)
+                
+                    procedure_content = BeautifulSoup(
+                        str(soup), 'html.parser').prettify()
+                
+                    with open((os.path.join(root_path, filename)), "w+", encoding="utf-8") as file:
+                        write_content = ''.join(str(procedure_content)[1:-2])
+                        # remove <p>
+                        write_content = write_content.replace("<p>", "  ")
+                        write_content = write_content.replace("</p>", "  ")
+                        
+                        # remove <tt>
+                        write_content = write_content.replace(
+                            "<tt class=\"docutils literal\">", "  ")
+                        write_content = write_content.replace("</tt>", "  ")
+                        write_content = write_content.replace("<blockquote>", "  ")
+                        write_content = write_content.replace("</blockquote>", "  ")
+                        write_content = write_content.replace('<p class="first admonition-title">', " ")
+                    
+                        file.write(write_content)
+                    file.close()
 
                 with open((os.path.join(root_path, filename)), "r", encoding="utf-8") as input, open((os.path.join(root_path, filename)), 'r+', encoding="utf-8") as output:
                     for line in input:
@@ -328,11 +343,9 @@ def processSplitHTML():
                     output.truncate()
                 print("[%s] %s created successfully" %
                       ("processSplitHTML", filename))
-    print("[%s][INFO] -------- Done -------- " % ("processSplitHTML"))
+    # print("[%s][INFO] -------- Done -------- " % ("processSplitHTML"))
 
 # append to template
-
-
 def appendSplit2Template():
     temp = root_path + "\\template_self\\mindy.html"
     output_dir = root_path + "\\output\\"
@@ -357,7 +370,7 @@ def appendSplit2Template():
                     shutil.copy(temp, output_dir + filename + ".html")
                     if os.path.isfile(output_dir + filename + ".html"):
                         with open(output_dir + filename + ".html", "r+", encoding="utf-8") as file_output:
-                            for x in range(8):
+                            for x in range(5):
                                 print(file_output.readline())
                             pos = file_output.tell()
                             print(pos)
@@ -444,8 +457,6 @@ def appendSplit2Template():
 
 
 # remove processing middle files
-
-
 def removeFiles():
     output_dir = root_path + "\\output\\"
 
